@@ -32,7 +32,7 @@ Next we'll create a CSS class that references your SVG file. Add this class to y
 
 ![Create config file](../images/step6-icon-style.png)
 
-The CSS for integrating SVG and PNG images with the font icons used by Page Builder can be a bit tricky in terms of matching size and positioning. As such, we recommend the following CSS rule set and conventions, changing only the content url path to your icon:  
+The CSS for integrating SVG and PNG images with the font icons used by Page Builder can be a bit tricky in terms of matching size and positioning. As such, we recommend the following CSS rule set and conventions, changing only the content url path to your icon:
 
 ```css
 .icon-pagebuilder-quote {
@@ -50,15 +50,14 @@ The CSS for integrating SVG and PNG images with the font icons used by Page Buil
 | `width`         | Sets the width of the content area that most closely matches the widths of Page Builder icon fonts. |
 | `height`        | Sets the height of the content area that most closely matches the widths of Page Builder icon fonts. |
 | `margin-bottom` | Pulls the SVG or PNG image down within the panel container to more closely match the positioning of Page Builder's font icon. |
-{:style="table-layout:auto"}
 
-When deployed, your icon images are linked from `pub/static` as shown here: 
+When deployed, your icon images are linked from `pub/static` as shown here:
 
 ![Create config file](../images/step6-icon-link-static.png)
 
 ## Add the icon class to the config file
 
-The last step is to add our icon's class name to our config file. Previous to this step, we used an existing icon class: `icon-pagebuilder-heading`. Now we can replace this class with our new class: `icon-pagebuilder-quote`, as shown here:  
+The last step is to add our icon's class name to our config file. Previous to this step, we used an existing icon class: `icon-pagebuilder-heading`. Now we can replace this class with our new class: `icon-pagebuilder-quote`, as shown here:
 
 ```xml
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
@@ -75,7 +74,7 @@ The last step is to add our icon's class name to our config file. Previous to th
     >
 ```
 
-That's it. Now you can regenerate your static assets, empty your browser cache, and do a hard reload of your Admin page to see your new icon in the panel. 
+That's it. Now you can regenerate your static assets, empty your browser cache, and do a hard reload of your Admin page to see your new icon in the panel.
 
 ## Next
 [Tutorial summary](summary.md).

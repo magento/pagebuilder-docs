@@ -50,7 +50,6 @@ There are a number of child elements which can be configured, these are typicall
 | `appearances`       | Configures various appearances along with associated data mapping elements. This is a crucial part of all content types and defines how the master and preview systems should retrieve and display their data. |
 | `is_system`         | Determines menu visibility for the content type. System content types are visible in the menu. The default value for this is true. By setting this to false, you can hide child or "special" content types that are added by other content types. For example, you cannot directly drag a Slide content type onto the stage, which means it is not a system content type. |
 | `additional_data`   | Allows you to specify additional data for the component. See [additional configurations](../how-to/how-to-add-additional-configurations.md) for more information. |
-{:style="table-layout:auto"}
 
 The following is an example of a content type configuration taken from `view/adminhtml/pagebuilder/content_type/text.xml` for our Text content type. This displays some of the different available configuration options for configuring content types.
 
@@ -113,12 +112,11 @@ Any modifications you might want to make to content type configuration forms use
 The `parents` element specifies which content types can accept this type as a child.
 Parent policies will override any child policies that are set.
 
-You can configure the default policy to easily `allow` or `deny` all parents. 
+You can configure the default policy to easily `allow` or `deny` all parents.
 
 | Attribute           | Description                                                                            |
 | ------------------- | -------------------------------------------------------------------------------------- |
 | `default_policy`    | Values: `allow` `deny`. Allows or denies all content types to be parents unless specified as a parent element. |
-{:style="table-layout:auto"}
 
 The `parents` node accepts a list of content types for the policy via child `parent` elements.
 
@@ -126,7 +124,6 @@ The `parents` node accepts a list of content types for the policy via child `par
 | ------------------- | -------------------------------------------------------------------------------------- |
 | `name`              | The name of the content type that this parents policy is assigned to. Such as `slider`.       |
 | `policy`            | Values: `allow` `deny`. Determine whether the current content type is allowed or denied to be a child of the specified content type.  |
-{:style="table-layout:auto"}
 
 **Example:**
 ``` xml
@@ -134,19 +131,18 @@ The `parents` node accepts a list of content types for the policy via child `par
     <parent name="row" policy="allow"/>
     <parent name="column" policy="allow"/>
 </parents>
-``` 
+```
 
 #### `children` element
 
 The `children` element specifies which content types can accept this type as a parent, this configuration is formed the same as the above `parents` configuration, the difference being this controls which content types can be a child of the current content type.
-Parent policies will override any child policies that are set. 
+Parent policies will override any child policies that are set.
 
-You can configure the default policy to easily `allow` or `deny` all children. 
+You can configure the default policy to easily `allow` or `deny` all children.
 
 | Attribute           | Description                                                                            |
 | ------------------- | -------------------------------------------------------------------------------------- |
 | `default_policy`    | Values: `allow` `deny`. Allows or denies all content types to be children unless specified as a child element. |
-{:style="table-layout:auto"}
 
 The `children` node accepts a list of content types for the policy via child `child` elements.
 
@@ -154,7 +150,6 @@ The `children` node accepts a list of content types for the policy via child `ch
 | ------------------- | -------------------------------------------------------------------------------------- |
 | `name`              | The name of the content type that this parents policy is assigned to. Such as `slider`.       |
 | `policy`            | Values: `allow` `deny`. Determine whether the current content type is allowed or denied to be a child of the specified content type.  |
-{:style="table-layout:auto"}
 
 
 **Example:**
@@ -163,7 +158,7 @@ The `children` node accepts a list of content types for the policy via child `ch
     <child name="row" policy="deny"/>
     <child name="column" policy="deny"/>
 </children>
-``` 
+```
 
 #### `appearances` element
 
@@ -180,7 +175,6 @@ For instance a great use of this functionality within Banner is to display the c
 | `preview_template`  | Template used to display the content type within the admin preview.                    |
 | `master_template`   | Template which is hydrated with data and rendered to be stored as the master format.                         |
 | `reader`            | Reads data for the content type from the master format. Unless you need to conduct complex retrieval of data from the master format we recommend you use the default `Magento_PageBuilder/js/master-format/read/configurable` reader as this contains the necessary logic for the child `element` nodes to work. |
-{:style="table-layout:auto"}
 
 **Example:**
 ```xml
@@ -194,16 +188,15 @@ For instance a great use of this functionality within Banner is to display the c
 Every content type must declare a default appearance to allow other modules to easily extend the content type with additional appearances.
 
 ##### Appearance Elements Configuration
-To enable your appearance to effectively read and write data from the master format into your preview and master templates you'll need to declare the various attributes to be applied to your elements. 
+To enable your appearance to effectively read and write data from the master format into your preview and master templates you'll need to declare the various attributes to be applied to your elements.
 
-These are declared under the `<elements />` node within the appearance. 
+These are declared under the `<elements />` node within the appearance.
 
 ###### `element`
 
 | Attribute           | Description                                                                            |
 | ------------------- | -------------------------------------------------------------------------------------- |
 | `name`              | The name for the element that will be used to reference the data mapping configuration from your templates. This must be unique within the current appearance.    |
-{:style="table-layout:auto"}
 
 The name specified here is used within your templates bindings to retrieve the data from your configuration.
 
@@ -213,7 +206,7 @@ For instance if you specified the element name to be `main` by `<element name="m
 <div html="data.main.html" attr="data.main.attributes" ko-style="data.main.style" css="data.main.css"></div>
 ```
 
-Within an element you're able to specify different standard HTML attributes to customise the output displayed. 
+Within an element you're able to specify different standard HTML attributes to customise the output displayed.
 
 | Element            | Description                                                                                           |
 | ------------------ | ----------------------------------------------------------------------------------------------------- |
@@ -221,7 +214,6 @@ Within an element you're able to specify different standard HTML attributes to c
 | `css`              | Assign field name for CSS classes to be included on the element, also allows to specifically ignore system classes so they're not displayed within the content types edit form.                      |
 | `html`             | Allows for a fields value to be output as HTML within the current element. This is used within the Text content type to ensure all content is rendered as expected. **Warning:** If you're using this attribute you should ensure you're safely escaping any harmful values to avoid adding potential XSS vulnerabilities within the admin.                |
 | `tag`              | Allows you to read the tag name of the element and map it back to the master format. This is used in instances where the content type is modifying the type of element output, such as in Heading.               |
-{:style="table-layout:auto"}
 
 **Example:**
 
@@ -279,7 +271,6 @@ All these elements share a common near identical interface and can be configured
 | `preview_converter`   | Converts the value for the preview. Used for cases where the conversion logic is different between the two views.     |
 | `persistence_mode`    | Used for read/write properties.                                                                                       |
 | `reader`              | Reader used for parsing attributes and properties out of the DOM. Should not be used with read-only persistence_mode. |
-{:style="table-layout:auto"}
 
 You may optionally set a `reader` value in configuration, otherwise `Magento_PageBuilder/js/property/style-property-reader` will be used for properties, and `Magento_PageBuilder/js/property/attribute-reader` will be used for attributes. Both default readers accept `source` as a parameter, and will return that value.
 
@@ -304,7 +295,7 @@ The following is a converter that determines the output for an overlay backgroun
 ```js
 define(["Magento_PageBuilder/js/utils/color-converter", "Magento_PageBuilder/js/utils/number-converter", "Magento_PageBuilder/js/utils/object"], function (colorConverter, numberConverter, objectUtil) {
     var OverlayBackgroundColor = function () {};
-    
+
     /**
      * Convert value to internal format
      *
@@ -314,7 +305,7 @@ define(["Magento_PageBuilder/js/utils/color-converter", "Magento_PageBuilder/js/
     OverlayBackgroundColor.prototype.fromDom = function fromDom(value) {
         return value;
     };
-    
+
     /**
      * Convert value to knockout format
      *
@@ -324,11 +315,11 @@ define(["Magento_PageBuilder/js/utils/color-converter", "Magento_PageBuilder/js/
      */
     OverlayBackgroundColor.prototype.toDom = function toDom(name, data) {
           var overlayColor = "transparent";
-        
+
           if (data.show_overlay === "always" && data.overlay_color !== "" && data.overlay_color !== undefined) {
                 overlayColor = colorConverter.fromHex(data.overlay_color, numberConverter.percentToDecimal(data.overlay_transparency));
           }
-        
+
           return overlayColor;
     };
     return OverlayBackgroundColor;
@@ -355,7 +346,7 @@ The above will produce the following output if `desktop_image` is attached to a 
 <img src="my-image.png" style="max-width: 100%; height: auto;" />
 ```
 
-###### `html` 
+###### `html`
 
 The `html` element allows you to read the innerHTML of the element in a property and map it back to the master format. This enables you to add rich text editing to a content type and have the HTML written and read from the master format.
 
@@ -398,7 +389,7 @@ The `toDom` method is called before data is converted by element converters to u
 
 When accessing data provided into the above functions **you should** utilise the `get` and `set` utility functions from `Magento_PageBuilder/js/utils/object` to ensure any data mapping entries which traverse deeper into the data set with the dot notation can correctly retrieve and set their data.
 
-**Example:** Mass converter that defaults mobile image value to desktop image value if not configured 
+**Example:** Mass converter that defaults mobile image value to desktop image value if not configured
 ```xml
 <converters>
     <converter name="empty_mobile_image" component="Magento_PageBuilder/js/mass-converter/empty-mobile-image">
@@ -413,7 +404,7 @@ When accessing data provided into the above functions **you should** utilise the
 ```js
 define(["Magento_PageBuilder/js/utils/object"], function (objectUtil) {
     var EmptyMobileImage = function () {};
-    
+
     /**
      * Process data after it's read and converted by element converters
      *
@@ -424,14 +415,14 @@ define(["Magento_PageBuilder/js/utils/object"], function (objectUtil) {
     EmptyMobileImage.prototype.fromDom = function fromDom(data, config) {
         var desktopImage = objectUtil.get(data, config.desktop_image_variable);
         var mobileImage = objectUtil.get(data, config.mobile_image_variable);
-        
+
         if (mobileImage && desktopImage && mobileImage[0] !== undefined && desktopImage[0] !== undefined && mobileImage[0].url === desktopImage[0].url) {
             delete data[config.mobile_image_variable];
         }
-        
+
         return data;
     };
-    
+
     /**
      * Process data before it's converted by element converters
      *
@@ -441,14 +432,14 @@ define(["Magento_PageBuilder/js/utils/object"], function (objectUtil) {
      */
     EmptyMobileImage.prototype.toDom = function toDom(data, config) {
         var mobileImage = objectUtil.get(data, config.mobile_image_variable);
-        
+
         if (mobileImage === undefined || mobileImage[0] === undefined) {
             objectUtil.set(data, config.mobile_image_variable, objectUtil.get(data, config.desktop_image_variable));
         }
-        
+
         return data;
     };
-    
+
     return EmptyMobileImage;
 });
 ```
@@ -460,7 +451,6 @@ When creating your preview component there are some additional settings you can 
 | Property                 | Description                                                                                                                         | Example        |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 |`fieldsToIgnoreOnRemove`| An array containing field names to ignore when evaluating whether an element has been configured. This is utilised when deciding whether to display the confirmation on removal of a content type. The default value is an empty array. | `["tab_name"]` |
-{:style="table-layout:auto"}
 
 <!-- {% endraw %} -->
 
@@ -480,7 +470,6 @@ We discourage modifying existing menu sections if they do not belong to your mod
 | `translate`         | Determine which aspects of the menu section should be translated.                                                                                    |
 | `sortOrder`         | The sort order in relation to other menu sections, within our configuration we step these 10 integers apart to allow for new sections to be added in between. |
 | `label`             | The label to be displayed within the left menu    |
-{:style="table-layout:auto"}
 
 The following is an example of a menu section configuration in `view/adminhtml/pagebuilder/menu_section.xml`:
 

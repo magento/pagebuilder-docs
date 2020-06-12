@@ -8,7 +8,7 @@ An **appearance** is an XML element (in the content type's configuration file) t
 
 Many of Page Builder's content types have only one `appearance` element. These include the Heading, Text, Image, Video, Tabs, and more. Other content types have several appearances. For example, the Banner content type has four appearances, as shown here:
 
-![banner-appearances](../images/banner-appearances.png)  
+![banner-appearances](../images/banner-appearances.png)
 
 Page Builder defines these appearances in the Banner's configuration file (`Magento/PageBuilder/view/adminhtml/pagebuilder/content_type/banner.xml`), as shown here:
 
@@ -21,7 +21,7 @@ Page Builder defines these appearances in the Banner's configuration file (`Mage
 </appearances>
 ```
 
-In Page Builder 1.0.0, when you customize content types that have multiple appearances (like the Banner), you must apply your changes to all the appearances, not just one. Customizing a single appearance of a content type that defines multiple appearances is not currently supported.  
+In Page Builder 1.0.0, when you customize content types that have multiple appearances (like the Banner), you must apply your changes to all the appearances, not just one. Customizing a single appearance of a content type that defines multiple appearances is not currently supported.
 You can use appearances to change content types in the following ways:
 
 - Add new style properties.
@@ -34,7 +34,7 @@ You can use appearances to change content types in the following ways:
 
 In this tutorial, you will learn how to extend one of Page Builder's existing content types by adding a new `max-height` style property to the Banner's existing appearances.
 
-![Page Builder Banner menu item](../images/extend-banner-menu.png){:width="815px" height="auto"}
+![Page Builder Banner menu item](../images/extend-banner-menu.png)
 
 ## Banner extension steps
 

@@ -4,7 +4,7 @@ By default, the Page Builder panel has four menu sections (Layout, Elements, Med
 
 ![Panel menu](../images/panel-horizontal-default.png)
 
-These menu sections are defined in the Page Builder `menu_section.xml` file and can be extended and customized from your content type by adding new menu sections with unique names and/or changing the `label` and `sortOrder` of the existing menu sections noted in the table below. 
+These menu sections are defined in the Page Builder `menu_section.xml` file and can be extended and customized from your content type by adding new menu sections with unique names and/or changing the `label` and `sortOrder` of the existing menu sections noted in the table below.
 
 | name          | label       | sortOrder | purpose                                                |
 | ------------- | ----------- | --------- | ------------------------------------------------------ |
@@ -12,7 +12,6 @@ These menu sections are defined in the Page Builder `menu_section.xml` file and 
 | `elements`    | Elements    | 10        | Groups common text and input elements                  |
 | `media`       | Media       | 20        | Groups visual and interactive elements                 |
 | `add_content` | Add Content | 30        | Groups dynamic storefront elements                     |
-{:style="table-layout:auto"}
 
 ## Overview
 
@@ -43,7 +42,7 @@ To rename the panel menu sections, you need to extend the defaults configured in
     </config>
     ```
 
-3. Change one or more of the existing menu sections by overriding their `label` values. This example changes the layout menu section from "Layout" to "Structure": 
+3. Change one or more of the existing menu sections by overriding their `label` values. This example changes the layout menu section from "Layout" to "Structure":
 
     ```xml
     <?xml version="1.0"?>
@@ -54,7 +53,7 @@ To rename the panel menu sections, you need to extend the defaults configured in
 
 ## Reorder panel menu sections
 
-To reorder existing panel menu sections, you need to override the default `sortOrder`s applied to existing panel menu sections. The `sortOrder` is defined as a `byte` value, so technically, it can be set any where from -128 to 127, but we don't recommend using negative values! Just keep the byte value in mind when you try to set the `sortOrder` above 127. The following example changes the order of the `layout` and `elements` menu sections to display as the last two menu sections. 
+To reorder existing panel menu sections, you need to override the default `sortOrder`s applied to existing panel menu sections. The `sortOrder` is defined as a `byte` value, so technically, it can be set any where from -128 to 127, but we don't recommend using negative values! Just keep the byte value in mind when you try to set the `sortOrder` above 127. The following example changes the order of the `layout` and `elements` menu sections to display as the last two menu sections.
 
 ```xml
 <?xml version="1.0"?>

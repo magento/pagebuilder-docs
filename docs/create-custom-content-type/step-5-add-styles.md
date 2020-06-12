@@ -4,7 +4,7 @@ In this step, we will create CSS styles (using LESS) to define the Quote's base 
 
 ## About styles
 
-Page Builder provides two ways to style your content type's HTML templates using LESS: 
+Page Builder provides two ways to style your content type's HTML templates using LESS:
 
 1. You can use the standard `class` attribute to define the base look and feel of a content type.
 
@@ -16,17 +16,17 @@ The `class` attribute is the typical, non-dynamic way to including static class 
 
 ### `css` attribute
 
-The `css` attribute gives end-users the option to customize the appearance of your content type using CSS classes. As the developer, you determine the list of CSS classes you want to provide as options. 
+The `css` attribute gives end-users the option to customize the appearance of your content type using CSS classes. As the developer, you determine the list of CSS classes you want to provide as options.
 
 Unlike the `class` attribute, which always includes the defined classes, the `css` attribute provides a binding to a form field in your content type. End-users then use that form field to add the CSS class values that are in turn applied to the HTML template.
 
-The following diagram details how the `css` binding works starting from the HTML template (`preview.html`), the configuration (`example_quote.xml`), the form field from `pagebuilder_example_quote_form.xml`, to the CSS stylesheet (`_import.less`) and finally to the rendered HTML. The highlighted parts of the code and the arrows between them should give you a good idea for how things are connected to make the `css` binding work. 
+The following diagram details how the `css` binding works starting from the HTML template (`preview.html`), the configuration (`example_quote.xml`), the form field from `pagebuilder_example_quote_form.xml`, to the CSS stylesheet (`_import.less`) and finally to the rendered HTML. The highlighted parts of the code and the arrows between them should give you a good idea for how things are connected to make the `css` binding work.
 
-![Create config file](../images/step5-css-binding.png){:width="745px" height="auto"}
+![Create config file](../images/step5-css-binding.png)
 
 As shown, the end result appends the user-entered CSS classes to the rendered template element along with any other `class` styles you already defined.
 
-The `pagebuilder_base_form` has a form field for the `css` attribute already built-in as shown here:  
+The `pagebuilder_base_form` has a form field for the `css` attribute already built-in as shown here:
 
 ![Create config file](../images/css-classes-input-field.png)
 
@@ -222,7 +222,7 @@ Instead, we will use a simple `selector` to define and limit the color options a
 </field>
 ```
 
-When rendered in the form editor, the selector field provides users with a simple color list. Page Builder applies the class name as the selected value: 
+When rendered in the form editor, the selector field provides users with a simple color list. Page Builder applies the class name as the selected value:
 
 ![Create config file](../images/step5-quote-color-selector.png)
 
@@ -262,7 +262,7 @@ The full file contents for both the `adminhtml` and `frontend` LESS files are pr
 
 ### LESS for `adminhtml`
 
-The `_import.less` file content for the Admin preview template: 
+The `_import.less` file content for the Admin preview template:
 
 ```css
 // Content type's base styling

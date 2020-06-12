@@ -8,7 +8,7 @@ Page Builder Admin icons follow the same design principles as the core [Magento 
 
 Here are the available Page Builder Admin font icons (with class names) for use within your content type:
 
-![Page Builder admin icons](../images/pagebuilder-icons.png){:width="870px" height="auto"}
+![Page Builder admin icons](../images/pagebuilder-icons.png)
 
 Page Builder references these icons by their class names. For example, Page Builder's Heading content type references `icon-pagebuilder-heading` for its panel icon configuration file, as shown here:
 
@@ -50,7 +50,7 @@ You can use these icon class names in your own content types or create your own 
 
 ## Creating SVG or PNG icons
 
-To add your own icons, we recommend creating SVG images because they are smaller and render more clearly on high-resolution screens, including mobile devices. 
+To add your own icons, we recommend creating SVG images because they are smaller and render more clearly on high-resolution screens, including mobile devices.
 
 The size, appearance, and color of your images depend on where within Page Builder you want to use them. You can add icons to Page Builder in three areas:
 
@@ -80,23 +80,23 @@ Stage images can be a variety of sizes. For example, Page Builder's `cms-empty-r
 
 ![Create config file](../images/iconography-stage-images.png)
 
-Again, take note of its simple design and subtle color. 
+Again, take note of its simple design and subtle color.
 
 ## Adding your images
 
-Add all your SVG and/or PNG icons to the `adminhtml/web/css/images` directory for your content type. For example, if your content type is called `example-quote`, you would put your icons in `adminhtml/web/css/images/content-type/example-quote/appearance/`, as follows: 
+Add all your SVG and/or PNG icons to the `adminhtml/web/css/images` directory for your content type. For example, if your content type is called `example-quote`, you would put your icons in `adminhtml/web/css/images/content-type/example-quote/appearance/`, as follows:
 
 ![Create config file](../images/iconography-adding-icons.png)
 
 ## Create CSS classes
 
-As discussed earlier in this topic, Page Builder references its icon fonts using class names from a variety of locations, such as the panel, the toolbar, and the visual selectors within forms. To participate in this icon system, you need to create a CSS class for each SVG and/or PNG image you want to reference by class name. 
+As discussed earlier in this topic, Page Builder references its icon fonts using class names from a variety of locations, such as the panel, the toolbar, and the visual selectors within forms. To participate in this icon system, you need to create a CSS class for each SVG and/or PNG image you want to reference by class name.
 
 Add the CSS classes for your icons to your LESS file in `adminhtml` (and to the `frontend` LESS file if relevant), as shown here:
 
 ![Create config file](../images/step6-icon-style.png)
 
-The following CSS rule set shows one general way to link your icons through CSS:  
+The following CSS rule set shows one general way to link your icons through CSS:
 
 ```css
 .icon-pagebuilder-quote {
@@ -114,9 +114,8 @@ If you create an icon for the panel, replace the `background-image` attribute wi
 | `background-image url` | The `url` used for the `background-image` is the most critical part of your own CSS classes. Always use the `@{baseDir}` variable followed by your full module name, followed by the path to your image, starting with `css`. When deployed, Page Builder creates a link in the static output where the browser can resolve it, as described below. |
 | `width`                | Sets the width of the icon image.                            |
 | `height`               | Sets the height of the icon image.                           |
-{:style="table-layout:auto"}
 
-When deployed, your CSS classes and links to your icons are generated in `pub/static`, as shown here: 
+When deployed, your CSS classes and links to your icons are generated in `pub/static`, as shown here:
 
 ![Create config file](../images/step6-icon-link-static.png)
 
@@ -125,8 +124,6 @@ For more general information about Magento's Admin icons and how to create your 
 * [Magento Admin icons]
 * [Create your own icons]
 * [The CMS icons repository]
-
-
 
 [Magento Admin icons]: https://devdocs.magento.com/guides/v2.2/pattern-library/graphics/iconography/iconography.html
 [Create your own icons]: https://devdocs.magento.com/guides/v2.2/pattern-library/graphics/iconography/iconography.html#creating-icons

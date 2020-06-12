@@ -44,7 +44,6 @@ The following table lists the Page Builder events you can bind to and handle wit
 | [image:{{preview.contentType.id}}:assignAfter](#imageidassignafter) | [googleMaps:authFailure](#googlemapsauthfailure)                                   |
 | [image:mountAfter](#imagemountafter)                | [state](#state)                                                    |
 | [image:uploadAfter](#imageuploadafter)              | [{{config.name}}:{{preview.contentType.id}}:updateAfter](#confignameidupdateafter)        |
-{:style="table-layout:auto"}
 
 ## Event details
 
@@ -65,7 +64,6 @@ events.on("contentType:createAfter", function (params) {});
 | ------------- | ----------------------------------------------------------- |
 | `id`          | `string`                                                    |
 | `contentType` | `ContentType` or `ContentTypeCollection` |
-{:style="table-layout:auto"}
 
 [Back to top]
 
@@ -81,8 +79,6 @@ events.on("contentType:mountAfter", function (params) {});
 | ------------- | ------------- |
 | `id`          | `string`      |
 | `contentType` | `ContentType` |
-{:style="table-layout:auto"}
-
 
 #### ContentTypeCollection
 
@@ -95,10 +91,8 @@ events.on("contentType:mountAfter", function (params) {});
 | `id`             | `string`                |
 | `contentType`    | `ContentTypeCollection` |
 | `expectChildren` | `number`                |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `contentType:dropAfter`
 
@@ -110,10 +104,8 @@ events.on("contentType:dropAfter", function (params) {});
 | ------------- | ----------------------------------------------------------- |
 | `id`          | `string`                                                    |
 | `contentType` | `ContentType` or `ContentTypeCollection`                    |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `contentType:renderAfter`
 
@@ -126,10 +118,8 @@ events.on("contentType:renderAfter", function (params) {});
 | `id`          | `string`                                                    |
 | `element`     | `HTMLElement`                                                   |
 | `contentType` | `ContentType` or `ContentTypeCollection` |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `contentType:removeAfter`
 
@@ -143,10 +133,8 @@ events.on("contentType:removeAfter", function (params) {});
 | `index`       | `number`                                       |
 | `parentContentType`      | `ContentType` or `ContentTypeCollection` |
 | `stageId`     | `string`                                       |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `contentType:duplicateAfter`
 
@@ -160,10 +148,8 @@ events.on("contentType:duplicateAfter", function (params) {});
 | `duplicateContentType` | `ContentType` or `ContentTypeCollection` |
 | `index`                | `number`                                                    |
 | `direct`               | `boolean`                                                   |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `contentType:moveBefore`
 
@@ -178,10 +164,8 @@ events.on("contentType:moveBefore", function (params) {});
 | `targetParent` | `ContentTypeCollection`                            |
 | `targetIndex`  | `number`                                                    |
 | `stageId`      | `string`                                                    |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `contentType:moveAfter`
 
@@ -196,10 +180,8 @@ events.on("contentType:moveAfter", function (params) {});
 | `targetParent` | `ContentTypeCollection`                            |
 | `targetIndex`  | `number`                                                    |
 | `stageId`      | `string`                                                    |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `contentType:redrawAfter`
 
@@ -213,17 +195,14 @@ events.on("contentType:redrawAfter", function (params) {});
 | ------------- | ----------------------------------------------------------- |
 | `id`          | `string`                                                    |
 | `contentType` | `ContentType` or `ContentTypeCollection` |
-{:style="table-layout:auto"}
 
 #### Frontend
 
 | Params    | Type          |
 | --------- | ------------- |
 | `element` | `HTMLElement` |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `column:dragStart`
 
@@ -235,7 +214,6 @@ events.on("column:dragStart", function (params) {});
 | --------- | ---------------------- |
 | `column`  | `ContentTypeCollection` |
 | `stageId` | `string`               |
-{:style="table-layout:auto"}
 
 [Back to top]
 
@@ -250,10 +228,8 @@ events.on("column:dragStop", function (params) {});
 | --------- | ---------------------- |
 | `column`  | `ContentTypeCollection` |
 | `stageId` | `string`               |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `column:initializeAfter`
 
@@ -266,10 +242,8 @@ events.on("column:initializeAfter", function (params) {});
 | `column`  | `Column`      |
 | `element`  | `Element` |
 | `columnGroup` | `ColumnGroup`     |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `image:{{preview.contentType.id}}:assignAfter` {#imageidassignafter}
 
@@ -280,10 +254,8 @@ events.on(`image:${this.contentType.id}:assignAfter`, function (params) {});
 | Params        | Type   |
 | ------------- | ------ |
 | `imageObject` | `File` |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `image:mountAfter`
 
@@ -296,10 +268,8 @@ events.on("image:mountAfter", function (params) {});
 | `id`             | `string` |
 | `contentType`    | `ContentType` |
 | `expectChildren` | `number` |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `image:uploadAfter`
 
@@ -310,10 +280,8 @@ events.on("image:uploadAfter", function (params) {});
 | Params | Type   |
 | ------ | ------ |
 | `file` | `File` |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `stage:{{preview.contentType.stageId}}:readyAfter`
 
@@ -324,10 +292,8 @@ events.on(`stage:${this.contentType.stageId}:readyAfter`, function (params) {});
 | Params  | Type    |
 | ------- | ------- |
 | `stage` | `Stage` |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `stage:{{preview.contentType.stageId}}:renderAfter`
 
@@ -338,10 +304,8 @@ events.on(`stage:${this.contentType.stageId}:renderAfter`, function (params) {})
 | Params  | Type    |
 | ------- | ------- |
 | `stage` | `Stage` |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `stage:interactionStart`
 
@@ -352,10 +316,8 @@ events.on("stage:interactionStart", function (params) {});
 | Params    | Type     |
 | --------- | -------- |
 | `stageId` | `string` |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `stage:interactionStop`
 
@@ -366,10 +328,8 @@ events.on("stage:interactionStop", function (params) {});
 | Params    | Type     |
 | --------- | -------- |
 | `stageId` | `string` |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `stage:{{preview.contentType.stageId}}:fullScreenModeChangeAfter` {#stageidtogglefullscreen}
 
@@ -380,10 +340,8 @@ events.on(`stage:${this.contentType.stageId}:fullScreenModeChangeAfter`, functio
 | Params       | Type      |
 | ------------ | --------- |
 | `fullScreen` | `boolean` |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `childContentType:sortStart`
 
@@ -396,10 +354,8 @@ events.on("childContentType:sortStart", function (params) {});
 | `instance`         | `ContentTypeCollection`     |
 | `originalPosition` | `number`                    |
 | `ui`               | `JQueryUI.SortableUIParams` |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `childContentType:sortUpdate`
 
@@ -414,10 +370,8 @@ events.on("childContentType:sortUpdate", function (params) {});
 | `originalPosition` | `number`                    |
 | `ui`               | `JQueryUI.SortableUIParams` |
 | `event`            | `jQuery.Event`                     |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `stage:error`
 
@@ -428,10 +382,8 @@ events.on("stage:error", function (params) {});
 | Params  | Type    |
 | ------- | ------- |
 | `error` | `Error` |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `stage:{{preview.contentType.stageId}}:readyAfter` {#stageidreadyafter}
 
@@ -442,10 +394,8 @@ events.on(`stage:${this.contentType.stageId}:readyAfter`, function (params) {});
 | Params  | Type    |
 | ------- | ------- |
 | `stage` | `Stage` |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `stage:{{preview.contentType.stageId}}:masterFormatRenderAfter` {#stageidmasterformatrenderafter}
 
@@ -456,10 +406,8 @@ events.on(`stage:${this.contentType.stageId}:masterFormatRenderAfter`, function 
 | Params           | Type     |
 | ---------------- | -------- |
 | `renderedOutput` | `string` |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `stage:updateAfter`
 
@@ -470,10 +418,8 @@ events.on("stage:updateAfter", function (params) {});
 | Params    | Type     |
 | --------- | -------- |
 | `stageId` | `string` |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `stage:childFocusStart`
 
@@ -484,10 +430,8 @@ events.on("stage:childFocusStart", function () {});
 | Params | Type |
 | ------ | ---- |
 | `None` |      |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `stage:childFocusStop`
 
@@ -498,7 +442,6 @@ events.on("stage:childFocusStop", function () {});
 | Params | Type |
 | ------ | ---- |
 | `None` |      |
-{:style="table-layout:auto"}
 
 [Back to top]
 
@@ -512,10 +455,8 @@ events.on("state", function (params) {});
 | Params  | Type        |
 | ------- | ----------- |
 | `state` | `DataStore` |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `{{config.name}}:{{preview.contentType.id}}:updateAfter` {#confignameidupdateafter}
 
@@ -526,10 +467,8 @@ events.on(`${this.config.name}:${this.contentType.id}:updateAfter`, function (pa
 | Params        | Type          |
 | ------------- | ------------- |
 | `contentType` | `ContentType` |
-{:style="table-layout:auto"}
 
 [Back to top]
-
 
 ### `googleMaps:authFailure`
 
@@ -540,11 +479,8 @@ events.on("googleMaps:authFailure", function () {});
 | Params | Type |
 | ------ | ---- |
 | `None` |      |
-{:style="table-layout:auto"}
 
 [Back to top]
-
-
 
 [Back to top]: #events-list
 

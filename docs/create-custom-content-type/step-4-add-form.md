@@ -10,7 +10,7 @@ Page Builder provides two base forms that give you a ton of functionality you ca
 
 - `pagebuilder_base_form_with_background_attributes` (inherits from `pagebuilder_base_form`)
 
-Inheriting from either base form gives you an editor for your content type that slides out from the right side of the Admin screen. 
+Inheriting from either base form gives you an editor for your content type that slides out from the right side of the Admin screen.
 
 ### `pagebuilder_base_form`
 
@@ -45,7 +45,7 @@ Add your form and layout files to your module in the following locations:
 In your configuration file, add your form name (without the .xml file extension) to the `form` attribute within the `<type>` element, as shown here:
 
 ```xml
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
     <type name="example_quote"
         label="Quote"
@@ -56,7 +56,6 @@ In your configuration file, add your form name (without the .xml file extension)
 | Attribute | Description                                                  |
 | --------- | ------------------------------------------------------------ |
 | `form`    | Name of the UI component form that provides the form editor for your content type. |
-{:style="table-layout:auto"}
 
 ## The Quote form
 
@@ -72,7 +71,6 @@ The purpose of each field is described as follows:
 | Author        | A text input field for the author's name.                    |
 | Description   | A text input field to describe the author's title or origin of the quote. |
 | CSS for Quote | A text input field for end-users to add CSS class names for styling the text in the Quote field. This option is detailed in [Step 5: Add styles](step-5-add-styles.md). |
-{:style="table-layout:auto"}
 
 The Quote form is shown in full here for you to copy into your `pagebuilder_example_form.xml` file, followed by descriptions of the key parts.
 
@@ -226,7 +224,7 @@ To ensure your appearance field renders, create a `di.xml` file located here:
 </config>
 ```
 
-Again, even though our Quote control doesn't currently define an appearance, we must implement all the parts so that other modules can expect each Page Builder content type to have an appearance defined, even if it is not used. 
+Again, even though our Quote control doesn't currently define an appearance, we must implement all the parts so that other modules can expect each Page Builder content type to have an appearance defined, even if it is not used.
 
 ### fieldset
 
@@ -236,7 +234,6 @@ Page Builder requires fields to be grouped within named `<fieldset>` elements. F
 | ----------- | ------------------------------------------------------------ |
 | `name`      | You can name your fieldset whatever you want. Currently, it has no significance for data binding. |
 | `sortOrder` | Determines where Page Builder puts the fieldset within the editor in relation to other fieldsets. Page Builder sets the `sortOrder` for the `pagebuilder_base_form` fieldset to `90`. Setting your fieldset to a value less than that (such as `20`) will put your fieldset above both inherited fieldsets. A value greater than `90` will put your fieldset below the inherited fieldsets. |
-{:style="table-layout:auto"}
 
 ### field
 
@@ -247,7 +244,6 @@ The `<field>` element creates the actual HTML form element as specified by the `
 | `name`        | The name of the field used for data bindings.                |
 | `sortOrder`   | Determines where Page Builder puts the field within the fieldset in relation to other fields. |
 | `formElement` | Determines the HTML form element to render for the field.    |
-{:style="table-layout:auto"}
 
 ### data source
 
@@ -281,7 +277,6 @@ The `<settings>` element defines the data scope, data type, and label to use for
 | `dataScope` | Specifies the name of your input field for data binding. The `dataScope` node allows you to change the value of the `name` attribute for your input field. We do not need to change the field name value, so we keep our dataScope value the same as our field name. |
 | `dataType`  | Specifies the data type for the field's data. Common values are `text` and `boolean`. |
 | `label`     | Specifies the text label applied to the input field on the form. |
-{:style="table-layout:auto"}
 
 ## Quote form layout
 
@@ -345,7 +340,6 @@ The `<element>` element provides a scope for the data bindings within it.
 | Attribute | Description                                                  |
 | --------- | ------------------------------------------------------------ |
 | `name`    | Specifies the name of the element scope for the data binding when applied to template elements. In our example, the element name of `main` is used as the scope for binding styles and other attributes to the top-level `<div>` element in our template: `<div attr="data.main.attributes" ko-style="data.main.style">` |
-{:style="table-layout:auto"}
 
 #### style
 
@@ -359,7 +353,6 @@ The `<style>` element configures the bindings from the form style fields to the 
 | `preview_converter` | Converts the value for the preview. Used for cases where the conversion logic is different between the two views. |
 | `storage_key`       | Optional variable name for value in the data storage. If no value is provided, the `name` attribute will be used. |
 | `reader`            | Reader used for parsing attributes and properties out of the DOM. Should not be used with read-only persistence_mode. |
-{:style="table-layout:auto"}
 
 #### attribute
 
@@ -369,7 +362,6 @@ The `<attribute>` element provides a mechanism to attach DOM attributes to templ
 | --------- | ------------------------------------------------------------ |
 | `name`    | Unique name used for configuration merging, and the default value for storage_key if none is provided. |
 | `source`  | The name of the property or attribute in the DOM. Must be in snake_case. |
-{:style="table-layout:auto"}
 
 #### css
 
@@ -378,9 +370,8 @@ The `<css>` element sets the binding for the CSS Classes form field (`css_classe
 | Attribute | Description                                      |
 | --------- | ------------------------------------------------ |
 | `name`    | Specifies the name of the form field to bind to. |
-{:style="table-layout:auto"}
 
-For example, in our Quote configuration, we define an `<element>` named `quote` with a `<css>` element bound to an input field in our form named `quote_css`, as shown here: 
+For example, in our Quote configuration, we define an `<element>` named `quote` with a `<css>` element bound to an input field in our form named `quote_css`, as shown here:
 
 ```xml
 <!-- from example_quote.xml -->
@@ -424,9 +415,8 @@ The `<html>` element binds the HTML content entered in a form field. When the `<
 | Attribute | Description                                      |
 | --------- | ------------------------------------------------ |
 | `name`    | Specifies the name of the form field to bind to. |
-{:style="table-layout:auto"}
 
-For example, as with the previous `css` binding, the Quote configuration defines the `<element>` named `quote` with an `<html>` element that is bound to an input field in our form named `quote_text`, as shown here: 
+For example, as with the previous `css` binding, the Quote configuration defines the `<element>` named `quote` with an `<html>` element that is bound to an input field in our form named `quote_text`, as shown here:
 
 ```xml
 <!-- from example_quote.xml -->
@@ -465,4 +455,3 @@ And the `html` binding is applied in the `master.html` template, as shown here:
 ## Next
 
 [Step 5: Add styles](step-5-add-styles.md)
-
