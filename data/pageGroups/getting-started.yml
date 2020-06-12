@@ -1,7 +1,7 @@
 order: 1
 title: Getting started
 name: getting-started
-url: /index/
+url: /intro/
 pages:
   - title: What is Page Builder?
-    url: /index/
+    url: /intro/
