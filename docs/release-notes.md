@@ -9,7 +9,7 @@ The release notes include:
 
 ## **1.4.0** for Magento Commerce 2.4.0
 
-- {:.new}<!-- PB-494 -->Added support for PHP 7.4
+- {:.new}<!-- PB-494 -->Added support for PHP 7.4.
 
 - {:.fix}<!-- MC-31247 -->Fixed an issue where the Products content type did not show configurable products when the condition was set to price.
 
