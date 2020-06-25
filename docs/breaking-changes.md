@@ -16,7 +16,7 @@ We’re sorry if these changes cause you any disruption. But we strongly believe
 
 ## Master Format Changes
 
-The `data-role` attribute is now called `data-content-type`.  We strongly believe this makes understanding the purpose of the element and attribute much easier, as `data-role` is already used for several other features in Magento.
+The `data-role` attribute is now called `data-content-type`. We strongly believe this makes understanding the purpose of the element and attribute much easier, as `data-role` is already used for several other features in Magento.
 
 This change causes existing content to load as HTML code within your content type. To fix this issue, run the following command on your MySQL database:
 
@@ -53,17 +53,21 @@ We've also improved the naming of various properties in the JavaScript classes w
 - From the `preview` and `master` components, you now access the content type instance through `contentType` instead of previously using `parent`. For example, event code using `parent` will need to be updated to contentType:
 
   ```js
-  events.on(`${this.config.name}:${this.parent.id}:updateAfter`, function (args) {
-       console.log(self.parent);
-  });
+  events.on(`${this.config.name}:${this.parent.id}:updateAfter`, function(
+    args
+  ) {
+    console.log(self.parent)
+  })
   ```
 
   Changes to:
 
   ```js
-  events.on(`${this.config.name}:${this.contentType.id}:updateAfter`, function (args) {
-       console.log(self.contentType);
-  });
+  events.on(`${this.config.name}:${this.contentType.id}:updateAfter`, function(
+    args
+  ) {
+    console.log(self.contentType)
+  })
   ```
 
 - `render_template` is renamed to `master_template`:
@@ -84,8 +88,6 @@ We've also improved the naming of various properties in the JavaScript classes w
                reader="Magento_PageBuilder/js/master-format/read/configurable">
   ```
 
-  
+* `is_visible` is renamed to `is_system`. If your content type modifies this attribute, you will need to update your reference in the configuration file.
 
-- `is_visible` is renamed to `is_system`. If your content type modifies this attribute, you will need to update your reference in the configuration file.
-
-- `renderChildTemplate` is renamed to `masterTemplate` and `previewChildTemplate` is renamed to `childTemplate`. If you have a container content type which renders children, you will need to update these references in your code.
+* `renderChildTemplate` is renamed to `masterTemplate` and `previewChildTemplate` is renamed to `childTemplate`. If you have a container content type which renders children, you will need to update these references in your code.

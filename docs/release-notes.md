@@ -7,6 +7,20 @@ The release notes include:
 - {:.new}New features
 - {:.fix}Fixes and improvements
 
+## **1.4.0** for Magento Commerce 2.4.0
+
+- {:.fix}<!-- MC-31247 -->Fixed an issue where the Products content type did not show configurable products when the condition was set to price.
+
+- {:.fix}<!-- PB-179 -->Fixed the Products alignment configuration to position only the product container itself, not the contents of the product container, such as the product name, price, buttons, images, and other elements.
+
+- {:.fix}<!-- MC-33556 -->Performance improvements.
+
+- {:.fix}<!-- MC-32883 -->Security enhancements.
+
+## **1.3.2** for Magento Commerce 2.3.5-p2
+
+- {:.new}Security enhancements.
+
 ## **1.3.1** for Magento Commerce 2.3.5-p1
 
 This version of Page Builder is just a version-number update for Magento 2.3.5-p1. All features described for version 1.3.0 apply to this version as well.
@@ -14,25 +28,25 @@ This version of Page Builder is just a version-number update for Magento 2.3.5-p
 ## **1.3.0** for Magento Commerce 2.3.5
 
 - {:.new}**Templates**<br/>
-   Page Builder now has templates that can be created from existing content and applied to new content areas. Page Builder templates save both content and layouts of existing pages, blocks, dynamic blocks, product attributes, and category descriptions. For example, you can save an existing Page Builder CMS page as a template and then apply that template (with all its content and layouts) to quickly create new CMS Pages for your site. This new feature is documented here: [Templates](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-templates.html).
+  Page Builder now has templates that can be created from existing content and applied to new content areas. Page Builder templates save both content and layouts of existing pages, blocks, dynamic blocks, product attributes, and category descriptions. For example, you can save an existing Page Builder CMS page as a template and then apply that template (with all its content and layouts) to quickly create new CMS Pages for your site. This new feature is documented here: [Templates](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-templates.html).
 
 - {:.new}**Video Backgrounds for Rows, Banners, and Sliders**<br/>
-   Page Builder Rows, Banners, and Sliders now have the option to use videos for their backgrounds. These new features are documented here: [Rows](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-layout-row.html), [Banners](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-banner.html), [Sliders](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-slider.html).
+  Page Builder Rows, Banners, and Sliders now have the option to use videos for their backgrounds. These new features are documented here: [Rows](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-layout-row.html), [Banners](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-banner.html), [Sliders](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-slider.html).
 
 - {:.new}**Video support additions and enhancements**<br/>
-   Page Builder now supports a wider variety of video formats. In addition to YouTube and Vimeo videos, the Video content type and the video backgrounds now support video URL links to video formats like `.mp4` and other browser-supported formats. The Video content type also adds an autoplay feature. These new features are documented here: [Video content type](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-video.html).
+  Page Builder now supports a wider variety of video formats. In addition to YouTube and Vimeo videos, the Video content type and the video backgrounds now support video URL links to video formats like `.mp4` and other browser-supported formats. The Video content type also adds an autoplay feature. These new features are documented here: [Video content type](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-video.html).
 
 - {:.new}**Full Height Rows, Banners, and Sliders**<br/>
-   Page Builder Rows, Banners, and Sliders now have the option to set their heights to the full-height of the page using a number with any CSS unit (px, %, vh, em) or a calculation between units (100vh - 237px). These new features are documented here: [Rows](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-layout-row.html), [Banners](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-banner.html), [Sliders](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-slider.html).
+  Page Builder Rows, Banners, and Sliders now have the option to set their heights to the full-height of the page using a number with any CSS unit (px, %, vh, em) or a calculation between units (100vh - 237px). These new features are documented here: [Rows](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-layout-row.html), [Banners](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-banner.html), [Sliders](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-slider.html).
 
 - {:.new}**Content type upgrade library**<br/>
-   We can now create new versions of Page Builder content types without introducing backward-incompatible issues with previous versions. Prior to this release, significant changes to content type configurations would create display and data-loss issues with previously saved Page Builder content types. Our new upgrade library eliminates these issues. We designed the library to upgrade previous versions of content types saved to the database so that they match the configuration changes in the new versions. Page Builder runs the upgrade library on native content types as needed for a new release. This ensures that the built-in Page Builder content types are always upgraded to match any changes we make to content types for a new release.
+  We can now create new versions of Page Builder content types without introducing backward-incompatible issues with previous versions. Prior to this release, significant changes to content type configurations would create display and data-loss issues with previously saved Page Builder content types. Our new upgrade library eliminates these issues. We designed the library to upgrade previous versions of content types saved to the database so that they match the configuration changes in the new versions. Page Builder runs the upgrade library on native content types as needed for a new release. This ensures that the built-in Page Builder content types are always upgraded to match any changes we make to content types for a new release.
 
-   {: .bs-callout .bs-callout-warning }
-   **Please Note:** If you have created additional database entities for storing Page Builder content, you _must_ add those entities to your `etc/di.xml`. If you do not, the Page Builder content stored in your entity will not be updated, causing potential data-loss and display issues. For example, if you have created a blog entity that stores Page Builder content, you must add your blog entity to your `etc/di.xml` file as an `UpgradableEntitiesPool` type so that the upgrade library can update the Page Builder content types used in your blog. For more information and instructions on using the upgrade library, see: [How to use the content type upgrade library](https://devdocs.magento.com/page-builder/docs/how-to/how-to-use-upgrade-library.html){:data-proofer-ignore='true'}.
+  {: .bs-callout .bs-callout-warning }
+  **Please Note:** If you have created additional database entities for storing Page Builder content, you _must_ add those entities to your `etc/di.xml`. If you do not, the Page Builder content stored in your entity will not be updated, causing potential data-loss and display issues. For example, if you have created a blog entity that stores Page Builder content, you must add your blog entity to your `etc/di.xml` file as an `UpgradableEntitiesPool` type so that the upgrade library can update the Page Builder content types used in your blog. For more information and instructions on using the upgrade library, see: [How to use the content type upgrade library](https://devdocs.magento.com/page-builder/docs/how-to/how-to-use-upgrade-library.html){:data-proofer-ignore='true'}.
 
 - {:.new}**Documentation on adding new Appearances**<br/>
-   Everything you need to know about [adding appearances](https://devdocs.magento.com/page-builder/docs/how-to/how-to-add-appearance.html) for existing or custom content types.
+  Everything you need to know about [adding appearances](https://devdocs.magento.com/page-builder/docs/how-to/how-to-add-appearance.html) for existing or custom content types.
 
 **Various fixes**
 
@@ -83,7 +97,6 @@ This version of Page Builder is just a version-number update for Magento 2.3.5-p
 
 - {:.new}Security enhancements.
 
-
 ## **1.1.0** for Magento Commerce 2.3.3
 
 - {:.new}<!-- MC-15250 -->Added explicit product sorting to the Products content type.
@@ -96,12 +109,12 @@ This version of Page Builder is just a version-number update for Magento 2.3.5-p
 
 - {:.fix}<!-- MC-4137 -->Updated TinyMCE to version 4.9.5. This update, along with our additional improvements, fixed several TinyMCE inline editor issues:
 
-   - {:.fix}Variables, images, & image links now get added where the cursor is place.
-   - {:.fix}Tables and table cells can now be center aligned.
-   - {:.fix}Copy/paste now pastes content at the cursor's position.
-   - {:.fix}Links can now be applied to selected text.
-   - {:.fix}Bullets are now properly aligned.
-   - {:.fix}Changes within the inline editor can now be saved without first clicking outside the editor.
+  - {:.fix}Variables, images, & image links now get added where the cursor is place.
+  - {:.fix}Tables and table cells can now be center aligned.
+  - {:.fix}Copy/paste now pastes content at the cursor's position.
+  - {:.fix}Links can now be applied to selected text.
+  - {:.fix}Bullets are now properly aligned.
+  - {:.fix}Changes within the inline editor can now be saved without first clicking outside the editor.
 
 - {:.fix}<!-- MC-3880 -->Fixed an issue in which the minimum height & vertical alignment was inconsistent between sections on the edit panel for each content type.
 
@@ -134,5 +147,4 @@ To learn more about Page Builder and Page Builder development:
 - For developers: [What is Page Builder?](https://devdocs.magento.com/page-builder/docs/index.html)
 - For end-users: [Page Builder User Guide](https://docs.magento.com/m2/ee/user_guide/cms/page-builder.html)
 
-
-[PWA Studio]: https://magento.github.io/pwa-studio/
+[pwa studio]: https://magento.github.io/pwa-studio/
