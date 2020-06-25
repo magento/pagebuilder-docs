@@ -7,6 +7,20 @@ The release notes include:
 - {:.new}New features
 - {:.fix}Fixes and improvements
 
+## **1.4.0** for Magento Commerce 2.4.0
+
+- {:.fix}<!-- MC-31247 -->Fixed an issue where the Products content type did not show configurable products when the condition was set to price.
+
+- {:.fix}<!-- PB-179 -->Fixed the Products alignment configuration to position only the product container itself, not the contents of the product container, such as the product name, price, buttons, images, and other elements.
+
+- {:.fix}<!-- MC-33556 -->Performance improvements.
+
+- {:.fix}Security enhancements.
+
+## **1.3.2** for Magento Commerce 2.3.5-p2
+
+- {:.new}Security enhancements.
+
 ## **1.3.1** for Magento Commerce 2.3.5-p1
 
 This version of Page Builder is just a version-number update for Magento 2.3.5-p1. All features described for version 1.3.0 apply to this version as well.
