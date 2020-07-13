@@ -1,0 +1,75 @@
+{
+    "name": "Page Builder",
+    "version": "1.0.0",
+    "description": "Page Builder developer documentation",
+    "author": "Page Builder Team",
+    "view_type": "mdbook",
+    "meta_keywords": "magento, page-builder",
+    "meta_description": "default description",
+    "publish_date": "07/28/2020",
+    "show_edit_github_banner": false,
+    "base_path": "https://raw.githubusercontent.com",
+    "pages": [
+      {
+        "importedFileName": "What is Page Builder?",
+        "path": "magento/magento2-page-builder-docs/master/index.md",
+        "title": "What is Page Builder?"
+      },
+      {
+        "importedFileName": "Getting started",
+        "pages": [
+          {
+            "importedFileName": "Install Page Builder",
+            "pages": [],
+            "path": "magento/magento2-page-builder-docs/master/docs/getting-started/install-pagebuilder.md",
+            "title": "Install Page Builder"
+          },
+          {
+            "importedFileName": "View Page Builder",
+            "pages": [],
+            "path": "magento/magento2-page-builder-docs/master/docs/getting-started/view-pagebuilder.md",
+            "title": "View Page Builder"
+          },
+          {
+            "importedFileName": "Install Page Builder Examples",
+            "pages": [],
+            "path": "magento/magento2-page-builder-docs/master/docs/getting-started/install-pagebuilder-examples.md",
+            "title": "Install Page Builder Examples"
+          }
+        ],
+        "path": "magento/magento2-page-builder-docs/master/index.md",
+        "title": "Getting started"
+      },
+      {
+        "importedFileName": "Extend a content type",
+        "title": "Extend a content type",
+        "path": "",
+        "pages": [
+          {
+            "importedFileName": "Overview",
+            "pages": [],
+            "path": "magento/magento2-page-builder-docs/master/docs/extend-existing-content-type/overview.md",
+            "title": "Create a Public Key Certificate"
+          },
+          {
+            "importedFileName": "Step 1. Create extension module",
+            "pages": [],
+            "path": "magento/magento2-page-builder-docs/master/docs/extend-existing-content-type/step-1-create-extension-module.md",
+            "title": "Step 1. Create extension module"
+          },
+          {
+            "importedFileName": "Step 2. Extend appearances",
+            "pages": [],
+            "path": "magento/magento2-page-builder-docs/master/docs/extend-existing-content-type/step-2-extend-appearances.md",
+            "title": "Step 2. Extend appearances"
+          },
+          {
+            "importedFileName": "Step 3. Extend forms",
+            "pages": [],
+            "path": "magento/magento2-page-builder-docs/master/docs/extend-existing-content-type/step-3-extend-forms.md",
+            "title": "Step 3. Extend forms"
+          }
+        ]
+      }
+    ]
+  }
