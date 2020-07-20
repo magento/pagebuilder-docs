@@ -11,65 +11,272 @@
     "base_path": "https://raw.githubusercontent.com",
     "pages": [
       {
-        "importedFileName": "What is Page Builder?",
-        "path": "magento/magento2-page-builder-docs/parliament-update/docs/index.md",
-        "title": "What is Page Builder?"
+        "title": "What is Page Builder?",
+        "path": "magento/magento2-page-builder-docs/master/docs/index.md"
       },
       {
-        "importedFileName": "Getting started",
+        "title": "Getting started",
+        "path": "",
         "pages": [
           {
-            "importedFileName": "Install Page Builder",
-            "pages": [],
-            "path": "magento/magento2-page-builder-docs/parliament-update/docs/getting-started/install-pagebuilder.md",
-            "title": "Install Page Builder"
+            "title": "Install Page Builder",
+            "path": "magento/magento2-page-builder-docs/master/docs/getting-started/install-pagebuilder.md",
+            "pages": []
           },
           {
-            "importedFileName": "View Page Builder",
-            "pages": [],
-            "path": "magento/magento2-page-builder-docs/parliament-update/docs/getting-started/view-pagebuilder.md",
-            "title": "View Page Builder"
+            "title": "View Page Builder",
+            "path": "magento/magento2-page-builder-docs/master/docs/getting-started/view-pagebuilder.md",
+            "pages": []
           },
           {
-            "importedFileName": "Install Page Builder Examples",
-            "pages": [],
-            "path": "magento/magento2-page-builder-docs/parliament-update/docs/getting-started/install-pagebuilder-examples.md",
-            "title": "Install Page Builder Examples"
+            "title": "Install Page Builder Examples",
+            "path": "magento/magento2-page-builder-docs/master/docs/getting-started/install-pagebuilder-examples.md",
+            "pages": []
           }
-        ],
-        "path": "magento/magento2-page-builder-docs/parliament-update/index.md",
-        "title": "Getting started"
+        ]
       },
       {
-        "importedFileName": "Extend a content type",
         "title": "Extend a content type",
         "path": "",
         "pages": [
           {
-            "importedFileName": "Overview",
-            "pages": [],
-            "path": "magento/magento2-page-builder-docs/parliament-update/docs/extend-existing-content-type/overview.md",
-            "title": "Create a Public Key Certificate"
+            "title": "Create a Public Key Certificate",
+            "path": "magento/magento2-page-builder-docs/master/docs/extend-existing-content-type/overview.md",
+            "pages": []
           },
           {
-            "importedFileName": "Step 1. Create extension module",
-            "pages": [],
-            "path": "magento/magento2-page-builder-docs/parliament-update/docs/extend-existing-content-type/step-1-create-extension-module.md",
-            "title": "Step 1. Create extension module"
+            "title": "Step 1. Create extension module",
+            "path": "magento/magento2-page-builder-docs/master/docs/extend-existing-content-type/step-1-create-extension-module.md",
+            "pages": []
           },
           {
-            "importedFileName": "Step 2. Extend appearances",
-            "pages": [],
-            "path": "magento/magento2-page-builder-docs/parliament-update/docs/extend-existing-content-type/step-2-extend-appearances.md",
-            "title": "Step 2. Extend appearances"
+            "title": "Step 2. Extend appearances",
+            "path": "magento/magento2-page-builder-docs/master/docs/extend-existing-content-type/step-2-extend-appearances.md",
+            "pages": []
           },
           {
-            "importedFileName": "Step 3. Extend forms",
-            "pages": [],
-            "path": "magento/magento2-page-builder-docs/parliament-update/docs/extend-existing-content-type/step-3-extend-forms.md",
-            "title": "Step 3. Extend forms"
+            "title": "Step 3. Extend forms",
+            "path": "magento/magento2-page-builder-docs/master/docs/extend-existing-content-type/step-3-extend-forms.md",
+            "pages": []
           }
         ]
+      },
+      {
+        "title": "Create a content type",
+        "path": "",
+        "pages": [
+          {
+            "title": "Overview",
+            "path": "magento/magento2-page-builder-docs/master/docs/create-custom-content-type/overview.md",
+            "pages": []
+          },
+          {
+            "title": "Step 1. Add configuration",
+            "path": "magento/magento2-page-builder-docs/master/docs/create-custom-content-type/step-1-add-configuration.md",
+            "pages": []
+          },
+          {
+            "title": "Step 2. Add templates",
+            "path": "magento/magento2-page-builder-docs/master/docs/create-custom-content-type/step-2-add-templates.md",
+            "pages": []
+          },
+          {
+            "title": "Step 3. Add components",
+            "path": "magento/magento2-page-builder-docs/master/docs/create-custom-content-type/step-3-add-components.md",
+            "pages": []
+          },
+          {
+            "title": "Step 4. Add form",
+            "path": "magento/magento2-page-builder-docs/master/docs/create-custom-content-type/step-4-add-form.md",
+            "pages": []
+          },
+          {
+            "title": "Step 5. Add styles",
+            "path": "magento/magento2-page-builder-docs/master/docs/create-custom-content-type/step-5-add-styles.md",
+            "pages": []
+          },
+          {
+            "title": "Step 6. Add form",
+            "path": "magento/magento2-page-builder-docs/master/docs/create-custom-content-type/step-6-add-icon.md",
+            "pages": []
+          },
+          {
+            "title": "Summary",
+            "path": "magento/magento2-page-builder-docs/master/docs/create-custom-content-type/summary.md",
+            "pages": []
+          }
+        ]
+      },
+      {
+        "title": "How-Tos",
+        "path": "",
+        "pages": [
+          {
+            "title": "Configure styling options",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-configure-styling-options.md",
+            "pages": []
+          },
+          {
+            "title": "Add an appearance",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-add-appearance.md",
+            "pages": []
+          },
+          {
+            "title": "Upgrade content types",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-use-upgrade-library.md",
+            "pages": []
+          },
+          {
+            "title": "Customize the panel",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-customize-panel.md",
+            "pages": []
+          },
+          {
+            "title": "Add an image uploader",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-add-image-uploader.md",
+            "pages": []
+          },
+          {
+            "title": "Add a storefront widget",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-add-storefront-widget.md",
+            "pages": []
+          },
+          {
+            "title": "Add a text editor",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-add-text-editor.md",
+            "pages": []
+          },
+          {
+            "title": "Add a custom toolbar",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-add-custom-toolbar.md",
+            "pages": []
+          },
+          {
+            "title": "Add icons and images",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-add-icons-images.md",
+            "pages": []
+          },
+          {
+            "title": "Change breakpoints",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-change-breakpoints.md",
+            "pages": []
+          },
+          {
+            "title": "Add additional configurations",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-add-additional-configurations.md",
+            "pages": []
+          },
+          {
+            "title": "Add a block chooser",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-add-block-chooser.md",
+            "pages": []
+          },
+          {
+            "title": "Use full-width layouts",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-use-full-width-layouts.md",
+            "pages": []
+          },
+          {
+            "title": "Customize selectors",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-customize-selectors.md",
+            "pages": []
+          },
+          {
+            "title": "Apply product conditions",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-apply-product-conditions.md",
+            "pages": []
+          },
+          {
+            "title": "Use server-side previews",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-use-server-side-previews.md",
+            "pages": []
+          },
+          {
+            "title": "Use Page Builder for product attributes",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-use-pagebuilder-for-product-attributes.md",
+            "pages": []
+          },
+          {
+            "title": "Deactivate Page Builder",
+            "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-deactivate-pagebuilder.md",
+            "pages": []
+          }
+        ]
+      },
+      {
+        "title": "BlueFoot content migration",
+        "path": "",
+        "pages": [
+          {
+            "title": "Overview of content migration",
+            "path": "magento/magento2-page-builder-data-migration/1.0.0-release/docs/index.md",
+            "pages": []
+          },
+          {
+            "title": "Install the migration module",
+            "path": "magento/magento2-page-builder-data-migration/1.0.0-release/docs/install-migration-module.md",
+            "pages": []
+          },
+          {
+            "title": "Run the migration module",
+            "path": "magento/magento2-page-builder-data-migration/1.0.0-release/docs/run-migration-module.md",
+            "pages": []
+          },
+          {
+            "title": "How content migration works",
+            "path": "magento/magento2-page-builder-data-migration/1.0.0-release/docs/how-content-migration-works.md",
+            "pages": []
+          },
+          {
+            "title": "Migrate content from custom blocks",
+            "path": "magento/magento2-page-builder-data-migration/1.0.0-release/docs/migrate-content-custom-blocks.md",
+            "pages": []
+          },
+          {
+            "title": "Migrate other BlueFoot content",
+            "path": "magento/magento2-page-builder-data-migration/1.0.0-release/docs/migrate-other-bluefoot-content.md",
+            "pages": []
+          }
+        ]
+      },
+      {
+        "title": "Reference",
+        "path": "",
+        "pages": [
+          {
+            "title": "Architecture",
+            "path": "magento/magento2-page-builder-docs/master/docs/reference/architecture.md",
+            "pages": []
+          },
+          {
+            "title": "Configurations",
+            "path": "magento/magento2-page-builder-docs/master/docs/reference/configurations.md",
+            "pages": []
+          },
+          {
+            "title": "Datastore",
+            "path": "magento/magento2-page-builder-docs/master/docs/reference/data-store.md",
+            "pages": []
+          },
+          {
+            "title": "Events",
+            "path": "magento/magento2-page-builder-docs/master/docs/reference/events.md",
+            "pages": []
+          },
+          {
+            "title": "Knockout bindings",
+            "path": "magento/magento2-page-builder-docs/master/docs/reference/knockout-bindings.md",
+            "pages": []
+          }
+        ]
+      },
+      {
+        "title": "Release notes",
+        "path": "magento/magento2-page-builder-docs/master/docs/release-notes.md"
+      },
+      {
+        "title": "Component status",
+        "path": "magento/magento2-page-builder-docs/master/docs/comp-status2.md"
       }
     ]
   }
