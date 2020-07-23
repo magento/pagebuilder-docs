@@ -1,7 +1,5 @@
 # Page Builder configurations
 
-<!-- {% raw %} -->
-
 You can use the content type and menu section configuration to add new content types, extend existing content types, add and modify menu sections present in the left menu and rearrange content types.
 
 ## Content Type Configuration
@@ -451,8 +449,6 @@ When creating your preview component there are some additional settings you can 
 | Property                 | Description                                                                                                                         | Example        |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 |`fieldsToIgnoreOnRemove`| An array containing field names to ignore when evaluating whether an element has been configured. This is utilised when deciding whether to display the confirmation on removal of a content type. The default value is an empty array. | `["tab_name"]` |
-
-<!-- {% endraw %} -->
 
 ### Menu Sections
 
