@@ -2,13 +2,13 @@
 
 The first step to creating appearance customizations for existing Page Builder content types is to create a standard Magento module. In this step, we create an empty module so we can add our appearance and form extensions in steps 2 and 3:
 
-![Completed extension file structure](../images/extension-file-structure-complete.png){:width="826px" height="auto"}
+![Completed extension file structure](../images/extension-file-structure-complete.png)
 
 ## Add a directory structure
 
 To create a module for the Banner extensions, name your vendor directory `Example` and name your module `PageBuilderExtensionBanner`, as shown here:
 
-![Minimum extension module structure](../images/banner-extension-file-structure.png){:width="530px" height="auto"}
+![Minimum extension module structure](../images/banner-extension-file-structure.png)
 
 The convention for naming extension modules is to prefix your extension of an existing content type with `PageBuilderExtension`, followed by the name of the content type. This is not a required convention, but we find it helps group extension modules within your vendor directory.
 

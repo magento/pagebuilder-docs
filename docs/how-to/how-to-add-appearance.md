@@ -55,7 +55,6 @@ The following table describes the configuration arguments for each appearance op
 | `title`         | Display name for the appearance option. Banner example: Poster. |
 | `icon`          | Path to the `.svg` icon for the appearance: `view/adminthtml/web/css/images/content-type/[content-type-name]/appearance/*.svg`. See [Creating an icon for your appearance](#create-an-appearance-icon) |
 | `noticeMessage` | (Not shown in example.) The `noticeMessage` displays a message below the appearance options when the appearance is selected. For example, two of the Row appearances (`full-width` and `full-bleed`) define `noticeMessage` strings that display when selected. |
-{:style="table-layout:auto"}
 
 To add more appearance options, simply create more `item` arrays with names that match the `value`, as shown here:
 

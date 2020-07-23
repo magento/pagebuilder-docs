@@ -8,38 +8,13 @@ Extends all `abstract` configuration.
 
 `Magento_PageBuilder/js/form/element/block-chooser` configuration options:
 
-<table>
-  <tr>
-    <th>Option </th>
-    <th>Type</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td><code>dataUrlConfigPath</code></td>
-    <td>String</td>
-    <td>The path inside the Page Builder configuration object that points to the controller URL used to request data for display in the grid. </br>For example, if you use the <code>additional_data</code> configuration feature and add the URL, you could specify <code>content_types.mycontenttype.additional_data.my_cusom_property.my_data_url</code>.</td>
-  </tr>
-  <tr>
-    <td><code>requestParameter</code></td>
-    <td>String</td>
-    <td>The parameter name under which the selected entity ID will be sent when the component retrieves the metadata from the controller (which is specified by <code>dataUrlConfigPath</code>). </br>The default template is expecting the associated controller to return (at minimum) <code>title</code> and <code>is_active</code>. You can override the component template with the <code>template</code> attribute for the <code>component</code> element, and display desired data using a custom controller.</td>
-  </tr>
-  <tr>
-    <td><code>modalName</code></td>
-    <td>String</td>
-    <td>The UI registry key to the UI component that is representing the modal containing the <code>pagebuild_block_select_grid</code> listing. </br>For example, if you include the modal element with the name <code>modal</code> in the root of your content type form, you could set it to <code>ns = ${ $.ns }, index = modal</code>.</td>
-  </tr>
-  <tr>
-    <td><code>buttonTitle</code></td>
-    <td>String</td>
-    <td>The text displayed on the button used to open the block selection modal.</td>
-  </tr>
-  <tr>
-    <td><code>displayMetadata</code></td>
-    <td>Boolean</td>
-    <td>Denotes whether to display the information grid describing the block in more detail; <code>true</code> by default.</td>
-  </tr>
-</table>
+| Option | Type | Description |
+| ------ | ---- | ------------|
+| `dataUrlConfigPath` | String | The path inside the Page Builder configuration object that points to the controller URL used to request data for display in the grid. For example, if you use the `additional_data` configuration feature and add the URL, you could specify content_types.`mycontenttype.additional_data.my_cusom_property.my_data_url`. |
+| `requestParameter` |String | The parameter name under which the selected entity ID will be sent when the component retrieves the metadata from the controller (which is specified by `dataUrlConfigPath`). The default template is expecting the associated controller to return (at minimum) `title` and `is_active`. You can override the component template with the `template` attribute for the `component` element, and display desired data using a custom controller. |
+| `modalName` | String | The UI registry key to the UI component that is representing the modal containing the `pagebuild_block_select_grid` listing. For example, if you include the modal element with the name `modal` in the root of your content type form, you could set it to `ns = ${ $.ns }, index = modal`. |
+| `buttonTitle` | String | The text displayed on the button used to open the block selection modal. |
+| `displayMetadata` | Boolean | Denotes whether to display the information grid describing the block in more detail; `true` by default. |
 
 ## Add the block select grid listing modal to content type XML
 

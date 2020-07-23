@@ -1,6 +1,6 @@
 # How to add a custom Toolbar
 
-This topic shows you how to implement an inline toolbar for your content type. You can see an example of a toolbar in Page Builder's Heading content type, as shown here: 
+This topic shows you how to implement an inline toolbar for your content type. You can see an example of a toolbar in Page Builder's Heading content type, as shown here:
 
 ![Page Builder toolbar](../images/toolbar.png)
 
@@ -10,7 +10,7 @@ Toolbars provide end-users with a quick way to change common properties of your 
 
 The diagram below shows the basic steps for adding a toolbar to your content type. It also shows how the various parts connect and work together.
 
-![Toolbar how it works](../images/how-toolbars-work.png){:width="851px" height="auto"}
+![Toolbar how it works](../images/how-toolbars-work.png)
 
 
 
@@ -52,14 +52,13 @@ The `OptionInterface` and `ValueInterface` define the structure of toolbar optio
 | `value`  | Field option value, such as a CSS class (as shown in the code example). |
 | `label`  | Field option label, such as a label for a select option (as shown in the code example) |
 | `icon`   | CSS class name for the icon to display in the toolbar to represent the field's option. If you don't include a CSS class, the toolbar will display the label instead. |
-{:style="table-layout:auto"}
 
 ## Step 2: Create `Toolbar` instance
 
 To create an instance of the Page Builder toolbar in your `preview.js` component:
 
 - **Import Page Builder's `Toolbar` class** (`'Magento_PageBuilder/js/content-type-toolbar'`)
-- **Call the toolbar constructor.** The `Toolbar` constructor requires you to pass your `Preview` component and the array of toolbar options you created in step 1 (`this.toolbar = new Toolbar(this, this.getToolbarOptions());`). You can find Page Builder's `Toolbar` class in `magento2-page-builder/app/code/Magento/PageBuilder/view/adminhtml/web/ts/js/content-type-toolbar.ts`. 
+- **Call the toolbar constructor.** The `Toolbar` constructor requires you to pass your `Preview` component and the array of toolbar options you created in step 1 (`this.toolbar = new Toolbar(this, this.getToolbarOptions());`). You can find Page Builder's `Toolbar` class in `magento2-page-builder/app/code/Magento/PageBuilder/view/adminhtml/web/ts/js/content-type-toolbar.ts`.
 
 ```js
 define([
@@ -83,8 +82,8 @@ Within your `preview.html` template, use a `div` element (with CSS class and eve
 <!--preview.html-->
 <div attr="data.main.attributes" ko-style="data.main.style" class="pagebuilder-content-type" css="data.main.css" event="{ mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false">
     <render args="getOptions().template"/>
-    <div class="pagebuilder-toolbar-container" 
-         tabindex="0" 
+    <div class="pagebuilder-toolbar-container"
+         tabindex="0"
          event="{ focusin: toolbar.onFocusIn, focusout: toolbar.onFocusOut }">
         <with args="toolbar">
             <render args="template"/>
@@ -96,7 +95,7 @@ Within your `preview.html` template, use a `div` element (with CSS class and eve
 </div>
 ```
 
-**Line 4:** Use this CSS class to correctly format and control the screen placement of the toolbar when the wrapped HTML element receives focus. 
+**Line 4:** Use this CSS class to correctly format and control the screen placement of the toolbar when the wrapped HTML element receives focus.
 
 **Line 5:** Set a `tabindex` of 0 to ensure that the `div` wrapper is part of the default focus order for tabbing.
 
@@ -114,7 +113,7 @@ You can find this HTML template here: `app/code/Magento/PageBuilder/view/adminht
 
 ## Example code
 
-The following links show how the Heading implements its toolbar within its `preview.html` template and `preview.js` component: 
+The following links show how the Heading implements its toolbar within its `preview.html` template and `preview.js` component:
 
 - `app/code/Magento/PageBuilder/view/adminhtml/web/template/content-type/heading/default/preview.html`
 - `app/code/Magento/PageBuilder/view/adminhtml/web/ts/js/content-type/heading/preview.ts`

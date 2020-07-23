@@ -17,7 +17,7 @@ As mentioned before, Page Builder defines the Banner's appearances within the `b
 
 To customize these appearances, you must create a new configuration file named `banner.xml`. The configuration file must use the same name as the Banner's configuration file. This ensures that Magento merges the appearance customizations with the Banner's existing configuration. Your file structure for the `banner.xml` extension should look like this:
 
-![Extension config file structure](../images/appearance-extension-config-file.png){:width="511px" height="auto"}
+![Extension config file structure](../images/appearance-extension-config-file.png)
 
 ## Add properties to appearances
 
@@ -71,9 +71,8 @@ The following table describes the elements in our extension configuration.
 | `elements`    | The grouping element that specifies one or more `element` nodes. |
 | `element`     | The `element` maps styles and other appearance extensions from the form editor to the HTML templates. In our markup, we map our new style properties for each appearance to the `wrapper` element of the Banner's HTML templates. |
 | `style`       | The `style` element configures the bindings from the form field to the HTML template elements. Here, we apply our style to the `wrapper` element of the template. The style `name` represents the CSS `max-height` style. The `source` is the name of the form field you want the style bound to. That means that the field name we will add in step 3 will be `max-height`. |
-{:style="table-layout:auto"}
 
 ## Next
 
-[Step 3: Extend forms](step-3-extend-forms.md) 
+[Step 3: Extend forms](step-3-extend-forms.md)
 

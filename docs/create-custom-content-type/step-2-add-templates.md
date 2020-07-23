@@ -10,7 +10,7 @@ Conventions for adding content type templates are as follows.
 
 - Page Builder requires you to name your templates `preview.html` for the Admin preview template and `master.html` for the master format storefront template.
 
-- Page Builder requires the name of an `appearance` to match the name of the directory containing the appearance templates. If they don't match, your content type appearances will not render. 
+- Page Builder requires the name of an `appearance` to match the name of the directory containing the appearance templates. If they don't match, your content type appearances will not render.
 
   For example, if you navigate to the Banner's appearance templates (`PageBuilder/view/adminhtml/web/template/content-type/banner`) you can see that the names of the template directories match the names of the four appearances defined in the `banner.xml` configuration file as shown here:
 
@@ -62,7 +62,6 @@ The following table describes each `appearance` attribute in our example.
 | `preview_template` | References the `preview.html` (the Admin preview template) for rendering the preview appearance of your content type on the stage within the Admin UI. |
 | `master_template`  | References the `master.html` (the master format storefront template) for rendering the appearance of your content type on the storefront for customers to see. |
 | `reader`           | Reads content type data from the master format.      |
-{:style="table-layout:auto"}
 
 ## Quote `preview_template`
 
@@ -70,27 +69,27 @@ The Quote `preview_template`  (`preview.html`) is shown here in full, followed b
 
 ```html
 <!-- preview.html -->
-<div attr="data.main.attributes" 
-     ko-style="data.main.style" 
-     class="pagebuilder-content-type" 
-     css="data.main.css" 
+<div attr="data.main.attributes"
+     ko-style="data.main.style"
+     class="pagebuilder-content-type"
+     css="data.main.css"
      event="{ mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false">
     <render args="getOptions().template" />
-    <blockquote attr="data.quote.attributes" 
-              ko-style="data.quote.style" 
-              css="data.quote.css" 
+    <blockquote attr="data.quote.attributes"
+              ko-style="data.quote.style"
+              css="data.quote.css"
               data-bind="liveEdit: { field: 'quote_text', placeholder: $t('Enter Quote') }">
     </blockquote>
-    <div class="quote-author" 
-       attr="data.author.attributes" 
-       ko-style="data.author.style" 
-       css="data.author.css" 
+    <div class="quote-author"
+       attr="data.author.attributes"
+       ko-style="data.author.style"
+       css="data.author.css"
        data-bind="liveEdit: { field: 'quote_author', placeholder: $t('Enter Author') }">
     </div>
-    <div class="quote-title" 
-       attr="data.author_title.attributes" 
-       ko-style="data.author_title.style" 
-       css="data.author_title.css" 
+    <div class="quote-title"
+       attr="data.author_title.attributes"
+       ko-style="data.author_title.style"
+       css="data.author_title.css"
        data-bind="liveEdit: { field: 'quote_author_desc', placeholder: $t('Enter Description') }">
     </div>
 </div>
@@ -98,7 +97,7 @@ The Quote `preview_template`  (`preview.html`) is shown here in full, followed b
 
 ### attr
 
-The `attr` attribute allows binding of data from the content type form (UI component) to the html elements in the template. 
+The `attr` attribute allows binding of data from the content type form (UI component) to the html elements in the template.
 
 The value for `attr` is derived from the `element` name in the configuration file followed by `attributes`. For example, the `attr` value used to bind data for the  `blockquote` on line 8 of the Quote `preview.html` is `attr="data.quote.attributes"`. This corresponds to the  `element` named `quote` in the `example_quote.xml` configuration file, as shown here:
 
@@ -131,9 +130,9 @@ The `ko-style` attribute applies the `<style>` attributes from the form to a tem
 </element>
 ```
 
-As we discuss more in [Step 4: Add form](step-4-add-form.md), the `element` styles define bindings to fields in our form. In turn, these form fields provide user-entered data or default values that we apply to the HTML elements in our templates using the `ko-style` attribute. 
+As we discuss more in [Step 4: Add form](step-4-add-form.md), the `element` styles define bindings to fields in our form. In turn, these form fields provide user-entered data or default values that we apply to the HTML elements in our templates using the `ko-style` attribute.
 
-The following snippet shows the `ko-style` (Knockout binding) that applies the styles defined in the main `element` to the  `div` node of the Quote's Admin preview template: 
+The following snippet shows the `ko-style` (Knockout binding) that applies the styles defined in the main `element` to the  `div` node of the Quote's Admin preview template:
 
 ```html
 <!-- preview.html -->
@@ -158,7 +157,7 @@ The `liveEdit` binding enables end users to enter HTML content directly on the A
 
 ```html
 <!-- preview.html -->
-<blockquote attr="data.quote.attributes" 
+<blockquote attr="data.quote.attributes"
             data-bind="liveEdit: { field: 'quote_text', placeholder: $t('Enter Quote') }">
 </blockquote>
 ```
@@ -175,21 +174,21 @@ The Quote `master_template` (`master.html`) is shown here in full. The same attr
 <!--master.html-->
 <div attr="data.main.attributes">
     <blockquote class="quote-content"
-              attr="data.quote.attributes" 
-              ko-style="data.quote.style" 
-              css="data.quote.css" 
+              attr="data.quote.attributes"
+              ko-style="data.quote.style"
+              css="data.quote.css"
               html="data.quote.html">
     </blockquote>
-    <div class="quote-author" 
-       attr="data.author.attributes" 
-       ko-style="data.author.style" 
-       css="data.author.css" 
+    <div class="quote-author"
+       attr="data.author.attributes"
+       ko-style="data.author.style"
+       css="data.author.css"
        html="data.author.html">
     </div>
-    <div class="quote-title" 
-       attr="data.author_title.attributes" 
-       ko-style="data.author_title.style" 
-       css="data.author_title.css" 
+    <div class="quote-title"
+       attr="data.author_title.attributes"
+       ko-style="data.author_title.style"
+       css="data.author_title.css"
        html="data.author_title.html">
     </div>
 </div>
@@ -207,7 +206,7 @@ For example, from the Quote `preview.html` template, the `liveEdit` binding on t
 </blockquote>
 ```
 
-The master format storefront template uses the `html` attribute to retrieve the HTML content and display it in the `blockquote` element as follows: 
+The master format storefront template uses the `html` attribute to retrieve the HTML content and display it in the `blockquote` element as follows:
 
 ```html
 <!--master.html-->

@@ -8,7 +8,7 @@ Page Builder forms are UI component forms. This means they follow the same conve
 
 Your file structure for the Banner extension form and corresponding layout should look like this:
 
-![Extension forms file structure](../images/extension-forms-files.png){:width="544px" height="auto"}
+![Extension forms file structure](../images/extension-forms-files.png)
 
 ### Extension form
 
@@ -91,11 +91,10 @@ The following table describes some key elements:
 | `field`    | The field `name` should match the CSS max-height style property, but in snake_case. Fields also have a `sortOrder` you can use to place your field above or below existing fields. The `formElement` for a field describes the HTML form type, such as input, checkbox, select, and more. |
 | `argument` | Provides the way to add a `default` value to your field. We set our default value to `300`. |
 | `settings` | Provides the markup that gives your field a label, CSS styling, validation, and other properties as needed. |
-{:style="table-layout:auto"}
 
 After adding the `max_height` field, run `bin/magento cache:clean`, drag a banner to the Admin stage, open the editor, and see your new style property field being rendered in the Banner's form, as shown here:
 
-![Appearance fieldset](../images/appearance-fieldset.png){:width="934px" height="auto"}
+![Appearance fieldset](../images/appearance-fieldset.png)
 
 ## Conclusion
 

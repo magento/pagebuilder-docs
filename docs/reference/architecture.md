@@ -3,8 +3,8 @@
 We wrote Page Builder in [TypeScript], a superset of JavaScript. Before each release, we transpile the TypeScript to JavaScript.
 Use the TypeScript components in the module as a reference to understand the flow of information.
 
-**Note:**
-*You need not use TypeScript in your module to work with the Page Builder code.*
+>[!NOTE] 
+>You need not use TypeScript in your module to work with the Page Builder code.
 
 Page Builder also uses core Magento technologies such as jQuery, Knockout, and UI Components, along with additional libraries to help with various content types shipped with the module.
 
@@ -13,12 +13,10 @@ Page Builder also uses core Magento technologies such as jQuery, Knockout, and U
 Page Builder uses XHTML with inline styles and data attributes for storage and as the master format.
 This allows Page Builder to display content with minimum changes to the Magento storefront and other third-party systems.
 Use the following steps to display Page Builder content on a Magento storefront or third-party system:
-<!-- {% raw %} -->
 
 1. Replace all Magento directives such as `{{image url=path/to/image.png}}`
 2. Add custom stylesheet to provide the base styles that the user can't edit. This includes styles for the content types, such as the `slider` and the `tabs`.
 3. After the content renders, load and initialize the widgets and libraries on the frontend that need initialization, such as the `slider` and the `tabs`.
-<!-- {% endraw %} -->
 
 ## Integration with Magento and custom modules
 
@@ -47,7 +45,6 @@ This means you don't have to change your custom extensions if you're using UI co
 | Master template   | `master_template`     | Template used to render the content type to the master format |
 | Form              | `form`                | Form used to edit attributes of the content type             |
 | Reader            | `reader`              | Reads data for the content type from the master format       |
-{:style="table-layout:auto"}
 
 ## Data flow
 
@@ -121,10 +118,11 @@ For example:
 
 ```xml
 <element name="main">
-		<style name="display" source="display" converter="Magento_PageBuilder/js/converter/style/display" preview_converter="Magento_PageBuilder/js/converter/style/preview/display"/>
+	<style name="display" source="display" 
+           converter="Magento_PageBuilder/js/converter/style/display" 
+           preview_converter="Magento_PageBuilder/js/converter/style/preview/display"/>
 </element>
 ```
-
 
 ## Datastore
 
@@ -155,9 +153,8 @@ Appearances provide several ways to customize your content types. For example, y
 | Content type components | `Vendor/ModuleName/view/adminhtml/web/js/content-type/content-type-name` |
 | Content type templates  | `Vendor/ModuleName/view/adminhtml/web/template/content-type/content-type-name/appearance-name` |
 | Styles                  | `Vendor/ModuleName/view/adminhtml/web/css/source/content-type/content-type-name` |
-{:style="table-layout:auto"}
 
-**Note:**
-We have also considered introducing an appearance component and/or moving the initialization of the libraries to bindings. This would allow you to add custom logic per appearance changes and libraries per appearance for content types like the `slider` and the `tabs`.
+>[!NOTE]
+>We have also considered introducing an appearance component and/or moving the initialization of the libraries to bindings. This would allow you to add custom logic per appearance changes and libraries per appearance for content types like the `slider` and the `tabs`.
 
 [TypeScript]: https://www.typescriptlang.org/
