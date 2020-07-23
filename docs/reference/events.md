@@ -28,7 +28,7 @@ The following table lists the Page Builder events you can bind to and handle wit
 | [contentType:moveAfter](#contenttypemoveafter)      | [stage:error](#stageerror)                                              |
 | [contentType:moveBefore](#contenttypemovebefore)    | [stage:{{preview.contentType.stageId}}:masterFormatRenderAfter](#stageidmasterformatrenderafter) |
 | [contentType:redrawAfter](#contenttyperedrawafter)  | [stage:{{preview.contentType.stageId}}:readyAfter](#stageidreadyafter)              |
-| [contentType:removeAfter](#contenttyperemoveafter)  | [stage:{{preview.contentType.stageId}}:renderAfter](#stagepreviewcontenttypestageidrenderafter)             |
+| [contentType:removeAfter](#contenttyperemoveafter)  | [stage:{{preview.contentType.stageId}}:renderAfter](#stagepreviewrenderafter)             |
 | [contentType:renderAfter](#contenttyperenderafter)  | [stage:{{preview.contentType.stageId}}:fullScreenModeChangeAfter](#stageidtogglefullscreen)        |
 |                                                     | [stage:updateAfter](#stageupdateafter)                                        |
 |                                                     |                                                          |
@@ -291,7 +291,7 @@ events.on(`stage:${this.contentType.stageId}:readyAfter`, function (params) {});
 
 [Back to top]
 
-### `stage:{{preview.contentType.stageId}}:renderAfter`
+### `stage:{{preview.contentType.stageId}}:renderAfter` {#stagepreviewrenderafter}
 
 ```js
 events.on(`stage:${this.contentType.stageId}:renderAfter`, function (params) {});
