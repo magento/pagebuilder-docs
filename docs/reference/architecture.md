@@ -3,8 +3,8 @@
 We wrote Page Builder in [TypeScript], a superset of JavaScript. Before each release, we transpile the TypeScript to JavaScript.
 Use the TypeScript components in the module as a reference to understand the flow of information.
 
->[!NOTE] 
->You need not use TypeScript in your module to work with the Page Builder code.
+{: .bs-callout-info }
+You need not use TypeScript in your module to work with the Page Builder code.
 
 Page Builder also uses core Magento technologies such as jQuery, Knockout, and UI Components, along with additional libraries to help with various content types shipped with the module.
 
@@ -13,10 +13,12 @@ Page Builder also uses core Magento technologies such as jQuery, Knockout, and U
 Page Builder uses XHTML with inline styles and data attributes for storage and as the master format.
 This allows Page Builder to display content with minimum changes to the Magento storefront and other third-party systems.
 Use the following steps to display Page Builder content on a Magento storefront or third-party system:
+{% raw %}
 
 1. Replace all Magento directives such as `{{image url=path/to/image.png}}`
 2. Add custom stylesheet to provide the base styles that the user can't edit. This includes styles for the content types, such as the `slider` and the `tabs`.
 3. After the content renders, load and initialize the widgets and libraries on the frontend that need initialization, such as the `slider` and the `tabs`.
+{% endraw %}
 
 ## Integration with Magento and custom modules
 
@@ -118,8 +120,8 @@ For example:
 
 ```xml
 <element name="main">
-	<style name="display" source="display" 
-           converter="Magento_PageBuilder/js/converter/style/display" 
+	<style name="display" source="display"
+           converter="Magento_PageBuilder/js/converter/style/display"
            preview_converter="Magento_PageBuilder/js/converter/style/preview/display"/>
 </element>
 ```

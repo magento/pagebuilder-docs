@@ -1,5 +1,6 @@
 # Page Builder events
 
+{% raw %}
 The pattern for consuming Page Builder events in JavaScript, such as within the `preview.js` component, is to import `Magento_PageBuilder/js/events` and use the `events.on()` method to bind to the event you want to handle, as shown here:
 
 ```js
@@ -478,3 +479,5 @@ events.on("googleMaps:authFailure", function () {});
 [Back to top]
 
 [Back to top]: #events-list
+
+{% endraw %}

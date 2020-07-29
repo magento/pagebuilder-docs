@@ -40,7 +40,7 @@
         "path": "",
         "pages": [
           {
-            "title": "Create a Public Key Certificate",
+            "title": "Overview",
             "path": "magento/magento2-page-builder-docs/master/docs/extend-existing-content-type/overview.md",
             "pages": []
           },
