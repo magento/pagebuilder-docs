@@ -3,8 +3,8 @@
 We wrote Page Builder in [TypeScript], a superset of JavaScript. Before each release, we transpile the TypeScript to JavaScript.
 Use the TypeScript components in the module as a reference to understand the flow of information.
 
->[!NOTE]
->You need not use TypeScript in your module to work with the Page Builder code.
+{: .bs-callout-info }
+You need not use TypeScript in your module to work with the Page Builder code.
 
 Page Builder also uses core Magento technologies such as jQuery, Knockout, and UI Components, along with additional libraries to help with various content types shipped with the module.
 
