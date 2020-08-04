@@ -25,7 +25,7 @@ The release notes include:
 -  {:.fix}<!-- MC-34590 -->Fixed the Text content type to correctly handle and save non-Latin-1 characters.
 -  {:.fix}<!-- MC-34677 -->Fixed Page Builder CSS styles that caused Safari 13.1 to incorrectly render the Luma theme's site menu for small view ports and mobile screens.
 -  {:.fix}<!-- MC-34846 -->Fixed the HTML content type to correctly display embedded widgets like "Order by SKU" on the Storefront.
--  {:.fix}Fixed an error ("Page Builder was rendering for 5 seconds without releasing locks") that prevented users from saving some content-type forms. The error caused the loader icon to spin indefinitely after trying to save a form.
+-  {:.fix}Fixed an error that prevented users from saving content-type forms in some cases. The error ("Page Builder was rendering for 5 seconds without releasing locks") caused the loader icon to spin indefinitely after trying to save a form.
 
 ## **1.3.2** for Magento Commerce 2.3.5-p2
 
