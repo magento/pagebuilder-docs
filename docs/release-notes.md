@@ -7,6 +7,10 @@ The release notes include:
 -  {:.new}New features
 -  {:.fix}Fixes and improvements
 
+## **1.4.1** for Magento Commerce 2.4.0-p1
+
+-  {:.new}<!-- PB-590 --> Upgraded to TinyMCE 4. Removed TinyMCE 3 to improve security.
+
 ## **1.4.0** for Magento Commerce 2.4.0
 
 -  {:.new}<!-- PB-494 -->Added support for PHP 7.4.
