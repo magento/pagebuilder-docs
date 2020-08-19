@@ -1,3 +1,3 @@
-[submodule "parliament"]
-	path = parliament
-	url = git@github.com:bdenham/pb-parliament.git
+[submodule "parliament-client-template"]
+	path = parliament-client-template
+	url = git@github.com:bdenham/parliament-client-template.git
