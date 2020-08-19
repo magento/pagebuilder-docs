@@ -13,7 +13,7 @@
     {
       "pages": [],
       "title": "What is Page Builder?",
-      "path": "magento/magento2-page-builder-docs/master/docs/index.md"
+      "path": "https://bdenham.github.io/page-builder/index.md"
     },
     {
       "title": "Getting started",
@@ -21,17 +21,17 @@
       "pages": [
         {
           "title": "Install Page Builder",
-          "path": "magento/magento2-page-builder-docs/master/docs/getting-started/install-pagebuilder.md",
+          "path": "https://bdenham.github.io/page-builder/getting-started/install-pagebuilder.md",
           "pages": []
         },
         {
           "title": "View Page Builder",
-          "path": "magento/magento2-page-builder-docs/master/docs/getting-started/view-pagebuilder.md",
+          "path": "https://bdenham.github.io/page-builder/getting-started/view-pagebuilder.md",
           "pages": []
         },
         {
           "title": "Install Page Builder Examples",
-          "path": "magento/magento2-page-builder-docs/master/docs/getting-started/install-pagebuilder-examples.md",
+          "path": "https://bdenham.github.io/page-builder/getting-started/install-pagebuilder-examples.md",
           "pages": []
         }
       ]
