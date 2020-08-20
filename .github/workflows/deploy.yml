@@ -16,6 +16,11 @@ jobs:
           fetch-depth: '0'
           submodules: 'recursive'
 
+      - name: Check links
+        uses: ad-m/report-link-action@master
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+
       - name: Setup Node
         uses: actions/setup-node@v2-beta
         with:

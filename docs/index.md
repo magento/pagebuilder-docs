@@ -3,7 +3,7 @@
 Page Builder is a Magento extension for creating content by dragging-and-dropping pre-built controls. 
 We call these controls "content types." The available content types are shown in Page Builder's menu:
 
-![Page Builder content types](images/pagebuilder-content-types.png)
+![Page Builder content types](images2/pagebuilder-content-types.png)
 
 These content types provide several key features, including:
 
