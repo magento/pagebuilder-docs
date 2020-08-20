@@ -20,7 +20,6 @@ jobs:
 
       - name: Install and test
         run: |
-          cd parliament
           npm install
 
       - name: Build production site
