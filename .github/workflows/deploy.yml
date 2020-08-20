@@ -39,6 +39,6 @@ jobs:
       - name: Deploy to gh-pages
         uses: Cecilapp/GitHub-Pages-deploy@master
         env:
-          BUILD_DIR: ./parliament/.cache/docs/
+          BUILD_DIR: ./parliament/.cache/gatsby-source-git/
           EMAIL: ${{ secrets.EMAIL }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
