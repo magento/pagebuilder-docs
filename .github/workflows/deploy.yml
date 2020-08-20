@@ -38,6 +38,6 @@ jobs:
       - name: Deploy to gh-pages
         uses: Cecilapp/GitHub-Pages-deploy@master
         env:
-          BUILD_DIR: public/
+          BUILD_DIR: .parliament/public/docs/
           EMAIL: ${{ secrets.EMAIL }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
