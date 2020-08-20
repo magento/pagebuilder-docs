@@ -17,6 +17,8 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
           node-version: '12'
+
+      - name: Run Install
         working-directory: ./parliament
         run: |
           npm install
