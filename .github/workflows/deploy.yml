@@ -1,0 +1,39 @@
+name: Deploy site to gh-pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Use Node.js 10.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+
+      - name: Install and test
+        run: |
+          cd parliament
+          npm install
+
+      - name: Build production site
+        env:
+          GATSBY_SOURCE: ${{ secrets.GATSBY_SOURCE }}
+          GATSBY_SOURCE_BRANCH: ${{ secrets.GATSBY_SOURCE_BRANCH }}
+          GATSBY_SOURCE_PATTERNS: "docs/**/*"
+        run: |
+          npm run build:prod
+
+      - name: Deploy to gh-pages
+        uses: Cecilapp/GitHub-Pages-deploy@master
+        env:
+          BUILD_DIR: public/
+          EMAIL: ${{ secrets.EMAIL }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
