@@ -24,14 +24,16 @@ jobs:
       - name: Install and test
         run: |
           npm install
+        working-directory: parliament
 
       - name: Build production site
         env:
           GATSBY_SOURCE: ${{ secrets.GATSBY_SOURCE }}
           GATSBY_SOURCE_BRANCH: ${{ secrets.GATSBY_SOURCE_BRANCH }}
-          GATSBY_SOURCE_PATTERNS: '../docs/**/*'
+          GATSBY_SOURCE_PATTERNS: '**/docs/**'
         run: |
           npm run build:prod
+        working-directory: parliament
 
       - name: Deploy to gh-pages
         uses: Cecilapp/GitHub-Pages-deploy@master
