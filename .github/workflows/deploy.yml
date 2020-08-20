@@ -12,9 +12,10 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
-
-      - name: Checkout submodules
-        uses: textbook/git-checkout-submodule-action@master
+        with:
+          # token: ${{ secrets.GH_TOKEN }}
+          fetch-depth: '0'
+          submodules: 'recursive'
 
       - name: Setup Node
         uses: actions/setup-node@v2-beta
@@ -30,7 +31,7 @@ jobs:
         env:
           GATSBY_SOURCE: ${{ secrets.GATSBY_SOURCE }}
           GATSBY_SOURCE_BRANCH: ${{ secrets.GATSBY_SOURCE_BRANCH }}
-          GATSBY_SOURCE_PATTERNS: '**/*'
+          GATSBY_SOURCE_PATTERNS: 'docs/**/*'
         run: |
           npm run build:prod
         working-directory: ./parliament
