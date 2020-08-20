@@ -42,8 +42,3 @@ jobs:
           BUILD_DIR: ./parliament/public/
           EMAIL: ${{ secrets.EMAIL }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-
-      - name: Check links
-        uses: ad-m/report-link-action@master
-        with:
-          github_token: ${{ secrets.GH_TOKEN }}
