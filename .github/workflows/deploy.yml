@@ -31,6 +31,7 @@ jobs:
           GATSBY_SOURCE: ${{ secrets.GATSBY_SOURCE }}
           GATSBY_SOURCE_BRANCH: ${{ secrets.GATSBY_SOURCE_BRANCH }}
           GATSBY_SOURCE_PATTERNS: 'docs/**/*'
+          GATSBY_SITE_PATH_PREFIX: '/magento2-page-builder-docs'
         run: |
           npm run build:prod
         working-directory: ./parliament
