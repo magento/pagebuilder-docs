@@ -13,24 +13,27 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v2
 
+      - name: Checkout submodules
+        uses: textbook/git-checkout-submodule-action@master
+
       - name: Setup Node
         uses: actions/setup-node@v2-beta
         with:
           node-version: '12'
 
       - name: Run Install
-        working-directory: ./parliament
         run: |
           npm install
+        working-directory: ./parliament
 
       - name: Build production site
         env:
           GATSBY_SOURCE: ${{ secrets.GATSBY_SOURCE }}
           GATSBY_SOURCE_BRANCH: ${{ secrets.GATSBY_SOURCE_BRANCH }}
           GATSBY_SOURCE_PATTERNS: '**/*'
-        working-directory: ./parliament
         run: |
           npm run build:prod
+        working-directory: ./parliament
 
       - name: Deploy to gh-pages
         uses: Cecilapp/GitHub-Pages-deploy@master
