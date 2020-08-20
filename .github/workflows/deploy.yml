@@ -8,9 +8,6 @@ on:
 jobs:
   build-test-deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: parliament
 
     steps:
       - name: Checkout
@@ -21,10 +18,10 @@ jobs:
         with:
           node-version: 10.x
 
-      - name: Install and test
+      - name: Install
         run: |
           npm install
-        working-directory: parliament
+        working-directory: ./parliament
 
       - name: Build production site
         env:
@@ -33,11 +30,11 @@ jobs:
           GATSBY_SOURCE_PATTERNS: '**/docs/**'
         run: |
           npm run build:prod
-        working-directory: parliament
+        working-directory: ./parliament
 
       - name: Deploy to gh-pages
         uses: Cecilapp/GitHub-Pages-deploy@master
         env:
-          BUILD_DIR: public/
+          BUILD_DIR: public/docs/
           EMAIL: ${{ secrets.EMAIL }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
