@@ -13,7 +13,6 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v2
         with:
-          # token: ${{ secrets.GH_TOKEN }}
           fetch-depth: '0'
           submodules: 'recursive'
 
@@ -39,6 +38,6 @@ jobs:
       - name: Deploy to gh-pages
         uses: Cecilapp/GitHub-Pages-deploy@master
         env:
-          BUILD_DIR: public/docs/
+          BUILD_DIR: public/
           EMAIL: ${{ secrets.EMAIL }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
