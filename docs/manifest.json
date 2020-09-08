@@ -11,7 +11,6 @@
   "base_path": "https://raw.githubusercontent.com",
   "pages": [
     {
-      "pages": [],
       "title": "What is Page Builder?",
       "path": "magento/magento2-page-builder-docs/master/docs/index.md"
     },
