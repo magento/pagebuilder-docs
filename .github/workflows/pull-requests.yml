@@ -9,7 +9,7 @@ on:
       - docs/**
 
 jobs:
-  test:
+  markdown-linting:
     runs-on: ubuntu-latest
 
     steps:

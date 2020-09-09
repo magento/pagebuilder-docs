@@ -7,6 +7,51 @@ The release notes include:
 -  {:.new}New features
 -  {:.fix}Fixes and improvements
 
+## **1.5.0** for Magento Commerce 2.4.1
+
+### Features
+
+-  {:.new}<!--Issue 510, 511, 512, 513-->Full-Screen editing mode. You can now edit Page Builder content in full-screen mode for all the areas controlled by Page Builder: CMS pages, Product and Catalog Pages, Blocks, and Dynamic Blocks. Full-screen mode is better than ever, allowing you to focus on the content and see the results that better match the user experience on the storefront.
+
+### Fixes
+
+-  {:.fix}<!--Issue 419--> *Nested links in Banners and Slides.* Adding links to both the content and the outer elements of Banners and Slides created nested links which did not display or behave correctly on the storefront. To resolve the issue, we no longer allow links to be added to *both* the Message Text area and the Link attribute as shown here.
+
+   ![image-20200909075833716](../Library/Application Support/typora-user-images/image-20200909075833716.png)
+
+-  {:.fix}<!--Issue 421--> Fixed issue where setting empty border radius on a Tab Item caused errors and broke Tab Item content.
+
+-  {:.fix}<!--Issue 422--> Fixed issue where adding certain combinations of conditions to the Products Condition filter caused errors that prevented saving the Products form.
+
+-  {:.fix}<!--Issue 425-->Fixed issue in which the Slider content type did not behave correctly when the Infinite Loop setting was disabled.
+
+-  {:.fix}<!--Issue 426-->Fixed the Minimum Advertised Price so that it now works in Page Builder.
+
+-  {:.fix}<!--Issue 436-->Fixed the issue in Safari and IE 11 that prevented dragging and dropping an Image to the upload area in Banners and Slides.
+
+
+-  {:.fix}<!--Issue 514-->User sees content snapshot on Category Page in Admin Panel
+
+-  {:.fix}<!--Issue 519-->Added parameter in a backward-compatible way
+
+-  {:.fix}<!--Issue 525-->A Slider element is not responsive on the mobile view in the Firefox browser. Fix for responsive behavior of the Column element in Firefox on mobile view. In case of width style nested columns of the main Column element and Slider element inside.
+
+-  {:.fix}<!--Issue 543-->Content Product Attributes Default Sorting Order
+
+-  {:.fix}<!--Issue 544-->Configurable Page Builder Full Screen Mode.
+
+-  {:.fix}<!--Issue 567-->Fix selector for widget config
+
+-  {:.fix}<!--Issue 609-->Content Type Toolbar hidden under PageBuilder header in Full screen
+
+-  {:.fix}<!--Issue 612-->Multiple row with the parallax background does not render correctly after toggle a screen mode several times - added rebuild parallax function.
+
+-  {:.fix}<!--Issue 613-->Sliders do not render correctly after toggle a screen mode several times - added slider resize after open full screen mode.
+
+-  {:.fix}<!--Issue 614-->Deprecate OpenPageBuilderFullScreen Action Group - Amending Deprecation Message
+
+-  {:.fix}<!--MC-35220--> Page builder can't save content. Fixed issue issue where trying to copy the content from a Heading content type to a Text content type prevented Page Builder from saving.
+
 ## **1.4.1** for Magento Commerce 2.4.0-p1
 
 -  {:.new}<!-- PB-590 --> Upgraded to TinyMCE 4. Removed TinyMCE 3 to improve security.
