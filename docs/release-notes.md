@@ -7,8 +7,6 @@ The release notes include:
 -  {:.new}New features
 -  {:.fix}Fixes and improvements
 
-<<<<<<< Updated upstream
-=======
 ## **1.5.0** for Magento Commerce 2.4.1
 
 -  {:.new}<!--Issue 510, 511, 512, 513-->Immersive, full-screen editing. Editing Page Builder content is now full-screen only for all areas controlled by Page Builder. This includes CMS pages, Product and Category pages, Blocks, and Dynamic Blocks. Full-screen editing puts the focus on your content and provides a view that better matches the user experience on the storefront.
@@ -43,7 +41,6 @@ The release notes include:
 
 -  {:.fix}<!--MC-35220-->Fixed the issue where trying to copy the content from a Heading content type to a Text content type prevented Page Builder from saving.
 
->>>>>>> Stashed changes
 ## **1.4.1** for Magento Commerce 2.4.0-p1
 
 -  {:.new}<!-- PB-590 --> Upgraded to TinyMCE 4. Removed TinyMCE 3 to improve security.
