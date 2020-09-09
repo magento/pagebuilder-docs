@@ -37,6 +37,12 @@ The release notes include:
 
 -  {:.fix}<!--MC-35220-->Fixed the issue where trying to copy the content from a Heading content type to a Text content type prevented Page Builder from saving.
 
+-  {:.fix}<!--MC-34620-->Fixed the Text content type to correctly handle and save non-Latin-1 characters.
+
+-  {:.fix}<!--MC-34679-->Fixed Page Builder CSS styles that caused Safari 13.1 to incorrectly render the Luma theme's site menu for small view ports and mobile screens.
+
+-  {:.fix}<!--MC-34848-->Fixed the HTML content type to correctly display embedded widgets like "Order by SKU" on the Storefront.
+
 ## **1.4.1** for Magento Commerce 2.4.0-p1
 
 -  {:.new}<!-- PB-590 --> Upgraded to TinyMCE 4. Removed TinyMCE 3 to improve security.
@@ -56,9 +62,9 @@ The release notes include:
 ## **1.3.3** for Magento Commerce 2.3.6
 
 -  {:.fix}<!-- MC-32766 -->Fixed the Text content type to correctly save the Magento variable directives added to html attributes.
--  {:.fix}<!-- MC-34590 -->Fixed the Text content type to correctly handle and save non-Latin-1 characters.
--  {:.fix}<!-- MC-34677 -->Fixed Page Builder CSS styles that caused Safari 13.1 to incorrectly render the Luma theme's site menu for small view ports and mobile screens.
--  {:.fix}<!-- MC-34846 -->Fixed the HTML content type to correctly display embedded widgets like "Order by SKU" on the Storefront.
+-  {:.fix}<!-- MC-34590-->Fixed the Text content type to correctly handle and save non-Latin-1 characters.
+-  {:.fix}<!-- MC-34677-->Fixed Page Builder CSS styles that caused Safari 13.1 to incorrectly render the Luma theme's site menu for small view ports and mobile screens.
+-  {:.fix}<!-- MC-34846-->Fixed the HTML content type to correctly display embedded widgets like "Order by SKU" on the Storefront.
 -  {:.fix}Fixed an error that prevented users from saving content-type forms in some cases. The error ("Page Builder was rendering for 5 seconds without releasing locks") caused the loader icon to spin indefinitely after trying to save a form.
 
 ## **1.3.2** for Magento Commerce 2.3.5-p2
