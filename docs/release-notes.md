@@ -35,8 +35,6 @@ The release notes include:
 
 -  {:.fix}<!--Issue 612, 613-->Fixed issues where Sliders and multiple rows using parallax backgrounds would not render correctly after toggling the full-screen mode several times.
 
--  {:.fix}<!--Issue 614-->Deprecated `onOpenPageBuilderFullScreen`. This event is no longer required because Page Builder can now only be edited in full-screen mode.
-
 -  {:.fix}<!--MC-35220-->Fixed the issue where trying to copy the content from a Heading content type to a Text content type prevented Page Builder from saving.
 
 ## **1.4.1** for Magento Commerce 2.4.0-p1
