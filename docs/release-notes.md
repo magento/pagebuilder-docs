@@ -7,6 +7,43 @@ The release notes include:
 -  {:.new}New features
 -  {:.fix}Fixes and improvements
 
+<<<<<<< Updated upstream
+=======
+## **1.5.0** for Magento Commerce 2.4.1
+
+-  {:.new}<!--Issue 510, 511, 512, 513-->Immersive, full-screen editing. Editing Page Builder content is now full-screen only for all areas controlled by Page Builder. This includes CMS pages, Product and Category pages, Blocks, and Dynamic Blocks. Full-screen editing puts the focus on your content and provides a view that better matches the user experience on the storefront.
+
+-  {:.new}<!--Issue 544-->Page Builder content previews. By default, Page Builder now provides content previews not only for CMS pages and Blocks, but for Product and Category pages as well. You can configure this feature to be on or off for Product and Category pages using the new Page Builder Content Preview setting, accessed in Stores > Configuration > Content Management > Advanced Content Tools.
+
+-  {:.new}<!--Issue 543-->Improved access to Product short descriptions. By default, a Product's short description is now displayed before the longer description. This not only matches the order they appear on the storefront, but also prevents the need to scroll through the longer description content to get access to short description.
+
+-  {:.fix}<!--Issue 419-->Nested links in Banners and Slides. Adding links to both the content and the outer elements of Banners and Slides created nested links which did not display or behave correctly on the storefront. To resolve the issue, we no longer allow links to be added to *both* the Message Text area and the Link attribute as shown here.
+
+   ![image-20200909075833716](../Library/Application Support/typora-user-images/image-20200909075833716.png)
+
+-  {:.fix}<!--Issue 421--> Fixed issue where setting empty border radius on a Tab Item caused errors and broke Tab Item content.
+
+-  {:.fix}<!--Issue 422--> Fixed issue where adding certain combinations of conditions to the Products Condition filter caused errors that prevented saving the Products form.
+
+-  {:.fix}<!--Issue 425-->Fixed issue in which the Slider content type did not behave correctly when the Infinite Loop setting was disabled.
+
+-  {:.fix}<!--Issue 426-->Fixed the Minimum Advertised Price so that it now works in Page Builder.
+
+-  {:.fix}<!--Issue 436-->Fixed the issue in Safari and IE 11 that prevented dragging and dropping an Image to the upload area in Banners and Slides.
+
+-  {:.fix}<!--Issue 525-->Fixed the issue in which the Slider content type was not responsive in Firefox.
+
+-  {:.fix}<!--Issue 567-->Fixed the issue where the widget configuration was creating incorrect selectors in the DOM for the different appearances.
+
+-  {:.fix}<!--Issue 609-->Fixed the issue in which the Header toolbar hid the content type's option menu, which prevented access to the form and other options.
+
+-  {:.fix}<!--Issue 612, 613-->Fixed issues where Sliders and multiple rows using parallax backgrounds would not render correctly after toggling the full-screen mode several times.
+
+-  {:.fix}<!--Issue 614-->Deprecated `onOpenPageBuilderFullScreen`. This event is no longer required because Page Builder can now only be edited in full-screen mode.
+
+-  {:.fix}<!--MC-35220-->Fixed the issue where trying to copy the content from a Heading content type to a Text content type prevented Page Builder from saving.
+
+>>>>>>> Stashed changes
 ## **1.4.1** for Magento Commerce 2.4.0-p1
 
 -  {:.new}<!-- PB-590 --> Upgraded to TinyMCE 4. Removed TinyMCE 3 to improve security.
