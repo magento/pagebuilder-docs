@@ -13,7 +13,7 @@ The release notes include:
 
 -  {:.new}<!--Issue 544-->Page Builder content previews. By default, Page Builder now provides content previews not only for CMS pages and Blocks, but for Product and Category pages as well. You can configure this feature to be on or off for Product and Category pages using the new Page Builder Content Preview setting, accessed in Stores > Configuration > Content Management > Advanced Content Tools.
 
--  {:.new}<!--Issue 543-->Improved access to Product short descriptions. By default, a Product's short description is now displayed before the longer description. This not only matches the order they appear on the storefront, but also prevents the need to scroll through the longer description content to get access to short description.
+-  {:.new}<!--Issue 543-->Improved access to Product short descriptions. By default, a Product's short description is now displayed before the longer description. This not only matches the order they appear on the storefront, but also prevents the need to scroll through the longer description's content to get access to the short description.
 
 -  {:.fix}<!--Issue 419-->Nested links in Banners and Slides. Adding links to both the content and the outer elements of Banners and Slides created nested links which did not display or behave correctly on the storefront. To resolve the issue, we no longer allow links to be added to *both* the Message Text area and the Link attribute.
 
