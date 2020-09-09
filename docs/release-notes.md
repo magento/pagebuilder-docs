@@ -15,9 +15,7 @@ The release notes include:
 
 -  {:.new}<!--Issue 543-->Improved access to Product short descriptions. By default, a Product's short description is now displayed before the longer description. This not only matches the order they appear on the storefront, but also prevents the need to scroll through the longer description content to get access to short description.
 
--  {:.fix}<!--Issue 419-->Nested links in Banners and Slides. Adding links to both the content and the outer elements of Banners and Slides created nested links which did not display or behave correctly on the storefront. To resolve the issue, we no longer allow links to be added to *both* the Message Text area and the Link attribute as shown here.
-
-   ![image-20200909075833716](../Library/Application Support/typora-user-images/image-20200909075833716.png)
+-  {:.fix}<!--Issue 419-->Nested links in Banners and Slides. Adding links to both the content and the outer elements of Banners and Slides created nested links which did not display or behave correctly on the storefront. To resolve the issue, we no longer allow links to be added to *both* the Message Text area and the Link attribute.
 
 -  {:.fix}<!--Issue 421--> Fixed issue where setting empty border radius on a Tab Item caused errors and broke Tab Item content.
 
