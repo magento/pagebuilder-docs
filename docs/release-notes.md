@@ -7,15 +7,15 @@ The release notes include:
 -  {:.new}New features
 -  {:.fix}Fixes and improvements
 
-## **1.5.0** for Magento Commerce 2.4.1
+## 1.5.0 for Magento Commerce 2.4.1
 
--  {:.new}<!--Issue 510, 511, 512, 513-->Immersive, full-screen editing. Editing Page Builder content is now full-screen only for all areas controlled by Page Builder. This includes CMS pages, Product and Category pages, Blocks, and Dynamic Blocks. Full-screen editing puts the focus on your content and provides a view that better matches the user experience on the storefront.
+-  {:.new}<!--Issue 510, 511, 512, 513-->**Immersive, full-screen editing.** Editing Page Builder content is now full-screen only for all areas controlled by Page Builder. This includes CMS pages, Product and Category pages, Blocks, and Dynamic Blocks. Full-screen editing puts the focus on your content and provides a view that better matches the user experience on the storefront.
 
--  {:.new}<!--Issue 544-->Page Builder content previews. By default, Page Builder now provides content previews not only for CMS pages and Blocks, but for Product and Category pages as well. You can configure this feature to be on or off for Product and Category pages using the new Page Builder Content Preview setting, accessed in Stores > Configuration > Content Management > Advanced Content Tools.
+-  {:.new}<!--Issue 544-->**Page Builder content previews.** By default, Page Builder now provides content previews not only for CMS pages and Blocks, but for Product and Category pages as well. You can configure this feature to be on or off for Product and Category pages using the new Page Builder Content Preview setting, accessed in Stores > Configuration > Content Management > Advanced Content Tools.
 
--  {:.new}<!--Issue 543-->Improved access to Product short descriptions. By default, a Product's short description is now displayed before the longer description. This not only matches the order they appear on the storefront, but also prevents the need to scroll through the longer description's content to get access to the short description.
+-  {:.new}<!--Issue 543-->**Improved access to Product short descriptions.** By default, a Product's short description is now displayed before the longer description. This not only matches the order they appear on the storefront, but also prevents the need to scroll through the longer description's content to get access to the short description.
 
--  {:.fix}<!--Issue 419-->Nested links in Banners and Slides. Adding links to both the content and the outer elements of Banners and Slides created nested links which did not display or behave correctly on the storefront. To resolve the issue, we no longer allow links to be added to *both* the Message Text area and the Link attribute.
+-  {:.new}<!--Issue 419-->**Prevented nested links in Banners and Slides.** Adding links to both the content and the outer elements of Banners and Slides created nested links which did not display or behave correctly on the storefront. To resolve the issue, we no longer allow links to be added to *both* the Message Text area and the Link attribute for Banners and Slides.
 
 -  {:.fix}<!--Issue 421--> Fixed issue where setting empty border radius on a Tab Item caused errors and broke Tab Item content.
 
