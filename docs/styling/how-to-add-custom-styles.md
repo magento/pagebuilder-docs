@@ -1,6 +1,24 @@
-# How to add custom CSS to Page Builder
+# How to override styles
 
-To extend or override Page Builder styles, you can add custom CSS classes to any of the following locations:
+To customize or override a Page Builder style assigned to a content type, we recommend creating a CSS selector that targets the content type by using a custom class, as follows:
+
+-  `html-body` id
+-  `data-content-type` attribute
+-  your custom CSS class
+
+For example, if you wanted to override the Heading content type, the selector for your CSS class should follow this pattern:
+
+![Page Builder style selector](../images/pagebuilder-style-override-selector.svg)
+
+This CSS selector results in a CSS specificity value of 120, which overrides the 110 specificity for Page Builder styles, while keeping the specificity relatively low for any additional overrides, as needed.
+
+In addition, you need to add your CSS class (or classes) to the content type. You can do this by adding your class names to the content type's **CSS Classes** field in the editor. For this example, you would add `theme-headings` to the field in the Headings editor, as shown:
+
+![Add CSS class to content type](../images/css-classes-field.svg)
+
+## Where to add your CSS
+
+To extend or override Page Builder styles, add your custom CSS classes to any of the following locations:
 
 -  **Page Builder module** `adminhtml` area
 -  **Page Builder module** `frontend` area
@@ -9,7 +27,7 @@ To extend or override Page Builder styles, you can add custom CSS classes to any
 
 The reasons for adding your overrides to one or more of these locations are described next.
 
-## Overriding Admin styles (adminhtml)
+### Overriding Admin styles (adminhtml)
 
 To override Page Builder styles applied to content types on the Admin stage, add or import your CSS styles to the `_module.less` file in your module's `adminhtml` area: `/view/adminhtml/web/css/source/_module.less`.
 
@@ -49,7 +67,7 @@ Using HTML Code in this way creates an internal stylesheet (on the page) that ov
 
     By convention, Magento merges the CSS/LESS imported in `_module.less` with all the other CSS in the `pub/static` directory: `styles-m.css` and `styles-l.css`.
 
-3. Add your custom CSS to override the Page Builder styles applied to Page Builder content types as well as your custom content types. The ruleset below is applied to a custom content type:
+3. Add your custom CSS rulesets to your `.less` files. The simple ruleset below is for a custom content type named `vendor_modulename`:
 
     ```css
     #html-body [data-content-type='vendor_modulename'].my-css-class {
@@ -66,6 +84,6 @@ Using HTML Code in this way creates an internal stylesheet (on the page) that ov
 
     ![Add CSS class to content type](../images/css-classes-field.svg)
 
-After these four steps, the browser does the rest to ensure your CSS overrides the Page Builder CSS.
+That's it. The browser does the rest, resulting in a clean override of Page Builder's native styling.
 
 To learn how the details of how Page Builder styles all content types, see [How Page Builder styles content](how-pagebuilder-styles-content.md).

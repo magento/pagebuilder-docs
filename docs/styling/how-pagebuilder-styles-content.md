@@ -70,26 +70,8 @@ If you inspect a page on your storefront built with Page Builder, you can see fo
 
 3. **Applied styles**. The dynamic `data-pb-style` attributes on the content types match their respective CSS styles in the `<style>` block, and the browser does the rest. For custom content types (and many native content types), Page Builder applies the `data-pb-style` attribute to the top-level container element. However, for some content types, like the Row shown in this example, the `data-pb-style` attribute is added to an inner element.
 
-## Overriding Page Builder CSS
-
-To customize or override a Page Builder style assigned to a content type, we recommend creating a CSS selector that targets the content type with using a custom class, as follows:
-
--  `html-body` id
--  `data-content-type` attribute
--  your custom CSS class
-
-For example, if you wanted to override the Heading content type, the selector for your CSS class should follow this pattern:
-
-![Page Builder style selector](../images/pagebuilder-style-override-selector.svg)
-
-This CSS selector results in a CSS specificity value of 120, which overrides the 110 specificity for Page Builder styles, while keeping the specificity relatively low for any additional overrides, as needed.
-
-In addition, you need to add your CSS class (or classes) to the content type. You can do this by adding your class names to the content type's **CSS Classes** field in the editor. For this example, you would add `theme-headings` to the field in the Headings editor, as shown:
-
-![Add CSS class to content type](../images/css-classes-field.svg)
-
 ## Summary
 
 Page Builder applies styles to native and custom content types by creating dynamic, attribute-based styles, using a CSS selector pattern that results in a specificity of 110 for each content type style. These styles are added to a single internal stylesheet for each page and can be easily overridden with custom CSS classes.
 
-See [How to add custom CSS to Page Builder](how-to-add-custom-styles.md) to start customizing styles for existing Page Builder content types.
+See [How to override styles](how-to-add-custom-styles.md) to start customizing Page Builder's styles to meet your needs.
