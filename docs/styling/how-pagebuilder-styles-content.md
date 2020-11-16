@@ -1,15 +1,41 @@
 # How Page Builder styles content
 
-To style both its native content types and your custom content types, Page Builder does the following:
+Page Builder applies CSS styles to both native and custom content types by generating attribute-based CSS rulesets that are unique to each content type on a page. Listed below are the highlights of how Page Builder styles content types.
 
--  Creates a single, dynamic CSS ruleset for each content type.
+-  Page Builder adds a `data-pb-style` attribute and a dynamically generated value to the content type so that it can be uniquely targeted by a CSS selector.
 
--  Populates the ruleset with default values and values from the end user's chosen settings in the content type's editor.
+-  Page Builder generates a CSS selector for the content type by combining the page's `html-body` id and the `data-pb-style` attribute with the content types unique value.
 
--  Creates a CSS selector for the ruleset by combining the page's `html-body` id with the `data-pb-style` attribute and unique (dynamically generated) value. The unique value ensures that each content type on the page can be uniquely targeted.
+-  Page Builder creates the CSS ruleset (property: values) for the selector by pulling values from the content type's form editor.
 
-## Page Builder CSS example
-For example, Page Builder generates the following CSS ruleset for the default settings on a Row content type:
+-  Page Builder creates an internal stylesheet for each page by adding a `<style>` block before the content types on the page.
+
+The details of each process are explained below.
+
+## Content type style attributes
+
+For every content type (both native and custom), Page Builder adds an attribute called `data-pb-style` with a unique and dynamically generated value. The following example shows a Heading content type with the style attribute:
+
+```html
+<h2 data-content-type="heading"
+    data-appearance="default"
+    data-element="main"
+    data-pb-style="XDFNGK9">
+    My Heading
+</h2>
+```
+
+## Dynamic CSS selectors
+
+Page Builder generates its CSS selectors using one `id` and one `attribute`. This pattern is always the same, which gives all Page Builder CSS selectors a specificity of **110**. The anatomy of a Page Builder CSS selector is shown here:
+
+![Page Builder style selector](../images/pagebuilder-style-selector.svg)
+
+As noted, the CSS specificity of 110 is relatively low, which makes it possible to override these styles with your own custom CSS. For more information on CSS specificity and how it works, see https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity.
+
+## CSS rulesets
+
+To create the CSS rulesets for the selectors, Page Builder pulls the properties and values from the content type's form editor. The following example lists the CSS rules created from a Row content type (with minor changes made to the margins and paddings in the editor):
 
 ```css
 #html-body [data-pb-style=WMWMCFQ] {
