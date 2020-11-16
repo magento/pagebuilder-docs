@@ -2,8 +2,6 @@
 
 <!-- {% raw %} -->
 
-## What's in this topic
-
 This topic describes the new full-width page layouts in Page Builder, along with instructions on how you can use them in custom themes.
 
 **Note:** These layouts use the Luma theme page structures. They may not work as expected in your custom themes.
@@ -22,7 +20,7 @@ This template simply removes the left and right gutters from a CMS page's conten
 
 As this template extends from the `1column` page layout we restore the `page-layout-1column` class within the `Magento\PageBuilder\Plugin\Result\Page` plugin.
 
-We do this by referencing the `main.content` container and replacing the `page-main` with our new `page-main-full-width`. 
+We do this by referencing the `main.content` container and replacing the `page-main` with our new `page-main-full-width`.
 
 ```xml
 <referenceContainer name="main.content" htmlTag="main" htmlClass="page-main-full-width" />

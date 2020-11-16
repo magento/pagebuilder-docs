@@ -356,9 +356,9 @@ Using `<attribute>` or `<style>` configurations is transparent to end users. But
 
 The `<css>` config node is a bit different from the `<attribute>` and `<style>` nodes. The `<css>` node wasn't designed to be added to an element more than once like the other two nodes. Instead, it was designed to capture multiple CSS classes from a single form field and render those classes to the DOM within the `class` attribute. For this reason, it is currently not possible to add CSS classes to an element's `class` attribute from other form fields.
 
-Out of the box, Page Builder maps the `<css>` config node (for each content type) to the `css_classes` input field from the `pagebuilder_base_form.xml`. For example, if you were to enter two CSS classes into this field within the Heading form, Page Builder would add the `class` attribute to the Heading's `main` element (`<h2>`) and populate it with the CSS classes entered, as shown on the first line here:
+Out of the box, Page Builder maps the `<css>` config node (for each content type) to the `css_classes` input field from the `pagebuilder_base_form.xml`. For example, if you were to enter two CSS classes into this field within the Heading form, Page Builder would add the `class` attribute to the Heading's `main` element (`<h2>`) and populate it with the CSS classes entered, as shown on the first line of the HTML below:
 
-![CSS Classes input field](../images/css-class-input-output.png)
+![CSS Classes input field](../images/css-classes-field-for-css-nodes.svg)
 
 ```html
 <h2 class="fall-heading-style halloween-heading-style"
@@ -372,7 +372,7 @@ Out of the box, Page Builder maps the `<css>` config node (for each content type
 </h2>
 ```
 
-As mentioned, you can override the `<css>` node to map it to a different field name and/or type. You just can't use it more than once per element.
+As mentioned, you can override the `<css>` node to map it to a different field name and/or field type (like a selector control). You just can't apply the `<css>` node more than once per element.
 
 Regardless of the limitation, you can still use the `<css>` node to provide creative styling options for a content type. For example, if a merchant has a set of standard CSS classes they use during the year for holidays, you could map the `<css>` node to a `select` field that allows end users to choose from sets of merchant-approved classes with descriptive names, like Halloween styling, Christmas styling, and so on.
 

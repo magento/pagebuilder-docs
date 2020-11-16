@@ -2,8 +2,6 @@
 
 <!-- {% raw %} -->
 
-## What's in this topic
-
 This topic describes how to extend some Page Builder fields to accommodate a custom look and feel for the text alignment option.
 
 In the Advanced section of the content editor, the text alignment field for each content type now shows an icon and title. You can customize the text alignment field to show this new look and feel for your custom content types.

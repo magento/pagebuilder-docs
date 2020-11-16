@@ -1,7 +1,5 @@
 # How to add a text editor
 
-## What's in this topic
-
 This topic describes how to add a reusable inline text editing component to the Page Builder stage for a content type.
 
 ## Add configuration for the inline text editor
@@ -25,7 +23,7 @@ To add configuration for the inline text editor:
 
 2. Add your custom editor adapter class to the list of WYSIWYG adapters supporting inline text editing in the `di.xml` file:
 
-  ``` xml 
+  ``` xml
     <type name="Magento\PageBuilder\Model\Wysiwyg\InlineEditingSupportedAdapterList">
         <arguments>
             <argument name="wysiwygAdaptersSupportingInlineEditing" xsi:type="array">
