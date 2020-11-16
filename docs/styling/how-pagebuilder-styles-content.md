@@ -70,14 +70,6 @@ If you inspect a page on your storefront built with Page Builder, you can see fo
 
 3. **Applied styles**. The dynamic `data-pb-style` attributes on the content types match their respective CSS styles in the `<style>` block, and the browser does the rest. For custom content types (and many native content types), Page Builder applies the `data-pb-style` attribute to the top-level container element. However, for some content types, like the Row shown in this example, the `data-pb-style` attribute is added to an inner element.
 
-## Page Builder CSS specificity
-
-Page Builder generates `id` + `attribute` selectors to dynamically create a CSS ruleset for a content type. The pattern for each content type is always the same, one `id` selector and one attribute selector. This gives all Page Builder content types a specificity of **110**.
-
-![Page Builder style selector](../images/pagebuilder-style-selector.svg)
-
-The CSS specificity of 110 is relatively low, which makes it possible to override these styles with your own custom CSS. For more information on CSS specificity and how it works, see https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity.
-
 ## Overriding Page Builder CSS
 
 To customize or override a Page Builder style assigned to a content type, we recommend creating a CSS selector that targets the content type with using a custom class, as follows:
