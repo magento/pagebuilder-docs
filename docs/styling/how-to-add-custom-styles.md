@@ -78,7 +78,7 @@ Using HTML Code in this way creates an internal stylesheet (on the page) that ov
     }
     ```
 
-    In this example, we use the `#html-body` id, which Page Builder adds to the `<body>` tag of all Page Builder pages, coupled with an attribute (`data-content-type`) that targets our custom content type, and finally your own CSS class. The combination of the id, attribute, and class increases the CSS specificity to 1-2-0, high enough to override Page Builder's CSS specificity of 1-1-0.
+    In this example, we use the `#html-body` id from the `<body>` element of all Magento storefront pages, coupled with an attribute (`data-content-type`) that targets our custom content type, and finally your own CSS class. The combination of the id, attribute, and class increases the CSS specificity to 1-2-0, high enough to override Page Builder's CSS specificity of 1-1-0.
 
 4. Add your custom CSS class name to the CSS Classes field for the content type. This ensures that Page Builder includes your CSS class name in the DOM of the content type.
 
