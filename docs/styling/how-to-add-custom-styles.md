@@ -49,7 +49,7 @@ For detailed information on adding CSS and LESS styles to your themes, see:
 
 ### Overriding styles during development and testing
 
-To quickly develop and test custom CSS overrides before moving them to your modules and themes, you can drag an HTML Code content type to the page your developing, then add your custom CSS styles to a `<style>` block in the WYSIWYG editor.
+To quickly develop and test custom CSS overrides before moving them to your modules and themes, you can drag an HTML Code content type to the page you are developing, then add your custom CSS styles to a `<style>` block in the WYSIWYG editor.
 
 ![HTML Code styling during development](../images/htmlcode-styling-during-dev.png)
 
