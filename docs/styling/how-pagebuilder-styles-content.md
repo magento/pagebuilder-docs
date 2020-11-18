@@ -66,9 +66,33 @@ If you inspect a page on your storefront built with Page Builder, you can see fo
 
 1. **Html-body id**. The first thing to notice is the CSS `id=html-body` assigned to Magento storefront pages. Page Builder uses this `id` to construct all the CSS selectors it applies to its content types.
 
-2. **Internal style block**. Page Builder adds all the unique `data-pb-style` attribute styles (one for each content type on the page) to a single `<style>` block. This creates what's called an internal stylesheet for the page. In this example, the page contains three content types. So Page Builder has added three CSS rulesets to the `<style>` block, one for each content type on the page. If the page contained 10 content types, the `<style>` block would contain 10 CSS rulesets.
+2. **Internal style block**. Page Builder adds all the unique `data-pb-style` attribute styles for the page's content types to a single `<style>` block. This creates what's called an internal stylesheet for the page. In this example, the page contains three content types that required three CSS rulesets for the page's `<style>` block.
 
-3. **Applied styles**. The dynamic `data-pb-style` attributes on the content types match their respective CSS styles in the `<style>` block, and the browser does the rest. For custom content types (and many native content types), Page Builder applies the `data-pb-style` attribute to the top-level container element. However, for some content types, like the Row shown in this example, the `data-pb-style` attribute is added to an inner element.
+    Note that not every content type on the page needs its own unique ruleset. In many cases, CSS rulesets can be shared among the content types on the page. Page Builder determines the most efficient application of CSS to the content types on the page, then creates the rulesets necessary for accurate styling.
+
+3. **Applied styles**. The dynamic `data-pb-style` attributes on the content types match their respective CSS styles in the `<style>` block, and the browser does the rest. For both custom and native content types, Page Builder applies the `data-pb-style` attribute to content type elements that contain `style` nodes.
+
+    For example, notice how Page Builder adds the `data-pb-style` attribute to the Row's `inner` element, and not the `main` element, as was done for the Heading and Text content types. The reason becomes clear when you look at the Row's element structure within its config file (row.xml):
+
+    ```xml
+    <elements>
+        <element name="main">
+            <style name="display" source="display" converter="Magento_PageBuilder/js/converter/style/display" preview_converter="Magento_PageBuilder/js/converter/style/preview/display"/>
+            <attribute name="name" source="data-content-type"/>
+            <attribute name="appearance" source="data-appearance"/>
+        </element>
+        <element name="inner">
+            <style name="background_color" source="background_color"/>
+            <style name="background_image" source="background_image" converter="Magento_PageBuilder/js/converter/style/background-image" preview_converter="Magento_PageBuilder/js/converter/style/preview/background-image" persistence_mode="write"/>
+            <style name="background_position" source="background_position"/>
+            <style name="background_size" source="background_size"/>
+            <style name="background_repeat" source="background_repeat"/>
+            <style name="background_attachment" source="background_attachment"/>
+            <style name="text_align" source="text_align"/>
+            ...
+    ```
+
+    As shown, the Row's `inner` element contains all the `style` nodes applied to the Row, not the `main` element. So Page Builder applies the `data-pb-styles` attribute to the Row's `inner` element to ensure the proper application of CSS styles. For the Heading and Text content types, all the `style` nodes are in the `main` element, so Page Builder applies the `data-pb-styles` attribute to those elements in the DOM.
 
 ## Summary
 
