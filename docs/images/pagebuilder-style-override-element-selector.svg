@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="875" height="226" viewBox="0 0 875 226">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="875" height="226" fill="#FFF"/>
+    <text fill="#D0021B" font-family="Helvetica" font-size="26">
+      <tspan x="15" y="134">#html-body</tspan>
+    </text>
+    <text fill="#06C" font-family="Helvetica" font-size="26">
+      <tspan x="205.5" y="133">[ data-content-type =</tspan>
+    </text>
+    <text fill="#417505" font-family="Helvetica" font-size="26">
+      <tspan x="453.5" y="134">&apos;heading&apos;</tspan>
+    </text>
+    <path stroke="#D0021B" stroke-dasharray="2 4" stroke-linecap="square" stroke-width="2" d="M15,98 L15,81 L145,81 L145,98"/>
+    <path stroke="#06C" stroke-dasharray="2 4" stroke-linecap="square" stroke-width="2" d="M205.5,100 L205.5,81 L429.5,81 L429.5,100"/>
+    <path stroke="#417505" stroke-dasharray="2 4" stroke-linecap="square" stroke-width="2" d="M452.5,98 L452.5,81 L558.5,81 L558.5,98"/>
+    <text fill="#D0021B" font-family="Helvetica" font-size="14">
+      <tspan x="39.417" y="36">Page Builder </tspan> <tspan x="46.045" y="55">ID selector </tspan>
+    </text>
+    <text fill="#9013FE" font-family="Helvetica" font-size="14">
+      <tspan x="157.097" y="36">element</tspan> <tspan x="157.49" y="55">selector </tspan>
+    </text>
+    <text fill="#D0021B" font-family="Helvetica" font-size="14">
+      <tspan x="42.652" y="178">Same for all</tspan> <tspan x="38.362" y="197">content types </tspan>
+    </text>
+    <text fill="#06C" font-family="Helvetica" font-size="14">
+      <tspan x="277.152" y="178">Same for all </tspan> <tspan x="272.862" y="197">content types </tspan>
+    </text>
+    <text fill="#417505" font-family="Helvetica" font-size="14">
+      <tspan x="461.483" y="178">Different for all </tspan> <tspan x="465.362" y="197">content types </tspan>
+    </text>
+    <text fill="#06C" font-family="Helvetica" font-size="14">
+      <tspan x="279.917" y="36">Page Builder</tspan> <tspan x="228.169" y="55">content type attribute selector </tspan>
+    </text>
+    <text fill="#417505" font-family="Helvetica" font-size="14">
+      <tspan x="467.417" y="36">Page Builder </tspan> <tspan x="449.907" y="55">content type name </tspan>
+    </text>
+    <text fill="#000" font-family="Helvetica-Bold, Helvetica" font-size="16" font-weight="bold">
+      <tspan x="674.5" y="51">Specificity</tspan>
+    </text>
+    <g transform="translate(636 78)">
+      <circle cx="24" cy="24" r="24" fill="#E86764"/>
+      <path fill="#FFF" fill-rule="nonzero" d="M18.4615385,19.9308894 L18.4615385,17.3076923 C19.6784917,17.2536055 20.5303461,17.1724765 21.0171274,17.0643029 C21.7923717,16.893028 22.423375,16.5504833 22.9101562,16.0366587 C23.2436916,15.6850944 23.4960929,15.2163491 23.6673678,14.6304087 C23.7665269,14.2788444 23.8161058,14.0174287 23.8161058,13.8461538 L27.0207332,13.8461538 L27.0207332,33.452524 L23.0724159,33.452524 L23.0724159,19.9308894 L18.4615385,19.9308894 Z"/>
+    </g>
+    <circle cx="24" cy="24" r="24" fill="#60A1E3" transform="translate(692 78)"/>
+    <circle cx="24" cy="24" r="24" fill="#BE74FF" transform="translate(747 78)"/>
+    <text fill="#D0021B" font-family="Helvetica" font-size="14">
+      <tspan x="622.259" y="163">1 id selector </tspan>
+    </text>
+    <text fill="#06C" font-family="Helvetica" font-size="14">
+      <tspan x="658.414" y="197">1 attribute selector</tspan>
+    </text>
+    <line x1="660.5" x2="660.5" y1="130.5" y2="149.5" stroke="#D0021B" stroke-linecap="square"/>
+    <line x1="770.5" x2="770.5" y1="130.5" y2="149.5" stroke="#D0021B" stroke-linecap="square"/>
+    <line x1="183" x2="183" y1="65" y2="105" stroke="#9013FE" stroke-linecap="square" stroke-width="2"/>
+    <line x1="716.5" x2="716.5" y1="130.5" y2="177.5" stroke="#06C" stroke-linecap="square"/>
+    <polygon fill="#06C" fill-rule="nonzero" points="569.472 138.116 569.472 114.224 564.597 114.224 564.597 116.09 567.301 116.09 567.301 136.25 564.597 136.25 564.597 138.116"/>
+    <text fill="#9013FE" fill-rule="nonzero" font-family="Helvetica" font-size="26">
+      <tspan x="168.5" y="135">h1</tspan>
+    </text>
+    <path fill="#FFF" fill-rule="nonzero" d="M718.095703 113.5L718.095703 93.6757812 714.855469 93.6757812C714.855469 93.8489583 714.805339 94.1132812 714.705078 94.46875 714.531901 95.0611979 714.276693 95.5351562 713.939453 95.890625 713.447266 96.4101562 712.809245 96.7565104 712.025391 96.9296875 711.533203 97.0390625 710.671875 97.1210938 709.441406 97.1757812L709.441406 97.1757812 709.441406 99.828125 714.103516 99.828125 714.103516 113.5 718.095703 113.5zM773.595703 113.5L773.595703 93.6757812 770.355469 93.6757812C770.355469 93.8489583 770.305339 94.1132812 770.205078 94.46875 770.031901 95.0611979 769.776693 95.5351562 769.439453 95.890625 768.947266 96.4101562 768.309245 96.7565104 767.525391 96.9296875 767.033203 97.0390625 766.171875 97.1210938 764.941406 97.1757812L764.941406 97.1757812 764.941406 99.828125 769.603516 99.828125 769.603516 113.5 773.595703 113.5z"/>
+    <text fill="#9013FE" font-family="Helvetica" font-size="14">
+      <tspan x="742.304" y="165">1 element selector</tspan>
+    </text>
+  </g>
+</svg>
