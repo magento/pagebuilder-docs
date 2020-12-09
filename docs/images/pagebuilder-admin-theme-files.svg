@@ -48,7 +48,7 @@
     </g>
     <g transform="translate(65 69)">
       <text fill="#222" font-family="Helvetica" font-size="14">
-        <tspan x="25" y="16">Vendor</tspan>
+        <tspan x="25" y="16">VendorName</tspan>
       </text>
       <g transform="translate(0 2)">
         <polygon fill="#7C7C7C" points="0 0 6 0 8 3 16 3 16 16 0 16"/>

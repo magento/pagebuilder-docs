@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="630" height="218" viewBox="0 0 630 218">
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="218" viewBox="0 0 700 218">
   <g fill="none" fill-rule="evenodd">
-    <rect width="630" height="218" fill="#FFF"/>
-    <rect width="629" height="217" x=".5" y=".5" stroke="#999"/>
+    <rect width="700" height="218" fill="#FFF"/>
+    <rect width="699" height="217" x=".5" y=".5" stroke="#999"/>
     <text fill="#000" font-family="Helvetica-Bold, Helvetica" font-size="15" font-weight="bold">
       <tspan x="120" y="147">Applied Theme</tspan>
     </text>
@@ -11,7 +11,7 @@
     <text fill="#000" font-family="Helvetica" font-size="18">
       <tspan x="13.473" y="78">Default Theme</tspan>
     </text>
-    <line x1="12.5" x2="629.5" y1="99.5" y2="99.5" stroke="#AAA" stroke-linecap="square"/>
+    <line x1="12.5" x2="699.5" y1="99.5" y2="99.5" stroke="#AAA" stroke-linecap="square"/>
     <g transform="translate(252 125)">
       <rect width="177" height="32" x=".5" y=".5" fill="#FFF" stroke="#979797"/>
       <text fill="#333" font-family="Helvetica" font-size="14" letter-spacing=".2">

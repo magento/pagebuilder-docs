@@ -1,19 +1,26 @@
-# Override Page Builder styles in themes
+# Override Page Builder styles using themes
 
-The best place to override Page Builder's default styles is within themes. CSS selectors within themes take precedence over the same CSS selectors in modules. This behavior reinforces the Magento convention of using themes to style your module content whenever possible.
+The best place to override Page Builder's default styles is within Admin and frontend themes. Magento adds theme styles to the `styles.css` output after the styles from modules. This action ensures that theme styles take precedence over the same styles in modules. It's also why you want to use Magento themes to style your Page Builder content whenever possible.
 
-Use Admin themes to override Page Builder's default admin styles. And use frontend themes to override Page Builder's default storefront styles.
+In this topic, you will learn how to use Admin and frontend themes to override Page Builder's default admin and storefront styles, respectively.
 
 ## Use Admin themes
 
 To override Page Builder styles in the Admin, you need to:
 
-1. Create an Admin theme.
+1. Create or modify an Admin theme.
 2. Apply the Admin theme to a module.
 
-### Step 1: Create an Admin theme
+### Step 1: Create or modify an Admin theme
 
-Your first step is to create an Admin theme with the following directory and file structure. See [Create an Admin theme]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/themes/admin_theme_create.html) for more details:
+The following instructions refer only to the specifics of overriding Page Builder Admin styles. To learn more on creating Admin themes in general, see [Create an Admin theme]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/themes/admin_theme_create.html).
+
+Your overriding Admin theme should have a directory and file structure similar to the following:
+
+```terminal
+app/design/adminhtml/VendorName/ThemeName/web/css/source/pagebuilder/<specific overrides>
+app/design/adminhtml/VendorName/ThemeName/web/css/source/_module.less
+```
 
 ![Page Builder admin theme files](../images/pagebuilder-admin-theme-files.svg)
 _Admin theme directory structure_
@@ -40,11 +47,11 @@ The key takeaways are numbered in the image and described as follows:
 
 ### Step 2: Apply the Admin theme to a module
 
-After creating the Admin theme, you need to apply it to a custom Page Builder module. See [Apply an Admin theme]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/themes/admin_theme_apply.html) for complete details.
+The following instructions are specific to applying an Admin theme to a custom Page Builder module. To learn more on applying Admin themes to modules in general, see [Apply an Admin theme]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/themes/admin_theme_apply.html).
 
 **To apply your Admin theme to a module**:
 
-1. Create a `di.xml` file (in your module's `etc` directory) that references your Admin theme. The following example adds the `Vendor/ThemeName` Admin theme we created in step 1:
+1. Create a `di.xml` file (in your module's `etc` directory) that references your Admin theme. The following example adds the `VendorName/ThemeName` Admin theme we created in step 1:
 
     ```xml
     <?xml version="1.0"?>
@@ -54,7 +61,7 @@ After creating the Admin theme, you need to apply it to a custom Page Builder mo
         <type name="Magento\Theme\Model\View\Design">
             <arguments>
                 <argument name="themes" xsi:type="array">
-                    <item name="adminhtml" xsi:type="string">Vendor/ThemeName</item>
+                    <item name="adminhtml" xsi:type="string">VendorName/ThemeName</item>
                 </argument>
             </arguments>
         </type>
@@ -76,28 +83,35 @@ After creating the Admin theme, you need to apply it to a custom Page Builder mo
 
 To override Page Builder styles on the storefront, you need to:
 
-1. Create a frontend theme.
-2. Apply the frontend theme in the Admin.
+1. Create or modify a frontend theme.
+2. Apply the frontend theme to a store view or page.
 
-### Step 1: Create a frontend theme
+### Step 1: Create or modify a frontend theme
 
-Your first step is to create a frontend theme with the following directory and file structure. See [Create a new storefront theme]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/themes/theme-create.html) for all the details:
+The following instructions refer only to the specifics of overriding Page Builder frontend styles. To learn more on creating frontend themes in general, see [Create a new storefront theme]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/themes/theme-create.html).
+
+Your overriding frontend theme should have a directory and file structure similar to the following:
+
+```terminal
+app/design/frontend/VendorName/ThemeName/web/css/source/pagebuilder/<specific overrides>
+app/design/frontend/VendorName/ThemeName/web/css/source/_extend.less
+```
 
 ![Page Builder frontend theme files](../images/pagebuilder-frontend-theme-files.svg)
 _Frontend theme directory structure_
 
-The first three numbered callouts (1, 2, 3) in the frontend theme directory structure are identical to those described for the [admin theme](#admin-themes) previously. The only difference is the file name to use for your frontend theme's master import file: `_extend.less`.
+The first three numbered callouts (1, 2, 3) in the theme directory structure are identical to those described for the [admin theme](#admin-themes). The only difference is that the `_module.less` file should be named `_extend.less`.
 
-1. **_extend.less**. The `_extend.less` file is required and must be added directly to your frontend theme's `source` directory. Magento uses this file to add your frontend styles to the `pub/static/frontend` output in a location within the `styles-m.css` where they override (instead of replace) the default frontend styles, including Page Builder's default content-type styles. Like the `_import.less` files, the `_extend.less` file should only contain `@import` statements. In our example, our `_extend.less` contains the same two imports as seen in `module.less`:
+4. **_extend.less**. The `_extend.less` file is required and must be added directly to your frontend theme's `source` directory. Magento uses this file to add your frontend styles to the `pub/static/frontend` output in a location within the `styles-m.css` where they override (instead of replace) the default frontend styles, including Page Builder's default content-type styles. Like the `_import.less` files, the `_extend.less` file should only contain `@import` statements. In our example, our `_extend.less` contains the same two imports as seen in `module.less`:
 
     ```scss
     @import 'pagebuilder/heading/_import.less';
     @import 'pagebuilder/products/_import.less';
     ```
 
-### Step 2: Apply the frontend theme in the Admin
+### Step 2: Apply the frontend theme
 
-After creating the frontend theme, you need to apply it to one or more of your store views. You can can also apply it specifically to a page. See [Apply a storefront theme]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/themes/theme-apply.html) for all the details.
+The following instructions are here as a **reminder** to apply your frontend theme to a store view or page. If you forget, you won't see your style overrides in the storefront, and you will wonder why. To learn more on applying themes in general, see [[Apply a storefront theme]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/themes/theme-apply.html).
 
 **To apply your frontend theme to a store view**:
 
@@ -108,16 +122,13 @@ _Set default frontend theme for store view_
 
 **To apply your frontend theme to a page**:
 
-Open a new or existing CMS page, scroll to the Design section at the bottom, and select your theme from the New Theme selector.
+During development, it's easy to apply your frontend theme to a single page for testing. But equally easy to forget to switch your page to that theme. Consider this your reminder.
+
+On any CMS page, scroll to the Design section at the bottom, and select your theme from the New Theme selector.
 
 ![Set theme for page](../images/theme-page-setting-admin.svg)
 _Set frontend theme for page_
 
-
 ## More about themes
 
-For additional information on creating and applying themes, as well as overriding module styles with themes, see these additional topics:
-
--  [Simple ways to customize a theme's styles]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/css-guide/css_quick_guide_approach.html)
-
--  [Override module styles with theme styles]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/css-guide/css_quick_guide_approach.html#override-module-styles)
+For additional information on overriding styles using themes, see [Simple ways to customize a theme's styles]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/css-guide/css_quick_guide_approach.html).

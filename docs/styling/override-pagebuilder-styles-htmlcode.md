@@ -1,4 +1,4 @@
-# Override Page Builder styles with HTML Code
+# Override Page Builder styles using HTML Code
 
 To quickly develop and test custom CSS overrides before moving them to your modules and themes, you can drag an HTML Code content type to the page you are developing, then add your custom CSS styles to a `<style>` block in the WYSIWYG editor.
 
