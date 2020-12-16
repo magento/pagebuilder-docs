@@ -100,7 +100,7 @@ app/design/frontend/VendorName/ThemeName/web/css/source/_extend.less
 ![Page Builder frontend theme files](../images/pagebuilder-frontend-theme-files.svg)
 _Frontend theme directory structure_
 
-The first three numbered callouts (1, 2, 3) in the theme directory structure are identical to those described for the [admin theme](#admin-themes). The only difference is that the `_module.less` file should be named `_extend.less`.
+The first three numbered callouts (1, 2, 3) in the theme directory structure are identical to those previously described for the admin themes. The only difference is that the `_module.less` file should be named `_extend.less`.
 
 4. **_extend.less**. The `_extend.less` file is required and must be added directly to your frontend theme's `source` directory. Magento uses this file to add your frontend styles to the `pub/static/frontend` output in a location within the `styles-m.css` where they override (instead of replace) the default frontend styles, including Page Builder's default content-type styles. Like the `_import.less` files, the `_extend.less` file should only contain `@import` statements. In our example, our `_extend.less` contains the same two imports as seen in `module.less`:
 
