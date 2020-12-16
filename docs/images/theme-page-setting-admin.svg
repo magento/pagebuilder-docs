@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="630" height="248" viewBox="0 0 630 248">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="630" height="248" fill="#FFF"/>
+    <rect width="629" height="247" x=".5" y=".5" stroke="#999"/>
+    <text fill="#000" font-family="Helvetica-Bold, Helvetica" font-size="15" font-weight="bold">
+      <tspan x="180.833" y="97">Layout</tspan>
+    </text>
+    <text fill="#000" font-family="Helvetica-Bold, Helvetica" font-size="15" font-weight="bold">
+      <tspan x="56.665" y="152">Customn Layout Update</tspan>
+    </text>
+    <text fill="#000" font-family="Helvetica-Bold, Helvetica" font-size="15" font-weight="bold">
+      <tspan x="146.643" y="207">New Theme</tspan>
+    </text>
+    <text fill="#000" font-family="Helvetica" font-size="18">
+      <tspan x="13" y="28">Design</tspan>
+    </text>
+    <g transform="translate(252 75)">
+      <rect width="179" height="32" x=".5" y=".5" fill="#FFF" stroke="#979797"/>
+      <text fill="#333" font-family="Helvetica" font-size="14" letter-spacing=".2">
+        <tspan x="12" y="22">Page -- Full Width</tspan>
+      </text>
+      <g transform="translate(178)">
+        <rect width="34" height="32" x=".5" y=".5" fill="#E3E3E3" stroke="#979797"/>
+        <polygon fill="#524A42" points="17 14 21 19 13 19" transform="rotate(-180 17 16.5)"/>
+      </g>
+    </g>
+    <g transform="translate(252 130)">
+      <rect width="104" height="32" x=".5" y=".5" fill="#FFF" stroke="#979797"/>
+      <text fill="#333" font-family="Helvetica" font-size="14" letter-spacing=".2">
+        <tspan x="9.976" y="22">No Update</tspan>
+      </text>
+      <g transform="translate(103)">
+        <rect width="34" height="32" x=".5" y=".5" fill="#E3E3E3" stroke="#979797"/>
+        <polygon fill="#524A42" points="17 14 21 19 13 19" transform="rotate(-180 17 16.5)"/>
+      </g>
+    </g>
+    <g transform="translate(252 185)">
+      <rect width="150" height="32" x=".5" y=".5" fill="#FFF" stroke="#979797"/>
+      <text fill="#333" font-family="Helvetica" font-size="14" letter-spacing=".2">
+        <tspan x="12" y="22">Theme Name</tspan>
+      </text>
+      <g transform="translate(149)">
+        <rect width="34" height="32" x=".5" y=".5" fill="#E3E3E3" stroke="#979797"/>
+        <polygon fill="#524A42" points="17 14 21 19 13 19" transform="rotate(-180 17 16.5)"/>
+      </g>
+    </g>
+    <g transform="translate(398 134)">
+      <circle cx="11" cy="11" r="11" fill="#514943"/>
+      <text fill="#FFF" font-family="Helvetica-Bold, Helvetica" font-size="18" font-weight="bold" letter-spacing=".257">
+        <tspan x="5" y="18">?</tspan>
+      </text>
+    </g>
+    <g stroke="#3C3C3C" transform="translate(597 14)">
+      <circle cx="9" cy="9" r="9"/>
+      <polyline points="4 11 9 7 13 11"/>
+    </g>
+  </g>
+</svg>
