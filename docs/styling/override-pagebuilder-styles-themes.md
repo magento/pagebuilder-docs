@@ -4,7 +4,7 @@ The best place to override Page Builder's default styles is within Admin and fro
 
 In this topic, you will learn how to use Admin and frontend themes to override Page Builder's default admin and storefront styles, respectively.
 
-## Override using Admin themes
+## Override Admin themes
 
 To override Page Builder styles used in the Admin, you need to:
 
@@ -79,7 +79,7 @@ The following instructions are specific to applying an Admin theme to a custom P
     bin/magento cache:clean
     ```
 
-## Use frontend themes
+## Override frontend themes
 
 To override Page Builder styles on the storefront, you need to:
 
