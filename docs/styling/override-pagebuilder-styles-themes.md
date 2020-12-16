@@ -27,7 +27,7 @@ _Admin theme directory structure_
 
 The key takeaways are numbered in the image and described as follows:
 
-1. **Content types**. Organize your overriding styles according to the Page Builder content-type names you want to override. In this example, we added a `pagebuilder` directory in `source` where we have added `heading` and `products` directories for the content types we want to override.
+1. **Content types**. Organize your overriding styles according to the Page Builder content-type names you want to override. In this example, we added the `design/Vendor/ThemeName/web/css/source/pagebuilder` directory and the `heading` and `products` subdirectories for the content types we want to override.
 
 2. **Overriding stylesheets**. Name your overriding `.less` files to match the appearances of the content types you are overriding. In this example, the `heading` content type has one appearance: `default`. However, the `products` content type has two appearances `default` and `carousel`, so we create one `.less` file for each. This naming convention helps you find your overriding styles later when you need to update them.
 
@@ -111,18 +111,18 @@ The first three numbered callouts (1, 2, 3) in the theme directory structure are
 
 ### Step 2: Apply the frontend theme
 
-The following instructions are here as a **reminder** to apply your frontend theme to a store view or page. If you forget, you won't see your style overrides in the storefront, and you will wonder why. To learn more on applying themes in general, see [[Apply a storefront theme]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/themes/theme-apply.html).
+The following instructions are here as a **reminder** to apply your frontend theme to a store view or page. If you forget, you won't see your style overrides in the storefront. To learn more on applying themes in general, see [[Apply a storefront theme]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/themes/theme-apply.html).
 
 **To apply your frontend theme to a store view**:
 
-Navigate to Content > Design > Configuration and edit the store view where you can apply your frontend theme as the default theme:
+Navigate to **Content** > **Design** > **Configuration** and edit the store view where you can apply your frontend theme as the default theme:
 
 ![Set default theme on store view](../images/theme-default-setting-admin.svg)
 _Set default frontend theme for store view_
 
 **To apply your frontend theme to a page**:
 
-During development, it's easy to apply your frontend theme to a single page for testing. But equally easy to forget to switch your page to that theme. Consider this your reminder.
+During development, it's easy to apply your frontend theme to a single page for testing, but it's also easy to forget to switch your page to that theme. 
 
 On any CMS page, scroll to the Design section at the bottom, and select your theme from the New Theme selector.
 
