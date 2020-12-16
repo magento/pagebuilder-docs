@@ -1,12 +1,12 @@
 # Override Page Builder styles using themes
 
-The best place to override Page Builder's default styles is within Admin and frontend themes. Magento adds theme styles to the `styles.css` output after the styles from modules. This action ensures that theme styles take precedence over the same styles in modules. It's also why you want to use Magento themes to style your Page Builder content whenever possible.
+The best place to override Page Builder's default styles is within Admin and frontend themes. Magento adds theme styles to the `styles.css` output after applying styles from modules, ensuring that theme styles take precedence. It's also why you want to use Magento themes to style your Page Builder content whenever possible.
 
 In this topic, you will learn how to use Admin and frontend themes to override Page Builder's default admin and storefront styles, respectively.
 
-## Use Admin themes
+## Override using Admin themes
 
-To override Page Builder styles in the Admin, you need to:
+To override Page Builder styles used in the Admin, you need to:
 
 1. Create or modify an Admin theme.
 2. Apply the Admin theme to a module.
@@ -38,7 +38,7 @@ The key takeaways are numbered in the image and described as follows:
     @import '_carousel.less';
     ```
 
-4. **_module.less**. The `_module.less` file is required and must be added directly to your admin theme's `source` directory. Magento uses this file to add your admin styles to the `pub/static/adminhtml` output, where they can override default admin styles, including Page Builder's default content-type styles. Like the `_import.less` files, the `_module.less` file should only contain `@import` statements. In our example, our `_module.less` contains two imports:
+4. **_module.less**. The `_module.less` file is required and must be added directly to your Admin theme's `source` directory. Magento uses this file to add your Admin styles to the `pub/static/adminhtml` output, where they can override the default Admin styles, including Page Builder's default content-type styles. Like the `_import.less` files, the `_module.less` file should only contain `@import` statements. In our example, our `_module.less` contains two imports:
 
     ```scss
     @import 'pagebuilder/heading/_import.less';
