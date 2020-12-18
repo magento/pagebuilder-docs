@@ -5,7 +5,7 @@ The `HTML Code` content type can only override frontend theme and module styles.
 
 To quickly develop and test custom CSS overrides for the storefront (before moving them to your modules and themes):
 
-1. Drag an `HTML Code` content type anywhere on the stage. Its position on the stage does not matter. Styles added to `HTML Code` will always override same-specificity styles from other sources.
+1. Drag an `HTML Code` content type anywhere on the stage. Its position on the stage does not matter. Styles added to `HTML Code` will always be placed _after_ Page Builder's internal `<style>` block. This placement ensures that your `HTML Code` block styles will override Page Builder's styles.
 
 1. Open the form editor for the content type.
 
