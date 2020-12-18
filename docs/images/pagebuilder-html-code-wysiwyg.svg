@@ -19,7 +19,7 @@
     <rect width="825" height="167" x="12" y="73" stroke="#ADADAD"/>
     <rect width="849" height="274" x=".5" y=".5" stroke="#999"/>
     <text fill="#747474" font-family="Helvetica" font-size="12">
-      <tspan x="13" y="263">HTML code must be valid, all CSS &amp; JavaScript must be wrapped in their HTML elements.</tspan>
+      <tspan x="13" y="263">HTML code must be valid. All CSS &amp; JavaScript must be wrapped in their HTML elements.</tspan>
     </text>
   </g>
 </svg>

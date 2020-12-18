@@ -20,7 +20,7 @@ The steps for overriding styles in your modules are similar to those introduced 
 
 ### Step 1: Create `adminhtml` and `frontend` directories
 
-In modules, the only difference between overriding Page Builder Admin styles and storefront styles is in where you add your `.less` files. Adding your `.less` files to the `adminhtml` directory overrides Page Builder's Admin styles. Adding them to the `frontend` directory overrides Page Builder's storefront styles. All the other guidelines for each `area` are the same.
+In modules, the only difference between overriding Page Builder Admin styles and storefront styles is the location of your `.less` files. Adding your `.less` files to the `adminhtml` directory overrides Page Builder's Admin styles. Adding them to the `frontend` directory overrides Page Builder's storefront styles. All the other guidelines for each `area` are the same.
 
 ### Step 2: Add content type directories
 
@@ -46,7 +46,7 @@ To ensure this style overrides the `h1` element of the `Heading` content type wi
 
 ### Step 4: Add `_import.less` files
 
-As another organizing practice, we recommend adding `_import.less` files to each content type directory. These files should only contain `@import` statements for all other `.less` files in the directory. When there's only one `.less` file in the directory (as with our example), this practice feels like overkill. But it's a good habit to create as your module's become more complex. Using import files like this helps keep your changes closer to where they occur. In these module examples, the `_import.less` files contain only one import:
+As another organizing practice, we recommend adding `_import.less` files to each content type directory. These files should only contain `@import` statements for all other `.less` files in the directory. When there's only one `.less` file in the directory (as with our example), this practice feels like overkill. But it's a good habit to create as your modules become more complex. Using import files like this helps keep your changes closer to where they occur. In these module examples, the `_import.less` files contain only one import:
 
 ```scss
 @import '_default.less';
@@ -54,7 +54,7 @@ As another organizing practice, we recommend adding `_import.less` files to each
 
 ### Step 5: Add a `_module.less` file
 
-The `_module.less` file is the only **required** file and must be added directly to the `adminhtml/web/css/source` directory. Magento uses this file to add your content type's admin styles to the `pub/static/adminhtml` output, where they can override the default content-type styles. Like the `_import.less` files, it's a best practice for your `_module.less` file to contain only `@import` statements. Technically, you could put all your CSS directly in `_module.less`, but that could quickly become a mess. Using best practices, our `_module.less` files in these examples would look like this:
+The `_module.less` file is the only **required** file and must be added directly to the `adminhtml/web/css/source` directory. Magento uses this file to add your content type's Admin styles to the `pub/static/adminhtml` output, where they can override the default content-type styles. Like the `_import.less` files, it's a best practice for your `_module.less` file to contain only `@import` statements. Technically, you could put all your CSS directly in `_module.less`, but that could quickly become a mess. Using best practices, our `_module.less` files in these examples would look like this:
 
 ```scss
 // Extension module
