@@ -57,5 +57,6 @@
     <line x1="591.5" x2="591.5" y1="128.5" y2="147.5" stroke="#D0021B" stroke-linecap="square"/>
     <line x1="647.5" x2="647.5" y1="128.5" y2="178.5" stroke="#06C" stroke-linecap="square"/>
     <polygon fill="#06C" fill-rule="nonzero" points="511.472 136.116 511.472 112.224 506.597 112.224 506.597 114.09 509.301 114.09 509.301 134.25 506.597 134.25 506.597 136.116"/>
+    <rect width="749" height="217" x=".5" y=".5" stroke="#999"/>
   </g>
 </svg>
