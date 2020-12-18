@@ -1,4 +1,4 @@
-# Use modules to override styles
+# Use Modules to override styles
 
 When you create a Page Builder module by either extending a Page Builder content type or creating a custom content type, you will override Page Builder styles from within the module. The overriding CSS selector pattern is the same: `#html-body` + `[attribute]` + `any additional selector`, as shown here:
 

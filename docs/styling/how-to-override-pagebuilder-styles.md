@@ -3,6 +3,7 @@
 To override the internal CSS Page Builder applies to content types, you must create a CSS selector with a [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) greater than 110, which is Page Builder's default selector specificity for all native and custom content types, as shown here:
 
 ![Default style selector](../images/pagebuilder-style-selector.svg)
+
 _Page Builder default style selectors_
 
 To learn the details of how Page Builder styles its content types, see [How Page Builder styles content](how-pagebuilder-styles-content.md).
@@ -12,6 +13,7 @@ To learn the details of how Page Builder styles its content types, see [How Page
 To help you with overriding Page Builder styles, we recommend the following CSS selector pattern: `#html-body` + `[attribute]` + `any additional selector`, as shown here:
 
 ![CSS selector override pattern](../images/pagebuilder-style-override-pattern-class.svg)
+
 _Page Builder override selector pattern_
 
 1. `#html-body` - Start all your override selectors with this `id`. It's in the `<body>` element of all Magento frontend and admin pages.
