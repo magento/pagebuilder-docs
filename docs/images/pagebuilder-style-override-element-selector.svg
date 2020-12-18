@@ -44,7 +44,7 @@
     <circle cx="24" cy="24" r="24" fill="#60A1E3" transform="translate(692 78)"/>
     <circle cx="24" cy="24" r="24" fill="#BE74FF" transform="translate(747 78)"/>
     <text fill="#D0021B" font-family="Helvetica" font-size="14">
-      <tspan x="622.259" y="163">1 id selector </tspan>
+      <tspan x="620.707" y="163">1 ID selector </tspan>
     </text>
     <text fill="#06C" font-family="Helvetica" font-size="14">
       <tspan x="658.414" y="197">1 attribute selector</tspan>
