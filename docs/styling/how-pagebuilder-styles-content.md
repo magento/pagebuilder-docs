@@ -98,4 +98,4 @@ If you inspect a page on your storefront built with Page Builder, you can see ho
 
 Page Builder applies styles to native and custom content types by creating dynamic, attribute-based styles, using a CSS selector pattern that results in a specificity of 110 for each content type style. These styles are added to a single internal stylesheet for each page and can be easily overridden with custom CSS classes.
 
-See [Override Page Builder styles](how-to-override-pagebuilder-styles.md) to start customizing Page Builder's styles to meet your needs.
+See [How to override Page Builder styles](how-to-override-pagebuilder-styles.md) to start customizing Page Builder's styles to meet your needs.

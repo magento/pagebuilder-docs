@@ -1,4 +1,4 @@
-# Override Page Builder styles
+# How to override Page Builder styles
 
 To override the internal CSS Page Builder applies to content types, you must create a CSS selector with a [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) greater than 110, which is Page Builder's default selector specificity for all native and custom content types, as shown here:
 
@@ -94,8 +94,8 @@ Page Builder adds this class to the `Heading` element (`h1` - `h6`) in the DOM, 
 
 Now that you understand Page Builder's CSS selector override pattern, as well as how to apply class names to existing Page Builder content types, it's time to put your knowledge to use.
 
-The next three topics describe where in Magento and Page Builder you can add your overriding styles:
+The next three topics describe how and where you can override Page Builder's default styles:
 
--  [Overriding Page Builder styles in Themes](override-pagebuilder-styles-themes.md)
--  [Overriding Page Builder styles in Modules](override-pagebuilder-styles-modules.md)
--  [Overriding Page Builder styles in HTML Code](override-pagebuilder-styles-htmlcode.md)
+-  [Use Themes to override styles](use-themes-to-override-styles.md)
+-  [Use Modules to override styles](use-modules-to-override-styles.md)
+-  [Use HTML Code to override styles](use-htmlcode-to-override-styles.md)

@@ -1,4 +1,4 @@
-# Override Page Builder styles using HTML Code
+# Use HTML Code to override styles
 
 {:.bs-callout-info}
 The `HTML Code` content type can only override frontend theme and module styles. Admin styles cannot be overridden with this content type.

@@ -1,4 +1,4 @@
-# Override Page Builder styles using themes
+# Use themes to override styles
 
 The best place to override Page Builder's default styles is within Admin and frontend themes. Magento adds theme styles to the `styles.css` output after applying styles from modules, ensuring that theme styles take precedence. It's also why you want to use Magento themes to style your Page Builder content whenever possible.
 
@@ -122,7 +122,7 @@ _Set default frontend theme for store view_
 
 **To apply your frontend theme to a page**:
 
-During development, it's easy to apply your frontend theme to a single page for testing, but it's also easy to forget to switch your page to that theme. 
+During development, it's easy to apply your frontend theme to a single page for testing, but it's also easy to forget to switch your page to that theme.
 
 On any CMS page, scroll to the Design section at the bottom, and select your theme from the New Theme selector.
 
