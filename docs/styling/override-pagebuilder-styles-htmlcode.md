@@ -1,7 +1,30 @@
 # Override Page Builder styles using HTML Code
 
-To quickly develop and test custom CSS overrides before moving them to your modules and themes, you can drag an HTML Code content type to the page you are developing, then add your custom CSS styles to a `<style>` block in the WYSIWYG editor.
+To quickly develop and test custom CSS overrides for the storefront (before moving them to your modules and themes):
 
-![HTML Code styling during development](../images/htmlcode-styling-during-dev.png)
+1. Drag an `HTML Code` content type anywhere on the stage. Its position on the stage does not matter. Styles added to `HTML Code` will always override same-specificity styles from other sources.
 
-Using HTML Code in this way creates an internal stylesheet (on the page) that overrides any same-specificity CSS defined in the external stylesheets of your themes and module. This can be handy when you want to test changes for existing theme and module styles without having to recompile `.less` files.
+1. Open the form editor for the content type.
+
+   ![CSS selector override pattern](../images/pagebuilder-html-code-editor.svg)
+
+1. Add your overriding CSS styles to a `<style>` block in the WYSIWYG editor.
+
+   ![CSS selector override pattern](../images/pagebuilder-html-code-wysiwyg.svg)
+
+    ```html
+    <style>
+    #html-body [data-content-type='heading'].my-class {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: red;
+      margin: 40px;
+    }
+    </style>
+    ```
+
+Using `HTML Code` in this way creates an internal stylesheet (on the page) that overrides any same-specificity CSS defined in the external stylesheets of your themes and modules. This can be handy when you want to test changes for existing frontend theme and module styles without having to recompile `.less` files.
+
+{:.bs-callout-info}
+The `HTML Code` content type can only override frontend theme and module styles. Admin styles cannot be overridden with this content type.
