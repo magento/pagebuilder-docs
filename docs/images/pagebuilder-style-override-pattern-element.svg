@@ -22,7 +22,7 @@
       <tspan x="377.707" y="78">attribute</tspan> <tspan x="378.49" y="97">selector </tspan>
     </text>
     <text fill="#000" font-family="Helvetica-Bold, Helvetica" font-size="16" font-weight="bold">
-      <tspan x="243.5" y="31">“anything else” </tspan>
+      <tspan x="244.5" y="30">any additional selector </tspan>
     </text>
     <text fill="#000" font-family="Helvetica-Bold, Helvetica" font-size="16" font-weight="bold">
       <tspan x="679.5" y="38">Specificity</tspan>
