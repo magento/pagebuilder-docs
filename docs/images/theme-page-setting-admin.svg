@@ -23,7 +23,7 @@
         <rect width="34" height="32" x=".5" y=".5" fill="#E3E3E3" stroke="#979797"/>
         <polygon fill="#524A42" points="17 14 21 19 13 19" transform="rotate(-180 17 16.5)"/>
       </g>
-    </g>
+    </g> 
     <g transform="translate(232 130)">
       <rect width="104" height="32" x=".5" y=".5" fill="#FFF" stroke="#979797"/>
       <text fill="#333" font-family="Helvetica" font-size="14" letter-spacing=".2">
