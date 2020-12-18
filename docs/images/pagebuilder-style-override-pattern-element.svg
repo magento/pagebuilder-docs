@@ -13,7 +13,7 @@
     <path stroke="#D0021B" stroke-dasharray="2 4" stroke-linecap="square" stroke-width="2" d="M15,140 L15,123 L145,123 L145,140"/>
     <path stroke="#06C" stroke-dasharray="2 4" stroke-linecap="square" stroke-width="2" d="M220.5,142 L220.5,123 L584.5,123 L584.5,142"/>
     <text fill="#D0021B" font-family="Helvetica" font-size="14">
-      <tspan x="48.766" y="78">html-body</tspan> <tspan x="47.597" y="97">id selector </tspan>
+      <tspan x="48.766" y="78">html-body</tspan> <tspan x="46.045" y="97">ID selector </tspan>
     </text>
     <text fill="#9013FE" font-family="Helvetica" font-size="14">
       <tspan x="160.097" y="78">element</tspan> <tspan x="160.49" y="97">selector </tspan>
@@ -22,7 +22,7 @@
       <tspan x="377.707" y="78">attribute</tspan> <tspan x="378.49" y="97">selector </tspan>
     </text>
     <text fill="#000" font-family="Helvetica-Bold, Helvetica" font-size="16" font-weight="bold">
-      <tspan x="243.5" y="31">“anything else” </tspan>
+      <tspan x="243.5" y="31">“anything other selector” </tspan>
     </text>
     <text fill="#000" font-family="Helvetica-Bold, Helvetica" font-size="16" font-weight="bold">
       <tspan x="679.5" y="38">Specificity</tspan>
@@ -34,7 +34,7 @@
     <circle cx="24" cy="24" r="24" fill="#60A1E3" transform="translate(697 65)"/>
     <circle cx="24" cy="24" r="24" fill="#BE74FF" transform="translate(752 65)"/>
     <text fill="#D0021B" font-family="Helvetica" font-size="14">
-      <tspan x="627.259" y="150">1 id selector </tspan>
+      <tspan x="625.707" y="150">1 ID selector </tspan>
     </text>
     <text fill="#06C" font-family="Helvetica" font-size="14">
       <tspan x="663.414" y="184">1 attribute selector</tspan>
