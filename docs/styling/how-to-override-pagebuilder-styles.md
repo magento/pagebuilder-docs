@@ -1,14 +1,22 @@
 # Override Page Builder styles
 
-To override the internal CSS Page Builder applies to content types, you must create a CSS selector with a [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) greater than 110, which is Page Builder's default selector specificity for all native and custom content types. To learn the details of how Page Builder styles its content types, see [How Page Builder styles content](how-pagebuilder-styles-content.md).
+To override the internal CSS Page Builder applies to content types, you must create a CSS selector with a [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) greater than 110, which is Page Builder's default selector specificity for all native and custom content types, as shown here:
 
-To help you with overriding Page Builder styles, we recommend the following CSS selector pattern. This pattern ensures your CSS will override Page Builder's existing CSS selectors for content types.
+![Default style selector](../images/pagebuilder-style-selector.svg)
+_Page Builder default style selectors_
+
+To learn the details of how Page Builder styles its content types, see [How Page Builder styles content](how-pagebuilder-styles-content.md).
 
 ## CSS selector override pattern
 
+To help you with overriding Page Builder styles, we recommend the following CSS selector pattern: `#html-body` + `[attribute]` + `any additional selector`, as shown here:
+
+![CSS selector override pattern](../images/pagebuilder-style-override-pattern-class.svg)
+_Page Builder override selector pattern_
+
 1. `#html-body` - Start all your override selectors with this `id`. It's in the `<body>` element of all Magento frontend and admin pages.
 
-1. `[data-content-type="content-type-name"]` - Add a content-type attribute selector next, where the `"content-type-name"` is the name of the content type found in its configuration file. For example, to target the `Row` content type, your attribute selector would look like `[data-content-type="row"]`.
+1. `[data-content-type='my-custom']` - Add a content-type attribute selector next, where the `'my-custom'` is the name of the content type found in its configuration file. For example, to target the `Row` content type, your attribute selector would look like `[data-content-type='row']`.
 
 1. `Any additional selector` - The first two selectors match Page Builder's internal selectors with a specificity of 110. Adding any other selector (except `*`) will bump the specificity to 111 or higher, which overrides Page Builder's internal selector.
 
