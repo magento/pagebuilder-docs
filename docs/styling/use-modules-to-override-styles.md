@@ -16,7 +16,7 @@ The steps for overriding Page Builder styles in the Admin and on the storefront 
 
 ![Admin styles in modules](../images/pagebuilder-admin-frontend-module-files.svg)
 
-The steps for overriding styles in your modules are similar to those introduced for [overriding Admin themes](override-pagebuilder-styles-themes.md). They are numbered in the image and described as follows:
+The steps for overriding styles in your modules are similar to those introduced for [overriding Admin themes](use-themes-to-override-styles.md). They are numbered in the image and described as follows:
 
 ### Step 1: Create `adminhtml` and `frontend` directories
 
