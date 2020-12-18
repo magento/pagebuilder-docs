@@ -1,6 +1,6 @@
 # Override Page Builder styles in modules
 
-When you create a Page Builder module by either extending a Page Builder content type or creating a custom content type, you will override Page Builder styles from within the module. The overriding CSS selector pattern is the same: `#html-body` + `[attribute]` + `anything other selector`, as shown here:
+When you create a Page Builder module by either extending a Page Builder content type or creating a custom content type, you will override Page Builder styles from within the module. The overriding CSS selector pattern is the same: `#html-body` + `[attribute]` + `any additional selector`, as shown here:
 
 ```scss
 #html-body [data-content-type='my-custom'].my-class
