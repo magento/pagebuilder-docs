@@ -1,12 +1,12 @@
 # Override Page Builder styles
 
-To override the internal CSS Page Builder applies to content types, you must create a CSS selector with a [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) greater than 110—Page Builder's default selector specificity for all native and custom content types. To learn the details of how Page Builder styles its content types, see [How Page Builder styles content](how-pagebuilder-styles-content.md).
+To override the internal CSS Page Builder applies to content types, you must create a CSS selector with a [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) greater than 110, which is Page Builder's default selector specificity for all native and custom content types. To learn the details of how Page Builder styles its content types, see [How Page Builder styles content](how-pagebuilder-styles-content.md).
 
 To help you with overriding Page Builder styles, we recommend the following CSS selector pattern. This pattern ensures your CSS will override Page Builder's existing CSS selectors for content types.
 
 ## CSS selector override pattern
 
-1. `#html-body` - Start all your override selectors with this id. It's in the `<body>` element of all Magento frontend and admin pages.
+1. `#html-body` - Start all your override selectors with this `id`. It's in the `<body>` element of all Magento frontend and admin pages.
 
 1. `[data-content-type="content-type-name"]` - Add a content-type attribute selector next, where the `"content-type-name"` is the name of the content type found in its configuration file. For example, to target the `Row` content type, your attribute selector would look like `[data-content-type="row"]`.
 
@@ -26,7 +26,7 @@ With one additional HTML element selector, you can override Page Builder's defau
 
 ## More selector override examples
 
-Here are some additional examples that override Page Builder's default styles. Each selector targets a different HTML element of a content type, but all of them have a specificity higher than the Page Builder's default of 110:
+In the following examples, each selector targets a different HTML element of a content type, but all of them have a specificity higher than Page Builder's default of 110:
 
 **Override all `Heading` styles**
 
@@ -54,7 +54,7 @@ Here are some additional examples that override Page Builder's default styles. E
 
 ## Override content using CSS Classes
 
-So far, we've only used ids, attributes, and elements to override Page Builder's CSS. But you can also use CSS classes to fill the `any additional selector` slot of the pattern. To override a content type using one or more custom CSS classes:
+So far, we've only used IDs, attributes, and elements to override Page Builder's CSS. But you can also use CSS classes to fill the `any additional selector` slot of the pattern. To override a content type using one or more custom CSS classes:
 
 1. Create the CSS selector.
 
