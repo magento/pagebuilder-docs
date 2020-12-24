@@ -12,7 +12,7 @@ The Page Builder files that provide a viewport's html template, functions, prope
 
 ![Viewports overview](../images/pagebuilder-viewports-overview.svg)
 
-### Viewport template
+### switcher.html
 
 The `switcher.html` file is Page Builder's default template for each viewport button. Page Builder renders the template in its header within `web/template/page-builder.html` as shown here:
 
@@ -50,7 +50,7 @@ _switcher.html_
 </each>
 ```
 
-### Viewport properties and functions
+### page-builder.ts
 
 Page Builder's `page-builder.ts` file is the `$parent` view-model for the `switcher.html` template. It contains the viewport properties and functions the template (`switcher.html`) binds to.
 
@@ -78,7 +78,7 @@ The convention for naming a viewport CSS class is `.[viewport-name]`-`viewport`.
 
 **`toggleViewport(viewport)`**—Changes the stage width using the CSS class (from `viewportClasses`) of the currently selected viewport name. It also triggers the `viewportChangeAfter` event (passing the current viewport's configuration data) so that content types can handle these events and make changes to their own layouts. For more details, see [How breakpoints work](how-breakpoints-work.md).
 
-### Viewport configuration
+### view.xml
 
 Page Builder's `view.xml` file provides all the default configuration data for the desktop and mobile viewports, as shown here:
 
@@ -127,9 +127,9 @@ Page Builder's `view.xml` file provides all the default configuration data for t
 
 // Describe vars here
 
-### Viewport CSS Classes
+### _mobile-viewport.less
 
-The `_mobile-viewport.less` file provides the `.mobile-viewport` CSS class. This class is assigned to `viewportClasses` when the `toggleViewport()` function is executed for the `mobile` viewport button.
+The `_mobile-viewport.less` file provides Page Builder's `.mobile-viewport` CSS class. This class is assigned to `viewportClasses` when the `toggleViewport()` function is executed for the `mobile` viewport button.
 
 Page Builder's default `.mobile-viewport` class shows the hierarchy of CSS selectors needed for targeting the stage for any viewport class:
 
@@ -151,7 +151,7 @@ Page Builder's default `.mobile-viewport` class shows the hierarchy of CSS selec
 }
 ```
 
-### Viewport button icons
+### Button icons
 
 Finish description of where icons are declared in view.xml.
 
