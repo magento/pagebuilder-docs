@@ -10,47 +10,56 @@ Clicking these viewport buttons change the width of the stage to show previews o
 
 ## Viewport files
 
-This topic provides detailed information on the Page Builder files that make up a viewport. These files include the HTML template, functions, properties, configuration data, and events for a viewport.
+The viewport files listed below provide the HTML templates, functions, properties, configuration data, and events associated with Page Builder viewports.
 
-The following diagram shows the Page Builder files that make a viewport, followed by summary descriptions of each.
+- `Magento/PageBuilder/etc/view.xml`
+- `Magento/PageBuilder/view/adminhtml/web/template/page-builder.html`
+- `Magento/PageBuilder/view/adminhtml/web/template/viewport/switcher.html`
+- `Magento/PageBuilder/view/adminhtml/web/ts/js/page-builder.ts`
+- `Magento/PageBuilder/view/adminhtml/web/css/source/_mobile-viewport.less`
+- `Magento/PageBuilder/view/adminhtml/web/css/images/switcher/switcher-desktop.svg`
+- `Magento/PageBuilder/view/adminhtml/web/css/images/switcher/switcher-mobile.svg`
+
+The following diagram shows what each of these files contribute to viewports, followed by summary descriptions.
 
 ![Viewports overview](../images/pagebuilder-viewport-files.svg)
 
 -  **`page-builder.html`**—HTML Template parent that hosts Page Builder's header, viewport buttons, template buttons, panel, and stage.
 
--  **`switcher.html`**—HTML Template (`viewportTemplate`) that defines the viewport buttons using Knockout bindings for the `toggleViewport()` function, button images, and tooltips.
+-  **`switcher.html`**—HTML Template (`viewportTemplate`) that defines the viewport buttons using Knockout bindings for the `toggleViewport(viewport)` function, button images, and tooltips.
 
 -  **`page-builder.ts`**—View-model that defines the viewport properties and functions for the `switcher.html` template bindings.
 
 -  **`view.xml`**—Configuration data that defines properties for viewport names, visibility, defaults, min- and max-widths, button icons, tooltip labels, and more.
 
--  **`_mobile_viewport.less`**—Contains CSS classes that control the stage width and other properties. Classes in this file are assigned to the observable `viewportClasses` property and switched when `toggleViewport()` is triggered by the viewport buttons.
+-  **`_mobile_viewport.less`**—Contains CSS classes that control the stage width. Classes in this file are assigned to the observable `viewportClasses` property and switched when `toggleViewport()` is triggered by the viewport buttons.
 
 -  **`button icons`**—SVG images for the viewport buttons.
 
--  **`stage events`**—These are the events triggered in the `toggleViewport()` function—[`stage:viewportChangeAfter`](../reference/events.md#stageviewportchangeafter) and [`stage:${this.id}:viewportChangeAfter`](../reference/events.md#stageidviewportchangeafter). Content types can listen for these events and use the viewport data to change their own layouts and visual appearances accordingly.
+-  **`stage events`**—These are the events triggered in the `toggleViewport(viewport)` function—[`stage:viewportChangeAfter`](../reference/events.md#stageviewportchangeafter) and [`stage:${this.id}:viewportChangeAfter`](../reference/events.md#stageidviewportchangeafter). Content types can listen for these events and use the viewport data to change their own layouts and visual appearances accordingly.
 
 ## Viewport bindings and events
 
-The following diagram is similar to the previous diagram, but focuses on the relationships and interactions between the files. The numbers are not meant to show the order of events. They are only meant to highlight the most important parts of the process.
+The following diagram is similar to the previous diagram, but focuses on the relationships and interactions between the files. The numbers are not meant to show a sequence. They are only meant to highlight the important connections between the files.
 
 ![Viewports overview](../images/pagebuilder-viewports-overview.svg)
 
-1. The `page-builder.html` template renders the `switcher.html` viewport template in header.
-1. The `switcher.html` binds to the properties and functions in its parent view-module: `page-builder.ts`.
-1. The `page-builder` view-model initializes its properties from the `view.xml` config file.
-1. The button icons are referenced by URLs in the `view.xml` file.
-1. The `toggleViewport()` function is bound to the button click event in the `switcher.html` template. This function does two things: (1) sets the `viewportClasses` observable to CSS class defined by the viewport, and (2) triggers the stage events for listeners.
+1. **Templates**—The `page-builder.html` template renders the `switcher.html` viewport template in header.
+1. **Bindings**—The `switcher.html` binds to the properties and functions in its parent view-module: `page-builder.ts`.
+1. **Initialization**—The `page-builder.ts` view-model initializes its properties from the `view.xml` viewport data config file.
+1. **Images**—The button icons are referenced by URLs in the `view.xml` file.
+1. **Function**—The `toggleViewport(viewport)` function is bound to the button click event in the `switcher.html` template. This function does two things:
 
-1. Content types handle these events within their `widget.js` file (for the storefront) and `preview.ts` file (for the Admin stage).
+   -  Sets the `viewportClasses` observable to a CSS class defined by the selected viewport.
+   -  Triggers the `stage:viewportChangeAfter` events for listeners.
 
-The following sections provide details for each of the files noted in the previous diagrams.
+1. **Events**—Content types handle the stage events within their  `widget.js` (for the storefront) and `preview.ts` (for the Admin stage) files.
+
+The following sections provide details for each of the files described in the previous diagrams.
 
 ## `page-builder.html`
 
 The `page-builder.html` template renders the `switcher.html` viewport template within the Page Builder header, as shown here:
-
-_Viewport template rendered in Page Builder header_
 
 ```html
 <div class="admin__field pagebuilder-header"...>
@@ -61,7 +70,15 @@ _Viewport template rendered in Page Builder header_
 </div>
 ```
 
-The `page-builder.html` template also contains the `viewportClasses` observable that changes the stage width based on the CSS class assigned to the viewport. See [Viewport properties](#viewport-properties) below for more information about `viewportClasses`.
+The `page-builder.html` template also contains the `viewportClasses` observable that changes the stage width based on the CSS class assigned to the viewport, as shown here:
+
+```jsx
+<div class="pagebuilder-stage-wrapper"
+     css="Object.assign({'stage-full-screen': isFullScreen, 'stage-content-snapshot': isSnapshot},
+     viewportClasses)"
+```
+
+For more information about `viewportClasses`, see [Viewport properties](#viewport-properties) and [_mobile-viewports.less](#_mobile-viewportless) later in this topic.
 
 ## `switcher.html`
 
@@ -119,25 +136,17 @@ Page Builder's `page-builder.ts` file is the `$parent` view-model for the `switc
 
 **`defaultViewport`**—String name of viewport set to be displayed by default. This property is set from the `view.xml` file.
 
-**`viewportClasses`**—Object array that provides the `page-builder.html` template with the CSS class that matches the currently selected viewport. These classes control the width and layout of the Page Builder stage and must be named by convention. You can find the usage of this property in `page-builder.html` as shown here:
-
-```html
-<div class="pagebuilder-stage-wrapper"
-     css="Object.assign({'stage-full-screen': isFullScreen, 'stage-content-snapshot': isSnapshot},
-     viewportClasses)"
-```
-
-The convention for naming viewport CSS classes is `.[viewport-name]`-`viewport`. For example, the CSS class for the mobile viewport is `.mobile-viewport`.
+**`viewportClasses`**—Observable object array of CSS classes used to change the stage width for the currently selected viewport. The `toggleViewport(viewport)` function that assigns CSS classes to `viewportClasses` expects classes to be named with the following convention: `[viewport-name]`-`viewport`. By default, Page Builder uses only one CSS class to set the stage width for its `mobile` viewport: `mobile-viewport`. The `desktop` viewport does not have a class because it does not set a stage width different than the stage's default width. See [_mobile-viewport.less](#_mobile-viewportless) for more information.
 
 ### Viewport functions
 
 **`initViewports(config)`**—Sets the viewport configuration data to properties bound to the viewport template.
 
-**`toggleViewport(viewport)`**—Changes the stage width using the CSS class (from `viewportClasses`) of the currently selected viewport name. It also triggers the `viewportChangeAfter` event (passing the current viewport's name) so that content types can handle these events and make changes to their own layouts. For more details, see [Stage events](#stage-events) at the end of this topic.
+**`toggleViewport(viewport)`**—Assigns CSS classes to the `viewportClasses` observable, based on the selected viewport name passed in as an argument (`viewport`). The CSS classes in `viewportClasses` set the stage width. This function also triggers the `stage:viewportChangeAfter` events so that content types can handle these events and make changes to their own layouts. For more details, see [Stage events](#stage-events) at the end of this topic.
 
 ## `view.xml`
 
-Page Builder's `view.xml` file provides the default configuration data for the desktop and mobile viewports, as shown here:
+Page Builder's `view.xml` file provides the default configuration data for the `desktop` and `mobile` viewports, as shown here:
 
 ```xml
 <vars module="Magento_PageBuilder">
@@ -182,7 +191,7 @@ Page Builder's `view.xml` file provides the default configuration data for the d
 </var>
 ```
 
-Descriptions of the configuration data follow:
+Configuration data descriptions:
 
 - `Magento_PageBuilder` - Defines the module to which viewport data applies.
 - `breakpoints` - Defines `viewports` object for the module.
@@ -201,10 +210,11 @@ Descriptions of the configuration data follow:
 - `default` - Defines the default appearance of the `products` content type.
 - `slidesToShow` - (number) Defines viewport data used by the `products` content type.
 
-As shown for the `products` content type, you can define viewport data for your own content types. For example, if you have a custom content type called `testimonials`— which showed several customer quotes (side-by-side) similar to how `products` works—you could create an `options` node for the `mobile` viewport that looks like this:
+As shown for the `products` content type, you can define viewport data for your own content types. For example, if you have a custom content type called `testimonials`— which showed several customer quotes (side-by-side) similar to how the `products` carousel works — you could create an `options` node for the `mobile` viewport that looks like this:
 
 ```xml
 <var name="mobile">
+   ...
     <var name="options">
         <var name="testimonials">
             <var name="default">
@@ -218,21 +228,29 @@ As shown for the `products` content type, you can define viewport data for your 
 </var>
 ```
 
-More on this in [How to customize viewports](how-to-add-new-viewports.md).
+The takeaway here is that you can create any node hierarchy and variable names you want for use in your content types. To learn about defining and using viewport data in your own content types, see [How to use viewports](how-to-use-viewports.md).
 
 ## `_mobile-viewport.less`
 
-The `_mobile-viewport.less` file provides the CSS class that Page Builder uses to change the stage width for its `mobile` viewport. The convention required for naming viewport CSS classes is:
+The `_mobile-viewport.less` file provides the CSS class for Page Builder's `mobile` viewport: `mobile-viewport`. This class is assigned to the `viewportClasses` observable when the mobile viewport button is clicked, at which point the stage width changes to the width defined in `mobile-viewport`.
 
-```terminal
+As mentioned, the CSS classes used to control the stage width must follow a strict naming convention:
+
+```css
 .[viewport-name]-viewport
 ```
 
-For example, the CSS class for the mobile viewport is `.mobile-viewport`.
+The `[viewport-name]` refers to the name of the viewport as defined in the `view.xml` file. For example, if there was a viewport named `mobile-small` in the `view.xml` file, the CSS class for setting the stage width must be named `mobile-small-viewport`. Otherwise, the `toggleViewport(viewport)` function won't assign the correct CSS class to `viewportClasses` for the stage:
 
-This class is assigned to `viewportClasses` when the `toggleViewport()` function is executed for the `mobile` viewport button. As a result, the stage width is changed as defined by the viewport's class.
+```javascript
+public toggleViewport(viewport: string) {
+    ...
+    this.viewportClasses[`${viewport}-viewport`](true);
+    ...
+}
+```
 
-Page Builder's default `.mobile-viewport` class shows the hierarchy of CSS selectors needed for targeting the stage:
+Page Builder's default `mobile-viewport` class shows the hierarchy of CSS selectors needed for targeting the stage:
 
 ```scss
 .mobile-viewport {
@@ -357,4 +375,4 @@ function initSlider($element, slickConfig, breakpoint) {
 
 ## Summary
 
-Viewports in Page Builder provide a way to control the responsive nature of Page Builder content. Knowing how they work is the first step. The next step is learning how to use these viewports in your own content types. Continue with [How to use viewports](how-to-add-new-viewports.md) to create and customize your own viewports for existing and custom content types.
+Viewports in Page Builder provide a way to control the responsive nature of Page Builder content. Knowing how they work is the first step. The next step is learning how to use these viewports in your own content types. Continue with [How to use viewports](how-to-use-viewports.md) to create and customize your own viewports for existing and custom content types.
