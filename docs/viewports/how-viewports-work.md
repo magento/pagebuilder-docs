@@ -10,7 +10,7 @@ Clicking these viewport buttons change the width of the stage to show previews o
 
 ## Viewport files
 
-The viewport files listed below provide the HTML templates, functions, properties, configuration data, and events associated with Page Builder viewports.
+The viewport files listed as follows provide the HTML templates, functions, properties, configuration data, and events associated with Page Builder viewports.
 
 - `Magento/PageBuilder/etc/view.xml`
 - `Magento/PageBuilder/view/adminhtml/web/template/page-builder.html`
@@ -20,7 +20,7 @@ The viewport files listed below provide the HTML templates, functions, propertie
 - `Magento/PageBuilder/view/adminhtml/web/css/images/switcher/switcher-desktop.svg`
 - `Magento/PageBuilder/view/adminhtml/web/css/images/switcher/switcher-mobile.svg`
 
-The following diagram shows what each of these files contribute to viewports, followed by summary descriptions.
+The following diagram shows what these files contribute to the features and functions of viewports, followed by summary descriptions.
 
 ![Viewports overview](../images/pagebuilder-viewport-files.svg)
 
@@ -40,20 +40,20 @@ The following diagram shows what each of these files contribute to viewports, fo
 
 ## Viewport bindings and events
 
-The following diagram is similar to the previous diagram, but focuses on the relationships and interactions between the files. The numbers are not meant to show a sequence. They are only meant to highlight the important connections between the files.
+The following diagram is similar to the previous diagram, but focuses on the relationships and interactions between the viewport files. The numbers are not meant to show a sequence. They simply call out the important connections between the files.
 
 ![Viewports overview](../images/pagebuilder-viewports-overview.svg)
 
-1. **Templates**—The `page-builder.html` template renders the `switcher.html` viewport template in header.
+1. **Templates**—The `page-builder.html` template renders the `switcher.html` viewport template in the header section of the Page Builder stage.
 1. **Bindings**—The `switcher.html` binds to the properties and functions in its parent view-module: `page-builder.ts`.
-1. **Initialization**—The `page-builder.ts` view-model initializes its properties from the `view.xml` viewport data config file.
-1. **Images**—The button icons are referenced by URLs in the `view.xml` file.
-1. **Function**—The `toggleViewport(viewport)` function is bound to the button click event in the `switcher.html` template. This function does two things:
+1. **Initialization**—The `page-builder.ts` view-model initializes its properties from the `view.xml` viewport data config file and sets the default viewport.
+1. **Button icons**—The button icons are referenced by URLs in the `view.xml` file.
+1. **Toggle function**—The `toggleViewport(viewport)` function is bound to the button click event in the `switcher.html` template. This function does two things:
 
    -  Sets the `viewportClasses` observable to a CSS class defined by the selected viewport.
    -  Triggers the `stage:viewportChangeAfter` events for listeners.
 
-1. **Events**—Content types handle the stage events within their  `widget.js` (for the storefront) and `preview.ts` (for the Admin stage) files.
+1. **Events**—Content types handle the stage events within their `widget.js` (for the storefront) and `preview.ts` (for the Admin stage) files.
 
 The following sections provide details for each of the files described in the previous diagrams.
 
