@@ -375,4 +375,4 @@ function initSlider($element, slickConfig, breakpoint) {
 
 ## Summary
 
-Viewports in Page Builder provide a way to control the responsive nature of Page Builder content. Knowing how they work is the first step. Learning how to use these viewports in your own content types is next. Continue with [How to use viewports](how-to-use-viewports.md) to create and customize your own viewports for existing and custom content types.
+Viewports in Page Builder provide a way to control the responsiveness of Page Builder content. Knowing how they work is the first step. Learning how to use these viewports in your own content types is next. Continue with [How to use viewports](how-to-use-viewports.md) to create and customize your own viewports for existing and custom content types.
