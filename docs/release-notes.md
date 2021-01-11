@@ -19,7 +19,7 @@ The release notes include:
 
 -  {:.new}<!-- Issue 559 -->**Removed predefined form field entries**. Advanced form settings for margins, paddings, and border-related properties (border, border width, and border radius) are now set as `default`, so that values can be defined by a module's CSS.
 
--  {:.new}<!-- Issue 635, 557,  -->**Added stage affordances**. Rows and Columns now provide extra spacing affordance around contained content types on the stage, but not on the storefront. The extra stage spacing makes it easier to access the mouseover option menus for both the container and contained content types.
+-  {:.new}<!-- Issue 635, 557,  -->**Added stage spacing**. Rows and Columns now provide extra spacing affordances around contained content types on the stage, but not on the storefront. The extra stage spacing makes it easier to access the mouseover option menus for both the container and contained content types.
 
 -  {:.fix}<!-- MC-37348 -->**Fixed auto-scrolling to reviews**. Auto-scrolling to product reviews on the storefront is now fixed.
 
