@@ -7,6 +7,32 @@ The release notes include:
 -  {:.new}New features
 -  {:.fix}Fixes and improvements
 
+## 1.6.0 for Magento Commerce 2.4.2
+
+-  {:.new}<!-- Issue 558 -->**New Page Builder styling**. Page Builder made massive improvements to how it styles content. The changes now make it easy to create simple CSS selectors to override Page Builder's existing content type styles. These changes make it possible to create Page Builder themes with rich responsiveness for all content types.
+
+-  {:.new}<!-- Issue 429 -->**Row container now optional**. You can now create content in Page Builder without requiring a Row container. In addition to the Row, the following content types can now be dragged and dropped directly on the stage: HTML, Block, Dynamic Block, Columns, and Tabs.
+
+-  {:.new}<!-- Issue 636 -->**New responsive viewport switcher**. You can now preview your Page Builder content at different device widths (breakpoints) using the new Admin viewport switcher buttons above the stage. The Admin viewport switcher simulates how your content will be styled when displayed on the storefront using different devices.
+
+-  {:.new}<!-- Issue 637 -->**New breakpoint-specific form fields**. Content type field values can now be set to specific viewport breakpoints. Icon indicators next to the fields show which viewport the content type's field value is applied to.
+
+-  {:.new}<!-- Issue 559 -->**Removed predefined form field entries**. Advanced form settings for margins, paddings, and border-related properties (border, border width, and border radius) are now set as `default`, so that values can be defined by a module's CSS.
+
+-  {:.new}<!-- Issue 635, 557,  -->**Added stage padding**. Rows and Columns now provide padding around contained content types on the stage, not on the storefront. The stage padding makes it easier to access the mouseover option menus for both the container and contained content types.
+
+-  {:.fix}<!-- MC-37348 -->**Fixed auto-scrolling to reviews**. Auto-scrolling to product reviews on the storefront is now fixed.
+
+-  {:.fix}<!-- MC-36227 -->**Fixed cropped content**. Lengthy category and product descriptions are no longer cropped.
+
+-  {:.fix}<!-- MC-35402 -->**Fixed full-width, full-bleed Category content**. Category content can now be displayed in a full-width or full-bleed layout.
+
+-  {:.fix}<!-- MC-37989 -->**Security enhancements**.
+
+## 1.5.1 for Magento Commerce 2.4.1-p1
+
+-  {:.fix}<!-- PB-1140, MC-38812 -->**Error popup.** Fixed an issue in which Page Builder displayed an error popup when adding Catalog subcategories in the Admin.
+
 ## 1.5.0 for Magento Commerce 2.4.1
 
 -  {:.new}<!-- Issue 510, 511, 512, 513 -->**Immersive, full-screen editing.** Editing Page Builder content is now full-screen only for all areas controlled by Page Builder. This includes CMS pages, Product and Category pages, Blocks, and Dynamic Blocks. Full-screen editing puts the focus on your content and provides a view that better matches the user experience on the storefront.
@@ -56,6 +82,11 @@ The release notes include:
 -  {:.fix}<!-- PB-179 -->Fixed the Products alignment configuration to position only the product container itself, not the contents of the product container, such as the product name, price, buttons, images, and other elements.
 
 -  {:.fix}<!-- MC-33556 -->Performance improvements.
+
+-  {:.fix}Security enhancements.
+
+
+## **1.3.3-p1** for Magento Commerce 2.3.6-p1
 
 -  {:.fix}Security enhancements.
 
