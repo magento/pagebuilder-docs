@@ -209,11 +209,11 @@ Configuration data descriptions:
 - `max-width` - (string) Defines the maximum width for the viewport in `px`.
 - `min-width` - (string) Defines the minimum width for the viewport in `px`.
 - `options` - Defines an `options` object for one or more content types.
-- `products` - Defines the `products` sub-object for the option data.
-- `default` - Defines the default appearance of the `products` content type.
-- `slidesToShow` - (number) Defines viewport data used by the `products` content type.
+- `products` - Defines a `products` object for use in Page Builder's `Products` content type.
+- `default` - Defines the default appearance of the `Products` content type.
+- `slidesToShow` - (number) Defines viewport data used by the `Products` content type.
 
-As shown for the `products` content type, you can define viewport data for your own content types. For example, if you have a custom content type called `testimonials`— which showed several customer quotes (side-by-side) similar to how the `products` carousel works — you could create an `options` node for the `mobile` viewport that looks like this:
+As shown for the `Products` content type, you can define viewport data for your own content types. For example, if you have a custom content type called `testimonials`— which showed several customer quotes (side-by-side) similar to how the `Products` carousel works — you could create an `options` node for the `mobile` viewport that looks like this:
 
 ```xml
 <var name="mobile">
@@ -235,7 +235,7 @@ The takeaway here is that you can create any node hierarchy and variable names y
 
 ## `_mobile-viewport.less`
 
-The `_mobile-viewport.less` file provides the CSS class for Page Builder's `mobile` viewport: `mobile-viewport`. This class is assigned to the `viewportClasses` observable when the mobile viewport button is clicked, at which point the stage width changes to the width defined in `mobile-viewport`.
+The `_mobile-viewport.less` file provides the CSS class for Page Builder's `mobile-viewport`. This class is assigned to the `viewportClasses` observable when the mobile viewport button is clicked, at which point the stage width changes to the width defined in `mobile-viewport`.
 
 As mentioned, the CSS classes used to control the stage width must follow a strict naming convention:
 
@@ -311,6 +311,8 @@ public toggleViewport(viewport: string) {
 
 Page Builder content types listen for these events and reconfigure their layouts based on the current `viewport` or `previousViewport` names (as passed by the event).
 
+To learn about how to use viewport stage events in your custom content types, see [How to use viewports](how-to-use-viewports.md).
+
 ### How content types use stage events
 
 To understand how Page Builder uses stage events in its content types, let's look at how the `Products` content type changes the number of products to display based on viewport properties.
@@ -378,4 +380,4 @@ function initSlider($element, slickConfig, breakpoint) {
 
 ## Summary
 
-Viewports in Page Builder provide a way to control the responsiveness of your content. Knowing how viewports work is the first step. Learning how to use them in your own content types is next. Continue with [How to add viewports](how-to-add-viewports.md) to create and customize your own viewports for existing and custom content types.
+Viewports in Page Builder provide a way to control the responsiveness of your content. Knowing how viewports work is the first step. Learning how to add your own viewports is next. Continue with [How to add viewports](how-to-add-viewports.md) to create and customize additional viewports for Page Builder.
