@@ -200,11 +200,11 @@ Configuration data descriptions:
 - `breakpoints` - Defines `viewports` object for the module.
 - `desktop` and `mobile` - Defines viewport objects named `desktop` and `mobile`.
 - `label` - (string) Defines title of tooltip.
-- `stage` - (bool) ????
+- `stage` - (bool) Determines whether viewport button appears above the stage.
 - `default` - (bool) Determines if the viewport is selected when the stage is loaded.
 - `class` - (string) CSS class to apply to the viewport switcher button (not the stage).
 - `icon` - (string) - URL to the button image (SVG) location.
-- `media` - (string) ????
+- `media` - (string) Media query used in the Admin.
 - `conditions` - Defines the `min` and `max` breakpoints for the viewport.
 - `max-width` - (string) Defines the maximum width for the viewport in `px`.
 - `min-width` - (string) Defines the minimum width for the viewport in `px`.
