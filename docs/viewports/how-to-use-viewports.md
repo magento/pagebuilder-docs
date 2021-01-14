@@ -1,6 +1,14 @@
 # How to use viewports
 
-This topic describes how to use viewports to create responsive content types. We will look at how Page Builder's `Products` content type uses viewport data (from `view.xml`) to determine how many products to display at different viewport widths.
+This topic explains how to use viewports to create responsive content types. You can use viewports in three ways:
+
+- Add responsive CSS to content.
+- Add data for content type JavaScript consumption.
+- Add breakpoints for content type fields.
+
+
+
+We will look at how Page Builder's `Products` content type uses viewport data (from `view.xml`) to determine how many products to display at different viewport widths.
 
 
 
