@@ -23,6 +23,7 @@ app/design/adminhtml/VendorName/ThemeName/web/css/source/_module.less
 ```
 
 ![Page Builder admin theme files](../images/pagebuilder-admin-theme-files.svg)
+
 _Admin theme directory structure_
 
 The key takeaways are numbered in the image and described as follows:
@@ -98,6 +99,7 @@ app/design/frontend/VendorName/ThemeName/web/css/source/_extend.less
 ```
 
 ![Page Builder frontend theme files](../images/pagebuilder-frontend-theme-files.svg)
+
 _Frontend theme directory structure_
 
 The first three numbered callouts (1, 2, 3) in the theme directory structure are identical to those previously described for the admin themes. The only difference is that the `_module.less` file should be named `_extend.less`.
@@ -111,13 +113,14 @@ The first three numbered callouts (1, 2, 3) in the theme directory structure are
 
 ### Step 2: Apply the frontend theme
 
-The following instructions are here as a **reminder** to apply your frontend theme to a store view or page. If you forget, you won't see your style overrides in the storefront. To learn more on applying themes in general, see [[Apply a storefront theme]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/themes/theme-apply.html).
+The following instructions are here as a **reminder** to apply your frontend theme to a store view or page. If you forget, you won't see your style overrides in the storefront. To learn more on applying themes in general, see [Apply a storefront theme]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/themes/theme-apply.html).
 
 **To apply your frontend theme to a store view**:
 
 Navigate to **Content** > **Design** > **Configuration** and edit the store view where you can apply your frontend theme as the default theme:
 
 ![Set default theme on store view](../images/theme-default-setting-admin.svg)
+
 _Set default frontend theme for store view_
 
 **To apply your frontend theme to a page**:
@@ -127,6 +130,7 @@ During development, it's easy to apply your frontend theme to a single page for 
 On any CMS page, scroll to the Design section at the bottom, and select your theme from the New Theme selector.
 
 ![Set theme for page](../images/theme-page-setting-admin.svg)
+
 _Set frontend theme for page_
 
 ## More about themes
