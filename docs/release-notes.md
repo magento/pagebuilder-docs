@@ -9,7 +9,7 @@ The release notes include:
 
 ## 1.6.0 for Magento Commerce 2.4.2
 
--  {:.new}<!-- Issue 558 -->**New Page Builder styling**. Page Builder made massive improvements to how it styles content. The changes now make it easy to create simple CSS selectors to override Page Builder's existing content type styles. These changes make it possible to create Page Builder themes with rich responsiveness for all content types.
+-  {:.new}<!-- Issue 558 -->**New Page Builder styling**. Page Builder made massive improvements to how it styles content. The changes now make it easy to create simple CSS selectors to override Page Builder's existing content type styles. These changes make it possible to create Page Builder themes with rich responsiveness for all content types. See [How Page Builder styles content](styling/how-pagebuilder-styles-content.md).
 
 -  {:.new}<!-- Issue 429 -->**Row container now optional**. You can now create content in Page Builder without requiring a Row container. In addition to the Row, the following content types can now be dragged and dropped directly on the stage: HTML, Block, Dynamic Block, Columns, and Tabs.
 
