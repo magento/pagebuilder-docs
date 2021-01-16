@@ -7,6 +7,32 @@ The release notes include:
 -  {:.new}New features
 -  {:.fix}Fixes and improvements
 
+## 1.6.0 for Magento Commerce 2.4.2
+
+-  {:.new}<!-- Issue 558 -->**New Page Builder styling**. Page Builder made massive improvements to how it styles content. The changes now make it easy to create simple CSS selectors to override Page Builder's existing content type styles. These changes make it possible to create Page Builder themes with rich responsiveness for all content types. See [How Page Builder styles content](styling/how-pagebuilder-styles-content.md).
+
+-  {:.new}<!-- Issue 429 -->**Row container now optional**. You can now create content in Page Builder without requiring a Row container. In addition to the Row, the following content types can now be dragged and dropped directly on the stage: HTML, Block, Dynamic Block, Columns, and Tabs.
+
+-  {:.new}<!-- Issue 636 -->**New responsive viewport switcher**. You can now preview your Page Builder content at different device widths (breakpoints) using the new Admin viewport switcher buttons above the stage. The Admin viewport switcher simulates how your content will be styled when displayed on the storefront using different devices.
+
+-  {:.new}<!-- Issue 637 -->**New breakpoint-specific form fields**. Content type field values can now be set to specific viewport breakpoints. Icon indicators next to the fields show which viewport the content type's field value is applied to.
+
+-  {:.new}<!-- Issue 559 -->**Removed predefined form field entries**. Advanced form settings for margins, paddings, and border-related properties (border, border width, and border radius) are now set as `default`, so that values can be defined by a module's CSS.
+
+-  {:.new}<!-- Issue 635, 557,  -->**Added stage spacing**. Rows and Columns now provide extra spacing affordances around contained content types on the stage, but not on the storefront. The extra stage spacing makes it easier to access the mouseover option menus for both the container and contained content types.
+
+-  {:.fix}<!-- MC-37348 -->**Fixed auto-scrolling to reviews**. Auto-scrolling to product reviews on the storefront is now fixed.
+
+-  {:.fix}<!-- MC-36227 -->**Fixed cropped content**. Lengthy category and product descriptions are no longer cropped.
+
+-  {:.fix}<!-- MC-35402 -->**Fixed full-width, full-bleed Category content**. Category content can now be displayed in a full-width or full-bleed layout.
+
+-  {:.fix}<!-- MC-37989 -->**Security enhancements**.
+
+## 1.5.1 for Magento Commerce 2.4.1-p1
+
+-  {:.fix}<!-- PB-1140, MC-38812 -->**Error popup.** Fixed an issue in which Page Builder displayed an error popup when adding Catalog subcategories in the Admin.
+
 ## 1.5.0 for Magento Commerce 2.4.1
 
 -  {:.new}<!-- Issue 510, 511, 512, 513 -->**Immersive, full-screen editing.** Editing Page Builder content is now full-screen only for all areas controlled by Page Builder. This includes CMS pages, Product and Category pages, Blocks, and Dynamic Blocks. Full-screen editing puts the focus on your content and provides a view that better matches the user experience on the storefront.
@@ -59,6 +85,11 @@ The release notes include:
 
 -  {:.fix}Security enhancements.
 
+
+## **1.3.3-p1** for Magento Commerce 2.3.6-p1
+
+-  {:.fix}Security enhancements.
+
 ## **1.3.3** for Magento Commerce 2.3.6
 
 -  {:.fix}<!-- MC-32766 -->Fixed the Text content type to correctly save the Magento variable directives added to html attributes.
@@ -96,7 +127,7 @@ This version of Page Builder is just a version-number update for Magento 2.3.5-p
    **Please Note:** If you have created additional database entities for storing Page Builder content, you _must_ add those entities to your `etc/di.xml`. If you do not, the Page Builder content stored in your entity will not be updated, causing potential data-loss and display issues. For example, if you have created a blog entity that stores Page Builder content, you must add your blog entity to your `etc/di.xml` file as an `UpgradableEntitiesPool` type so that the upgrade library can update the Page Builder content types used in your blog. For more information and instructions on using the upgrade library, see: [How to use the content type upgrade library](https://devdocs.magento.com/page-builder/docs/how-to/how-to-use-upgrade-library.html){:data-proofer-ignore='true'}.
 
 -  {:.new}**Documentation on adding new Appearances**<br/>
-   Everything you need to know about [adding appearances](https://devdocs.magento.com/page-builder/docs/how-to/how-to-add-appearance.html) for existing or custom content types.
+   Everything you need to know about [adding appearances](https://devdocs.magento.com/page-builder/docs/customize/how-to-add-appearance.html) for existing or custom content types.
 
 **Various fixes**
 

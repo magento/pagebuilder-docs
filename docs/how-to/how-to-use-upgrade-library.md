@@ -6,7 +6,7 @@ To fix this limitation for versions 1.3+, Page Builder uses Magento's native upg
 
 ## Example: Updating the Row content type
 
-Let's imagine that the Page Builder team needs to change the configuration of the Row's full-width appearance to fix a layout issue. The fix is simple. We need to move a style attribute from one element in the Row's full-width appearance to another element. But without the upgrade helpers, our change to the Row's configuration would break all previously saved Page Builder content that uses Rows. And because all Page Builder content is wrapped in a Row, changing the Row would break all Page Builder content!
+Let's imagine that the Page Builder team needs to change the configuration of the Row's full-width appearance to fix a layout issue. The fix is simple. We need to move a style attribute from one element in the Row's full-width appearance to another element. But without the upgrade helpers, our change to the Row's configuration would break all previously saved Page Builder content that uses Rows.
 
 To fix this issue, we created a set of Page Builder DOM helper classes (`Magento\PageBuilder\Model\Dom\*`) that we can use to update all our native content types (including the Row) that have already been stored in the database.
 
