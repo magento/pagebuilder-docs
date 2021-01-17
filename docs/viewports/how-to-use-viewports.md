@@ -27,7 +27,6 @@ Each approach is describe next in detail.
 
 ### Step 3: Add matching media queries for frontend themes
 
-
 ## Create responsive JavaScript
 
 **[Add link to example branch in repo]**
@@ -62,7 +61,7 @@ The XML data defined in the `mobile` viewport starts with the `options` node as 
 </var>
 ```
 
-The `options` node here defines the specific data that the `Products` content type needs in order to change the number of products shown in its carousel component. For more information on the specific `view.xml` nodes, see the [view.xml section](how-viewports-work.md#viewxml) in [How viewports work](how-viewports-work.md).
+The `options` node here defines the specific data that `Products` needs to change the number of products shown in its carousel component. For more information on the specific `view.xml` nodes, see the [view.xml section](pagebuilder-viewports.md#viewxml) in [Page Builder viewports](pagebuilder-viewports.md).
 
 ### Handling viewport changes
 

@@ -11,9 +11,9 @@ By default, Page Builder defines four viewports, but only two are shown on the A
 
 1. [Create an Admin theme](#step-1-create-an-admin-theme).
 1. [Add a view.xml file](#step-2-add-a-viewxml-file). This file should contain your configuration data for the additional viewports.
-1. [Add stage CSS classes](#step-3-add-stage-css-classes). This file should contain your CSS/LESS classes that control the stage width for your additional viewports.
-1. [Add SVG images](#step-4-add-svg-images). These image files provide the icons for the viewport buttons.
-1. [Add Switcher template](#step-5-customize-switchhtml-template-optional) (Strictly optional). If you want to customize the tooltip content, you need to copy and paste Page Builder's `switcher.html` template to your Admin theme, then make changes to it as needed.
+1. [Add viewport CSS classes](#step-3-add-viewport-css-classes). These classes control the stage canvas width for a selected viewport.
+1. [Add viewport button images](#step-4-add-viewport-button-images). These are SVG images for the viewport buttons.
+1. [Add Switcher template](#step-5-customize-switchhtml-template-optional) (Strictly optional). If you want to customize the tooltip content, you can copy and paste Page Builder's `switcher.html` template to your Admin theme, then make changes to the template as needed.
 
 {: .bs-callout-info }
 Unlike the `view.xml` configuration (which merges with Page Builder's `view.xml` configuration), a custom `switcher.html` template completely overrides Page Builder's `switcher.html` template. This means you may need to update your theme's `switcher.html` with any new template features or bindings introduced in future Page Builder versions of the `switcher.html` template to ensure that nothing breaks.
@@ -25,13 +25,13 @@ To create and apply an Admin theme, follow the instructions described here:
 -  [Create an Admin theme]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/themes/admin_theme_create.html).
 -  [Apply an Admin theme]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/themes/admin_theme_apply.html).
 
-Your Admin theme and module should have directory and file structures similar to these:
+Your Admin theme and module should have directory structure similar to the following diagram:
 
 ![Viewport icons](../images/pagebuilder-admin-viewport-theme-files.svg)
 
 ### Step 2: Add a `view.xml` file
 
-As with other XML files in Magento, you can add to and override the existing viewport configurations by adding a `view.xml` file to your Admin theme. In our example Admin theme, we modified the hidden viewports to provide button icons and a custom `max-width` (`540px`) to the `mobile-small` viewport.
+As with other XML files in Magento, you can add to and override the existing viewport configurations by adding a `view.xml` file to your Admin theme. In our example theme, we added button icons and additional properties to Page Builder's existing, but hidden, viewports: `table` and `mobile-small`.
 
 ```xml
 <?xml version="1.0"?>
@@ -47,7 +47,7 @@ As with other XML files in Magento, you can add to and override the existing vie
                 <var name="media">only screen and (max-width: 1024px)</var>
             </var>
             <var name="mobile-small">
-                <var name="label">Small Mobile</var>
+                <var name="label">Mobile Small</var>
                 <var name="stage">true</var>
                 <var name="class">mobile-switcher</var>
                 <var name="icon">images/switcher/switcher-mobile-small.svg</var>
@@ -61,13 +61,14 @@ As with other XML files in Magento, you can add to and override the existing vie
 </view>
 ```
 
-You can add as many viewports/breakpoints as you want. For example, you could add a viewport called `mobile-tiny` that has a `max-width` of 300px by adding it to `breakpoints` as follows:
+You can add as many viewports to the `view.xml` configuration as you want.
+For example, if you wanted a viewport with a `max-width` of `300px`, you could create one called `mobile-tiny` and set its properties as follows:
 
 ```xml
 <var name="breakpoints">
     ...
     <var name="mobile-tiny">
-        <var name="label">Tiny Mobile</var>
+        <var name="label">Mobile Tiny</var>
         <var name="stage">true</var>
         <var name="class">mobile-switcher</var>
         <var name="icon">images/switcher/switcher-mobile-tiny.svg</var>
@@ -79,15 +80,20 @@ You can add as many viewports/breakpoints as you want. For example, you could ad
     ...
 ```
 
-### Step 3: Add stage CSS Classes
+For more information about the viewport configuration properties, see the [view.xml topic](pagebuilder-viewports.md#viewxml).
+### Step 3: Add viewport CSS Classes
 
-To change the stage width of the selected viewport, you need to add CSS classes to one or more `.less` files. You must name these classes using the viewport convention:
+Page Builder uses viewport-specific CSS classes to change the stage's canvas width for the selected viewport.
+So when you add a viewport configuration to the `view.xml` file, you need to add a corresponding CSS class to your `viewports.less` file in your theme.
+Your CSS class must use the following naming convention:
 
 ```terminal
- [viewport-name]-viewport
+ <viewport-name>-viewport
  ```
 
- In our example Admin theme, we added two CSS classes to change the stage width when users select the `tablet` and `mobile-small` viewports:
+The `<viewport-name>` should be replaced with the name of the viewport defined in your `view.xml` file.
+
+ In our Admin theme example, we added two CSS classes to set the stage's canvas width for the `tablet` and `mobile-small` viewports:
 
 ```scss
 .tablet-viewport {
@@ -121,7 +127,12 @@ To change the stage width of the selected viewport, you need to add CSS classes 
 }
 ```
 
-Any additional viewports will require additional CSS classes to control the stage width when selected. For example, if you created a viewport called `mobile-tiny`, you would add a CSS class called `.mobile-tiny-viewport`, which would change the stage width to its defined `max-width`:
+When a user clicks a viewport button, Page Builder assigns the viewport's matching CSS class to the `viewportClasses` observable, which changes the stage canvas width.
+
+- The `max-width` property sets the width of the stage canvas, where content is displayed on the screen.
+- The`left` and `transform` properties center the canvas on the stage.
+
+Here's another example. The following CSS class would control the stage canvas width for the `mobile-tiny` viewport we saw in Step 2 above:
 
 ```scss
 .mobile-tiny-viewport {
@@ -140,16 +151,20 @@ Any additional viewports will require additional CSS classes to control the stag
 }
 ```
 
-### Step 4: Add SVG images
+The `max-width` defined in the CSS class should match the `max-width` defined for the viewport configuration in the `view.xml` file. Matching widths ensures that the stage view matches the storefront view.
 
-You will need to create your own SVG images for your custom viewports. To match Page Builder's existing viewport button icons, adhere to the following guidelines:
+### Step 4: Add viewport button images
 
-- 18px height for all new icons.
-- 20px max-width for all new icons, narrower as needed.
-- Transparent backgrounds.
-- Solid white shapes.
+Page Builder uses SVG images for its existing viewport button icons. And while you _can_ use other image formats (like .png), we recommend creating SVG icons that match Page Builder's existing icons.
 
-For example, the source button icons used in the example Admin theme, are shown here:
+To match Page Builder's icons, create your icons with the following properties:
+
+- height: 18px height.
+- width: 20px, or narrower as needed.
+- background: transparent.
+- fill: #fff.
+
+The source button icons used in the example Admin theme are shown here:
 
 ![Viewport icons](../images/pagebuilder-viewport-icons.png)
 
@@ -157,7 +172,7 @@ Giving all icons a height of 18px ensures they align nicely within Page Builder'
 
 ### Step 5: Customize `switch.html` template (optional)
 
-As mentioned previously, if you want to change the viewport button's tooltip description based on the viewport selected, you need to add your own `switcher.html` template that replaces Page Builder's `switcher.html`. The template HTML shown here adds some dynamic word swapping based on the viewport being displayed:
+As mentioned previously, if you want to change the viewport button's tooltip description based on the selected viewport, you need to add your own `switcher.html` template that replaces Page Builder's `switcher.html`. The template shown here adds some dynamic word swapping when different viewports are displayed:
 
 ```html
 <each args="data: Object.keys(viewports), as: 'name'">
@@ -185,7 +200,7 @@ This template shows two trivial changes to Page Builder's `switcher.html` templa
 - **Line 12**—We changed one word of the text description.
 - **Lines 13-14**— We added Knockout conditional `span` tags to display different tooltip content ("Width" vs. "Minimum Width") based on the selected viewport (`desktop` vs. others).
 
-Your changes can be as simple or complex as required.
+Your changes can be simple, like this, or as complex as required.
 ## Summary
 
 In this topic you learned how to add more viewports to Page Builder's stage so that end users can preview how their content will look a different widths on the storefront. To learn more about how to use these viewports to customize your content types, see [How to use viewports](how-to-use-viewports.md).
