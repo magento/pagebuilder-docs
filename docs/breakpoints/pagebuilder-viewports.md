@@ -205,12 +205,12 @@ Descriptions of each node follows:
 - `Magento_PageBuilder` - Defines the module to which viewport data applies.
 - `breakpoints` - Defines `viewports` object for the module.
 - `desktop` and `mobile` - Defines viewport objects named `desktop` and `mobile`.
-- `label` - (string) Defines title of tooltip.
-- `stage` - (bool) Determines whether viewport button appears above the stage.
+- `label` - (string) Defines the title of the tooltip.
+- `stage` - (bool) Determines whether a viewport button appears for use on the stage.
 - `default` - (bool) Determines if the viewport is selected when the stage is loaded.
-- `class` - (string) CSS class to apply to the viewport switcher button (not the stage).
+- `class` - (string) CSS class to apply to the viewport switcher button (not to the stage).
 - `icon` - (string) - URL to the button image (SVG) location.
-- `media` - (string) Media query used in the Admin.
+- `media` - (string) Defines the media query Page Builder uses to save breakpoint-specific values set in a content type's form. This media query is also used on the frontend to apply the breakpoint settings when the browser window matches the media query. Without this query, Page Builder won't save breakpoint specific values for a viewport.
 - `conditions` - Defines the `min` and `max` breakpoints for the viewport.
 - `max-width` - (string) Defines the maximum width for the viewport in `px`.
 - `min-width` - (string) Defines the minimum width for the viewport in `px`.
