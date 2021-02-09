@@ -13,16 +13,7 @@ These menu sections are defined in the Page Builder `menu_section.xml` file and 
 | `media`       | Media       | 20        | Groups visual and interactive elements                 |
 | `add_content` | Add Content | 30        | Groups dynamic storefront elements                     |
 
-## Overview
-
 This topic describes four ways to customize the Page Builder panel:
-
-- [How to customize the panel](#how-to-customize-the-panel)
-  - [Overview](#overview)
-  - [Rename panel menu sections](#rename-panel-menu-sections)
-  - [Reorder panel menu sections](#reorder-panel-menu-sections)
-  - [Add new panel menu sections](#add-new-panel-menu-sections)
-  - [Add content types to different panel menu sections](#add-content-types-to-different-panel-menu-sections)
 
 {: .bs-callout .bs-callout-info }
 For the sake of the user experience, please don't forget the affect your panel configurations may have on the end user. User's should have access the most important content types first, so be careful how you reorder menu sections and content types within menu sections. We strongly encourage you to place your content types into the existing menu sections when possible, instead of creating your own menu section.
