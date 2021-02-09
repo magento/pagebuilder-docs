@@ -1,6 +1,6 @@
 # How to add viewports
 
-By default, Page Builder defines four viewports, but only two are shown on the Admin stage: `desktop` and `mobile`. The other two viewports (hidden from the stage), are `tablet` and `small-mobile`. This topic shows you how to add the hidden viewports to the stage and customize them as needed.
+By default, Page Builder defines four breakpoints, but only uses two to provide viewport previews for the stage: `desktop` and `mobile`. The other two breakpoints are `tablet` and `small-mobile`. This topic shows you how to use these breakpoints to add two additional viewports to the stage and customize them as needed.
 
 ![Add viewports illustration](../images/pagebuilder-adding-viewports.svg)
 
@@ -9,11 +9,11 @@ By default, Page Builder defines four viewports, but only two are shown on the A
 
 ## Steps for adding viewports
 
-1. [Create an Admin theme](#step-1-create-an-admin-theme).
+1. [Create an Admin theme or module](#step-1-create-an-admin-theme).
 1. [Add a view.xml file](#step-2-add-a-viewxml-file). This file should contain your configuration data for the additional viewports.
 1. [Add viewport CSS classes](#step-3-add-viewport-css-classes). These classes control the stage canvas width for a selected viewport.
 1. [Add viewport button images](#step-4-add-viewport-button-images). These are SVG images for the viewport buttons.
-1. [Add Switcher template](#step-5-customize-switchhtml-template-optional) (Strictly optional). If you want to customize the tooltip content, you can copy and paste Page Builder's `switcher.html` template to your Admin theme, then make changes to the template as needed.
+1. [Add Switcher template](#step-5-customize-switchhtml-template-optional) (Strictly optional). If you want to customize the tooltip content, you can copy and paste Page Builder's `switcher.html` template to your Admin theme and make changes as needed.
 
 {: .bs-callout-info }
 Unlike the `view.xml` configuration (which merges with Page Builder's `view.xml` configuration), a custom `switcher.html` template completely overrides Page Builder's `switcher.html` template. This means you may need to update your theme's `switcher.html` with any new template features or bindings introduced in future Page Builder versions of the `switcher.html` template to ensure that nothing breaks.
@@ -53,7 +53,7 @@ As with other XML files in Magento, you can add to and override the existing vie
                 <var name="icon">images/switcher/switcher-mobile-small.svg</var>
                 <var name="media">only screen and (max-width: 540px)</var>
                 <var name="conditions">
-                    <var name="max-width">540px</var>
+                    <var name="max-width">640px</var>
                 </var>
             </var>
         </var>
