@@ -18,7 +18,7 @@ The following instructions refer only to the specifics of overriding Page Builde
 Your overriding Admin theme should have a directory and file structure similar to the following:
 
 ```terminal
-app/design/adminhtml/VendorName/ThemeName/web/css/source/pagebuilder/<specific overrides>
+app/design/adminhtml/VendorName/ThemeName/web/css/source/content-type/<specific overrides>
 app/design/adminhtml/VendorName/ThemeName/web/css/source/_module.less
 ```
 
@@ -28,9 +28,9 @@ _Admin theme directory structure_
 
 The key takeaways are numbered in the image and described as follows:
 
-1. **Content types**. Organize your overriding styles according to the Page Builder content-type names you want to override. In this example, we added the `design/Vendor/ThemeName/web/css/source/pagebuilder` directory and the `heading` and `products` subdirectories for the content types we want to override.
+1. **Content types**. Organize your overriding styles according to the Page Builder content-types you want to override. In this example, we added the `design/adminhtml/VendorName/ThemeName/web/css/source/content-type/` directory with the `heading` and `products` content types we want to override.
 
-2. **Overriding stylesheets**. Name your overriding `.less` files to match the appearances of the content types you are overriding. In this example, the `heading` content type has one appearance: `default`. However, the `products` content type has two appearances `default` and `carousel`, so we create one `.less` file for each. This naming convention helps you find your overriding styles later when you need to update them.
+2. **Overriding stylesheets**. Name your overriding `.less` files to match the appearance names of your content types. In this example, the `heading` content type has one appearance: `default`. However, the `products` content type has two appearances `default` and `carousel`, so we create one `.less` file for each. This convention helps organize your overriding styles to finding and updating them later.
 
 3. **Import files**. Include an `_import.less` file for each content type directory. This file should only contain `@import` statements for all the overriding files in the directory. Using import files like this helps keep your changes closer to where they occur. In our example, the `_import.less` file for our `products` content type contains two imports:
 
@@ -42,8 +42,8 @@ The key takeaways are numbered in the image and described as follows:
 4. **_module.less**. The `_module.less` file is required and must be added directly to your Admin theme's `source` directory. Magento uses this file to add your Admin styles to the `pub/static/adminhtml` output, where they can override the default Admin styles, including Page Builder's default content-type styles. Like the `_import.less` files, the `_module.less` file should only contain `@import` statements. In our example, our `_module.less` contains two imports:
 
     ```scss
-    @import 'pagebuilder/heading/_import.less';
-    @import 'pagebuilder/products/_import.less';
+    @import 'content-type/heading/_import.less';
+    @import 'content-type/products/_import.less';
     ```
 
 ### Step 2: Apply the Admin theme to a module
@@ -94,7 +94,7 @@ The following instructions refer only to the specifics of overriding Page Builde
 Your overriding frontend theme should have a directory and file structure similar to the following:
 
 ```terminal
-app/design/frontend/VendorName/ThemeName/web/css/source/pagebuilder/<specific overrides>
+app/design/frontend/VendorName/ThemeName/web/css/source/content-type/<specific overrides>
 app/design/frontend/VendorName/ThemeName/web/css/source/_extend.less
 ```
 
@@ -102,13 +102,13 @@ app/design/frontend/VendorName/ThemeName/web/css/source/_extend.less
 
 _Frontend theme directory structure_
 
-The first three numbered callouts (1, 2, 3) in the theme directory structure are identical to those previously described for the admin themes. The only difference is that the `_module.less` file should be named `_extend.less`.
+The first three numbered callouts (**1, 2, 3**) for the frontend theme are identical in description to the Admin theme [previously described](#step-1-create-or-modify-an-admin-theme). The only difference for frontend themes is that the `_module.less` file should be named `_extend.less`.
 
-4. **_extend.less**. The `_extend.less` file is required and must be added directly to your frontend theme's `source` directory. Magento uses this file to add your frontend styles to the `pub/static/frontend` output in a location within the `styles-m.css` where they override (instead of replace) the default frontend styles, including Page Builder's default content-type styles. Like the `_import.less` files, the `_extend.less` file should only contain `@import` statements. In our example, our `_extend.less` contains the same two imports as seen in `module.less`:
+**(4) _extend.less**. The `_extend.less` file is required and must be added directly to your frontend theme's `source` directory. Magento uses this file to add your frontend styles to the `pub/static/frontend` output in a location within the `styles-m.css` where they override (instead of replace) the default frontend styles, including Page Builder's default content-type styles. Like the `_import.less` files, the `_extend.less` file should only contain `@import` statements. In our example, our `_extend.less` contains the same two imports as seen in `module.less`:
 
     ```scss
-    @import 'pagebuilder/heading/_import.less';
-    @import 'pagebuilder/products/_import.less';
+    @import 'content-type/heading/_import.less';
+    @import 'content-type/products/_import.less';
     ```
 
 ### Step 2: Apply the frontend theme

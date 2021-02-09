@@ -11,11 +11,12 @@ Let's imagine that the Page Builder team needs to change the configuration of th
 To fix this issue, we created a set of Page Builder DOM helper classes (`Magento\PageBuilder\Model\Dom\*`) that we can use to update all our native content types (including the Row) that have already been stored in the database.
 
 ## Steps overview
+
 There are three steps to upgrading a content type when changing its configuration:
 
 1. Create a Converter (Example: `FixFullWidthRowPadding.php`)
-2. Create a Data Patch (Example: `UpgradeFullWidthPadding.php`)
-3. Update the UpgradableEntitiesPool (for custom entities)(`Magento\PageBuilder\Model\UpgradableEntitiesPool`)
+1. Create a Data Patch (Example: `UpgradeFullWidthPadding.php`)
+1. Update the UpgradableEntitiesPool (for custom entities)(`Magento\PageBuilder\Model\UpgradableEntitiesPool`)
 
 For our Row example, the Page Builder team would add the following files to the `Magento/PageBuilder/Setup` directories:
 

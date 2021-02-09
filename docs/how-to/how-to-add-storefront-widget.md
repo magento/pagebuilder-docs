@@ -16,7 +16,7 @@ Name your JavaScript file `widget.js` and put it in the following directory stru
 
 The JavaScript for the widget can handle events, initialize third-party controls, or do whatever else you need to control your content type's behavior _after_ Page Builder renders the master format template on the frontend (or within a block or dynamic block on the Admin stage).
 
-``` javascript
+```javascript
 define([
     'jquery',
 ], function ($) {
@@ -38,13 +38,13 @@ To configure your `widget.js` so that Page Builder can initialize and load it, c
     <type name="Magento\PageBuilder\Model\WidgetInitializerConfig">
         <arguments>
             <argument name="config" xsi:type="array">
-                    <item name="example_quote" xsi:type="array">
-                    <!-- Name is the appearance name -->
-                    <item name="default" xsi:type="array">
-                        <!--required argument-->
-                            <item name="component" xsi:type="string">Example_PageBuilderQuote/js/content-type/example-quote/appearance/default/widget</item>
-                        </item>
+                <item name="example_quote" xsi:type="array">
+                <!-- Name is the appearance name -->
+                <item name="default" xsi:type="array">
+                    <!--required argument-->
+                        <item name="component" xsi:type="string">Example_PageBuilderQuote/js/content-type/example-quote/appearance/default/widget</item>
                     </item>
+                </item>
             </argument>
         </arguments>
     </type>

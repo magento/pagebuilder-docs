@@ -26,7 +26,7 @@ When you activate Page Builder, it replaces all WYSIWYG instances by interceptin
 
 This means you don't have to change your custom extensions if you're using UI components to implement their forms. However, if you don't want your module to use Page Builder for a specific field, you can revert to using the default WYSIWYG again by adding the following entry to the field in your XML configuration file:
 
-```
+```xml
 <item name="wysiwygConfigData" xsi:type="array">
     <item name="is_pagebuilder_enabled" xsi:type="boolean">false</item>
 </item>
@@ -36,17 +36,17 @@ This means you don't have to change your custom extensions if you're using UI co
 
 ![Page Builder big picture](../images/big-picture.png)
 
-| Entity            | Name in configuration | Description                                                  |
-| ----------------- | --------------------- | ------------------------------------------------------------ |
-| Content type      | `component`           | View model responsible for rendering the preview and master format |
-| Preview component | `preview_component`   | Contains preview specific logic generic for all appearances. Preview component is optional |
-| Master component  | `master_component`    | Contains master format rendering logic generic for all appearances. Master component is optional |
-| Data Store        |                       | Contains data for the content type                           |
+| Entity            | Name in configuration | Description                                                                                                    |
+|-------------------|-----------------------|----------------------------------------------------------------------------------------------------------------|
+| Content type      | `component`           | View model responsible for rendering the preview and master format                                             |
+| Preview component | `preview_component`   | Contains preview specific logic generic for all appearances. Preview component is optional                     |
+| Master component  | `master_component`    | Contains master format rendering logic generic for all appearances. Master component is optional               |
+| Data Store        |                       | Contains data for the content type                                                                             |
 | Appearance        | `appearance`          | Configuration for content type that defines look and behavior. Includes data mapping, form, templates, reader. |
-| Preview template  | `preview_template`    | Template used to display the element in the preview          |
-| Master template   | `master_template`     | Template used to render the content type to the master format |
-| Form              | `form`                | Form used to edit attributes of the content type             |
-| Reader            | `reader`              | Reads data for the content type from the master format       |
+| Preview template  | `preview_template`    | Template used to display the element in the preview                                                            |
+| Master template   | `master_template`     | Template used to render the content type to the master format                                                  |
+| Form              | `form`                | Form used to edit attributes of the content type                                                               |
+| Reader            | `reader`              | Reads data for the content type from the master format                                                         |
 
 ## Data flow
 
@@ -86,9 +86,6 @@ Any content type using background images will have a mass converter. In the foll
 Here's the interface for these converters:
 
 ```typescript
-/**
- * @api
- */
 interface ConverterInterface {
     /**
      * Process data after it's read and converted by element converters
@@ -120,7 +117,7 @@ For example:
 
 ```xml
 <element name="main">
-	<style name="display" source="display"
+    <style name="display" source="display"
            converter="Magento_PageBuilder/js/converter/style/display"
            preview_converter="Magento_PageBuilder/js/converter/style/preview/display"/>
 </element>
@@ -150,13 +147,13 @@ Appearances provide several ways to customize your content types. For example, y
 
 ## Module structure
 
-| File type               | Location                                                     |
-| ----------------------- | ------------------------------------------------------------ |
-| Content type components | `Vendor/ModuleName/view/adminhtml/web/js/content-type/content-type-name` |
+| File type               | Location                                                                                       |
+|-------------------------|------------------------------------------------------------------------------------------------|
+| Content type components | `Vendor/ModuleName/view/adminhtml/web/js/content-type/content-type-name`                       |
 | Content type templates  | `Vendor/ModuleName/view/adminhtml/web/template/content-type/content-type-name/appearance-name` |
-| Styles                  | `Vendor/ModuleName/view/adminhtml/web/css/source/content-type/content-type-name` |
+| Styles                  | `Vendor/ModuleName/view/adminhtml/web/css/source/content-type/content-type-name`               |
 
->[!NOTE]
->We have also considered introducing an appearance component and/or moving the initialization of the libraries to bindings. This would allow you to add custom logic per appearance changes and libraries per appearance for content types like the `slider` and the `tabs`.
+{: .bs-callout-info }
+We have also considered introducing an appearance component and/or moving the initialization of the libraries to bindings. This would allow you to add custom logic per appearance changes and libraries per appearance for content types like the `slider` and the `tabs`.
 
 [TypeScript]: https://www.typescriptlang.org/

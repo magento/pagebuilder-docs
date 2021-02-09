@@ -47,14 +47,14 @@ Using the same class name as the Banner ensures that Magento's XML merging will 
 
 The following table describes the configuration arguments for each appearance option.
 
-| Arguments       | Description                                                  |
-| --------------- | ------------------------------------------------------------ |
-| `optionsData`   | Grouping array for all the appearance options of a content type. |
+| Arguments       | Description                                                                                                                                                                                                                                                             |
+|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `optionsData`   | Grouping array for all the appearance options of a content type.                                                                                                                                                                                                        |
 | `item array`    | Grouping array of properties that define an appearance option. We recommend you match the `name` of the item array to the option's `value` string. In our example, the `item` array's name is `simple-poster`, which matches the option's value string `simple-poster`. |
-| `value`         | String that matches the appearance name defined in the content type's configuration file. Page Builder uses this string value to link the option to the appearance.|
-| `title`         | Display name for the appearance option. Banner example: Poster. |
-| `icon`          | Path to the `.svg` icon for the appearance: `view/adminthtml/web/css/images/content-type/[content-type-name]/appearance/*.svg`. See [Creating an icon for your appearance](#create-an-appearance-icon) |
-| `noticeMessage` | (Not shown in example.) The `noticeMessage` displays a message below the appearance options when the appearance is selected. For example, two of the Row appearances (`full-width` and `full-bleed`) define `noticeMessage` strings that display when selected. |
+| `value`         | String that matches the appearance name defined in the content type's configuration file. Page Builder uses this string value to link the option to the appearance.                                                                                                     |
+| `title`         | Display name for the appearance option. Banner example: Poster.                                                                                                                                                                                                         |
+| `icon`          | Path to the `.svg` icon for the appearance: `view/adminthtml/web/css/images/content-type/[content-type-name]/appearance/*.svg`. See [Creating an icon for your appearance](#create-an-appearance-icon)                                                                  |
+| `noticeMessage` | (Not shown in example.) The `noticeMessage` displays a message below the appearance options when the appearance is selected. For example, two of the Row appearances (`full-width` and `full-bleed`) define `noticeMessage` strings that display when selected.         |
 
 To add more appearance options, simply create more `item` arrays with names that match the `value`, as shown here:
 
@@ -98,7 +98,7 @@ _SVG appearance template_
 These specific dimensions ensure that your icon fits seamlessly with Page Builder's existing appearance icons:
 
 | Property                       | Value       |
-| ------------------------------ | ----------- |
+|--------------------------------|-------------|
 | `svg width`                    | 218         |
 | `svg height`                   | 110         |
 | `svg viewbox`                  | 0 0 218 110 |
@@ -222,7 +222,7 @@ The `_module.less` file is an import file that ensures the additional stylesheet
 ```scss
 @import "_simple-poster";
 ```
-_Use _module.less for import statements_
+Use _module.less for import statements
 
 ## Example Module
 

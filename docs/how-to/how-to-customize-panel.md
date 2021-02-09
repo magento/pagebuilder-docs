@@ -7,7 +7,7 @@ By default, the Page Builder panel has four menu sections (Layout, Elements, Med
 These menu sections are defined in the Page Builder `menu_section.xml` file and can be extended and customized from your content type by adding new menu sections with unique names and/or changing the `label` and `sortOrder` of the existing menu sections noted in the table below.
 
 | name          | label       | sortOrder | purpose                                                |
-| ------------- | ----------- | --------- | ------------------------------------------------------ |
+|---------------|-------------|-----------|--------------------------------------------------------|
 | `layout`      | Layout      | 1         | Groups containers that control the structure of a page |
 | `elements`    | Elements    | 10        | Groups common text and input elements                  |
 | `media`       | Media       | 20        | Groups visual and interactive elements                 |
@@ -17,10 +17,12 @@ These menu sections are defined in the Page Builder `menu_section.xml` file and 
 
 This topic describes four ways to customize the Page Builder panel:
 
-- [Rename panel menu sections](#rename-panel-menu-sections)
-- [Reorder panel menu sections](#reorder-panel-menu-sections)
-- [Add new panel menu sections](#add-new-panel-menu-sections)
-- [Add content types to different panel menu sections](#add-content-types-to-different-panel-menu-sections)
+- [How to customize the panel](#how-to-customize-the-panel)
+  - [Overview](#overview)
+  - [Rename panel menu sections](#rename-panel-menu-sections)
+  - [Reorder panel menu sections](#reorder-panel-menu-sections)
+  - [Add new panel menu sections](#add-new-panel-menu-sections)
+  - [Add content types to different panel menu sections](#add-content-types-to-different-panel-menu-sections)
 
 {: .bs-callout .bs-callout-info }
 For the sake of the user experience, please don't forget the affect your panel configurations may have on the end user. User's should have access the most important content types first, so be careful how you reorder menu sections and content types within menu sections. We strongly encourage you to place your content types into the existing menu sections when possible, instead of creating your own menu section.

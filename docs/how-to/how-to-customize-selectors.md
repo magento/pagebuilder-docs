@@ -17,8 +17,8 @@ All image formats are supported for icons, though we suggest using an SVG format
 To add Visual Select customization to a Page Builder content block:
 
 1. [Override the select component with an element template](#element-template)
-2. [Add Visual Select to the XML config](#xml-config)
-3. [How to reuse vertical alignment between different content types](#vertical-alignment)
+1. [Add Visual Select to the XML config](#xml-config)
+1. [How to reuse vertical alignment between different content types](#vertical-alignment)
 
 ## Override the select component with an element template {#element-template}
 
