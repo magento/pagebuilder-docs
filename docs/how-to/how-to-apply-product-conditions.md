@@ -8,17 +8,6 @@ Out-of-the-box, product conditions can be set on Page Builder's Product content 
 
 This topic describes how you can apply the conditions mechanism to your own custom content types.
 
-## Overview
-
-To reuse conditions for custom content types:
-
-- [How to apply product conditions](#how-to-apply-product-conditions)
-  - [Overview](#overview)
-  - [Add an attribute to the content type {#add-attribute}](#add-an-attribute-to-the-content-type-add-attribute)
-  - [Add the conditions {#add-conditions}](#add-the-conditions-add-conditions)
-  - [Create a custom `form` data provider {#data-provider}](#create-a-custom-form-data-provider-data-provider)
-  - [Include the `conditionsDataProcessor` and attribute {#include}](#include-the-conditionsdataprocessor-and-attribute-include)
-
 ## Add an attribute to the content type {#add-attribute}
 
 To add an attribute within your custom content type:
