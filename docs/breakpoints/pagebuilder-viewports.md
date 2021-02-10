@@ -143,7 +143,7 @@ As previously noted, Page Builder's `page-builder.ts` file is the `$parent` View
 
 **`defaultViewport`**—Name (`string`) of the viewport that is selected by default. This property is set in the `view.xml` configuration.
 
-**`viewportClasses`**—Observable object array of CSS classes used to change the stage width for the currently selected viewport. The `toggleViewport()` assigns CSS classes to the`viewportClasses` observable based on the selected viewport. The function uses the selected viewport name appended with `'-viewport'` to assign the correct CSS class. By default, Page Builder uses only one CSS class to set the stage width for its `mobile` viewport: `mobile-viewport`. The `desktop` viewport does not have a class because it does not set a stage width that is different from the stage's default width. See [_mobile-viewport.less](#_mobile-viewportless) and [Add viewport CSS classes](#step-3-add-viewport-css-classes) for more information.
+**`viewportClasses`**—Observable object array of CSS classes used to change the stage width for the currently selected viewport. The `toggleViewport()` assigns CSS classes to the`viewportClasses` observable based on the selected viewport. The function uses the selected viewport name appended with `'-viewport'` to assign the correct CSS class. By default, Page Builder uses only one CSS class to set the stage width for its `mobile` viewport: `mobile-viewport`. The `desktop` viewport does not have a class because it does not set a stage width that is different from the stage's default width. See [_mobile-viewport.less](#_mobile-viewportless) for more information.
 
 ### Viewport functions
 
