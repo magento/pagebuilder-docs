@@ -1,7 +1,7 @@
 # Use HTML Code to override styles
 
 {:.bs-callout-info}
-The `HTML Code` content type can only override frontend theme and module styles. Admin styles cannot be overridden with this content type.
+The `HTML Code` content type can only override frontend theme and module styles. Admin styles cannot be overridden using HTML Code.
 
 To quickly develop and test custom CSS overrides for the storefront (before moving them to your modules and themes):
 
