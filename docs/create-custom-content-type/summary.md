@@ -7,19 +7,19 @@ Review the following topics to learn more about customizing Page Builder:
 
 ### Tutorials
 
-- [Extend an existing content type](../extend-existing-content-type/overview.md)
+-  [Extend an existing content type](../extend-existing-content-type/overview.md)
 
 ### How-Tos
 
-- [How to customize the Page Builder panel](../customize/how-to-customize-panel.md)
-- [How to add an image uploader](../how-to/how-to-add-image-uploader.md)
-- [How to add a storefront widget](../how-to/how-to-add-storefront-widget.md)
-- [How to add a custom toolbar](../customize/how-to-add-custom-toolbar.md)
-- [How to add icons and images](../customize/how-to-add-icons-images.md)
+-  [How to customize the Page Builder panel](../customize/how-to-customize-panel.md)
+-  [How to add an image uploader](../how-to/how-to-add-image-uploader.md)
+-  [How to add a storefront widget](../how-to/how-to-add-storefront-widget.md)
+-  [How to add a custom toolbar](../customize/how-to-add-custom-toolbar.md)
+-  [How to add icons and images](../customize/how-to-add-icons-images.md)
 
 ### Reference
 
-- [Page Builder configurations](../reference/configurations.md)
-- [Page Builder Datastore](../reference/data-store.md)
-- [Page Builder events](../reference/events.md)
-- [Page Builder Knockout bindings](../reference/knockout-bindings.md)
+-  [Page Builder configurations](../reference/configurations.md)
+-  [Page Builder Datastore](../reference/data-store.md)
+-  [Page Builder events](../reference/events.md)
+-  [Page Builder Knockout bindings](../reference/knockout-bindings.md)

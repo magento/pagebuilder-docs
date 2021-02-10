@@ -43,13 +43,13 @@ The CSS for integrating SVG and PNG images with the font icons used by Page Buil
 }
 ```
 
-| Attribute       | Description                                                  |
-| --------------- | ------------------------------------------------------------ |
-| `class name`    | To match the class names of Page Builder's native icons, we recommend prefixing your icon names with `icon-pagebuilder` as we have done with our Quote icon. |
+| Attribute       | Description                                                                                                                                                                                                                                                                                                                                                |
+|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `class name`    | To match the class names of Page Builder's native icons, we recommend prefixing your icon names with `icon-pagebuilder` as we have done with our Quote icon.                                                                                                                                                                                               |
 | `content`       | The relative path to your SVG or PNG icon when rendered from `pub/static`. Referencing your image from your CSS icon class ensures that the link to your image will be created in the static output and the icon will resolve in the browser. Using the `@{baseDir}` variable also ensures that the static path to your image file will resolve correctly. |
-| `width`         | Sets the width of the content area that most closely matches the widths of Page Builder icon fonts. |
-| `height`        | Sets the height of the content area that most closely matches the widths of Page Builder icon fonts. |
-| `margin-bottom` | Pulls the SVG or PNG image down within the panel container to more closely match the positioning of Page Builder's font icon. |
+| `width`         | Sets the width of the content area that most closely matches the widths of Page Builder icon fonts.                                                                                                                                                                                                                                                        |
+| `height`        | Sets the height of the content area that most closely matches the widths of Page Builder icon fonts.                                                                                                                                                                                                                                                       |
+| `margin-bottom` | Pulls the SVG or PNG image down within the panel container to more closely match the positioning of Page Builder's font icon.                                                                                                                                                                                                                              |
 
 When deployed, your icon images are linked from `pub/static` as shown here:
 
@@ -78,5 +78,3 @@ That's it. Now you can regenerate your static assets, empty your browser cache, 
 
 ## Next
 [Tutorial summary](summary.md).
-
-

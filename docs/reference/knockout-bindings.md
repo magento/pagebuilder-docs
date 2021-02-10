@@ -2,14 +2,14 @@
 
 As part of the Page Builder application, we provide a number of several new Knockout bindings to add more functionality to certain content types through Knockouts binding syntax.
 
-| Binding Name   | Description                                                    |
-| -------------- | -------------------------------------------------------------- |
-| `sortable`       | Enables sorting the children of a bound element. We use this within container content types such as the root container, row and columns to enable drag and drop capabilities on their children content types. This can be used for easy access to the jQuery UI sortable functionality within your module. |
-| `draggable`      | Enables draggable functionality on DOM elements. We use this to enable the content types in the left menu to be dragged and dropped into containers on the stage. |
-| `liveEdit`      | Enables basic live text editing on the stage. This also supports displaying additional items within the live edit UI for easier modification. You can read more about how to use live edit within our [How to add a custom Toolbar](../customize/how-to-add-custom-toolbar.md) guide. |
-| `hasFocusNoScroll` | Enables an element to use Knockout `hasFocus` binding without it causing the browser to scroll to the element. We use this within Slider to ensure the correct slide is focused but we do not want to scroll this into view always. |
+| Binding Name       | Description                                                                                                                                                                                                                                                                                                |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `sortable`         | Enables sorting the children of a bound element. We use this within container content types such as the root container, row and columns to enable drag and drop capabilities on their children content types. This can be used for easy access to the jQuery UI sortable functionality within your module. |
+| `draggable`        | Enables draggable functionality on DOM elements. We use this to enable the content types in the left menu to be dragged and dropped into containers on the stage.                                                                                                                                          |
+| `liveEdit`         | Enables basic live text editing on the stage. This also supports displaying additional items within the live edit UI for easier modification. You can read more about how to use live edit within our [How to add a custom Toolbar](../customize/how-to-add-custom-toolbar.md) guide.                      |
+| `hasFocusNoScroll` | Enables an element to use Knockout `hasFocus` binding without it causing the browser to scroll to the element. We use this within Slider to ensure the correct slide is focused but we do not want to scroll this into view always.                                                                        |
 
-### `sortable` binding
+## `sortable` binding
 
 ```shell
 view/adminhtml/web/ts/js/binding/sortable.ts
@@ -57,9 +57,9 @@ This binding provides basic text live editing functionality to the current eleme
 
 **Configuration:**
 
-| Name           | Description                                                    |
-| -------------- | -------------------------------------------------------------- |
-| `field`        | The field name from the UI component form you want the live edit instance to edit. |
+| Name    | Description                                                                        |
+|---------|------------------------------------------------------------------------------------|
+| `field` | The field name from the UI component form you want the live edit instance to edit. |
 | `placeholder`  | _Optional_. A placeholder to display when there is no data entered for this field.
 | `selectAll`    | _Optional_. Selects all text on focus within the live edit field. We use this within tabs. |
 

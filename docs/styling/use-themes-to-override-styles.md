@@ -1,10 +1,10 @@
 # Use Themes to override styles
 
-The best place to override Page Builder's default styles is within Admin and frontend themes. Magento adds theme styles to the `styles.css` output after applying styles from modules, ensuring that theme styles take precedence. It's also why you want to use Magento themes to style your Page Builder content whenever possible.
+The best place to override Page Builder's default styles for native content types is within your Admin and frontend themes. For your own custom or extension modules, you should first add your overriding styles to your modules, as explained in [Use modules to override styles](use-modules-to-override-styles.md).
 
-In this topic, you will learn how to use Admin and frontend themes to override Page Builder's default admin and storefront styles, respectively.
+In this topic, you will learn how to use Admin and frontend themes to override the default styles that Page Builder applies to its out-of-the-box content types.
 
-## Override Admin themes
+## Steps to override Admin themes
 
 To override Page Builder styles used in the Admin, you need to:
 
@@ -52,7 +52,7 @@ The following instructions are specific to applying an Admin theme to a custom P
 
 **To apply your Admin theme to a module**:
 
-1. Create a `di.xml` file (in your module's `etc` directory) that references your Admin theme. The following example adds the `VendorName/ThemeName` Admin theme we created in step 1:
+1. Create a `di.xml` file (in your module's `etc` directory) that references your Admin theme. The following example adds the `VendorName/ThemeName` Admin theme that we just created:
 
     ```xml
     <?xml version="1.0"?>
@@ -70,7 +70,7 @@ The following instructions are specific to applying an Admin theme to a custom P
     </config>
     ```
 
-2. Upgrade your module, clean cache, and reload the Admin in the browser:
+2. Upgrade your module, clean the cache, and reload the Admin in the browser:
 
     ```bash
     bin/magento setup:upgrade
@@ -80,7 +80,7 @@ The following instructions are specific to applying an Admin theme to a custom P
     bin/magento cache:clean
     ```
 
-## Override frontend themes
+## Steps to override frontend themes
 
 To override Page Builder styles on the storefront, you need to:
 

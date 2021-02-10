@@ -1,4 +1,4 @@
-# How to use breakpoints
+# How to use viewports
 
 Page Builder provides three ways to create responsive content using viewports:
 

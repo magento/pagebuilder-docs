@@ -13,7 +13,6 @@ define([
         // do logic
     });
 });
-
 ```
 
 ## Events list
@@ -32,8 +31,6 @@ The following table lists the Page Builder events you can bind to and handle wit
 | [contentType:removeAfter](#contenttyperemoveafter)                  | [stage:{{preview.contentType.stageId}}:renderAfter](#stagepreviewrenderafter)                    |
 | [contentType:renderAfter](#contenttyperenderafter)                  | [stage:{{preview.contentType.stageId}}:fullScreenModeChangeAfter](#stageidtogglefullscreen)      |
 |                                                                     | [stage:updateAfter](#stageupdateafter)                                                           |
-|                                                                     | [stage:viewportChangeAfter](#stageviewportchangeafter)                                           |
-|                                                                     | [stage::{{preview.contentType.stageId}}:viewportChangeAfter](#stageidviewportchangeafter)        |
 |                                                                     |                                                                                                  |
 | **Column Events**                                                   | **Preview Events**                                                                               |
 | [column:dragStart](#columndragstart)                                | [childContentType:sortstart](#childcontenttypesortstart)                                         |
@@ -50,9 +47,9 @@ The following table lists the Page Builder events you can bind to and handle wit
 ## `contentType:*` events
 Events starting with `contentType:` are triggered for every content type on the stage. These events can also be called for specific content types by prefixing the content type's name before the event (`name:event`). For example:
 
-* `text:createAfter`
-* `row:mountAfter`
-* `tab-item:mountAfter`
+-  `text:createAfter`
+-  `row:mountAfter`
+-  `tab-item:mountAfter`
 
 ### `contentType:createAfter`
 

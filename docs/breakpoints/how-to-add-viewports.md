@@ -203,4 +203,4 @@ This template shows two trivial changes to Page Builder's `switcher.html` templa
 Your changes can be simple, like this, or as complex as required.
 ## Summary
 
-In this topic you learned how to add more viewports to Page Builder's stage so that end users can preview how their content will look a different widths on the storefront. To learn more about how to use these viewports to customize your content types, see [How to use viewports](how-to-use-viewports.md).
+In this topic you learned how to add more viewports to Page Builder's stage so that end users can preview how their content will look a different widths on the storefront. To learn more about how to use these viewports to customize your content types, see How to use viewports.

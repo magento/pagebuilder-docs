@@ -8,9 +8,9 @@ For everyone else, Page Builder is automatically installed with Magento Commerce
 
 Before installing Page Builder for making contributions, make sure you have the following prerequisites:
 
-- A local development installation of Magento Commerce 2.3.1+ -- Use the installation instructions from the [DevDocs installation guide](https://devdocs.magento.com/guides/v2.3/install-gde/bk-install-guide.html).
-- Access to the private Page Builder repository. You should participate in [Magento Partner Program](https://magento.com/partners/become) to have these permissions.
-- [npm package manager](https://www.npmjs.com/get-npm)
+-  A local development installation of Magento Commerce 2.3.1+ -- Use the installation instructions from the [DevDocs installation guide](https://devdocs.magento.com/guides/v2.3/install-gde/bk-install-guide.html).
+-  Access to the private Page Builder repository. You should participate in [Magento Partner Program](https://magento.com/partners/become) to have these permissions.
+-  [npm package manager](https://www.npmjs.com/get-npm)
 
 1. Clone the Page Builder repos into the root directory of your Magento Commerce 2.3+ installation:
 
