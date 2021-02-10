@@ -19,7 +19,7 @@ The reason we suggest prefixing your content type with your vendor name is to pr
 
 ## The `example_quote` configuration
 
-Only a subset of configuration elements are described in our Quote example (enough to understand the basic role of the configuration file). For more details, refer to [Content type configurations](../reference/configurations.md) and [Additional configurations](../how-to/how-to-add-additional-configurations.md).
+Only a subset of configuration elements are described in our Quote example (enough to understand the basic role of the configuration file). For more details, refer to [Content type configurations](../reference/configurations.md) and [Additional configurations](../customize/how-to-add-additional-configurations.md).
 
 The following configuration is from the Quote content type. An overview of these elements and attributes are described in the tables that follow.
 

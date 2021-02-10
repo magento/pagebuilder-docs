@@ -475,4 +475,4 @@ Here we have an example of our layout menu section configuration.
 </config>
 ```
 
-For more information on how to customise the menu sections and the left panel please see: [How to customize the panel](../how-to/how-to-customize-panel.md).
+For more information on how to customise the menu sections and the left panel please see: [How to customize the panel](../customize/how-to-customize-panel.md).

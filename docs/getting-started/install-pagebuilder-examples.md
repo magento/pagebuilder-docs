@@ -32,7 +32,7 @@ The [Example directory](https://github.com/magento-devdocs/pagebuilder-examples/
 
 **In Progress**. The how-to directories in the repo correspond to the how-to topics in this documentation. Each how-to directory provides the files and code changes featured in the how-to topics.
 
-For example, the topic [How to add a custom toolbar](../how-to/how-to-add-custom-toolbar.md), has a corresponding directory within the [pagebuilder-examples repo](https://github.com/magento-devdocs/pagebuilder-examples) called [how-to-add-custom-toolbar](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/how-to-add-custom-toolbar). This directory provides the files with the code changes you need to make in order to add a custom toolbar to the `PageBuilderQuote` module.
+For example, the topic [How to add a custom toolbar](../customize/how-to-add-custom-toolbar.md), has a corresponding directory within the [pagebuilder-examples repo](https://github.com/magento-devdocs/pagebuilder-examples) called [how-to-add-custom-toolbar](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/how-to-add-custom-toolbar). This directory provides the files with the code changes you need to make in order to add a custom toolbar to the `PageBuilderQuote` module.
 
 ## Installation
 

@@ -441,6 +441,38 @@ events.on("stage:childFocusStop", function () {});
 
 [Back to top]
 
+### `stage:viewportChangeAfter` {#stageviewportchangeafter}
+
+Triggered for viewport/breakpoint changes on the storefront.
+Listen for this event in your content type's `widget.js` to handle responsive changes in the storefront.
+
+```js
+events.on(`stage:viewportChangeAfter`, function (args) {});
+```
+
+| Args               | Type     |
+|--------------------|----------|
+| `viewport`         | `string` |
+| `previousViewport` | `string` |
+
+[Back to top]
+
+### `stage:{{preview.contentType.stageId}}:viewportChangeAfter` {#stageidviewportchangeafter}
+
+Triggered for viewport/breakpoint changes in the Admin.
+Listen for this event in your content type's `preview.js` to handle responsive changes on the stage.
+
+```js
+events.on(`stage:${this.contentType.stageId}:viewportChangeAfter`, function (args) {});
+```
+
+| Args               | Type     |
+|--------------------|----------|
+| `viewport`         | `string` |
+| `previousViewport` | `string` |
+
+[Back to top]
+
 ### `state`
 
 ```js
