@@ -382,4 +382,3 @@ div {
 ## Next
 
 [Step 6: Add icon](step-6-add-icon.md)
-

@@ -8,9 +8,9 @@ Content type templates are the HTML files (HTML fragments) that define how your 
 
 Conventions for adding content type templates are as follows.
 
-- Page Builder requires you to name your templates `preview.html` for the Admin preview template and `master.html` for the master format storefront template.
+-  Page Builder requires you to name your templates `preview.html` for the Admin preview template and `master.html` for the master format storefront template.
 
-- Page Builder requires the name of an `appearance` to match the name of the directory containing the appearance templates. If they don't match, your content type appearances will not render.
+-  Page Builder requires the name of an `appearance` to match the name of the directory containing the appearance templates. If they don't match, your content type appearances will not render.
 
   For example, if you navigate to the Banner's appearance templates (`PageBuilder/view/adminhtml/web/template/content-type/banner`) you can see that the names of the template directories match the names of the four appearances defined in the `banner.xml` configuration file as shown here:
 
@@ -55,13 +55,13 @@ These files can be blank initially; they just need to exist in their proper loca
 
 The following table describes each `appearance` attribute in our example.
 
-| Attribute          | Description                                                  |
-| ------------------ | ------------------------------------------------------------ |
-| `name`             | As noted by convention, the name of the appearance and the name of the directory for the appearance templates *must* match. |
-| `default`          | Every content type must have a default appearance. If you only define one appearance for your content type, you must set the default to `true`. |
-| `preview_template` | References the `preview.html` (the Admin preview template) for rendering the preview appearance of your content type on the stage within the Admin UI. |
+| Attribute          | Description                                                                                                                                                    |
+|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `name`             | As noted by convention, the name of the appearance and the name of the directory for the appearance templates *must* match.                                    |
+| `default`          | Every content type must have a default appearance. If you only define one appearance for your content type, you must set the default to `true`.                |
+| `preview_template` | References the `preview.html` (the Admin preview template) for rendering the preview appearance of your content type on the stage within the Admin UI.         |
 | `master_template`  | References the `master.html` (the master format storefront template) for rendering the appearance of your content type on the storefront for customers to see. |
-| `reader`           | Reads content type data from the master format.      |
+| `reader`           | Reads content type data from the master format.                                                                                                                |
 
 ## Quote `preview_template`
 
@@ -225,4 +225,3 @@ The `html` value is derived from the configuration `element` name  (`quote`) and
 ## Next
 
 [Step 3: Add components](step-3-add-components.md)
-

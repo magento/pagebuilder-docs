@@ -63,16 +63,15 @@ In the Page Builder 1.0.0, you cannot extend just one appearance of a content ty
 
 The following table describes the elements in our extension configuration.
 
-| Element       | Description                                                  |
-| ------------- | ------------------------------------------------------------ |
-| `type`        | The type `name` defines the name of the content type. Make sure you name this configuration `banner` so that Magento will merge this configuration with the Banner's configuration. |
-| `appearances` | The grouping element that specifies one or more `appearance` elements. |
-| `appearance`  | The appearance `name` that Magento uses for XML merging. Again, make sure you use the same appearance names as the Banner so that Magento can merge your appearance extensions with the Banner appearances you want to change. |
-| `elements`    | The grouping element that specifies one or more `element` nodes. |
-| `element`     | The `element` maps styles and other appearance extensions from the form editor to the HTML templates. In our markup, we map our new style properties for each appearance to the `wrapper` element of the Banner's HTML templates. |
+| Element       | Description                                                                                                                                                                                                                                                                                                                                                                  |
+|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `type`        | The type `name` defines the name of the content type. Make sure you name this configuration `banner` so that Magento will merge this configuration with the Banner's configuration.                                                                                                                                                                                          |
+| `appearances` | The grouping element that specifies one or more `appearance` elements.                                                                                                                                                                                                                                                                                                       |
+| `appearance`  | The appearance `name` that Magento uses for XML merging. Again, make sure you use the same appearance names as the Banner so that Magento can merge your appearance extensions with the Banner appearances you want to change.                                                                                                                                               |
+| `elements`    | The grouping element that specifies one or more `element` nodes.                                                                                                                                                                                                                                                                                                             |
+| `element`     | The `element` maps styles and other appearance extensions from the form editor to the HTML templates. In our markup, we map our new style properties for each appearance to the `wrapper` element of the Banner's HTML templates.                                                                                                                                            |
 | `style`       | The `style` element configures the bindings from the form field to the HTML template elements. Here, we apply our style to the `wrapper` element of the template. The style `name` represents the CSS `max-height` style. The `source` is the name of the form field you want the style bound to. That means that the field name we will add in step 3 will be `max-height`. |
 
 ## Next
 
 [Step 3: Extend forms](step-3-extend-forms.md)
-

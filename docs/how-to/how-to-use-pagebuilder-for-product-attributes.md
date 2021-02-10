@@ -46,10 +46,10 @@ $categorySetup->addAttribute(
 The following steps change a custom product attribute's input type to Page Builder using the Admin UI:
 
 1. On the Admin sidebar, click **Stores**.
-2. Under **Attributes**, click on **Product**.
-3. Select the target custom product attribute.
+1. Under **Attributes**, click on **Product**.
+1. Select the target custom product attribute.
    You may have to use the search function or increase the amount displayed on the page to find it.
-4. Under **Attribute Properties**, select **Page Builder** for **Catalog Input Type for Store Owner**.
+1. Under **Attribute Properties**, select **Page Builder** for **Catalog Input Type for Store Owner**.
 
    ![Catalog Input Type]
 

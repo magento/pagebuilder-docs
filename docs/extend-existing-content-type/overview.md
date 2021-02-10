@@ -24,11 +24,11 @@ Page Builder defines these appearances in the Banner's configuration file (`Mage
 In Page Builder 1.0.0, when you customize content types that have multiple appearances (like the Banner), you must apply your changes to all the appearances, not just one. Customizing a single appearance of a content type that defines multiple appearances is not currently supported.
 You can use appearances to change content types in the following ways:
 
-- Add new style properties.
-- Add or change templates.
-- Add to or change existing forms.
-- Add new attributes.
-- Move data between elements.
+-  Add new style properties.
+-  Add or change templates.
+-  Add to or change existing forms.
+-  Add new attributes.
+-  Move data between elements.
 
 ## Banner extension tutorial
 
@@ -49,4 +49,3 @@ These steps show the basic pattern for adding style properties and form fields t
 ## Next
 
 [Step 1: Create an extension module](step-1-create-extension-module.md)
-

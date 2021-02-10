@@ -1,8 +1,6 @@
 # How to use server-side previews
 
-## What's in this topic
-
-This topic describes how to use the `RenderPool` on the stage to render a backend [content type] preview. 
+This topic describes how to use the `RenderPool` on the stage to render a backend [content type] preview.
 
 Using this method, you can preview content types that cannot be rendered on the stage and require further backend processing to be previewed.
 
@@ -45,7 +43,7 @@ To invoke the renderer from the stage, submit an HTTP request to the Page Builde
 
 1. Obtain the URL for the HTTP request from within your preview component by calling `getConfig("preview_url")` on the `Magento_PageBuilder/js/config` component.
 2. Make a request to the aforementioned obtained URL specifying your custom content type name and any additional parameters you want to use to render the element:
-    
+
     ``` javascript
         define([
             'jquery',
@@ -55,10 +53,10 @@ To invoke the renderer from the stage, submit an HTTP request to the Page Builde
             var AwesomeElement = function() {
                 Preview.apply(this, arguments);
             };
-         
+
             AwesomeElement.prototype = Object.create(Preview.prototype);
             AwesomeElement.prototype.constructor = AwesomeElement;
-         
+
             AwesomeElement.prototype.afterObservablesUpdated = function() {
                 Preview.prototype.afterObservablesUpdated.call(this);
                 // Get the url to call
@@ -71,20 +69,20 @@ To invoke the renderer from the stage, submit an HTTP request to the Page Builde
                         message: 'custom data!'
                     }
                 };
-         
+
                 $.ajax(url, requestConfig).done(function(response) {
                     // Will display: "Hello stage! You said custom content!"
                     this.data.main.html(response.data.message);
                 }.bind(this));
             };
-         
+
             return AwesomeElement;
         });
     ```
 
 ## Step 4: Render the element
 
-Your exact configuration and situation determine when, and how, you render the element. 
+Your exact configuration and situation determine when, and how, you render the element.
 
 Generally, you would perform this operation when the properties change, by overriding the `afterObservablesUpdated` method with this logic (as shown in the previous example).
 

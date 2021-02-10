@@ -1,7 +1,5 @@
 # How to add a text editor
 
-## What's in this topic
-
 This topic describes how to add a reusable inline text editing component to the Page Builder stage for a content type.
 
 ## Add configuration for the inline text editor
@@ -10,7 +8,7 @@ To add configuration for the inline text editor:
 
 1. Use `additional_data` in your `<YourModule>/view/base/pagebuilder/content_type/<content-type-name>.xml` XML config file to add the custom inline text editor configuration to a content type:
 
-  ``` xml
+  ```xml
   <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
      ...
          <additional_data>
@@ -23,9 +21,9 @@ To add configuration for the inline text editor:
   </config>
   ```
 
-2. Add your custom editor adapter class to the list of WYSIWYG adapters supporting inline text editing in the `di.xml` file:
+1. Add your custom editor adapter class to the list of WYSIWYG adapters supporting inline text editing in the `di.xml` file:
 
-  ``` xml 
+  ```xml
     <type name="Magento\PageBuilder\Model\Wysiwyg\InlineEditingSupportedAdapterList">
         <arguments>
             <argument name="wysiwygAdaptersSupportingInlineEditing" xsi:type="array">
@@ -41,7 +39,7 @@ To update the `<YourModule>/view/adminhtml/web/js/content-type/<content_type_nam
 
 1. Add the inline text editing component, `Magento_PageBuilder/js/content-type/text`, dependency:
 
-``` js
+```js
 define([
 "Magento_PageBuilder/js/config",
 "Magento_PageBuilder/js/content-type/preview",
@@ -51,7 +49,7 @@ define([
 
 If you are creating a custom content type, however, use an existing content type that already implements a WYSIWYG as your template. `Magento_PageBuilder/js/content-type/text` can be used as a reference for injecting the required inline text editor dependency into your own custom content type via `Magento_PageBuilder/js/wysiwyg/factory`:
 
-``` js
+```js
 initWysiwyg: function (element) {
     var self = this;
     this.element = element;
@@ -69,7 +67,7 @@ initWysiwyg: function (element) {
 }
 ```
 
-2. Add configuration for the inline text editor in the `<content-type-name>.xml` file.
+1. Add configuration for the inline text editor in the `<content-type-name>.xml` file.
 
 ## Update the preview template to display the inline text editor component
 
@@ -126,11 +124,11 @@ To extend the inline text editor component:
     </type>
     ```
 
-2. Specify the name of a preferred editor, as noted in the system configuration path `cms/wysiwyg/editor`.
+1. Specify the name of a preferred editor, as noted in the system configuration path `cms/wysiwyg/editor`.
 
     This configuration can be specified for every editor that is supported for display on the inline editing mode on the stage. `factory` then returns the WYSIWYG instance referenced in your current Magento configuration.
 
-3. Specify the `component_initializers`, per content type, where the inline text editor component will be used. Within this configuration, you can extend the existing event logic:
+1. Specify the `component_initializers`, per content type, where the inline text editor component will be used. Within this configuration, you can extend the existing event logic:
 
     ``` javascript
     initialize: function(wysiwyg) {
@@ -147,11 +145,11 @@ To extend the inline text editor component:
     ...
     ```
     The following events can be extended for the default TinyMCE4 editor:
-    - `onFocus`
-    - `onBlur`
-    - `afterChangeContent`
+    -  `onFocus`
+    -  `onBlur`
+    -  `afterChangeContent`
 
-4. Specify the list of modifers, `config_modifiers`, that can update the WYSIWYG configuration before the component is initialized. These configuration keys can also be used to update the default WYSIWYG editor (TinyMCE4).
-5. Specify the `mode` in which TinyMCE4 will be rendered on the stage.
-6. Specify the `minToolbarWidth` to limit the width of TinyMCE4. If a component is used with a content type configured to a small width, this will limit the width to match.
-7. Specify the `parentSelectorsToUnderlay` for TinyMCE4 to utilize an array of selectors for applying the z-index, which will prevent the toolbar from overlaying content type elements.
+1. Specify the list of modifers, `config_modifiers`, that can update the WYSIWYG configuration before the component is initialized. These configuration keys can also be used to update the default WYSIWYG editor (TinyMCE4).
+1. Specify the `mode` in which TinyMCE4 will be rendered on the stage.
+1. Specify the `minToolbarWidth` to limit the width of TinyMCE4. If a component is used with a content type configured to a small width, this will limit the width to match.
+1. Specify the `parentSelectorsToUnderlay` for TinyMCE4 to utilize an array of selectors for applying the z-index, which will prevent the toolbar from overlaying content type elements.

@@ -8,11 +8,11 @@ This topic describes how to add the image uploader component to your content typ
 
 The first step is to customize the image uploader to suit your needs. To do this, you must add the `additional_data` element to your content type's config file to create the data types and values needed to initialize the image uploader for your specific needs.
 
-``` xml
+```xml
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
     <type name="example_quote"
-		...
+        ...
         <additional_data>
             <item name="uploaderConfig" xsi:type="array">
                 <item name="isShowImageUploadInstructions" xsi:type="boolean">false</item>
@@ -47,41 +47,40 @@ The first step is to customize the image uploader to suit your needs. To do this
 
 To create an instance of the image uploader in your preview component (`preview.js`), import the `Magento_PageBuilder/js/content-type/uploader` component as a dependency and call the uploader constructor, passing in your content type's configuration options (added in step 1) and the other required arguments, as shown here :
 
-``` js
+```js
 define(['Magento_PageBuilder/js/content-type/uploader'], function (Uploader) {
 
-        Preview.prototype.getUploader = function () {
-            var initialImageValue = this.contentType.dataStore
-                .get(this.config.additional_data.uploaderConfig.dataScope, "");
+    Preview.prototype.getUploader = function () {
+        var initialImageValue = this.contentType.dataStore
+            .get(this.config.additional_data.uploaderConfig.dataScope, "");
 
-            return new Uploader(
-                "imageuploader_" + this.contentType.id,
-                this.config.additional_data.uploaderConfig,
-                this.contentType.id,
-                this.contentType.dataStore,
-                initialImageValue,
-            );
-        };
+        return new Uploader(
+            "imageuploader_" + this.contentType.id,
+            this.config.additional_data.uploaderConfig,
+            this.contentType.id,
+            this.contentType.dataStore,
+            initialImageValue,
+        );
+    };
 ```
 
 **Uploader constructor arguments**
 
-
-| Argument           | Type      | Description                                                                         | Required | Default                                                                                                 |
-| ------------------ | --------- | ----------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------- |
-| `name`             | String    | Used to locate the component in the UI registry.                  | yes     | None                                                                                                    |
-| `uploaderConfig`   | Object    | Initializes the image uploader UI component with the configuration settings from the `additional_data` element. | yes     | None                                                                                                    |
-| `contentTypeId`    | String    | The ID of the content type you are adding the uploader to.  | yes     | None                                                                                                    |
-| `dataStore`        | DataStore | The DataStore to store the selected image in.                          | yes     | None                                                                                                    |
-| `initialValue`     | Object[]  | The image value to set for the initial state of the uploader component. | yes     | None                                                                                                    |
-| `onChangeCallback` | Function  | The callback to execute when the end-user selects an image.                           | no    | Magento saves the image to the provided `dataStore` using `uploaderConfig.dataScope` as the key.        |
-| `onDeleteCallback` | Function  | The callback to execute when the end-user deletes the current image from storage. | no    | Magento removes the image from to the provided `dataStore` using `uploaderConfig.dataScope` as the key. |
+| Argument           | Type      | Description                                                                                                     | Required | Default                                                                                                 |
+|--------------------|-----------|-----------------------------------------------------------------------------------------------------------------|----------|---------------------------------------------------------------------------------------------------------|
+| `name`             | String    | Used to locate the component in the UI registry.                                                                | yes      | None                                                                                                    |
+| `uploaderConfig`   | Object    | Initializes the image uploader UI component with the configuration settings from the `additional_data` element. | yes      | None                                                                                                    |
+| `contentTypeId`    | String    | The ID of the content type you are adding the uploader to.                                                      | yes      | None                                                                                                    |
+| `dataStore`        | DataStore | The DataStore to store the selected image in.                                                                   | yes      | None                                                                                                    |
+| `initialValue`     | Object[]  | The image value to set for the initial state of the uploader component.                                         | yes      | None                                                                                                    |
+| `onChangeCallback` | Function  | The callback to execute when the end-user selects an image.                                                     | no       | Magento saves the image to the provided `dataStore` using `uploaderConfig.dataScope` as the key.        |
+| `onDeleteCallback` | Function  | The callback to execute when the end-user deletes the current image from storage.                               | no       | Magento removes the image from to the provided `dataStore` using `uploaderConfig.dataScope` as the key. |
 
 ## Step 3: Add markup for the uploader
 
 To add the image uploader to your preview template (`preview.html`), use Knockout's `scope` binding element to render an instance of your configured uploader component from the Magento registry, as shown here:
 
-``` html
+```html
 <div ...>
    ...
     <scope args="getUploader().getUiComponent()">

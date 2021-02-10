@@ -6,9 +6,9 @@ In this step, we will create a UI component form. This form will give users anot
 
 Page Builder provides two base forms that give you a ton of functionality you can inherit from right out-of-the-box:
 
-- `pagebuilder_base_form`
+-  `pagebuilder_base_form`
 
-- `pagebuilder_base_form_with_background_attributes` (inherits from `pagebuilder_base_form`)
+-  `pagebuilder_base_form_with_background_attributes` (inherits from `pagebuilder_base_form`)
 
 Inheriting from either base form gives you an editor for your content type that slides out from the right side of the Admin screen.
 
@@ -30,13 +30,13 @@ The base form you inherit from depends on the complexity of the content type you
 
 The conventions for naming your form and its layout are as follows:
 
-- The name for your form should follow this pattern: `pagebuilder_` + `content_type_name_` + `form.xml`. For example `pagebuilder_example_quote_form.xml`.
-- The name for your layout must match the name of your form, in this case: `pagebuilder_example_quote_form.xml`.
+-  The name for your form should follow this pattern: `pagebuilder_` + `content_type_name_` + `form.xml`. For example `pagebuilder_example_quote_form.xml`.
+-  The name for your layout must match the name of your form, in this case: `pagebuilder_example_quote_form.xml`.
 
 Add your form and layout files to your module in the following locations:
 
-- `view/adminhtml/layout/`
-- `view/adminhtml/ui_component/`
+-  `view/adminhtml/layout/`
+-  `view/adminhtml/ui_component/`
 
 ![Create config file](../images/step4-add-form.png)
 
@@ -53,8 +53,8 @@ In your configuration file, add your form name (without the .xml file extension)
         ...>
 ```
 
-| Attribute | Description                                                  |
-| --------- | ------------------------------------------------------------ |
+| Attribute | Description                                                                        |
+|-----------|------------------------------------------------------------------------------------|
 | `form`    | Name of the UI component form that provides the form editor for your content type. |
 
 ## The Quote form
@@ -65,11 +65,11 @@ In our Quote form, we will inherit from `pagebuilder_base_form_with_background_a
 
 The purpose of each field is described as follows:
 
-| Field         | Description                                                  |
-| ------------- | ------------------------------------------------------------ |
-| Quote         | A textarea for writing or pasting in the quote's text.       |
-| Author        | A text input field for the author's name.                    |
-| Description   | A text input field to describe the author's title or origin of the quote. |
+| Field         | Description                                                                                                                                                             |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Quote         | A textarea for writing or pasting in the quote's text.                                                                                                                  |
+| Author        | A text input field for the author's name.                                                                                                                               |
+| Description   | A text input field to describe the author's title or origin of the quote.                                                                                               |
 | CSS for Quote | A text input field for end-users to add CSS class names for styling the text in the Quote field. This option is detailed in [Step 5: Add styles](step-5-add-styles.md). |
 
 The Quote form is shown in full here for you to copy into your `pagebuilder_example_form.xml` file, followed by descriptions of the key parts.
@@ -230,24 +230,24 @@ Again, even though our Quote control doesn't currently define an appearance, we 
 
 Page Builder requires fields to be grouped within named `<fieldset>` elements. Fieldsets provide your fields with a basic grouping mechanism and an optional label. You can define as many fieldsets as you want.
 
-| Attribute   | Description                                                  |
-| ----------- | ------------------------------------------------------------ |
-| `name`      | You can name your fieldset whatever you want. Currently, it has no significance for data binding. |
+| Attribute   | Description                                                                                                                                                                                                                                                                                                                                                                                 |
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `name`      | You can name your fieldset whatever you want. Currently, it has no significance for data binding.                                                                                                                                                                                                                                                                                           |
 | `sortOrder` | Determines where Page Builder puts the fieldset within the editor in relation to other fieldsets. Page Builder sets the `sortOrder` for the `pagebuilder_base_form` fieldset to `90`. Setting your fieldset to a value less than that (such as `20`) will put your fieldset above both inherited fieldsets. A value greater than `90` will put your fieldset below the inherited fieldsets. |
 
 ### field
 
 The `<field>` element creates the actual HTML form element as specified by the `formElement` attribute, such as input, select, textarea, and colorPicker.
 
-| Attribute     | Description                                                  |
-| ------------- | ------------------------------------------------------------ |
-| `name`        | The name of the field used for data bindings.                |
+| Attribute     | Description                                                                                   |
+|---------------|-----------------------------------------------------------------------------------------------|
+| `name`        | The name of the field used for data bindings.                                                 |
 | `sortOrder`   | Determines where Page Builder puts the field within the fieldset in relation to other fields. |
-| `formElement` | Determines the HTML form element to render for the field.    |
+| `formElement` | Determines the HTML form element to render for the field.                                     |
 
 ### data source
 
-Defines the data source for the field. The source` node's value corresponds to a key (`page`) in the data array returned by the `\Magento\Framework\View\Element\UiComponent\DataProvider\DataProviderInterface::getData` method of your UI component.
+Defines the data source for the field. The source node's value corresponds to a key (`page`) in the data array returned by the `\Magento\Framework\View\Element\UiComponent\DataProvider\DataProviderInterface::getData` method of your UI component.
 
 ```xml
 <field name="quote_text" sortOrder="10" formElement="textarea">
@@ -272,11 +272,11 @@ The `<settings>` element defines the data scope, data type, and label to use for
 </settings>
 ```
 
-| Attribute   | Description                                                  |
-| ----------- | ------------------------------------------------------------ |
+| Attribute   | Description                                                                                                                                                                                                                                                          |
+|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `dataScope` | Specifies the name of your input field for data binding. The `dataScope` node allows you to change the value of the `name` attribute for your input field. We do not need to change the field name value, so we keep our dataScope value the same as our field name. |
-| `dataType`  | Specifies the data type for the field's data. Common values are `text` and `boolean`. |
-| `label`     | Specifies the text label applied to the input field on the form. |
+| `dataType`  | Specifies the data type for the field's data. Common values are `text` and `boolean`.                                                                                                                                                                                |
+| `label`     | Specifies the text label applied to the input field on the form.                                                                                                                                                                                                     |
 
 ## Quote form layout
 
@@ -333,42 +333,42 @@ The following elements are from our `example_quote.xml` configuration. These ele
 </elements>
 ```
 
-#### element
+### element
 
 The `<element>` element provides a scope for the data bindings within it.
 
-| Attribute | Description                                                  |
-| --------- | ------------------------------------------------------------ |
+| Attribute | Description                                                                                                                                                                                                                                                                                                              |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `name`    | Specifies the name of the element scope for the data binding when applied to template elements. In our example, the element name of `main` is used as the scope for binding styles and other attributes to the top-level `<div>` element in our template: `<div attr="data.main.attributes" ko-style="data.main.style">` |
 
-#### style
+### style
 
 The `<style>` element configures the bindings from the form style fields to the template elements.
 
-| Attribute           | Description                                                  |
-| ------------------- | ------------------------------------------------------------ |
-| `name`              | By convention, the name of the element should match the source. |
-| `source`            | The name of the form field you want the style bound to.      |
-| `converter`         | Converts the value after reading or before saving to the DOM. |
-| `preview_converter` | Converts the value for the preview. Used for cases where the conversion logic is different between the two views. |
-| `storage_key`       | Optional variable name for value in the data storage. If no value is provided, the `name` attribute will be used. |
+| Attribute           | Description                                                                                                           |
+|---------------------|-----------------------------------------------------------------------------------------------------------------------|
+| `name`              | By convention, the name of the element should match the source.                                                       |
+| `source`            | The name of the form field you want the style bound to.                                                               |
+| `converter`         | Converts the value after reading or before saving to the DOM.                                                         |
+| `preview_converter` | Converts the value for the preview. Used for cases where the conversion logic is different between the two views.     |
+| `storage_key`       | Optional variable name for value in the data storage. If no value is provided, the `name` attribute will be used.     |
 | `reader`            | Reader used for parsing attributes and properties out of the DOM. Should not be used with read-only persistence_mode. |
 
-#### attribute
+### attribute
 
 The `<attribute>` element provides a mechanism to attach DOM attributes to template elements.
 
-| Attribute | Description                                                  |
-| --------- | ------------------------------------------------------------ |
+| Attribute | Description                                                                                            |
+|-----------|--------------------------------------------------------------------------------------------------------|
 | `name`    | Unique name used for configuration merging, and the default value for storage_key if none is provided. |
-| `source`  | The name of the property or attribute in the DOM. Must be in snake_case. |
+| `source`  | The name of the property or attribute in the DOM. Must be in snake_case.                               |
 
-#### css
+### css
 
 The `<css>` element sets the binding for the CSS Classes form field (`css_classes`) from the `pagebuilder_base_form`, or from any custom input field you add to your form. When we define the `<css>` element, Page Builder applies the class names from the form's CSS Classes field to the template elements that use the `css` binding element.
 
 | Attribute | Description                                      |
-| --------- | ------------------------------------------------ |
+|-----------|--------------------------------------------------|
 | `name`    | Specifies the name of the form field to bind to. |
 
 For example, in our Quote configuration, we define an `<element>` named `quote` with a `<css>` element bound to an input field in our form named `quote_css`, as shown here:
@@ -413,7 +413,7 @@ In [Step 5: Add styles](step-5-add-styles.md), we will revisit the `css` attribu
 The `<html>` element binds the HTML content entered in a form field. When the `<html>` element names a field for binding, content entered into the field is applied to the template elements that use them.
 
 | Attribute | Description                                      |
-| --------- | ------------------------------------------------ |
+|-----------|--------------------------------------------------|
 | `name`    | Specifies the name of the form field to bind to. |
 
 For example, as with the previous `css` binding, the Quote configuration defines the `<element>` named `quote` with an `<html>` element that is bound to an input field in our form named `quote_text`, as shown here:
