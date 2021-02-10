@@ -127,7 +127,7 @@ This version of Page Builder is just a version-number update for Magento 2.3.5-p
    **Please Note:** If you have created additional database entities for storing Page Builder content, you _must_ add those entities to your `etc/di.xml`. If you do not, the Page Builder content stored in your entity will not be updated, causing potential data-loss and display issues. For example, if you have created a blog entity that stores Page Builder content, you must add your blog entity to your `etc/di.xml` file as an `UpgradableEntitiesPool` type so that the upgrade library can update the Page Builder content types used in your blog. For more information and instructions on using the upgrade library, see: [How to use the content type upgrade library](https://devdocs.magento.com/page-builder/docs/how-to/how-to-use-upgrade-library.html){:data-proofer-ignore='true'}.
 
 -  {:.new}**Documentation on adding new Appearances**<br/>
-   Everything you need to know about [adding appearances](https://devdocs.magento.com/page-builder/docs/how-to/how-to-add-appearance.html) for existing or custom content types.
+   Everything you need to know about [adding appearances](https://devdocs.magento.com/page-builder/docs/customize/how-to-add-appearance.html) for existing or custom content types.
 
 **Various fixes**
 

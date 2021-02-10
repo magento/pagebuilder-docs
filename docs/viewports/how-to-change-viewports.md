@@ -1,4 +1,6 @@
-# How to change breakpoints
+# How to change viewports
+
+**[REMOVE or UPDATE this topic to fit viewport changes]**
 
 This topic describes how to change the default mobile breakpoint in Page Builder.
 
@@ -25,7 +27,7 @@ By default, when you configure Page Builder to render a background image for a c
 
 If your custom theme also uses this max-width breakpoint for your mobile layout, no changes are required.
 
-However, if your custom theme uses a different mobile breakpoint, you need to overwrite the default breakpoint by either: 
+However, if your custom theme uses a different mobile breakpoint, you need to overwrite the default breakpoint by either:
 
 1. Adding the theme's breakpoint to the theme's `view.xml` file.
 2. Adding a `view.xml` file in the `etc` directory of your content type as shown here:

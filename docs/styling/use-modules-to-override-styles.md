@@ -66,4 +66,4 @@ The `_module.less` file is the only **required** file and must be added directly
 
 ## Summary
 
-Overriding the default Page Builder styles within modules is mostly a matter of using the overriding CSS selector patterns and putting them in the right files. To override Page Builder Admin styles, add your styles to right `adminhtml` files. And to override Page Builder storefront styles, add your styles to the right `frontend` files.
+Overriding the default Page Builder styles within modules is mostly a matter of using the overriding CSS selector patterns and putting them in the right files. To override Page Builder Admin styles, add your styles to the right `adminhtml` files. And to override Page Builder storefront styles, add your styles to the right `frontend` files.

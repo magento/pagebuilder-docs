@@ -8,7 +8,7 @@ You can find the Page Builder examples used in this documentation on GitHub in t
 
 ## Custom content type modules
 
-The [Example directory](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/Example) on the repo provides custom content-type modules for you to download and install. The Page Builder team members created these modules to serve as examples for learning. They are not fully tested or guaranteed to work perfectly. However, we will do our best to improve these examples and keep them updated with the latest releases of Page Builder. 
+The [Example directory](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/Example) on the repo provides custom content-type modules for you to download and install. The Page Builder team members created these modules to serve as examples for learning. They are not fully tested or guaranteed to work perfectly. However, we will do our best to improve these examples and keep them updated with the latest releases of Page Builder.
 
 - **[PageBuilderQuote](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/Example/PageBuilderQuote)** — Create by [Bruce Denham](https://github.com/bdenham). This module shows you how to create a content type for a customer testimonial page. This is the completed Quote module featured in the [Create a content type tutorial](../create-custom-content-type/overview.md).
 - **[PageBuilderGrid](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/Example/PageBuilderGrid)** — Created by [Dave Macaulay](https://github.com/davemacaulay). This module shows you how to create a content type that recreates the layout of the Magento Luma-themed home page using a grid structure with grid items.
@@ -32,7 +32,7 @@ The [Example directory](https://github.com/magento-devdocs/pagebuilder-examples/
 
 **In Progress**. The how-to directories in the repo correspond to the how-to topics in this documentation. Each how-to directory provides the files and code changes featured in the how-to topics.
 
-For example, the topic [How to add a custom toolbar](../how-to/how-to-add-custom-toolbar.md), has a corresponding directory within the [pagebuilder-examples repo](https://github.com/magento-devdocs/pagebuilder-examples) called [how-to-add-custom-toolbar](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/how-to-add-custom-toolbar). This directory provides the files with the code changes you need to make in order to add a custom toolbar to the `PageBuilderQuote` module.
+For example, the topic [How to add a custom toolbar](../customize/how-to-add-custom-toolbar.md), has a corresponding directory within the [pagebuilder-examples repo](https://github.com/magento-devdocs/pagebuilder-examples) called [how-to-add-custom-toolbar](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/how-to-add-custom-toolbar). This directory provides the files with the code changes you need to make in order to add a custom toolbar to the `PageBuilderQuote` module.
 
 ## Installation
 
@@ -47,22 +47,22 @@ Assuming you have Page Builder already installed, you can install the example mo
 2. Navigate to your `<Magento2_installation>/app/code/` directory.
 
 3. Copy or symlink the `Example` directory from your local `pagebuilder-examples` clone into your `app/code/` directory.
-    
+
     **To Symlink**:
     ```terminal
     ln -s <Relative_route_to_cloned_Example_directory>
     ```
-    
+
     ![Examples installation directory](../images/examples-install-location.png)
-    
+
 4. Enable the modules using the `setup:upgrade` command:
 
    ```terminal
    bin/magento setup:upgrade
    ```
-   
+
 5. Navigate to a Page Builder instance to ensure the example content types appear in the Page Builder panel, as shown here:
 
    ![Content type examples shown in panel](../images/example-content-types.png)
 
- 
+

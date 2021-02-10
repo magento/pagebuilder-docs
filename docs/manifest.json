@@ -113,12 +113,12 @@
       "pages": [
         {
           "title": "Configure styling options",
-          "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-configure-styling-options.md",
+          "path": "magento/magento2-page-builder-docs/master/docs/styling/how-to-configure-styling-options.md",
           "pages": []
         },
         {
           "title": "Add an appearance",
-          "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-add-appearance.md",
+          "path": "magento/magento2-page-builder-docs/master/docs/customize/how-to-add-appearance.md",
           "pages": []
         },
         {
@@ -128,7 +128,7 @@
         },
         {
           "title": "Customize the panel",
-          "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-customize-panel.md",
+          "path": "magento/magento2-page-builder-docs/master/docs/customize/how-to-customize-panel.md",
           "pages": []
         },
         {
@@ -148,22 +148,22 @@
         },
         {
           "title": "Add a custom toolbar",
-          "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-add-custom-toolbar.md",
+          "path": "magento/magento2-page-builder-docs/master/docs/customize/how-to-add-custom-toolbar.md",
           "pages": []
         },
         {
           "title": "Add icons and images",
-          "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-add-icons-images.md",
+          "path": "magento/magento2-page-builder-docs/master/docs/customize/how-to-add-icons-images.md",
           "pages": []
         },
         {
           "title": "Change breakpoints",
-          "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-change-breakpoints.md",
+          "path": "magento/magento2-page-builder-docs/master/docs/customize/how-to-change-breakpoints.md",
           "pages": []
         },
         {
           "title": "Add additional configurations",
-          "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-add-additional-configurations.md",
+          "path": "magento/magento2-page-builder-docs/master/docs/customize/how-to-add-additional-configurations.md",
           "pages": []
         },
         {
@@ -178,7 +178,7 @@
         },
         {
           "title": "Customize selectors",
-          "path": "magento/magento2-page-builder-docs/master/docs/how-to/how-to-customize-selectors.md",
+          "path": "magento/magento2-page-builder-docs/master/docs/customize/how-to-customize-selectors.md",
           "pages": []
         },
         {
