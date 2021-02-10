@@ -27,7 +27,7 @@ Page Builder's Heading also references three more icons in its toolbar as define
     key: "text_align",
     type: "select",
     values: [{
-				value: "left",
+    value: "left",
         label: "Left",
         icon: "icon-pagebuilder-align-left"
       }, {
@@ -54,9 +54,9 @@ To add your own icons, we recommend creating SVG images because they are smaller
 
 The size, appearance, and color of your images depend on where within Page Builder you want to use them. You can add icons to Page Builder in three areas:
 
-- Panel
-- Form
-- Stage
+-  Panel
+-  Form
+-  Stage
 
 ### Panel icons
 
@@ -108,12 +108,12 @@ The following CSS rule set shows one general way to link your icons through CSS:
 
 If you create an icon for the panel, replace the `background-image` attribute with `content` (as described in the content type tutorial, [Step 6: Add an icon](../create-custom-content-type/step-6-add-icon.md)).
 
-| Attribute              | Description                                                  |
-| ---------------------- | ------------------------------------------------------------ |
-| `class name`           | To match the class names of Page Builder's native icons, we recommend prefixing your icon names with `icon-pagebuilder`, as we have done with the Quote panel icon. |
+| Attribute              | Description                                                                                                                                                                                                                                                                                                                                         |
+|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `class name`           | To match the class names of Page Builder's native icons, we recommend prefixing your icon names with `icon-pagebuilder`, as we have done with the Quote panel icon.                                                                                                                                                                                 |
 | `background-image url` | The `url` used for the `background-image` is the most critical part of your own CSS classes. Always use the `@{baseDir}` variable followed by your full module name, followed by the path to your image, starting with `css`. When deployed, Page Builder creates a link in the static output where the browser can resolve it, as described below. |
-| `width`                | Sets the width of the icon image.                            |
-| `height`               | Sets the height of the icon image.                           |
+| `width`                | Sets the width of the icon image.                                                                                                                                                                                                                                                                                                                   |
+| `height`               | Sets the height of the icon image.                                                                                                                                                                                                                                                                                                                  |
 
 When deployed, your CSS classes and links to your icons are generated in `pub/static`, as shown here:
 
@@ -121,9 +121,9 @@ When deployed, your CSS classes and links to your icons are generated in `pub/st
 
 For more general information about Magento's Admin icons and how to create your own icons for use in Magento, take a look at these topics:
 
-* [Magento Admin icons]
-* [Create your own icons]
-* [The CMS icons repository]
+-  [Magento Admin icons]
+-  [Create your own icons]
+-  [The CMS icons repository]
 
 [Magento Admin icons]: https://devdocs.magento.com/guides/v2.2/pattern-library/graphics/iconography/iconography.html
 [Create your own icons]: https://devdocs.magento.com/guides/v2.2/pattern-library/graphics/iconography/iconography.html#creating-icons

@@ -91,7 +91,7 @@ Write the following content into this configuration file:
 
 Some important configurations to note:
 
-* The "left" and "right" appearances have different custom preview components:
+-  The "left" and "right" appearances have different custom preview components:
 
   ``` xml
   preview_template="VendorName_CustomContainer/content-type/custom-container-group/left/preview"
@@ -101,13 +101,13 @@ Some important configurations to note:
   preview_template="VendorName_CustomContainer/content-type/custom-container-group/right/preview"
   ```
 
-* The icon used for this component is the custom container icon:
+-  The icon used for this component is the custom container icon:
 
   ``` xml
   icon="icon-pagebuilder-custom-container"
   ```
 
-* This content type cannot be used anywhere except the stage:
+-  This content type cannot be used anywhere except the stage:
 
   ``` xml
   <parents default_policy="deny">
@@ -115,7 +115,7 @@ Some important configurations to note:
   </parents>
   ```
 
-* This content type only accepts [custom container][] content types as children:
+-  This content type only accepts [custom container][] content types as children:
 
   ``` xml
   <children default_policy="deny">
@@ -199,20 +199,20 @@ Write the following content into this configuration file:
 
 Some important configurations to note:
 
-* This content type can only be used inside a [custom container group][].
+-  This content type can only be used inside a [custom container group][].
 
-  ``` xml
-  <parents default_policy="deny">
-      <parent name="custom-container-group" policy="allow"/>
-  </parents>
-  ```
+    ``` xml
+    <parents default_policy="deny">
+        <parent name="custom-container-group" policy="allow"/>
+    </parents>
+    ```
 
-* This content type can contain all content types except:
+-  This content type can contain all content types except:
 
-  * custom container groups
-  * columns
-  * rows
-  * tabs
+   -  custom container groups
+   -  columns
+   -  rows
+   -  tabs
 
   ``` xml
   <children default_policy="allow">
@@ -425,7 +425,7 @@ The layout file for a [custom container group form][] and [custom container form
 
 Example:
 
-``` xml 
+``` xml
 <formElements>
     <select>
         <settings>
@@ -472,8 +472,8 @@ The data sources are virtual types of the `VisualSelect` class and defined in yo
 
 Create the icon files in the following locations inside your module to match the deployed location specified in the configuration:
 
-* `view/adminhtml/web/css/images/content-type/custom-container-group/appearance/left.svg`
-* `view/adminhtml/web/css/images/content-type/custom-container-group/appearance/right.svg`
+-  `view/adminhtml/web/css/images/content-type/custom-container-group/appearance/left.svg`
+-  `view/adminhtml/web/css/images/content-type/custom-container-group/appearance/right.svg`
 
 ## Templates
 
@@ -657,11 +657,11 @@ define([
 
 The code for this component does the following:
 
-* Since custom container group is a collection content type, the component extends the `PreviewCollection` component in the constructor.
-* An event listener is added during construction to listen for when the container group is dropped onto the stage.
+-  Since custom container group is a collection content type, the component extends the `PreviewCollection` component in the constructor.
+-  An event listener is added during construction to listen for when the container group is dropped onto the stage.
   The `populateContainerGroup()` method executes when this event occurs.
-* The `populateContainerGroup()` method adds 3 containers inside the container group when executed.
-* The `isContainer()` method marks this content type as not a standard container.
+-  The `populateContainerGroup()` method adds 3 containers inside the container group when executed.
+-  The `isContainer()` method marks this content type as not a standard container.
 
 ### Custom container JS component
 
@@ -711,13 +711,12 @@ define([
 
 The code for this component does the following:
 
-* Since custom container is a collection content type, the component extends the `PreviewCollection` component in the constructor.
-* The `retrieveOptions()` method overwrites the content types options list and removes the `move`, `duplicate` , and `remove` options.
+-  Since custom container is a collection content type, the component extends the `PreviewCollection` component in the constructor.
+-  The `retrieveOptions()` method overwrites the content types options list and removes the `move`, `duplicate` , and `remove` options.
 
 ## Styling
 
 The following sections describe files that add styles to the content types for the admin panel and storefront.
-
 
 ### Admin panel styles
 
@@ -1004,7 +1003,7 @@ Content:
 
 Enable and install your component using the following commands:
 
-```
+```terminal
 bin/magento module:enable --clear-static-content VendorName_CustomContainer
 bin/magento setup:upgrade
 ```

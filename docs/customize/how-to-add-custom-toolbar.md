@@ -12,8 +12,6 @@ The diagram below shows the basic steps for adding a toolbar to your content typ
 
 ![Toolbar how it works](../images/how-toolbars-work.png)
 
-
-
 ## Step 1: Add toolbar options
 
 Toolbar options are the clickable items in a toolbar that represent the property values of a form field. For example, the Heading content type adds toolbar options for the `text_align` field from `pagebuilder_base_form.xml`. The Heading adds the values of the `text_align` field (`left`, `center`, and `right`) as items on the toolbar, represented with the images provided by the icon CSS classes as shown here:
@@ -44,21 +42,21 @@ Toolbar options are the clickable items in a toolbar that represent the property
 
 The `OptionInterface` and `ValueInterface` define the structure of toolbar options. You can find these interfaces in `magento2-page-builder/app/code/Magento/PageBuilder/view/adminhtml/web/ts/js/content-type-toolbar.types.ts`. Descriptions of the elements follow:
 
-| Element  | Description                                                  |
-| -------- | ------------------------------------------------------------ |
-| `key`    | The field `name` you are binding to. For example: `<field name="quote_css"...>` |
-| `type`   | The `formElement` of the key field. For example: `<field ... formElement="select">` |
-| `values` | Array of field option values.                                |
-| `value`  | Field option value, such as a CSS class (as shown in the code example). |
-| `label`  | Field option label, such as a label for a select option (as shown in the code example) |
+| Element  | Description                                                                                                                                                          |
+|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `key`    | The field `name` you are binding to. For example: `<field name="quote_css"...>`                                                                                      |
+| `type`   | The `formElement` of the key field. For example: `<field ... formElement="select">`                                                                                  |
+| `values` | Array of field option values.                                                                                                                                        |
+| `value`  | Field option value, such as a CSS class (as shown in the code example).                                                                                              |
+| `label`  | Field option label, such as a label for a select option (as shown in the code example)                                                                               |
 | `icon`   | CSS class name for the icon to display in the toolbar to represent the field's option. If you don't include a CSS class, the toolbar will display the label instead. |
 
 ## Step 2: Create `Toolbar` instance
 
 To create an instance of the Page Builder toolbar in your `preview.js` component:
 
-- **Import Page Builder's `Toolbar` class** (`'Magento_PageBuilder/js/content-type-toolbar'`)
-- **Call the toolbar constructor.** The `Toolbar` constructor requires you to pass your `Preview` component and the array of toolbar options you created in step 1 (`this.toolbar = new Toolbar(this, this.getToolbarOptions());`). You can find Page Builder's `Toolbar` class in `magento2-page-builder/app/code/Magento/PageBuilder/view/adminhtml/web/ts/js/content-type-toolbar.ts`.
+-  **Import Page Builder's `Toolbar` class** (`'Magento_PageBuilder/js/content-type-toolbar'`)
+-  **Call the toolbar constructor.** The `Toolbar` constructor requires you to pass your `Preview` component and the array of toolbar options you created in step 1 (`this.toolbar = new Toolbar(this, this.getToolbarOptions());`). You can find Page Builder's `Toolbar` class in `magento2-page-builder/app/code/Magento/PageBuilder/view/adminhtml/web/ts/js/content-type-toolbar.ts`.
 
 ```js
 define([
@@ -78,7 +76,7 @@ define([
 
 Within your `preview.html` template, use a `div` element (with CSS class and events) to wrap whichever element in your template you want the toolbar to act on. For example, the custom Quote content type wraps its `<blockquote>` element within a `div` with the toolbar's CSS class and event binding, as shown here:
 
-``` html
+```html
 <!--preview.html-->
 <div attr="data.main.attributes" ko-style="data.main.style" class="pagebuilder-content-type" css="data.main.css" event="{ mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false">
     <render args="getOptions().template"/>
@@ -115,6 +113,5 @@ You can find this HTML template here: `app/code/Magento/PageBuilder/view/adminht
 
 The following links show how the Heading implements its toolbar within its `preview.html` template and `preview.js` component:
 
-- `app/code/Magento/PageBuilder/view/adminhtml/web/template/content-type/heading/default/preview.html`
-- `app/code/Magento/PageBuilder/view/adminhtml/web/ts/js/content-type/heading/preview.ts`
-
+-  `app/code/Magento/PageBuilder/view/adminhtml/web/template/content-type/heading/default/preview.html`
+-  `app/code/Magento/PageBuilder/view/adminhtml/web/ts/js/content-type/heading/preview.ts`

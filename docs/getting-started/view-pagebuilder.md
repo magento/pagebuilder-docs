@@ -2,15 +2,15 @@
 
 You can view Page Builder by navigating to one of several locations within the Admin UI:
 
-- Catalog Product
-- Catalog Category
-- CMS Page
-- CMS Block
+-  Catalog Product
+-  Catalog Category
+-  CMS Page
+-  CMS Block
 
 **Commerce Only:**
 
-- Content Staging
-- Dynamic Block (formally banner)
+-  Content Staging
+-  Dynamic Block (formally banner)
 
 The following example shows Page Builder active within the Home Page by selecting **Content** > **Pages** > **Home Page** > **Edit**, as shown here:
 

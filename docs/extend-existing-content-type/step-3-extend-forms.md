@@ -85,12 +85,12 @@ The markup for adding the field to the fieldset looks like this:
 
 The following table describes some key elements:
 
-| Elements   | Description                                                  |
-| ---------- | ------------------------------------------------------------ |
-| `fieldset` | The fieldset `name` should match the name of the fieldset from the Banner's form. The `appearance_fieldset` is common to all the content type forms and, by default, appears at the top of the forms using the `sortOrder` of 10. |
+| Elements   | Description                                                                                                                                                                                                                                                                               |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `fieldset` | The fieldset `name` should match the name of the fieldset from the Banner's form. The `appearance_fieldset` is common to all the content type forms and, by default, appears at the top of the forms using the `sortOrder` of 10.                                                         |
 | `field`    | The field `name` should match the CSS max-height style property, but in snake_case. Fields also have a `sortOrder` you can use to place your field above or below existing fields. The `formElement` for a field describes the HTML form type, such as input, checkbox, select, and more. |
-| `argument` | Provides the way to add a `default` value to your field. We set our default value to `300`. |
-| `settings` | Provides the markup that gives your field a label, CSS styling, validation, and other properties as needed. |
+| `argument` | Provides the way to add a `default` value to your field. We set our default value to `300`.                                                                                                                                                                                               |
+| `settings` | Provides the markup that gives your field a label, CSS styling, validation, and other properties as needed.                                                                                                                                                                               |
 
 After adding the `max_height` field, run `bin/magento cache:clean`, drag a banner to the Admin stage, open the editor, and see your new style property field being rendered in the Banner's form, as shown here:
 

@@ -10,19 +10,19 @@ Your configuration should conform to our XSD: `urn:magento:module:Magento_PageBu
 ### `type` element
 There are a number of simple attributes that can be configured within the `<type />` node of your content type.
 
-| Attribute           | Description                                                                                                                                 |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`              | Name of the content type that Magento uses for XML merging. The convention for using multi-word names is to separate the words with hyphens.      |
-| `label`             | Label displayed in the Page Builder panel, option menu, and on the Admin stage.                                                                                                      |
-| `menu_section`      | Menu section or category in the panel menu where your content type is displayed. The default menu sections are Layout, Elements, Media, and Add Content. See [Panel configurations](../customize/how-to-customize-panel.md) for more details.  |
-| `icon`              | CSS class for icon to be displayed within the menu alongside the content types name. See [How to add icons and images](../customize/how-to-add-icons-images.md) for more guidance.  |
-| `component`         | View model responsible for rendering the preview and master format. The component does not need to specify the `.js` extension. There are two component types to choose from: `content-type` and `content-type-collection`. Use `Magento_PageBuilder/js/content-type` for static content types that do not have children. Use `Magento_PageBuilder/js/content-type-collection` for content types that can contain children, otherwise known as container content types.                                                                        |
-| `preview_component` | JavaScript file (`preview.js` or `preview-collection.js`) that provides rendering logic within the Admin UI. The preview component does not need to specify the `.js` extension. <br/><br/>For _collection_ content types, you need to either reference your own `preview-collection` component or reference Page Builder's `preview-collection` (`preview_component="Magento_PageBuilder/js/content-type/preview-collection"`). If you don't specify the `preview_component`, Page Builder uses the base `Preview` component shown in the code: `Magento_PageBuilder/js/content-type/preview`. |
+| Attribute           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `name`              | Name of the content type that Magento uses for XML merging. The convention for using multi-word names is to separate the words with hyphens.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `label`             | Label displayed in the Page Builder panel, option menu, and on the Admin stage.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `menu_section`      | Menu section or category in the panel menu where your content type is displayed. The default menu sections are Layout, Elements, Media, and Add Content. See [Panel configurations](../how-to/how-to-customize-panel.md) for more details.                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `icon`              | CSS class for icon to be displayed within the menu alongside the content types name. See [How to add icons and images](../how-to/how-to-add-icons-images.md) for more guidance.                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `component`         | View model responsible for rendering the preview and master format. The component does not need to specify the `.js` extension. There are two component types to choose from: `content-type` and `content-type-collection`. Use `Magento_PageBuilder/js/content-type` for static content types that do not have children. Use `Magento_PageBuilder/js/content-type-collection` for content types that can contain children, otherwise known as container content types.                                                                                                                                                                            |
+| `preview_component` | JavaScript file (`preview.js` or `preview-collection.js`) that provides rendering logic within the Admin UI. The preview component does not need to specify the `.js` extension. <br/><br/>For _collection_ content types, you need to either reference your own `preview-collection` component or reference Page Builder's `preview-collection` (`preview_component="Magento_PageBuilder/js/content-type/preview-collection"`). If you don't specify the `preview_component`, Page Builder uses the base `Preview` component shown in the code: `Magento_PageBuilder/js/content-type/preview`.                                                    |
 | `master_component`  | JavaScript file (`master.js` or `master-collection.js`) that provides rendering logic generic for all appearances of your content type when rendered on the storefront. The master component does not need to specify the `.js` extension. <br/><br/>For _collection_ content types, you need to either reference your own `master-collection` component or reference Page Builder's `master-collection` (`master_component="Magento_PageBuilder/js/content-type/master-collection"`). If you don't specify the `master_component`, Page Builder uses the base `Master` component shown in the code: `Magento_PageBuilder/js/content-type/master`. |
-| `form`              | UI component form that provides the form controls for editing your content type.|
-| `icon`              | Optional. Class name for your PNG or SVG image (or font icon) displayed in the Page Builder panel alongside the label. If you don't provide an icon value, the Page Builder panel displays the content type name without an icon. |
-| `sortOrder`         | Optional. The listed order within the menu section. For example, `sortOrder=21` puts the content type third in the `Elements` menu section, after the content types with `sortOrder` values of 10 and 20. |
-| `translate`         | Identifies the attribute you want Magento to translate. |
+| `form`              | UI component form that provides the form controls for editing your content type.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `icon`              | Optional. Class name for your PNG or SVG image (or font icon) displayed in the Page Builder panel alongside the label. If you don't provide an icon value, the Page Builder panel displays the content type name without an icon.                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `sortOrder`         | Optional. The listed order within the menu section. For example, `sortOrder=21` puts the content type third in the `Elements` menu section, after the content types with `sortOrder` values of 10 and 20.                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `translate`         | Identifies the attribute you want Magento to translate.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 #### Basic Configuration Example
 As an example of the configurable attributes we can look into the Text content types basic configuration.
@@ -41,13 +41,13 @@ As an example of the configurable attributes we can look into the Text content t
 
 There are a number of child elements which can be configured, these are typically for more advanced options of the content type. All of these options are described in further detail below.
 
-| Element             | Description                                                                                                                                 |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `parents`           | Defines the default policy and matrix of which content types this content type can have as a parent. For instance the Slide content type defines a default policy of `deny` with an exception allowing this content type to only be housed within the Slider content type. |
-| `children`          | Similar to the `parents` option, however this defines the allowed `children` of the current content type. As with the Slide example this time the Slider defines the Slide as it's only allowed child. |
-| `appearances`       | Configures various appearances along with associated data mapping elements. This is a crucial part of all content types and defines how the master and preview systems should retrieve and display their data. |
-| `is_system`         | Determines menu visibility for the content type. System content types are visible in the menu. The default value for this is true. By setting this to false, you can hide child or "special" content types that are added by other content types. For example, you cannot directly drag a Slide content type onto the stage, which means it is not a system content type. |
-| `additional_data`   | Allows you to specify additional data for the component. See [additional configurations](../customize/how-to-add-additional-configurations.md) for more information. |
+| Element           | Description                                                                                                                                                                                                                                                                                                                                                               |
+|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `parents`         | Defines the default policy and matrix of which content types this content type can have as a parent. For instance the Slide content type defines a default policy of `deny` with an exception allowing this content type to only be housed within the Slider content type.                                                                                                |
+| `children`        | Similar to the `parents` option, however this defines the allowed `children` of the current content type. As with the Slide example this time the Slider defines the Slide as it's only allowed child.                                                                                                                                                                    |
+| `appearances`     | Configures various appearances along with associated data mapping elements. This is a crucial part of all content types and defines how the master and preview systems should retrieve and display their data.                                                                                                                                                            |
+| `is_system`       | Determines menu visibility for the content type. System content types are visible in the menu. The default value for this is true. By setting this to false, you can hide child or "special" content types that are added by other content types. For example, you cannot directly drag a Slide content type onto the stage, which means it is not a system content type. |
+| `additional_data` | Allows you to specify additional data for the component. See [additional configurations](../how-to/how-to-add-additional-configurations.md) for more information.                                                                                                                                                                                                         |
 
 The following is an example of a content type configuration taken from `view/adminhtml/pagebuilder/content_type/text.xml` for our Text content type. This displays some of the different available configuration options for configuring content types.
 
@@ -112,16 +112,16 @@ Parent policies will override any child policies that are set.
 
 You can configure the default policy to easily `allow` or `deny` all parents.
 
-| Attribute           | Description                                                                            |
-| ------------------- | -------------------------------------------------------------------------------------- |
-| `default_policy`    | Values: `allow` `deny`. Allows or denies all content types to be parents unless specified as a parent element. |
+| Attribute        | Description                                                                                                    |
+|------------------|----------------------------------------------------------------------------------------------------------------|
+| `default_policy` | Values: `allow` `deny`. Allows or denies all content types to be parents unless specified as a parent element. |
 
 The `parents` node accepts a list of content types for the policy via child `parent` elements.
 
-| Attribute             | Description                                                                            |
-| ------------------- | -------------------------------------------------------------------------------------- |
-| `name`              | The name of the content type that this parents policy is assigned to. Such as `slider`.       |
-| `policy`            | Values: `allow` `deny`. Determine whether the current content type is allowed or denied to be a child of the specified content type.  |
+| Attribute | Description                                                                                                                          |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------|
+| `name`    | The name of the content type that this parents policy is assigned to. Such as `slider`.                                              |
+| `policy`  | Values: `allow` `deny`. Determine whether the current content type is allowed or denied to be a child of the specified content type. |
 
 **Example:**
 ``` xml
@@ -138,17 +138,16 @@ Parent policies will override any child policies that are set.
 
 You can configure the default policy to easily `allow` or `deny` all children.
 
-| Attribute           | Description                                                                            |
-| ------------------- | -------------------------------------------------------------------------------------- |
-| `default_policy`    | Values: `allow` `deny`. Allows or denies all content types to be children unless specified as a child element. |
+| Attribute        | Description                                                                                                    |
+|------------------|----------------------------------------------------------------------------------------------------------------|
+| `default_policy` | Values: `allow` `deny`. Allows or denies all content types to be children unless specified as a child element. |
 
 The `children` node accepts a list of content types for the policy via child `child` elements.
 
-| Attribute             | Description                                                                            |
-| ------------------- | -------------------------------------------------------------------------------------- |
-| `name`              | The name of the content type that this parents policy is assigned to. Such as `slider`.       |
-| `policy`            | Values: `allow` `deny`. Determine whether the current content type is allowed or denied to be a child of the specified content type.  |
-
+| Attribute | Description                                                                                                                          |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------|
+| `name`    | The name of the content type that this parents policy is assigned to. Such as `slider`.                                              |
+| `policy`  | Values: `allow` `deny`. Determine whether the current content type is allowed or denied to be a child of the specified content type. |
 
 **Example:**
 ``` xml
@@ -166,13 +165,13 @@ Each content type can have a number of different appearances, these appearances 
 
 For instance a great use of this functionality within Banner is to display the content is different positions within the banner. We strongly recommend when customising any content types you utilise the appearance framework and look to add a new appearance.
 
-| Attribute           | Description                                                                            |
-| ------------------- | -------------------------------------------------------------------------------------- |
-| `name`              | The name for this appearance.                                                          |
-| `default`           | Determines whether this is the default appearance for the content type. The default will be auto selected when adding a new instance of the content type.                                                          |
-| `preview_template`  | Template used to display the content type within the admin preview.                    |
-| `master_template`   | Template which is hydrated with data and rendered to be stored as the master format.                         |
-| `reader`            | Reads data for the content type from the master format. Unless you need to conduct complex retrieval of data from the master format we recommend you use the default `Magento_PageBuilder/js/master-format/read/configurable` reader as this contains the necessary logic for the child `element` nodes to work. |
+| Attribute          | Description                                                                                                                                                                                                                                                                                                      |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `name`             | The name for this appearance.                                                                                                                                                                                                                                                                                    |
+| `default`          | Determines whether this is the default appearance for the content type. The default will be auto selected when adding a new instance of the content type.                                                                                                                                                        |
+| `preview_template` | Template used to display the content type within the admin preview.                                                                                                                                                                                                                                              |
+| `master_template`  | Template which is hydrated with data and rendered to be stored as the master format.                                                                                                                                                                                                                             |
+| `reader`           | Reads data for the content type from the master format. Unless you need to conduct complex retrieval of data from the master format we recommend you use the default `Magento_PageBuilder/js/master-format/read/configurable` reader as this contains the necessary logic for the child `element` nodes to work. |
 
 **Example:**
 ```xml
@@ -192,9 +191,9 @@ These are declared under the `<elements />` node within the appearance.
 
 ###### `element`
 
-| Attribute           | Description                                                                            |
-| ------------------- | -------------------------------------------------------------------------------------- |
-| `name`              | The name for the element that will be used to reference the data mapping configuration from your templates. This must be unique within the current appearance.    |
+| Attribute | Description                                                                                                                                                    |
+|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `name`    | The name for the element that will be used to reference the data mapping configuration from your templates. This must be unique within the current appearance. |
 
 The name specified here is used within your templates bindings to retrieve the data from your configuration.
 
@@ -206,12 +205,12 @@ For instance if you specified the element name to be `main` by `<element name="m
 
 Within an element you're able to specify different standard HTML attributes to customise the output displayed.
 
-| Element            | Description                                                                                           |
-| ------------------ | ----------------------------------------------------------------------------------------------------- |
-| `attribute`        | Assign a HTML attribute to the current element.                                                  |
-| `css`              | Assign field name for CSS classes to be included on the element, also allows to specifically ignore system classes so they're not displayed within the content types edit form.                      |
-| `html`             | Allows for a fields value to be output as HTML within the current element. This is used within the Text content type to ensure all content is rendered as expected. **Warning:** If you're using this attribute you should ensure you're safely escaping any harmful values to avoid adding potential XSS vulnerabilities within the admin.                |
-| `tag`              | Allows you to read the tag name of the element and map it back to the master format. This is used in instances where the content type is modifying the type of element output, such as in Heading.               |
+| Element     | Description                                                                                                                                                                                                                                                                                                                                 |
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `attribute` | Assign a HTML attribute to the current element.                                                                                                                                                                                                                                                                                             |
+| `css`       | Assign field name for CSS classes to be included on the element, also allows to specifically ignore system classes so they're not displayed within the content types edit form.                                                                                                                                                             |
+| `html`      | Allows for a fields value to be output as HTML within the current element. This is used within the Text content type to ensure all content is rendered as expected. **Warning:** If you're using this attribute you should ensure you're safely escaping any harmful values to avoid adding potential XSS vulnerabilities within the admin. |
+| `tag`       | Allows you to read the tag name of the element and map it back to the master format. This is used in instances where the content type is modifying the type of element output, such as in Heading.                                                                                                                                          |
 
 **Example:**
 
@@ -260,15 +259,15 @@ We automatically apply a `data-element` attribute upon any element which has a l
 
 All these elements share a common near identical interface and can be configured using the following attributes.
 
-| Attribute             | Description                                                                                                           |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------|
-| `name`                | Unique name used for configuration merging, and the default value for storage_key if none is provided.                |
-| `storage_key`         | Optional variable name for value in the data storage. If no value is provided, name will be used. This is the form fields data scope which is typically the name unless a `dataScope` is provided on the field. Supports the dot notation for `dataScope` (such as `layout.min_height`). |
-| `source`              | The name of the property or attribute in the DOM. Must be in snake case. For instance `text_align` aligns to `text-align`.                                            |
-| `converter`           | Converts the value after reading or before saving to the DOM.                                                         |
-| `preview_converter`   | Converts the value for the preview. Used for cases where the conversion logic is different between the two views.     |
-| `persistence_mode`    | Used for read/write properties.                                                                                       |
-| `reader`              | Reader used for parsing attributes and properties out of the DOM. Should not be used with read-only persistence_mode. |
+| Attribute           | Description                                                                                                                                                                                                                                                                              |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `name`              | Unique name used for configuration merging, and the default value for storage_key if none is provided.                                                                                                                                                                                   |
+| `storage_key`       | Optional variable name for value in the data storage. If no value is provided, name will be used. This is the form fields data scope which is typically the name unless a `dataScope` is provided on the field. Supports the dot notation for `dataScope` (such as `layout.min_height`). |
+| `source`            | The name of the property or attribute in the DOM. Must be in snake case. For instance `text_align` aligns to `text-align`.                                                                                                                                                               |
+| `converter`         | Converts the value after reading or before saving to the DOM.                                                                                                                                                                                                                            |
+| `preview_converter` | Converts the value for the preview. Used for cases where the conversion logic is different between the two views.                                                                                                                                                                        |
+| `persistence_mode`  | Used for read/write properties.                                                                                                                                                                                                                                                          |
+| `reader`            | Reader used for parsing attributes and properties out of the DOM. Should not be used with read-only persistence_mode.                                                                                                                                                                    |
 
 You may optionally set a `reader` value in configuration, otherwise `Magento_PageBuilder/js/property/style-property-reader` will be used for properties, and `Magento_PageBuilder/js/property/attribute-reader` will be used for attributes. Both default readers accept `source` as a parameter, and will return that value.
 
@@ -446,9 +445,9 @@ define(["Magento_PageBuilder/js/utils/object"], function (objectUtil) {
 
 When creating your preview component there are some additional settings you can configure to inform the internal framework how to handle aspects of your data.
 
-| Property                 | Description                                                                                                                         | Example        |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-|`fieldsToIgnoreOnRemove`| An array containing field names to ignore when evaluating whether an element has been configured. This is utilised when deciding whether to display the confirmation on removal of a content type. The default value is an empty array. | `["tab_name"]` |
+| Property                 | Description                                                                                                                                                                                                                             | Example        |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
+| `fieldsToIgnoreOnRemove` | An array containing field names to ignore when evaluating whether an element has been configured. This is utilised when deciding whether to display the confirmation on removal of a content type. The default value is an empty array. | `["tab_name"]` |
 
 ### Menu Sections
 
@@ -460,12 +459,12 @@ We discourage modifying existing menu sections if they do not belong to your mod
 
 #### `menu_section` element
 
-| Attribute           | Description                                                                                                                                 |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`              | The internal name for this menu section, will be used by content types to reference your section.      |
-| `translate`         | Determine which aspects of the menu section should be translated.                                                                                    |
-| `sortOrder`         | The sort order in relation to other menu sections, within our configuration we step these 10 integers apart to allow for new sections to be added in between. |
-| `label`             | The label to be displayed within the left menu    |
+| Attribute   | Description                                                                                                                                                   |
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `name`      | The internal name for this menu section, will be used by content types to reference your section.                                                             |
+| `translate` | Determine which aspects of the menu section should be translated.                                                                                             |
+| `sortOrder` | The sort order in relation to other menu sections, within our configuration we step these 10 integers apart to allow for new sections to be added in between. |
+| `label`     | The label to be displayed within the left menu                                                                                                                |
 
 The following is an example of a menu section configuration in `view/adminhtml/pagebuilder/menu_section.xml`:
 

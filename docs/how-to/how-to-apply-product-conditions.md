@@ -8,20 +8,11 @@ Out-of-the-box, product conditions can be set on Page Builder's Product content 
 
 This topic describes how you can apply the conditions mechanism to your own custom content types.
 
-## Overview
-
-To reuse conditions for custom content types:
-
-1. [Add an attribute to the content type](#add-attribute)
-2. [Add the conditions](#add-conditions)
-3. [Create a custom `form` data provider](#data-provider)
-4. [Include the `conditionsDataProcessor` and attribute](#include)
-
 ## Add an attribute to the content type {#add-attribute}
 
 To add an attribute within your custom content type:
 
-``` xml
+```xml
 <attribute source="data-myconditions" name="myconditions"/>
  ```
 
@@ -29,7 +20,7 @@ To add an attribute within your custom content type:
 
 To add the conditions `form` element to the `form` UI component:
 
-``` xml
+```xml
 <htmlContent name="myconditions" template="Magento_PageBuilder/form/element/widget-conditions">
     <settings>
         <additionalClasses>
@@ -50,7 +41,7 @@ To add the conditions `form` element to the `form` UI component:
 
 To create a custom `form` data provider for the edit form:
 
-``` xml
+```xml
 <dataSource name="mycomponent_form_data_source">
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
@@ -66,7 +57,7 @@ The preceding code is an example of how to add a custom `form` data provider. Re
 
 To include the `conditionsDataProcessor` and accompanying attribute in the data provider file, `view/adminhtml/web/js/content-type/mycomponent/form/provider.js`:
 
-``` js
+```js
 define([
     'Magento_PageBuilder/js/form/provider',
     'Magento_PageBuilder/js/form/provider/conditions-data-processor'
