@@ -239,7 +239,7 @@ As shown for the `Products` content type, you can define your own viewport data 
 </var>
 ```
 
-In short, whenever you need viewport-specific data to make responsive changes from your `preview.js` and `widget.js` components, you can define your own data structures in the `view.xml` file. To learn more about defining and using viewport data, see [Create responsive JavaScript](how-to-use-viewports.md#create-responsive-javascript) in [How to use viewports](how-to-use-viewports.md).
+In short, whenever you need breakpoint-specific data to make responsive changes from your `preview.js` and `widget.js` components, you can define your own data structures in the `view.xml` file. To learn more about defining and using breakpoint data, see [Create responsive JavaScript](how-to-use-breakpoints.md#create-responsive-javascript).
 
 ## `_mobile-viewport.less`
 
