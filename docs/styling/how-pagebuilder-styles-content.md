@@ -92,7 +92,7 @@ If you inspect a page on your storefront built with Page Builder, you can see ho
             ...
     ```
 
-    As shown, the Row's `inner` element contains all the `style` nodes applied to the Row, not the `main` element. So Page Builder applies the `data-pb-styles` attribute to the Row's `inner` element to ensure the proper application of CSS styles. For the Heading and Text content types, all the `style` nodes are in the `main` element, so Page Builder applies the `data-pb-styles` attribute to those elements in the DOM.
+    As shown, the Row's `inner` element contains all the `style` nodes applied to the Row, not the `main` element. So Page Builder applies the `data-pb-style` attribute to the Row's `inner` element to ensure the proper application of CSS styles. For the Heading and Text content types, all the `style` nodes are in the `main` element, so Page Builder applies the `data-pb-style` attribute to those elements in the DOM.
 
 ## Summary
 
