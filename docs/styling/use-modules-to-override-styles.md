@@ -3,7 +3,7 @@
 When you create a Page Builder module by either extending a Page Builder content type or creating a custom content type, you should override Page Builder's styles from within the module, using the Page Builder selector override pattern: `#html-body` + `[content-type attribute]` + `any additional selector`, as shown here:
 
 ```scss
-#html-body [data-content-type='my-custom'].my-class // Specificity = 120, which overrides Page Builder's style specificity for the same target.
+#html-body [data-content-type='my-custom'].my-class // Specificity = 120.
 ```
 
 ![CSS selector override pattern](../images/pagebuilder-style-override-pattern-class.svg)
