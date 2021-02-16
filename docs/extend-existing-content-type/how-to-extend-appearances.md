@@ -1,4 +1,4 @@
-## How to extend content types
+## How to extend appearances
 
 In this topic, you will learn how to add a new user-defined property to an existing content type. Specifically, we will add a `max-height` property to all the Banner appearances. Why? Because our customers told us that's what they wanted. Who are we to say no?
 
@@ -83,10 +83,10 @@ Attributes of the `style` node are described briefly here:
 To add the `max-width` property to the `content` element of each appearance,
 
 1. Open your module's `banner.xml` file.
-1. Remove the `preview` and `master` templates as well as the `main` element nodes for each appearance.
-1. Add your new `content` element and `style` node to the `elements` node for each appearance.
+1. Remove the `preview` and `master` templates as well as the `main` element nodes from each appearance.
+1. Add your new `content` element and `style` node to the `elements` node of each appearance.
 
-When you are done, the `appearances` section of your banner.xml file should look like this:
+When you are done, the `appearances` section of your `banner.xml` file should look like this:
 
 ```xml
 <appearances>
@@ -121,11 +121,11 @@ When you are done, the `appearances` section of your banner.xml file should look
 </appearances>
 ```
 
-### Step 3: Add your property field(s) to the form
+### Step 3: Add your property fields to the form
 
-Before you add a field to the form of an existing content type, you need to know where to add it. In other words, you need to decide which fieldset to put your field in. For our `max_height` field, it makes sense to add it below the Banner's existing `min_height` field, which is in the the `appearance_fieldset`.
+Before you add a field to the form of an existing content type, you need to decide where to add it. In other words, you need to pick a fieldset for your field. For our `max_height` field, it makes sense to add it below the Banner's existing `min_height` field, which is in the the `appearance_fieldset`.
 
-We used the following markup for our `max_height` field:
+In our example, we used the following markup for our `max_height` field:
 
 ```xml
 <form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
@@ -154,41 +154,39 @@ We used the following markup for our `max_height` field:
 </form>
 ```
 
-The following table describes some of the key nodes in the field:
+Explaining UI component form fields is beyond the scope of this topic, but a few brief descriptions of the most important nodes might help those of you who are not familiar with UI components. If you already know about UI components, feel free to skip this part.
 
 | Elements   | Description                                                                                                                                                                                                                                                                                       |
 |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `fieldset` | The fieldset `name` should match the name of the fieldset from the Banner's form. The `appearance_fieldset` is common to all the content type forms and, by default, appears at the top of the forms using the `sortOrder` of 10.                                                                 |
-| `field`    | The field `name` should match your `style` node's name in the content type's configuration. Fields also have a `sortOrder` you can use to place your field above or below existing fields. The `formElement` for a field describes the HTML form type, such as input, checkbox, select, and more. |
-| `argument` | Provides the way to add a `default` value to your field. We set our default value to `400`.                                                                                                                                                                                                       |
+| `fieldset` | The fieldset `name` should match the name of the fieldset from the Banner's form. The `appearance_fieldset` is common to all the content type forms and, by default, appears at the top of the forms using the `sortOrder` of 10. If you used [PB Modules](https://github.com/magento-devdocs/pbmodules/), the `fieldset` node names were copied from the Banner's form, so you're all set.                                                                |
+| `field`    | The field `name` should match your `style` node's name in your `banner.xml` config file. Fields also have a `sortOrder` you can use to place your field above or below existing fields. The `formElement` for a field describes the HTML form type, such as input, checkbox, select, and more. |
+| `config` | Provides the initial configuration for the field, including the `default` value. We set our default `max_height` field to `400` (px).                                                                                                                                                                                                       |
 | `settings` | Provides the markup that gives your field a label, CSS styling, validation, and other properties as needed.                                                                                                                                                                                       |
 
 ### Step 4: Add admin and frontend CSS as needed.
 
-For this extension to work as expected, we still need to apply a CSS `overflow: scroll` property to our content. We can do this by targeting the `data-element="content"` attribute in the `preview.html` and `master.html` templates.
+For this extension to work as expected, we need to apply a CSS `overflow: scroll` property to our content. We can do this by targeting the `[data-element="content]` attribute in the DOM.
 
-{:.procedure}
-To add the overflow property to the Admin template (`preview.html`),
+Open your module's Admin and frontend `_default.less` files (assuming you used PB Modules) and add your CSS/Less selector to both files:
 
-1. Open your module's Admin and frontend `_default.less` files for the Banner:
-   -  `adminhtml/web/css/source/content-type/banner/_default.less`
-   -  `frontend/web/css/source/content-type/banner/_default.less`
+-  `adminhtml/web/css/source/content-type/banner/_default.less`
+-  `frontend/web/css/source/content-type/banner/_default.less`
 
-1. Add your targeted CSS to both files, using Page Builder's [CSS selector override pattern](https://devdocs.magento.com/page-builder/docs/styling/how-to-override-pagebuilder-styles.html#css-selector-override-pattern).
+ Make sure you use Page Builder's new styling framework ([CSS selector override pattern](https://devdocs.magento.com/page-builder/docs/styling/how-to-override-pagebuilder-styles.html#css-selector-override-pattern)) to target the `[data-element="content]` attribute.
 
-The best way to figure out how to write the proper CSS selectors is to open your devtools and study the DOM elements to find existing `data-` attributes and classes that are already applied.
+The best way to figure out how to write the proper CSS selectors is to open your devtools and study the DOM structure around the `[data-element="content]` attribute.
 
-The selectors we used are shown here:
+We created the following selectors in our CSS/Less:
 
 ```scss
-// Targeting preview.html template
+// Targeting DOM element in the Admin
 #html-body [data-content-type='banner'] {
     [data-element='content'] {
         overflow: scroll;
     }
 }
 
-// Targeting master.html template
+// Targeting the DOM element on the frontend
 & when (@media-common = true) {
     #html-body [data-content-type='banner'] {
         [data-element='content'] {
@@ -200,7 +198,7 @@ The selectors we used are shown here:
 
 ### Testing your work
 
-After adding your CSS, run your Less transpiler, clean your cache (`bin/magento cache:clean`),drag a Banner to the Admin stage, open the editor, and take a look at your new Banner field being rendered in the form, similar to what's shown here:
+After adding your CSS/Less, run your Less transpiler, clean your cache (`bin/magento cache:clean`), drag a new Banner to the Admin stage, open the form editor, and take a look at your new field being rendered for every appearance in the form, similar to what's shown here:
 
 ![Appearance fieldset](../images/appearance-fieldset.png){:width="934px" height="auto"}
 

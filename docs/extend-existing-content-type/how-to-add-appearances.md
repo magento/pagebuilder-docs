@@ -1,4 +1,4 @@
-# How to add an appearance
+# How to add appearances
 
 Appearances provide different layout and styling options for a content type. For example, the Banner content type has four appearances. Each appearance shows a different layout for the Banner's included text and button.
 
