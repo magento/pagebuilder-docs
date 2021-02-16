@@ -67,6 +67,9 @@ To learn more about these nodes and others, take a look at these topics:
 -  [How to configure styling options](../styling/how-to-configure-styling-options.md).
 -  [Page Builder configurations](../reference/configurations.md).
 
-## Next
+## Next steps
 
-The next topic provides a guided walk-through for [How to extend content types](how-to-extend-appearances.md).
+Now that you know about appearances, take the next steps by walking through one or both of these tutorials. We recommend starting with extending appearances:
+
+-  [How to extend appearances](how-to-extend-appearances.md).
+-  [How to add appearances](how-to-extend-appearances.md).

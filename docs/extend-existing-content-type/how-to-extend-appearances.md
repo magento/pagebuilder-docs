@@ -202,6 +202,6 @@ After adding your CSS/Less, run your Less transpiler, clean your cache (`bin/mag
 
 ![Appearance fieldset](../images/appearance-fieldset.png){:width="934px" height="auto"}
 
-## Conclusion
+## Next
 
-There is much more to learn, but we hope this gives you a better understanding of how you can customize existing Page Builder content types to fit your customer's needs.
+This topic walked through the steps for modifying existing appearances. The next We hope this gives you a better understanding of how you can customize existing Page Builder content types to fit your customer's needs. 

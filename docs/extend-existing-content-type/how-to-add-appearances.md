@@ -1,7 +1,5 @@
 # How to add appearances
 
-Appearances provide different layout and styling options for a content type. For example, the Banner content type has four appearances. Each appearance shows a different layout for the Banner's included text and button.
-
 This topic shows how to add appearances to Page Builder's native content types. An overview of the steps and the files you need to add are illustrated here:
 
 ![How to add an appearance](../images/how-to-add-appearance.svg)
@@ -12,7 +10,7 @@ These steps also apply to adding appearances to your custom content types and th
 
 ## Step 1: Add virtual type for VisualSelect class
 
-First, we need a way select an appearance within the Admin UI. In Page Builder, we use the `VisualSelect` class. This class provides the UI for selecting different appearances. For example, the `VisualSelect` class for the Banner provides four appearances to choose from:
+First, we need a way select our new appearance within the form. In Page Builder, we use the `VisualSelect` class. This class provides the UI for selecting different appearances. For example, the `VisualSelect` class for the Banner provides four appearances to choose from:
 
 ![Banner visual selector](../images/banner-visual-selector.png)
 
