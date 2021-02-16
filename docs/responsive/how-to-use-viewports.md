@@ -1,4 +1,4 @@
-# How to use breakpoints
+# How to use viewports
 
 Page Builder provides three ways to create responsive content using viewports:
 
@@ -61,7 +61,7 @@ The XML data defined in the `mobile` viewport starts with the `options` node as 
 </var>
 ```
 
-The `options` node here defines the specific data that `Products` needs to change the number of products shown in its carousel component. For more information on the specific `view.xml` nodes, see the [view.xml section](pagebuilder-viewports.md#viewxml) in [Page Builder viewports](pagebuilder-viewports.md).
+The `options` node here defines the specific data that `Products` needs to change the number of products shown in its carousel component. For more information on the specific `view.xml` nodes, see the [view.xml section](viewports-and-breakpoints.md#viewxml) in [Page Builder viewports](viewports-and-breakpoints.md).
 
 ### Handling viewport changes
 
@@ -75,7 +75,7 @@ The event handlers for the `Products` content type are shown here:
 // products/preview.ts
 
 events.on(`stage:${this.contentType.stageId}:viewportChangeAfter`, (args: {viewport: string}) => {
-    const viewports = Config.getConfig("viewports");
+    const viewports = Config.getConfig("responsive");
     if (this.element && this.appearance() === "carousel") {
         this.slidesToShow = parseFloat(viewports[args.viewport].options.products.default.slidesToShow);
         this.destroySlider();

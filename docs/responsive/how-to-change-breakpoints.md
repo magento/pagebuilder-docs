@@ -47,7 +47,7 @@ For example, to change Page Builder's `mobile` and `mobile-small` breakpoints, y
 
 ### Step 3: Change stage media queries to match
 
-Changing the `media` query for a breakpoint is only required when the breakpoint is also used to create a stage viewport, which is true for the `mobile` breakpoint. As described in [Page Builder viewports](pagebuilder-viewports.md#viewxml), Page Builder uses the `media` query to define and apply breakpoint-specific values to properties of your content types.
+Changing the `media` query for a breakpoint is only required when the breakpoint is also used to create a stage viewport, which is true for the `mobile` breakpoint. As described in [Page Builder viewports](viewports-and-breakpoints.md#viewxml), Page Builder uses the `media` query to define and apply breakpoint-specific values to properties of your content types.
 
 ### Step 4: Change your frontend media queries to match
 

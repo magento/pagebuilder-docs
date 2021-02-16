@@ -80,7 +80,7 @@ For example, if you wanted a viewport with a `max-width` of `300px`, you could c
     ...
 ```
 
-For more information about the viewport configuration properties, see the [view.xml topic](pagebuilder-viewports.md#viewxml).
+For more information about the viewport configuration properties, see the [view.xml topic](viewports-and-breakpoints.md#viewxml).
 ### Step 3: Add viewport CSS Classes
 
 Page Builder uses viewport-specific CSS classes to change the stage's canvas width for the selected viewport.

@@ -1,6 +1,6 @@
-# Introduction to extensions and appearances
+# Extending content types
 
-Changing Page Builder's native content types is often the best way to satisfy your end users when they request changes.
+Extending Page Builder's native content types is often the best way to satisfy your end users when they request changes.
 
 Page Builder gives end users several content styling options from the default form editors. But what if your end users want to create a Banner with a different layout? Or maybe they want to change or add content properties that don't have a form field. These are the use cases that beg you to extend an existing content type, rather than create a new one.
 

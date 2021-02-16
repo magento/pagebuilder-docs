@@ -106,7 +106,7 @@ The following CSS rule set shows one general way to link your icons through CSS:
 }
 ```
 
-If you create an icon for the panel, replace the `background-image` attribute with `content` (as described in the content type tutorial, [Step 6: Add an icon](../create-custom-content-type/step-6-add-icon.md)).
+If you create an icon for the panel, replace the `background-image` attribute with `content` (as described in the content type tutorial, [Step 6: Add an icon](../creating/step-6-add-icon.md)).
 
 | Attribute              | Description                                                                                                                                                                                                                                                                                                                                         |
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
