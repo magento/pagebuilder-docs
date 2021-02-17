@@ -217,6 +217,12 @@ After adding your CSS/Less, run your Less transpiler, clean your cache (`bin/mag
 
 ![Appearance fieldset](../images/appearance-fieldset.png){:width="934px" height="auto"}
 
+## Summary
+
+Before you begin any Page Builder development, first explore whether you can meet your customer's needs by extending existing content types. If you can, you should. It's a quicker path to completion and less work than creating a completely new content type.
+
+With more experience, you may be surprised at how often you can adapt existing content types to meet your customer's needs.
+
 ## Next steps
 
-This topic walked you through the basic steps for extending existing appearances. Your next step is learning [How to add appearances](how-to-add-appearances.md). As you become more experienced working with appearances, you may be surprised at how often you can adapt Page Builder's existing content types to meet your customer's needs. Keep moving forward!
+Your next step is learning [how to add appearances](how-to-add-appearances.md).
