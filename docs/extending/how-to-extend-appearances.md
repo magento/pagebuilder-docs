@@ -165,21 +165,35 @@ Explaining UI component form fields is beyond the scope of this topic, but a few
 
 ### Step 4: Add admin and frontend CSS.
 
-For this extension to work as expected, we need to apply a CSS `overflow: scroll` property to our content. We can do this by targeting the `[data-element="content]` attribute in the DOM.
+For this extension to work as expected, we need to apply a CSS `overflow: scroll` property to the `content` element in the DOM.
 
-Open your module's Admin and frontend `_default.less` files (assuming you used PB Modules) and add your CSS/Less selector to both files:
+Open your module's Admin and frontend `_default.less` files (assuming you used PB Modules):
 
 -  `adminhtml/web/css/source/content-type/banner/_default.less`
 -  `frontend/web/css/source/content-type/banner/_default.less`
 
- Make sure you use Page Builder's new styling framework ([CSS selector override pattern](https://devdocs.magento.com/page-builder/docs/styling/how-to-override-pagebuilder-styles.html#css-selector-override-pattern)) to target the `[data-element="content]` attribute.
+ Use Page Builder's [CSS selector override pattern](https://devdocs.magento.com/page-builder/docs/styling/how-to-override-pagebuilder-styles.html#css-selector-override-pattern) to target the `[data-element="content]` attribute in the DOM.
 
-The best way to figure out how to write the proper CSS selectors is to open your devtools and study the DOM structure around the `[data-element="content]` attribute.
+ If you don't know [how Page Builder styles content](../styling/how-pagebuilder-styles-content.md), you need to stop reading this, go read that, along with [how to override Page Builder styles](../styling/how-to-override-pagebuilder-styles.md), then come back here and continue to the next paragraph.
 
-We created the following selectors in our CSS/Less:
+ Knowing how Page Builder styles its content and how to easily override those styles, will make your CSS selector life so easy that you'll rarely need to look at Page Builder's DOM output anymore. No more black-magic invocations to divine the tower of classes and elements needed to slay Page Builder's dragons of specificity. Your time is now. So arm yourself with knowledge, and win the specificity war! (Too much?)
+
+You can build your overriding CSS selectors just by knowing the names of the content type and `element` you need to target.
+
+For our example, content type is the `banner` and the `element` is `content`. Page Builder adds these the HTML nodes in the DOM (in both the Admin and frontend) as attributes. So all we need to do is start our selectors with `#html-body` followed by the attributes:
 
 ```scss
-// Targeting DOM element in the Admin
+#html-body [data-content-type='banner'] [data-element='content'] {
+    overflow: scroll;
+}
+```
+
+This selector has a specificity of `120`, more than we need to override any of Page Builder's styles. And we didn't even need to look at the DOM. We just need to know how Page Builder works.
+
+The Less in our module's `_default.less` files looks like this:
+
+```scss
+// Targeting the DOM element in the Admin
 #html-body [data-content-type='banner'] {
     [data-element='content'] {
         overflow: scroll;
