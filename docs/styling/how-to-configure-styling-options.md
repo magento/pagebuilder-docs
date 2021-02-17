@@ -8,6 +8,8 @@ But what if you want to give users even more styling options? For example, maybe
 
 Before we dive into the particulars of using different configuration options, let's take a moment to understand the role of the configurations within a Page Builder content type. The following diagram shows how the configuration options for the `Heading` content type connect or map the inputs from the Heading form to the bindings in the Heading templates and finally to the rendered output in the DOM:
 
+_Touch or click to expand_
+
 ![Understanding the big picture](../images/styling-big-picture.svg){: .zoom}
 
 1. **Heading Form** (`pagebuilder_heading_form.xml`). This form inherits from the `pagebuilder_base_form.xml`, which provides most of the input fields for the Heading. The Heading form itself provides input fields selecting an `appearance`, entering the `heading_text`, and selecting a `heading_type` (`h1` to `h6`). The text to the left of each field specifies which form the field comes from, the `heading_form` or the `base_form`.
