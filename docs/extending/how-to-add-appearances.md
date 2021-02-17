@@ -1,12 +1,12 @@
 # How to add appearances
 
-This topic shows how to add appearances to Page Builder's native content types. An overview of the steps and the files you need to add are illustrated here:
+This topic shows you how to add appearances to Page Builder's native content types. An overview of the steps and the files you need to add are illustrated here:
 
 ![How to add an appearance](../images/how-to-add-appearance.svg)
 
 _Steps for adding appearances_
 
-These steps also apply to adding appearances to your custom content types and third-party content types.
+These steps also apply to adding appearances to your custom content types and any third-party content types.
 
 ## Step 1: Add virtual type for VisualSelect class
 
