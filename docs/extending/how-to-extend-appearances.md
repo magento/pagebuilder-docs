@@ -1,6 +1,6 @@
 ## How to extend appearances
 
-In this topic, you will learn how to add a new user-defined property to an existing content type. Specifically, we will add a `max-height` property to all the Banner appearances. Why? Because our customers told us that's what they wanted. Who are we to say no?
+In this topic, you will learn how to add a new user-defined property to an existing content type. Specifically, we will add a `max-height` property to all the Banner appearances. Why? Because our customers [told us told us to drill sargent!](find clip)
 
 Here's the scenario: Your customers use Banners to feature products on their site. But they don't like the fact that the Banner's grow to the height of the content they enter. So they want you to add a `max-height` field to all the Banner appearances. That way they can limit all their banners to the same height, and have their extra content scroll as needed.
 
@@ -174,13 +174,15 @@ Open your module's Admin and frontend `_default.less` files (assuming you used P
 
  Use Page Builder's [CSS selector override pattern](https://devdocs.magento.com/page-builder/docs/styling/how-to-override-pagebuilder-styles.html#css-selector-override-pattern) to target the `[data-element="content]` attribute in the DOM.
 
- If you don't know [how Page Builder styles content](../styling/how-pagebuilder-styles-content.md), you need to stop reading this, go read that, along with [how to override Page Builder styles](../styling/how-to-override-pagebuilder-styles.md), then come back here and continue to the next paragraph.
+{:psa: .bs-callout-info }
+ **Public Service Announcement**: If you don't know [how to override Page Builder styles](../styling/how-to-override-pagebuilder-styles.md), you need to stop reading this topic, go read that topic (as well as [how Page Builder styles content](../styling/how-pagebuilder-styles-content.md), then come back here and continue to the next paragraph. Seriously.
 
  Knowing how Page Builder styles its content and how to easily override those styles, will make your CSS selector life so easy that you'll rarely need to look at Page Builder's DOM output anymore. No more black-magic invocations to divine the tower of classes and elements needed to slay Page Builder's dragons of specificity. Your time is now. So arm yourself with knowledge, and win the specificity war! (Too much?)
+ {: psa}
 
-You can build your overriding CSS selectors just by knowing the names of the content type and `element` you need to target.
+You can build your overriding CSS selectors just by knowing the configuration _names_ of the content type and `element` node you need to target in the DOM.
 
-For our example, content type is the `banner` and the `element` is `content`. Page Builder adds these the HTML nodes in the DOM (in both the Admin and frontend) as attributes. So all we need to do is start our selectors with `#html-body` followed by the attributes:
+For our example, the configuration names for our content type and target element node are `banner` and `content`. Page Builder adds these as attributes (`data-* = "name"`) to the template's generated DOM nodes in the Admin and frontend pages. So all we need to do is start our selectors with `#html-body` followed by these two attributes:
 
 ```scss
 #html-body [data-content-type='banner'] [data-element='content'] {
@@ -218,4 +220,4 @@ After adding your CSS/Less, run your Less transpiler, clean your cache (`bin/mag
 
 ## Next steps
 
-This topic walked you through the steps for extending existing appearances. Your next step is learning [How to add appearances](how-to-add-appearances.md). As you become more experienced working with appearances, you may be surprised at how often you can adapt Page Builder's existing content types to meet your customer's needs.
+This topic walked you through the basic steps for extending existing appearances. Your next step is learning [How to add appearances](how-to-add-appearances.md). As you become more experienced working with appearances, you may be surprised at how often you can adapt Page Builder's existing content types to meet your customer's needs. Keep moving forward!
