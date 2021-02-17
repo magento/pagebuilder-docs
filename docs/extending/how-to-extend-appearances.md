@@ -12,8 +12,8 @@ These steps describe the basic process for adding new style properties to an exi
 
 1. [Create a Page Builder extension module](#step-1-create-a-page-builder-extension-module).
 1. [Add your properties to elements](#step-2-add-new-properties-to-elements).
-1. [Add your property field(s) to the form](#step-3-add-your-property-fields-to-the-form).
-1. [Add admin and frontend styles (as needed)](#step-4-add-admin-and-frontend-css-as-needed).
+1. [Add your property fields to the form](#step-3-add-your-property-fields-to-the-form).
+1. [Add admin and frontend styles](#step-4-add-admin-and-frontend-css) (as needed).
 
 ### Step 1: Create a Page Builder extension module
 
@@ -163,7 +163,7 @@ Explaining UI component form fields is beyond the scope of this topic, but a few
 | `config`   | Provides the initial configuration for the field, including the `default` value. We set our default `max_height` field to `400` (px).                                                                                                                                                                                                                                                       |
 | `settings` | Provides the markup that gives your field a label, CSS styling, validation, and other properties as needed.                                                                                                                                                                                                                                                                                 |
 
-### Step 4: Add admin and frontend CSS as needed.
+### Step 4: Add admin and frontend CSS.
 
 For this extension to work as expected, we need to apply a CSS `overflow: scroll` property to our content. We can do this by targeting the `[data-element="content]` attribute in the DOM.
 
@@ -202,6 +202,6 @@ After adding your CSS/Less, run your Less transpiler, clean your cache (`bin/mag
 
 ![Appearance fieldset](../images/appearance-fieldset.png){:width="934px" height="auto"}
 
-## Next
+## Next steps
 
-This topic walked you through the steps for modifying existing appearances. Your next step is learning [How to add appearances](how-to-add-appearances.md). As you get more experience working with appearances, you may be surprised at how often you can adapt Page Builder's existing content types to meet your customer's needs.
+This topic walked you through the steps for extending existing appearances. Your next step is learning [How to add appearances](how-to-add-appearances.md). As you become more experienced working with appearances, you may be surprised at how often you can adapt Page Builder's existing content types to meet your customer's needs.
