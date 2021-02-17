@@ -34,6 +34,8 @@ _CSS selector override pattern_
 
 1. `Any additional selector` - The first two selectors match Page Builder's internal selectors with a specificity of `110`. Adding any other selector (except `*`) will bump the specificity to `111` or higher, which overrides Page Builder's internal selector.
 
+
+
 ## CSS selector override example
 
 For example, if you wanted to override the CSS that Page Builder applies to the `Heading` content type, you could use a selector pattern that targets one of the `Heading` HTML elements (like `h1`), which would create a CSS specificity of `111`, as shown here:

@@ -177,12 +177,11 @@ Open your module's Admin and frontend `_default.less` files (assuming you used P
 {:.bs-callout-info }
  **Public Service Announcement**: If you don't know [how to override Page Builder styles](../styling/how-to-override-pagebuilder-styles.md), you need to stop reading this topic, go read that topic (as well as [how Page Builder styles content](../styling/how-pagebuilder-styles-content.md), then come back here and continue to the next paragraph. Seriously.
 
- Knowing how Page Builder styles its content and how to easily override those styles, will make your CSS selector life so easy that you'll rarely need to look at Page Builder's DOM output anymore. No more black-magic invocations to divine the tower of classes and elements needed to slay Page Builder's dragons of specificity. Your time is now. So arm yourself with knowledge, and win the specificity war! (Too much?)
- {/:}
+ Knowing how Page Builder styles its content is important. But knowing how to override those styles is _essential_. When you know how Page Builder generates and applies its CSS, your CSS selector life changes. No more black-magic invocations to divine the tower of classes and elements you need to slay Page Builder's dragons of specificity. So arm yourself with knowledge, and win the specificity war! Here's how.
 
-You can build your overriding CSS selectors just by knowing the configuration _names_ of the content type and `element` node you need to target in the DOM.
+You can build your overriding CSS selectors just by knowing the configuration _names_ of the content type and element you need to target in the DOM.
 
-For our example, the configuration names for our content type and target element node are `banner` and `content`. Page Builder adds these as attributes (`data-* = "name"`) to the template's generated DOM nodes in the Admin and frontend pages. So all we need to do is start our selectors with `#html-body` followed by these two attributes:
+For example, the configuration names for content type and element node we want to target are `banner` and `content`. Page Builder helps us by always adding these as attributes (`data-* = "name"`) to the template's generated DOM nodes in the Admin and frontend pages. So all we need to do is start our selectors with `#html-body` followed by these two attributes:
 
 ```scss
 #html-body [data-content-type='banner'] [data-element='content'] {
@@ -190,7 +189,7 @@ For our example, the configuration names for our content type and target element
 }
 ```
 
-This selector has a specificity of `120`, more than we need to override any of Page Builder's styles. And we didn't even need to look at the DOM. We just need to know how Page Builder works.
+And that's it. This selector has a specificity of `120`, more than we need to override any styles Page Builder applies to the same DOM nodes. And we didn't even need to look at the DOM. We just needed to know how Page Builder styles its content.
 
 The Less in our module's `_default.less` files looks like this:
 
