@@ -1,6 +1,6 @@
 ## How to extend appearances
 
-In this topic, you will learn how to add a new user-defined property to an existing content type. Specifically, we will add a `max-height` property to all the Banner appearances. Why? Because our customers [told us told us to drill sargent!](find clip)
+In this topic, you will learn how to add a new user-defined property to an existing content type. Specifically, we will add a `max-height` property to all the Banner appearances. Why? Because our customers [told us to, drill sargeant!](https://www.youtube.com/watch?v=U6VPEcj77v8)
 
 Here's the scenario: Your customers use Banners to feature products on their site. But they don't like the fact that the Banner's grow to the height of the content they enter. So they want you to add a `max-height` field to all the Banner appearances. That way they can limit all their banners to the same height, and have their extra content scroll as needed.
 
@@ -174,11 +174,11 @@ Open your module's Admin and frontend `_default.less` files (assuming you used P
 
  Use Page Builder's [CSS selector override pattern](https://devdocs.magento.com/page-builder/docs/styling/how-to-override-pagebuilder-styles.html#css-selector-override-pattern) to target the `[data-element="content]` attribute in the DOM.
 
-{:psa: .bs-callout-info }
+{:.bs-callout-info }
  **Public Service Announcement**: If you don't know [how to override Page Builder styles](../styling/how-to-override-pagebuilder-styles.md), you need to stop reading this topic, go read that topic (as well as [how Page Builder styles content](../styling/how-pagebuilder-styles-content.md), then come back here and continue to the next paragraph. Seriously.
 
  Knowing how Page Builder styles its content and how to easily override those styles, will make your CSS selector life so easy that you'll rarely need to look at Page Builder's DOM output anymore. No more black-magic invocations to divine the tower of classes and elements needed to slay Page Builder's dragons of specificity. Your time is now. So arm yourself with knowledge, and win the specificity war! (Too much?)
- {: psa}
+ {/:}
 
 You can build your overriding CSS selectors just by knowing the configuration _names_ of the content type and `element` node you need to target in the DOM.
 
