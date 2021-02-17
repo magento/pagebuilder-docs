@@ -220,7 +220,7 @@ The `_module.less` file is an import file that ensures the additional stylesheet
 ```scss
 @import "_simple-poster";
 ```
-Use _module.less for import statements
+Use `_module.less` for import statements
 
 ## Example Module
 
