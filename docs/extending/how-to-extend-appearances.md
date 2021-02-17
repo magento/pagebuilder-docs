@@ -75,9 +75,9 @@ Because `max-height` is an official CSS property, we will add it using the `styl
 
 Attributes of the `style` node are described briefly here:
 
--  `style name` — name used to bind to the form field with the same name.
--  `style source` — name of the CSS property in snake_case. Page Builder changes `max_height` to `max-height` when writing it to the DOM.
--  `converter` — JavaScript function that converts internal property values to and from the DOM because DOM values are often not in the right format for internal processing.
+-  **`style name`** — name used to bind to the form field with the same name.
+-  **`style source`** — name of the CSS property in snake_case. Page Builder changes `max_height` to `max-height` when writing it to the DOM.
+- ** `converter`** — JavaScript function that converts internal property values to and from the DOM because DOM values are often not in the right format for internal processing.
 
 {:.procedure}
 To add the `max-width` property to the `content` element of each appearance,
