@@ -1,6 +1,6 @@
 # How to override Page Builder styles
 
-To override the internal CSS styles that Page Builder applies to content types, you must create a CSS selector with a [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) greater than `110`, which is selector specificity that Page Builder applies to all of its native content types and your custom content types. Page Builder's default selector pattern is shown here:
+To override the internal CSS styles that Page Builder applies to content types, you must create a CSS selector with a [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) greater than `110`, which is the selector specificity that Page Builder applies to all of its native content types and your custom content types. Page Builder's default selector pattern is shown here:
 
 ```scss
 // Specificity = 110, always
@@ -16,10 +16,13 @@ You can find all the details about how Page Builder styles its content types in 
 
 ## CSS selector override pattern
 
-Always use the following CSS selector pattern to override Page Builder's styles:
+{:.bs-callout-info}
+**Specificity Calculator**. This calculator is an excellent resource for learning and checking the specificity of your CSS selectors: [Specificity Calculator](https://specificity.keegan.st/).
+
+To override Page Builder's styles, always use the following CSS selector pattern:
 
 ```scss
-// Specificity = 111, or greater, which is all you need to override Page Builder
+// Creates a specificity = 111, or greater.
 
 #html-body  +  [content-type attribute]  +  any additional selector
 ```
@@ -36,7 +39,7 @@ _CSS selector override pattern_
 
 ## CSS selector override example
 
-For example, if you wanted to override the CSS that Page Builder applies to the `Heading` content type, you could use a selector pattern that targets one of the `Heading` HTML elements (like `h1`), which would create a CSS specificity of `111`, as shown here:
+If you want to override just _one_ of the HTML heading elements (`h1 - h6`), you would start with `#html-body` (as always), add the content type `heading` attribute, then add the heading element you want to override. That combination creates a CSS specificity of `111`, just enough to override Page Builder:
 
 ```scss
 #html-body h1[data-content-type="heading"] {}
@@ -44,22 +47,24 @@ For example, if you wanted to override the CSS that Page Builder applies to the 
 
 ![Page Builder style selector](../images/pagebuilder-style-override-element-selector.svg)
 
-With one additional HTML element selector, you can override Page Builder's default style while keeping the specificity low for additional overrides, as needed.
+Again, you can override Page Builder's default styles with `any additional selector`. This keeps your CSS simple and the specificity low.
 
 ## More selector override examples
 
-In the following examples, each selector targets a different HTML element of a content type, but all of them have a specificity higher than Page Builder's default of `110`:
+In the following examples, each combination of selectors targets different DOM elements for a content type. But all of these selectors have a specificity higher than Page Builder's default of `110`:
 
-**Override all `Heading` styles**
+**Overrides all `heading` elements (`h1 - h6`) for all `heading` appearances**
 
 ```scss
-#html-body [data-content-type="heading"][data-element="main"]  {} // Specificity 120
+// Specificity: 120
+#html-body [data-content-type="heading"][data-element="main"] {}
 ```
 
-**Override all `Heading` styles for `default` appearance**
+**Overrides `heading` elements (`h1 - h6`) for the `default` appearance**
 
 ```scss
-#html-body [data-content-type="heading"][data-appearance="default"] {} // Specificity 120
+// Specificity: 120
+#html-body [data-content-type="heading"][data-appearance="default"] {}
 ```
 
 **Override all `Row` inner element styles**

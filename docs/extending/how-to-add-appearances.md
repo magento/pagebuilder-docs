@@ -1,18 +1,16 @@
-# How to add an appearance
+# How to add appearances
 
-Appearances provide different layout and styling options for a content type. For example, the Banner content type has four appearances. Each appearance shows a different layout for the Banner's included text and button.
-
-This topic shows how to add appearances to Page Builder's native content types. An overview of the steps and the files you need to add are illustrated here:
+This topic shows you how to add appearances to Page Builder's native content types. An overview of the steps and the files you need to add are illustrated here:
 
 ![How to add an appearance](../images/how-to-add-appearance.svg)
 
 _Steps for adding appearances_
 
-These steps also apply to adding appearances to your custom content types and third-party content types.
+These steps also apply to adding appearances to your custom content types and any third-party content types.
 
 ## Step 1: Add virtual type for VisualSelect class
 
-First, we need a way select an appearance within the Admin UI. In Page Builder, we use the `VisualSelect` class. This class provides the UI for selecting different appearances. For example, the `VisualSelect` class for the Banner provides four appearances to choose from:
+First, we need a way select our new appearance within the form. In Page Builder, we use the `VisualSelect` class. This class provides the UI for selecting different appearances. For example, the `VisualSelect` class for the Banner provides four appearances to choose from:
 
 ![Banner visual selector](../images/banner-visual-selector.png)
 
@@ -47,14 +45,14 @@ Using the same class name as the Banner ensures that Magento's XML merging will 
 
 The following table describes the configuration arguments for each appearance option.
 
-| Arguments       | Description                                                                                                                                                                                                                                                             |
-|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `optionsData`   | Grouping array for all the appearance options of a content type.                                                                                                                                                                                                        |
-| `item array`    | Grouping array of properties that define an appearance option. We recommend you match the `name` of the item array to the option's `value` string. In our example, the `item` array's name is `simple-poster`, which matches the option's value string `simple-poster`. |
-| `value`         | String that matches the appearance name defined in the content type's configuration file. Page Builder uses this string value to link the option to the appearance.                                                                                                     |
-| `title`         | Display name for the appearance option. Banner example: Poster.                                                                                                                                                                                                         |
-| `icon`          | Path to the `.svg` icon for the appearance: `view/adminthtml/web/css/images/content-type/[content-type-name]/appearance/*.svg`. See [Creating an icon for your appearance](#create-an-appearance-icon)                                                                  |
-| `noticeMessage` | (Not shown in example.) The `noticeMessage` displays a message below the appearance options when the appearance is selected. For example, two of the Row appearances (`full-width` and `full-bleed`) define `noticeMessage` strings that display when selected.         |
+| Arguments           | Description                                                                                                                                                                                                                                                             |
+|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **`optionsData`**   | Grouping array for all the appearance options of a content type.                                                                                                                                                                                                        |
+| **`item array`**    | Grouping array of properties that define an appearance option. We recommend you match the `name` of the item array to the option's `value` string. In our example, the `item` array's name is `simple-poster`, which matches the option's value string `simple-poster`. |
+| **`value`**         | String that matches the appearance name defined in the content type's configuration file. Page Builder uses this string value to link the option to the appearance.                                                                                                     |
+| **`title` **        | Display name for the appearance option. Banner example: Poster.                                                                                                                                                                                                         |
+| **`icon` **         | Path to the `.svg` icon for the appearance: `view/adminthtml/web/css/images/content-type/[content-type-name]/appearance/*.svg`. See [Creating an icon for your appearance](#create-an-appearance-icon)                                                                  |
+| **`noticeMessage`** | (Not shown in example.) The `noticeMessage` displays a message below the appearance options when the appearance is selected. For example, two of the Row appearances (`full-width` and `full-bleed`) define `noticeMessage` strings that display when selected.         |
 
 To add more appearance options, simply create more `item` arrays with names that match the `value`, as shown here:
 
@@ -222,7 +220,7 @@ The `_module.less` file is an import file that ensures the additional stylesheet
 ```scss
 @import "_simple-poster";
 ```
-Use _module.less for import statements
+Use `_module.less` for import statements
 
 ## Example Module
 
