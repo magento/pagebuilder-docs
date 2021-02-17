@@ -34,14 +34,14 @@ To help you understand the kind of changes you can make to appearances, we'll lo
 
 Even in a condensed form, appearance configurations can be confusing. A quick summary of these nodes may help:
 
--  **`appearance`** — identifies an appearance configuration (by name) that all the HTML templates and nodes help define.
--  **`preview_template`** — path to the HTML template (`preview.html`) used to display the appearance in the Admin.
--  **`master_template`** — path to the HTML template (`master.html`) used to display the appearance on the storefront.
--  **`element`** — node type bound to an HTML element in the `preview.html` and `master.html` templates. The `element` node provides its bound template element with the `style`, `attribute`, and `css` values from the form fields.
--  **`style`** — for adding CSS properties (like `text-align`) to the element. The `style` node is bound to a form field of the same name.
--  **`attribute`** — for adding custom properties (like `background_type`) to the element. The `attribute` node is bound to a form field of the same name.
--  **`css`** — for adding CSS classes to the element. The `css` node is bound to a form field of the same name.
--  **`html`** — for allowing HTML content in the element. The `html` node is bound to a form field of the same name. The field's `formElement` type is either `input` or `wysiwyg`.
+-  `appearance` — identifies an appearance configuration (by name) that all the HTML templates and nodes help define.
+-  `preview_template` — path to the HTML template (`preview.html`) used to display the appearance in the Admin.
+-  `master_template` — path to the HTML template (`master.html`) used to display the appearance on the storefront.
+-  `element` — node type bound to an HTML element in the `preview.html` and `master.html` templates. The `element` node provides its bound template element with the `style`, `attribute`, and `css` values from the form fields.
+-  `style` — for adding CSS properties (like `text-align`) to the element. The `style` node is bound to a form field of the same name.
+-  `attribute` — for adding custom properties (like `background_type`) to the element. The `attribute` node is bound to a form field of the same name.
+-  `css` — for adding CSS classes to the element. The `css` node is bound to a form field of the same name.
+-  `html` — for allowing HTML content in the element. The `html` node is bound to a form field of the same name. The field's `formElement` type is either `input` or `wysiwyg`.
 
 When you understand how Page Builder uses these appearance nodes, it becomes much easier to recognize the nodes that define layouts vs. the ones that define styles. These node groups are defined next.
 
@@ -49,18 +49,18 @@ When you understand how Page Builder uses these appearance nodes, it becomes muc
 
 The layout for an appearance comes from the arrangement of HTML tags (`<div>`, `<a>`, `<button>`) in the templates. So if you need to change the layout, you start by changing the appearance templates:
 
--  **`preview_template`** — (`collage-left/preview.html`) for changing the appearance's layout in the Admin.
--  **`master_template`** — (`collage-left/master.html`) for changing the appearance's layout on the storefront.
+-  `preview_template` — (`collage-left/preview.html`) for changing the appearance's layout in the Admin.
+-  `master_template` — (`collage-left/master.html`) for changing the appearance's layout on the storefront.
 
 ### Appearance style nodes
 
 The styles and properties for an appearance come from all the sub-nodes of a given `element`. So if you need to change or add styles and properties to existing layouts, you start by changing and adding `style`, `attribute`, `css`, and `html` nodes to an existing `element` node:
 
--  **`element`** — for identifying the HTML element (in the templates) that you want to change using the `style`, `attribute`, and `css` nodes.
--  **`style`** — for changing or adding a CSS property (like `text-align`) to an element.
--  **`attribute`** — for changing or adding a custom property (like `background_type`) to an element.
--  **`css`** — for changing or adding CSS classes to an element.
--  **`html`** - for allowing HTML content in the element.
+-  `element` — for identifying the HTML element (in the templates) that you want to change using the `style`, `attribute`, and `css` nodes.
+-  `style` — for changing or adding a CSS property (like `text-align`) to an element.
+-  `attribute` — for changing or adding a custom property (like `background_type`) to an element.
+-  `css` — for changing or adding CSS classes to an element.
+-  `html` - for allowing HTML content in the element.
 
 To learn more about these nodes and others, take a look at these topics:
 
