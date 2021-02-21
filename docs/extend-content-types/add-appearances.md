@@ -1,8 +1,8 @@
-# Add an appearance
+# Add appearances
 
 This topic shows you how to add an appearance to Page Builder's native content types. An overview of the steps and the files you need to add are illustrated here:
 
-![Add an appearance](../images/how-to-add-appearance.svg)
+![Add appearances](../images/how-to-add-appearance.svg)
 
 _Steps for adding appearances_
 
