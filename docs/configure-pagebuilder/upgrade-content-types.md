@@ -2,7 +2,7 @@
 
 Before version 1.3, if we updated our content-type configurations and sent them out with a new version of Page Builder, it could break the data you saved using the previous version. This happened because the configuration data of a content type is mapped to the content type's display templates. So when we change a configuration, the display of existing content might also change. With significant changes, the data from the appearance `element` nodes (`attributes`, `css`, `html`, `style`, and `tag`) is lost. Such changes cause existing content to appear incorrectly, or not at all.
 
-To fix this limitation for versions 1.3+, Page Builder uses Magento's native upgrade mechanism, coupled with our content upgrade helpers. These helpers convert existing content so that it maps to new configurations and displays correctly.
+To fix this limitation, Page Builder now uses Magento's native upgrade mechanism, coupled with our content upgrade helpers. These helpers convert existing content so that it maps to new configurations and displays correctly.
 
 ## Example: Updating the Row content type
 
@@ -20,7 +20,7 @@ There are three steps to upgrading a content type when changing its configuratio
 
 For our Row example, the Page Builder team would add the following files to the `Magento/PageBuilder/Setup` directories:
 
-![Example converter and upgrader classes](images/upgrade-framework-example-pb.png)
+![Example converter and upgrader classes](../images/upgrade-framework-example-pb.png)
 
 ### Step 1: Create a Converter
 
@@ -172,7 +172,7 @@ If your Magento installation does not have any additional entities for Page Buil
 
 However, if you have created additional database entities for storing Page Builder content, you _must_ add those entities to the `UpgradableEntitiesPool` type in your module's `etc/di.xml`. If you do not, the Page Builder content stored in your entity will not be updated, causing potential data-loss and display issues.
 
-![Additional entities](images/upgrade-framework-additional-entities.png)
+![Additional entities](../images/upgrade-framework-additional-entities.png)
 
 For example, if you have created a blog entity that stores Page Builder content, you must add your blog entity to your `etc/di.xml` file as an `UpgradableEntitiesPool` type. This entry ensures that the upgrade library can update the Page Builder content types used in your blog. An entry for our blog example might look like this:
 
@@ -242,7 +242,7 @@ To use Page Builder's content upgrade helpers for your own content-type configur
 
 1. Within the test branch for your content type module changes, set up a directory structure similar to this:
 
-   ![Custom converter and upgrader classes](images/upgrade-framework-example-custom.png)
+   ![Custom converter and upgrader classes](../images/upgrade-framework-example-custom.png)
 
 1. Implement the `DataConverterInterface` to create a converter for your content type, using Page Builder's `FixFullWidthRowPadding` class as an example.
 

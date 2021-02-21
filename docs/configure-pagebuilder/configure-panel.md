@@ -1,4 +1,4 @@
-# Customize the panel
+# Configure the panel
 
 By default, the Page Builder panel has four menu sections (Layout, Elements, Media, Add Content) and 16 content types as shown here:
 

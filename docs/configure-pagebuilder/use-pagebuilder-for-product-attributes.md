@@ -113,7 +113,7 @@ To prevent your form field from switching or using Page Builder, set the `is_pag
 ...
 ```
 
-[Catalog Input Type]: images/catalog-input-type.png
-[Page Builder button]: images/pagebuilder-button.png
-[WYSIWYG UI Component]: https://devdocs.magento.com/guides/v2.2/ui_comp_guide/components/ui-wysiwyg.html
-[UI Component configuration file]: https://devdocs.magento.com/guides/v2.2/ui_comp_guide/concepts/ui_comp_xmldeclaration_concept.html
+[Catalog Input Type]: ../images/catalog-input-type.png
+[Page Builder button]: ../images/pagebuilder-button.png
+[WYSIWYG UI Component]: {{ site.baseurl }}/guides/v2.4/ui_comp_guide/components/ui-wysiwyg.html
+[UI Component configuration file]: {{ site.baseurl }}/guides/v2.4/ui_comp_guide/concepts/ui_comp_xmldeclaration_concept.html

@@ -1,6 +1,6 @@
 # Deactivate Page Builder
 
-We recommend deactivating the Page Builder editor through the Admin UI instead of disabling the module through the CLI using `bin/magento`. If you use the CLI, you could break various layouts, for example, the full-width layouts. Deactivating from the Admin UI allows the Page Builder module to continue rendering the content on the storefront even if the editor is not used in the Admin.
+We recommend deactivating the Page Builder editor through the Admin UI instead of disabling the module with the CLI (`bin/magento`). If you use the CLI, you could break various layouts, for example, the full-width layouts. Deactivating from the Admin UI allows the Page Builder module to continue rendering the content on the storefront even if the editor is not used in the Admin.
 
 Follow these steps to deactivate Page Builder in the Admin UI:
 
@@ -8,7 +8,7 @@ Follow these steps to deactivate Page Builder in the Admin UI:
 1. In the **General** group on the page, select **Content Management**.
 1. Under **Advanced Content Tools**, select **No** for **Enable Page Builder**.
 
-   ![activate page builder](images/activate-pagebuilder.png "Deactivate Page Builder")
+   ![activate page builder](../images/activate-pagebuilder.png "Deactivate Page Builder")
 
 1. Click **Save Config**
 
