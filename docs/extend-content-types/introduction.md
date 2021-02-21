@@ -66,6 +66,6 @@ The styles and properties for an appearance come from all the sub-nodes of a giv
 
 Now that you know about appearances, take the next steps by walking through one or both of these tutorials. We recommend you start with extending appearances:
 
--  [Extend an appearance](extend-an-appearance.md).
--  [Extend another appearance](extend-another-appearance.md).
--  [Add an appearance](add-appearance.md).
+-  [Extend appearances](extend-appearances.md).
+-  [Extend more appearances](extend-more-appearances.md).
+-  [Add appearances](add-appearances.md).

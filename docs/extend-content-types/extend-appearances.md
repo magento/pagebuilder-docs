@@ -226,4 +226,4 @@ With more experience, you may be surprised at how often you can adapt existing c
 
 ## Next steps
 
-Your next step is learning how to [add and appearance](add-appearance.md) to a content type.
+Your next step is learning how to [add a new appearance](add-appearances.md) to a content type.
