@@ -79,7 +79,6 @@ Attributes of the `style` node are described briefly here:
 -  `style source` — name of the CSS property in snake_case. Page Builder changes `max_height` to `max-height` when writing it to the DOM.
 -  `converter` — JavaScript function that converts internal property values to and from the DOM because DOM values are often not in the right format for internal processing.
 
-{:.procedure}
 To add the `max-width` property to the `content` element of each appearance,
 
 1. Open your module's `banner.xml` file.
@@ -163,7 +162,7 @@ Explaining UI component form fields is beyond the scope of this topic, but a few
 | `argument > config` | Provides the initial configuration for the field, including the `default` value. We set our default `max_height` field to `400` (px).                                                                                                                                                                                                                                                                                                                  |
 | `settings`          | Provides the field with a label, CSS styling, validation, and other properties as needed.                                                                                                                                                                                                                                                                                                                                                              |
 
-### Step 4: Add admin and frontend CSS.
+### Step 4: Add admin and frontend CSS
 
 For this extension to work as expected, we need to apply a CSS `overflow: scroll` property to the `content` element in the DOM.
 
@@ -172,17 +171,13 @@ Open your module's Admin and frontend `_default.less` files (assuming you used P
 -  `adminhtml/web/css/source/content-type/banner/_default.less`
 -  `frontend/web/css/source/content-type/banner/_default.less`
 
- Use Page Builder's [CSS selector override pattern](https://devdocs.magento.com/page-builder/docs/styling/how-to-override-pagebuilder-styles.html#css-selector-override-pattern) to target the `[data-element="content]` attribute in the DOM.
+ Use Page Builder's [CSS selector override pattern](../style-content-types/override-pagebuilder-styles.md#css-selector-override-pattern) to target the `[data-element="content]` attribute in the DOM.
 
+{: .bs-callout-info }
+**Styling best practices:**
+If you don't know how [how Page Builder styles content](../style-content-types/how-pagebuilder-styles-content.md), you need to stop reading this topic, go read that topic, then come back and continue. Knowing how Page Builder styles its content (and yours) is an essential part of mastering appearances. When you know how Page Builder generates and applies its CSS to the DOM, you gain control over your Page Builder styling destiny. No more dreams of selector magic shattered by nightmares of !importance. You can finally win the specificity war (in Page Builder).
 
-<div class="bs-callout-tip" markdown="1">
-**Styling best practices:** 
-If you don't know how to [override Page Builder styles](../style-content-types/override-pagebuilder-styles.md), you need to stop reading this topic, go read that topic (as well as [how Page Builder styles content](../style-content-types/how-pagebuilder-styles-content.md), then come back here and continue.
-
-Knowing how Page Builder styles its content is important. But knowing how to override those styles is _essential_. When you know how Page Builder generates and applies its CSS to the DOM, you gain control over your Page Builder styling destiny. No more dreams of selector magic ending in nightmares of !importance. Now you have the power to win the specificity war.
-</div>
-
-For example, the content type and element node we want to target are `banner` and `content`, as named in the config file. Page Builder adds these config nodes to the DOM as attributes (`data-* = "name"`). So all we need to do is start our selectors with `#html-body` followed by these two attributes:
+For example, the content type and `element` node we want to target are `banner` and `content`, as named in the config file. Page Builder adds these config nodes to the DOM as attributes (`data-* = "name"`). So all we need to do is start our selectors with `#html-body` followed by these two attributes:
 
 ```scss
 #html-body [data-content-type='banner'] [data-element='content'] {
