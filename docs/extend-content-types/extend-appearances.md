@@ -171,7 +171,7 @@ Open your module's Admin and frontend `_default.less` files (assuming you used P
 -  `adminhtml/web/css/source/content-type/banner/_default.less`
 -  `frontend/web/css/source/content-type/banner/_default.less`
 
- Use Page Builder's [CSS selector override pattern](../style-content-types/override-pagebuilder-styles.md#css-selector-override-pattern) to target the `[data-element="content]` attribute in the DOM.
+ Use Page Builder's [CSS selector override pattern](../style-content-types/override-pagebuilder-styles.md) to target the `[data-element="content]` attribute in the DOM.
 
 {: .bs-callout-info }
 **Styling best practices:**
