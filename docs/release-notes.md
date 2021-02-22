@@ -85,7 +85,6 @@ The release notes include:
 
 -  {:.fix}Security enhancements.
 
-
 ## **1.3.3-p1** for Magento Commerce 2.3.6-p1
 
 -  {:.fix}Security enhancements.
@@ -115,7 +114,7 @@ This version of Page Builder is just a version-number update for Magento 2.3.5-p
    Page Builder Rows, Banners, and Sliders now have the option to use videos for their backgrounds. These new features are documented here: [Rows](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-layout-row.html), [Banners](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-banner.html), [Sliders](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-slider.html).
 
 -  {:.new}**Video support additions and enhancements**<br/>
-   Page Builder now supports a wider variety of video formats. In addition to YouTube and Vimeo videos, the Video content type and the video backgrounds now support video URL links to video formats like `.mp4` and other browser-supported formats. The Video content type also adds an autoplay feature. These new features are documented here: [Video content type](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-video.html).
+   Page Builder now supports a wider variety of video formats. In addition to YouTube and Vimeo videos, the Video content type and the video backgrounds now support video URL links to video formats like `.mp4` and other browser-supported formats. The Video content type also adds an auto-play feature. These new features are documented here: [Video content type](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-video.html).
 
 -  {:.new}**Full Height Rows, Banners, and Sliders**<br/>
    Page Builder Rows, Banners, and Sliders now have the option to set their heights to the full-height of the page using a number with any CSS unit (px, %, vh, em) or a calculation between units (100vh - 237px). These new features are documented here: [Rows](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-layout-row.html), [Banners](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-banner.html), [Sliders](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-media-slider.html).
@@ -124,10 +123,10 @@ This version of Page Builder is just a version-number update for Magento 2.3.5-p
    We can now create new versions of Page Builder content types without introducing backward-incompatible issues with previous versions. Prior to this release, significant changes to content type configurations would create display and data-loss issues with previously saved Page Builder content types. Our new upgrade library eliminates these issues. We designed the library to upgrade previous versions of content types saved to the database so that they match the configuration changes in the new versions. Page Builder runs the upgrade library on native content types as needed for a new release. This ensures that the built-in Page Builder content types are always upgraded to match any changes we make to content types for a new release.
 
    {: .bs-callout .bs-callout-warning }
-   **Please Note:** If you have created additional database entities for storing Page Builder content, you _must_ add those entities to your `etc/di.xml`. If you do not, the Page Builder content stored in your entity will not be updated, causing potential data-loss and display issues. For example, if you have created a blog entity that stores Page Builder content, you must add your blog entity to your `etc/di.xml` file as an `UpgradableEntitiesPool` type so that the upgrade library can update the Page Builder content types used in your blog. For more information and instructions on using the upgrade library, see: [How to use the content type upgrade library](https://devdocs.magento.com/page-builder/docs/how-to/how-to-use-upgrade-library.html){:data-proofer-ignore='true'}.
+   **Please Note:** If you have created additional database entities for storing Page Builder content, you _must_ add those entities to your `etc/di.xml`. If you do not, the Page Builder content stored in your entity will not be updated, causing potential data-loss and display issues. For example, if you have created a blog entity that stores Page Builder content, you must add your blog entity to your `etc/di.xml` file as an `UpgradableEntitiesPool` type so that the upgrade library can update the Page Builder content types used in your blog. For more information and instructions on using the upgrade library, see: [Upgrade content types](https://devdocs.magento.com/page-builder/docs/configure-pagebuilder/upgrade-content-types.html){:data-proofer-ignore='true'}.
 
 -  {:.new}**Documentation on adding new Appearances**<br/>
-   Everything you need to know about [adding appearances](https://devdocs.magento.com/page-builder/docs/extending/how-to-add-appearances.html) for existing or custom content types.
+   Everything you need to know about [adding appearances](https://devdocs.magento.com/page-builder/docs/extend-content-types/add-appearances.html) for existing or custom content types.
 
 **Various fixes**
 

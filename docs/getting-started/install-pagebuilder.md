@@ -6,7 +6,7 @@ For everyone else, Page Builder is automatically installed with Magento Commerce
 
 ## GitHub installation for Contributors
 
-Before installing Page Builder for making contributions, make sure you have the following prerequisites:
+Before installing Page Builder for making contributions, you must have the following prerequisites:
 
 -  A local development installation of Magento Commerce 2.3.1+ -- Use the installation instructions from the [DevDocs installation guide](https://devdocs.magento.com/guides/v2.3/install-gde/bk-install-guide.html).
 -  Access to the private Page Builder repository. You should participate in [Magento Partner Program](https://magento.com/partners/become) to have these permissions.
