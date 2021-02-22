@@ -9,11 +9,11 @@ By default, Page Builder defines four responsive breakpoints, but only uses two 
 
 ## Steps for adding viewports
 
-1. [Create an Admin theme](#step-1-create-an-admin-theme) or [Create a module](https://github.com/magento-devdocs/pbmodules). Of course you can skip this step if you already have either one.
-1. [Add a view.xml file](#step-2-add-a-viewxml-file). Use this file to define your configuration data for the additional viewports.
-1. [Add viewport configuration data](#add-viewport-configuration-data)
-1. [Add viewport CSS classes](#step-3-add-viewport-css-classes). Create these classes to change the stage width for a selected viewport.
-1. [Add viewport button images](#step-4-add-viewport-button-images). Create SVG images for your viewport buttons.
+1. [Create an Admin theme]() or [Create a module](https://github.com/magento-devdocs/pbmodules). Of course you can skip this step if you already have either one.
+1. [Add a view.xml file](). Use this file to define your configuration data for the additional viewports.
+1. [Add viewport configuration data]()
+1. [Add viewport CSS classes](). Create these classes to change the stage width for a selected viewport.
+1. [Add viewport button images](). Create SVG images for your viewport buttons.
 
 ### Step 1: Create or add to an existing Admin theme
 
@@ -129,7 +129,7 @@ Details for these viewport nodes are in the [Viewport configuration data]() topi
 -  `icon` — for adding an icon to the button.
 -  `media` — for adding a media query used to show viewport properties on the frontend.
 
-At this point, if save your `view.xml` file, clear your cache (`bin/magento cache:clean`), and do a hard reload of your browser, you should see two additional buttons (without icons) in the Page Builder's stage header:
+At this point, if you save your `view.xml` file, clear your cache (`bin/magento cache:clean`), and do a hard reload of your browser, you should see two additional buttons (with broken images) in the Page Builder's stage header:
 
 ![Viewport icons](../images/viewport-skeletons-without-images.png)
 
@@ -224,14 +224,6 @@ Now if you save your `.less` file, transpile it, and reload of your browser, you
 ### Step 6: Add viewport forms
 
 Now that you've completed the stage setup for your new viewports, its time to use them to create a content type property that can accept different values for different  breakpoints.
-
-
-
-
-
-
-
-
 
 ## Summary
 

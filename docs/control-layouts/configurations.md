@@ -111,8 +111,7 @@ Your content type's custom configuration data might look like this:
 </var>
 ```
 
-In short, whenever you need breakpoint-specific data in your `widget.js` and `preview.js` components, you can define your own custom data in the `view.xml` file, where you can access it from an event handler for `stage:viewportChangeAfter`. To learn more about defining and using your own breakpoint data, see [Create responsive JavaScript](how-to-use-breakpoints.md#create-responsive-javascript).
-
+In short, whenever you need breakpoint-specific data in your `widget.js` and `preview.js` components, you can define your own custom data in the `view.xml` file, where you can access it from an event handler for `stage:viewportChangeAfter`.
 
 
 
