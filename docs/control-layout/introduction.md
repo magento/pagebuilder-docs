@@ -206,7 +206,7 @@ As previously noted, Page Builder's `page-builder.ts` file is the `$parent` View
 
 **`initViewports(config)`**—Sets the viewport property values from the `view.xml` config file. The `switcher.html` template (`viewportTemplate`) binds to these properties as previously described. This function also sets the default viewport for the stage. You can set the default viewport in the `view.xml`.
 
-**`toggleViewport(viewport)`**—Assigns CSS classes to the `viewportClasses` observable, based on the selected viewport name. The CSS classes assigned to `viewportClasses` control the stage width. This function also triggers the `stage:viewportChangeAfter` events. Content types can then change their layouts from event handlers. For more details, see [Stage events](#stage-events) at the end of this topic.
+**`toggleViewport(viewport)`**—Assigns CSS classes to the `viewportClasses` observable, based on the selected viewport name. The CSS classes assigned to `viewportClasses` control the stage width. This function also triggers the `stage:viewportChangeAfter` event. Content types can then change their layouts from event handlers. For more details, see [Stage event triggers](#stage-event-triggers) at the end of this topic.
 
 ## view.xml
 
@@ -296,9 +296,11 @@ Page Builder's entire `view.xml` configuration (minus the `media` node) is liste
 
 ## Viewport configurations
 
-Notice that the `mobile` breakpoint also has a `media` node query. Page Builder uses this query for content type properties that can be assigned to a viewport using viewport-aware form fields. So let's call the `media` node a **viewport media query**. This name will help us distinguish it from the `max-width` and `min-width` breakpoints, which are used for a different purpose, explained next.
+Notice that the `mobile` breakpoint has a `media` node query. Page Builder uses this query for content type properties that can be assigned to a viewport using _breakpoint-aware_ form fields. So let's call the `media` node a **viewport media query**. This name will help us distinguish it from the `max-width` and `min-width` breakpoints, which are used for a different purpose, described later in this topic.
 
 **Viewport configuration nodes**:
+
+The following nodes in the `view.xml` file provide configuration data for viewports:
 
 -  `label` - (string) Sets a viewport name or description for the tooltip.
 -  `stage` - (bool) If set to `true`, the viewport is added to the stage. If set to `false`, it is not, and users will not be able to set responsive properties on a content type for that viewport.
@@ -309,27 +311,29 @@ Notice that the `mobile` breakpoint also has a `media` node query. Page Builder 
 
 ## Breakpoint configurations
 
-Page Builder uses the `min-width` and `max-width` breakpoints to build media queries in JavaScript widgets for content types that require more than CSS to behave responsively. For example, the Products content type uses these breakpoints in its `widget.js` file to control the responsive behavior of its carousel control, described more below.
+Page Builder uses the `min-width` and `max-width` breakpoints to build `widget` media queries for content types that require more than CSS to behave responsively. For example, the Products content type uses these breakpoints in its `widget.js` file to control the responsive behavior of its carousel control, described later in this topic.
 
 **Breakpoint configuration nodes**:
+
+The following nodes from the `view.xml` file provide configuration data for breakpoints:
 
 -  `breakpoints` - Defines the parent object for all the named breakpoint objects in Page Builder.
 -  `desktop` and `mobile` - Defines the two breakpoint objects Page Builder uses for its default viewports.
 -  `conditions` - Contains the `min-width` and `max-width` breakpoints Page Builder uses to build media queries for JavaScript widgets and preview components.
 -  `max-width` and `min-width` - Define the breakpoint widths used to construct a media query in JavaScript. The default values are in pixels (`px`), but `em` units can also be used.
 
-### Custom configuration data
-
-A breakpoint configuration also includes custom breakpoint-specific data. Page Builder uses this particular custom data for its Products widget:
+Breakpoint configurations also include any custom nodes you add to defined breakpoint-specific data for your `preview` components and `widgets`. Page Builder uses these particular nodes to define the breakpoint-specific data it needs to make its Products `widget` responsive:
 
 -  `options` - Parent object that defines custom data used by the `Products` content type. You can define similar nodes with unique names for your own content type options.
 -  `products` - Parent object that defines the content type for the data. You can define similar nodes with unique names for your own content types.
 -  `default` - Parent object that groups `Products` data by appearance. You can define similar nodes with unique names for your own content types.
 -  `slidesToShow` - Property defined for a content type appearance. The Products content type uses the `slidesToShow` property within the `preview.js` and `widget.js` components to control responsive behavior in the Admin and the frontend. You can define similar properties for your own content types.
 
-As shown for `Products`, you can define your own custom data for a breakpoint, and then use that data to control content layout from your `widgets` or `preview` components.
+As shown for `Products`, you can define custom nodes for your own breakpoint-specific data. Then use that data to control your content type's layout on the Admin stage (using your `preview` component) and the storefront (using your `widget`).
 
-For example, let's say you want to create a content type that shows customer testimonials in a carousel. Like Products, you could use the [slick control](https://kenwheeler.github.io/slick/) to auto-loop the quotes across the screen. But you need a way to tell slick to increase or decrease the number of quotes to show on the screen for a given breakpoint. You can't do that with CSS media queries because slick is a contained control. You have to do it from your content type's `widget`. In this case, you could create a custom property for each breakpoint called `testimonialsToShow`. This property would define the ideal number of testimonials to show for a given breakpoint.
+### Custom data example
+
+Let's say you want to create a content type that shows customer testimonials in a carousel. Like Products, you could use the [slick control](https://kenwheeler.github.io/slick/) to auto-loop the quotes across the screen. But you need a way to tell slick to increase or decrease the number of quotes to show on the screen for a given breakpoint. You can't do that with CSS media queries because slick is a contained control. You have to do it from your content type's `widget`. In this case, you could create a custom property for each breakpoint called `testimonialsToShow`. This property would define the ideal number of testimonials to show for a given breakpoint.
 
 Your content type's custom configuration data might look like this:
 
@@ -443,8 +447,8 @@ Event handlers within Page Builder's content types (and yours) can then make res
 
 Understanding the elements of Page Builder's responsive framework and how it works is the first step toward making your content types responsive. To begin developing responsive content for Page Builder, we recommended the following sequence of topics:
 
-1. [Add viewports](./add-viewports.md)
-1. Use viewports (coming soon).
+1. [Add viewports to the stage](./add-viewports.md)
+1. Use viewports to create breakpoint-specific form properties (coming soon).
 1. [Add breakpoints](./add-breakpoints.md)
-1. [Use breakpoints](./use-breakpoints.md)
+1. [Use breakpoints for widgets](./use-breakpoints.md)
 1. [Change breakpoints and viewports](./change-breakpoints-viewports.md)
