@@ -22,7 +22,6 @@ This documentation describes how to do both.
 
 The following topics will help you get started with Page Builder development:
 
--  [Contributors Only - Install Page Builder](getting-started/install-pagebuilder.md)
--  [View Page Builder](getting-started/view-pagebuilder.md)
--  [Install Page Builder Examples](getting-started/install-pagebuilder-examples.md)
+-  [Contributors Only - Install Page Builder](contributors.md)
+-  [Install Page Builder Examples](pagebuilder-examples.md)
 -  [Check out the User Guide](https://docs.magento.com/m2/ee/user_guide/cms/page-builder.html)
