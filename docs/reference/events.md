@@ -443,8 +443,9 @@ events.on("stage:childFocusStop", function () {});
 
 ### `stage:viewportChangeAfter` {#stageviewportchangeafter}
 
-Triggered for viewport/breakpoint changes on the storefront.
-Listen for this event in your content type's `widget.js` to handle responsive changes in the storefront.
+Triggered for viewport changes in the Admin.
+Handle this event to control responsive changes to your content type from within your `widget` controls.
+Your `widget` should handle this event for cases where your content type is contained within a Block or Dynamic Block. In these cases, your content type's `widget` is loaded in the Admin, not your `preview` component.
 
 ```js
 events.on(`stage:viewportChangeAfter`, function (args) {});
@@ -459,8 +460,8 @@ events.on(`stage:viewportChangeAfter`, function (args) {});
 
 ### `stage:{{preview.contentType.stageId}}:viewportChangeAfter` {#stageidviewportchangeafter}
 
-Triggered for viewport/breakpoint changes in the Admin.
-Listen for this event in your content type's `preview.js` to handle responsive changes on the stage.
+Triggered for viewport changes in the Admin.
+Handle this event to control responsive changes to your content type from within your `preview` component.
 
 ```js
 events.on(`stage:${this.contentType.stageId}:viewportChangeAfter`, function (args) {});
