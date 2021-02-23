@@ -38,7 +38,7 @@ The stage width is controlled by the `.mobile-viewport` CSS (Less):
 
 In addition to providing the UI for frontend previews, viewports deliver one of Page Builder's best features: User-controlled property values that are breakpoint-specific. As a developer, you define the breakpoint for a viewport, and the end user defines the property value for that viewport. Without viewports, users can't set breakpoints on content properties.
 
-So let's define another term: viewport properties.
+So let's define another term: _viewport properties_.
 
 Viewport properties refer to the properties of a content type that can accept different values for different viewport breakpoints.
 
@@ -85,6 +85,23 @@ The following diagram shows how these files make viewports work.
 -  [Button icons](#button-icons)—SVG images for the viewport buttons.
 -  [Stage events](#stage-events)—The events triggered from the `toggleViewport()` function—[`stage:viewportChangeAfter`](../reference/events.md#stageviewportchangeafter) and [`stage:${this.id}:viewportChangeAfter`](../reference/events.md#stageidviewportchangeafter). Content type JavaScript components (`preview.ts` and `widget.js`) can listen for these events and make responsive changes as needed.
 
+## Viewport bindings and events
+
+The following diagram is similar to the previous one, but focuses more on how the viewport bindings and events work. The numbers are not meant to show a strict operational sequence. They simply call out the important actions and connections between the files.
+
+![Viewports overview](../images/pagebuilder-viewports-overview.svg)
+
+1. **Templates**—The `page-builder.html` template renders the `switcher.html` viewport template in the header section of the Page Builder stage.
+1. **Bindings**—The `switcher.html` binds to the properties and functions of its parent ViewModel: `page-builder.ts`.
+1. **Initialization**—The `page-builder.ts` ViewModel initializes its properties from the `view.xml` config file and sets the default viewport.
+1. **Button icons**—The button icons are referenced by URLs in the `view.xml` for display on the stage.
+1. **Toggle function**—The `toggleViewport()` function is bound to the button click event in the `switcher.html` template. This function does two things:
+
+   -  Sets the `viewportClasses` observable to a CSS class referenced by the selected viewport.
+   -  Triggers the `stage:viewportChangeAfter` events for listeners.
+
+1. **Events**—Content types handle the viewport events within their `widget.js` and `preview.ts` files.
+
 ## `page-builder.html`
 
 The `page-builder.html` template hosts the `switcher.html` template (`viewportTemplate`) in the Page Builder's header:
@@ -109,7 +126,6 @@ The `page-builder.html` template also includes the `viewportClasses` observable.
      css="Object.assign({'stage-full-screen': isFullScreen, 'stage-content-snapshot': isSnapshot},
      viewportClasses)"
 ```
-
 For more information about `viewportClasses`, see [Viewport properties](#viewport-properties) and [_mobile-viewports.less](#_mobile-viewportless), later in this topic.
 
 ## `switcher.html`
@@ -176,7 +192,7 @@ As previously noted, Page Builder's `page-builder.ts` file is the `$parent` View
 
 **`defaultViewport`**—Name of the viewport selected by default. This property is set in the `view.xml` configuration.
 
-**`viewportClasses`**—Observable object array of CSS classes used to change the stage width. The `toggleViewport()` appends the selected viewport name with `'-viewport'`, then assigns it as a CSS class to the`viewportClasses` observable. By default, Page Builder uses only one CSS class to set the stage width for its `mobile` viewport: `mobile-viewport`. The `desktop` viewport does not have a class because it does not set a stage width that is different from the stage's default width. See [_mobile-viewport.less](#_mobile-viewportless) for more information.
+**`viewportClasses`**—Observable object array of CSS classes used to change the stage width. The `toggleViewport()` appends the selected viewport name with `'-viewport'`, then assigns it as a CSS class to the`viewportClasses` observable. By default, Page Builder only sets one stage width for its `mobile` viewport, using the `.mobile-viewport` class. The `desktop` viewport does not have a class because it does not set a stage width that is different from the stage's default width. See [_mobile-viewport.less](#_mobile-viewportless) for more information.
 
 ### Viewport functions
 
@@ -184,9 +200,121 @@ As previously noted, Page Builder's `page-builder.ts` file is the `$parent` View
 
 **`toggleViewport(viewport)`**—Assigns CSS classes to the `viewportClasses` observable, based on the selected viewport name. The CSS classes assigned to `viewportClasses` control the stage width. This function also triggers the `stage:viewportChangeAfter` events. Content types can then change their layouts from event handlers. For more details, see [Stage events](#stage-events) at the end of this topic.
 
+## `view.xml`
+
+Page Builder's `view.xml` file provides viewport and breakpoint configurations for the `desktop` and `mobile` viewports. The file also provides breakpoint configurations only for the tablet and mobile-small breakpoints. The `desktop` and `mobile` configurations are shown here:
+
+```xml
+<!-- view.xml -->
+
+<vars module="Magento_PageBuilder">
+    <var name="breakpoints">
+        <var name="desktop">
+            <var name="label">Desktop</var>
+            <var name="stage">true</var>
+            <var name="default">true</var>
+            <var name="class">desktop-switcher</var>
+            <var name="icon">Magento_PageBuilder::css/images/switcher/switcher-desktop.svg</var>
+            <var name="conditions">
+                <var name="min-width">1024px</var>
+            </var>
+            <var name="options">
+                <var name="products">
+                    <var name="default">
+                        <var name="slidesToShow">5</var>
+                    </var>
+                </var>
+            </var>
+        </var>
+        <var name="mobile">
+            <var name="label">Mobile</var>
+            <var name="stage">true</var>
+            <var name="default">false</var>
+            <var name="class">mobile-switcher</var>
+            <var name="icon">Magento_PageBuilder::css/images/switcher/switcher-mobile.svg</var>
+            <var name="media">only screen and (max-width: 768px)</var>
+            <var name="conditions">
+                <var name="max-width">768px</var>
+                <var name="min-width">640px</var>
+            </var>
+            <var name="options">
+                <var name="products">
+                    <var name="default">
+                        <var name="slidesToShow">3</var>
+                    </var>
+                </var>
+            </var>
+        </var>
+    </var>
+</var>
+```
+
+## Viewport media queries
+
+Notice that the `mobile` breakpoint also has a `media` node query. Page Builder uses this query for content type properties that can be assigned to a viewport in the Admin, using viewport-aware form fields. So let's call the `media` node a **viewport media query**. This name will help us distinguish it from the `max-width` and `min-width` breakpoints, which are used for a different purpose, explained next.
+
+## JavaScript media queries
+
+Page Builder uses the `min-width` and `max-width` breakpoints to build media queries in JavaScript widgets for content types that require more than CSS to behave responsively. For example, the Products content type uses these breakpoints in its `widget.js` file to control the responsiveness of the slick carousel, described more below.
+
+### Core configuration data
+
+The properties that are common for all breakpoints:
+
+-  `Magento_PageBuilder` - Defines the module view configuration.
+-  `breakpoints` - Defines the parent object for all the named breakpoint objects in Page Builder.
+-  `desktop` and `mobile` - Defines the two breakpoint objects Page Builder uses for its default viewports.
+-  `label` - (string) Sets a viewport name or description for the tooltip.
+-  `stage` - (bool) If set to `true`, the viewport is added to the stage. If set to `false`, it is not, and users will not be able to set responsive properties on a content type for that viewport.
+-  `default` - (bool) Determines if the viewport is selected by default when the stage is loaded. Make sure at least one viewport has a `default` setting of `true`. Be aware that if you delete the `default` node entirely from the `desktop` viewport, Page Builder will always set it as the default, and ignore the `default` settings from all other viewports.
+-  `class` - (string) Defines a CSS class to style the viewport switcher button.
+-  `icon` - (string) - URL to the button image (SVG) location.
+-  `media` - (string) Defines the media query Page Builder uses to save breakpoint-specific properties for a viewport. Page Builder then adds the media query (and assigned properties) to its internal stylesheet on the page where the property values are applied at the breakpoints.
+-  `conditions` - Contains the `min-width` and `max-width` breakpoints Page Builder uses to build media queries for JavaScript widgets and preview components.
+-  `max-width` and `min-width` - Define the breakpoint widths used to construct a media query in JavaScript. The default values are in pixels (`px`), but `em` units can also be used.
+
+### Custom configuration data
+
+Page Builder defines the following configuration data for use in its Products widget.
+
+-  `options` - Parent object that defines custom data used by the `Products` content type. You can define similar nodes with unique names for your own content type options.
+-  `products` - Parent object that defines the content type for the data. You can define similar nodes with unique names for your own content types.
+-  `default` - Parent object that groups `Products` data by appearance. You can define similar nodes with unique names for your own content types.
+-  `slidesToShow` - Property defined for a content type appearance. The Products content type uses the `slidesToShow` property within the `preview.js` and `widget.js` components to control responsive behavior in the Admin and the frontend. You can define similar properties for your own content types.
+
+As shown for `Products`, you can define your own custom data for a breakpoint, and then use that data to control content layout from your widgets or preview components.
+
+For example, let's say you want to create a content type that shows customer testimonials in a carousel. Like Products, you could use the [slick control](https://kenwheeler.github.io/slick/) to auto-loop the quotes across the screen. But you need a way to tell slick to increase and decrease the number of quotes to show on the screen for a given breakpoint. You can't do that with CSS media queries because slick is a contained control. You have to do it from your JavaScript widget. In this case, you could create a custom property for each breakpoint called `testimonialsToShow`. This property would define the ideal number of testimonials to show for a given breakpoint.
+
+Your content type's custom configuration data might look like this:
+
+```xml
+<!-- view.xml -->
+
+<var name="mobile">
+   ...
+    <var name="options">
+        <var name="testimonials">
+            <var name="default">
+                <var name="testimonialsToShow">3</var>
+            </var>
+            <var name="with-images">
+                <var name="testimonialsToShow">2</var>
+            </var>
+        </var>
+    </var>
+</var>
+```
+
+In short, whenever you need breakpoint-specific data in your `widget.js` and `preview.js` components, you can define your own custom data in the `view.xml` file, where you can access it from an event handler for `stage:viewportChangeAfter`.
+
+Page Builder uses the `max-width` and `min-width` breakpoints (from the `conditions` node) to control the responsive behavior of content types using JavaScript `widgets`.
+
+The Products `widget.js` provides a good example of how this works. Within the widget, the `min-width` and `max-width` strings are passed to a [matchMedia() function](https://www.w3schools.com/jsref/met_win_matchmedia.asp). This method creates a list of media queries created from the `min-width` and `max-width` values from all the breakpoints defined in the `view.xml` file. When the browser width matches one of the query breakpoints, `matchMedia()` invokes a callback function on the widget. The widget can then respond to the breakpoint by calling functions and changing configurations on other controls like the [slick carousel](https://kenwheeler.github.io/slick/).
+
 ## `_mobile-viewport.less`
 
-The `_mobile-viewport.less` file includes the CSS class that **changes the stage width** to the width defined for the `mobile` breakpoint in `view.xml`. As mentioned in [Viewport properties](#viewport-properties), Page Builder assigns this class to the `viewportClasses` observable after the mobile viewport button is clicked. When this happens, the stage width changes to the width in the `.mobile-viewport` class. The name you give this class must follow this naming convention:
+The `_mobile-viewport.less` file includes the CSS class that **changes the stage width** to match the widths defined for the `mobile` breakpoint in the `view.xml` file. As mentioned in [Viewport properties](#viewport-properties), Page Builder assigns this class to the `viewportClasses` observable after the mobile viewport button is clicked. When this happens, the stage width changes to the width in the `.mobile-viewport` class. For new viewports, the class name that controls the stage width must follow this naming convention:
 
 ```terminal
 .[breakpoint-name] + '-viewport'
@@ -265,23 +393,6 @@ public toggleViewport(viewport: string) {
 ```
 
 Event handlers within Page Builder's content types (and yours) can then make responsive changes based on the selected `viewport` or `previousViewport`. To learn more about how to use these events, see [Create responsive JavaScript](use-viewports.md#create-responsive-javascript).
-
-## Viewport bindings and events
-
-The following diagram is similar to the previous one, but focuses more on how the viewport bindings and events work. The numbers are not meant to show a strict operational sequence. They simply call out the important actions and connections between the files.
-
-![Viewports overview](../images/pagebuilder-viewports-overview.svg)
-
-1. **Templates**—The `page-builder.html` template renders the `switcher.html` viewport template in the header section of the Page Builder stage.
-1. **Bindings**—The `switcher.html` binds to the properties and functions of its parent ViewModel: `page-builder.ts`.
-1. **Initialization**—The `page-builder.ts` ViewModel initializes its properties from the `view.xml` config file and sets the default viewport.
-1. **Button icons**—The button icons are referenced by URLs in the `view.xml` for display on the stage.
-1. **Toggle function**—The `toggleViewport()` function is bound to the button click event in the `switcher.html` template. This function does two things:
-
-   -  Sets the `viewportClasses` observable to a CSS class referenced by the selected viewport.
-   -  Triggers the `stage:viewportChangeAfter` events for listeners.
-
-1. **Events**—Content types handle the viewport events within their `widget.js` and `preview.ts` files.
 
 ## Summary
 

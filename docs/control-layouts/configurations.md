@@ -51,7 +51,6 @@ Page Builder's `view.xml` file provides viewport and breakpoint configurations f
 </var>
 ```
 
-
 ## Viewport media queries
 
 Notice that the `mobile` breakpoint also has a `media` node query. Page Builder uses this query for content type properties that can be assigned to a viewport in the Admin, using viewport-aware form fields. So let's call the `media` node a **viewport media query**. This name will help us distinguish it from the `max-width` and `min-width` breakpoints, which are used for a different purpose, explained next.
@@ -59,8 +58,6 @@ Notice that the `mobile` breakpoint also has a `media` node query. Page Builder 
 ## JavaScript media queries
 
 Page Builder uses the `min-width` and `max-width` breakpoints to build media queries in JavaScript widgets for content types that require more than CSS to behave responsively. For example, the Products content type uses these breakpoints in its `widget.js` file to control the responsiveness of the slick carousel, described more below.
-
-
 
 ### Core configuration data
 
@@ -113,13 +110,6 @@ Your content type's custom configuration data might look like this:
 
 In short, whenever you need breakpoint-specific data in your `widget.js` and `preview.js` components, you can define your own custom data in the `view.xml` file, where you can access it from an event handler for `stage:viewportChangeAfter`.
 
-
-
 Page Builder uses the `max-width` and `min-width` breakpoints (from the `conditions` node) to control the responsive behavior of content types using JavaScript `widgets`.
 
 The Products `widget.js` provides a good example of how this works. Within the widget, the `min-width` and `max-width` strings are passed to a [matchMedia() function](https://www.w3schools.com/jsref/met_win_matchmedia.asp). This method creates a list of media queries created from the `min-width` and `max-width` values from all the breakpoints defined in the `view.xml` file. When the browser width matches one of the query breakpoints, `matchMedia()` invokes a callback function on the widget. The widget can then respond to the breakpoint by calling functions and changing configurations on other controls like the [slick carousel](https://kenwheeler.github.io/slick/).
-
-
-
-
-After a user clicks one of these viewport buttons, Page Builder assigns the matching viewport class to the `viewportClasses` observable, which changes the `.pagebuilder-canvas` width for the stage.
