@@ -1,4 +1,4 @@
-# Introduction to viewports
+# Introduction to viewports for responsive design
 
 What's a viewport? It's a window in a spacecraft. But that's not important right now. For development, we know a viewport refers to the size of the window (or device) used to view content. But in Page Builder, the term has more specific meanings.
 
@@ -331,7 +331,7 @@ Breakpoint configurations also include any custom nodes you add to defined break
 
 As shown for `Products`, you can define custom nodes for your own breakpoint-specific data. Then use that data to control your content type's layout on the Admin stage (using your `preview` component) and the storefront (using your `widget`).
 
-### Custom data example
+### Using custom data
 
 Let's say you want to create a content type that shows customer testimonials in a carousel. Like Products, you could use the [slick control](https://kenwheeler.github.io/slick/) to auto-loop the quotes across the screen. But you need a way to tell slick to increase or decrease the number of quotes to show on the screen for a given breakpoint. You can't do that with CSS media queries because slick is a contained control. You have to do it from your content type's `widget`. In this case, you could create a custom property for each breakpoint called `testimonialsToShow`. This property would define the ideal number of testimonials to show for a given breakpoint.
 
@@ -355,7 +355,7 @@ Your content type's custom configuration data might look like this:
 </var>
 ```
 
-In short, whenever you need breakpoint-specific data in your `widget.js` and `preview.js` components, you can define your own custom data for a breakpoint in your `view.xml` file.
+In short, whenever you need breakpoint-specific data in your `widget.js` and `preview.js` components, you can define your own custom data for a breakpoint in your `view.xml` file. See [Use breakpoints for widgets](./use-breakpoints.md) for details.
 
 ## _mobile-viewport.less
 
