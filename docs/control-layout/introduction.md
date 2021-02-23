@@ -1,6 +1,4 @@
-# Responsive content types
-
-## Introduction to viewports
+# Introduction to viewports
 
 What's a viewport? It's a window in a spacecraft. But that's not important right now. For development, we know a viewport refers to the size of the window (or device) used to view content. But in Page Builder, the term has more specific meanings.
 
