@@ -1,6 +1,8 @@
-# Change breakpoints
+# Change breakpoints and viewports
 
-By default, Page Builder defines four breakpoints in the `Magento/PageBuilder/etc/view.xml` file: `desktop`, `tablet`, `mobile`, and `mobile-small`. The default values in XML are shown here:
+Changing breakpoints and viewports is about changing Page Builder's default `min-width` and `max-width` values to match your responsive design needs.
+
+The following list shows Page Builder's default `min-width` and `max-width` values for breakpoints and viewports:
 
 **desktop**
 
@@ -21,9 +23,14 @@ By default, Page Builder defines four breakpoints in the `Magento/PageBuilder/et
 
 -  `<var name="max-width">640px</var>`
 
+By default, Page Builder defines only one viewport `media` query for the `mobile` breakpoint. But you may find that your instance of Page Builder has a viewport `media` query defined for each breakpoint.
+
+{:.bs-callout-info}
+Like the `mobile` breakpoint, the `desktop` breakpoint also defines viewport configurations, but it does not define a `media` query. The `desktop` breakpoint serves as the default viewport (or fallback) used to store form field properties that are not defined with a specific breakpoint like `mobile`.
+
 ## Steps for changing breakpoints
 
-You can change Page Builder breakpoints using a Page Builder module or an Admin theme. The following steps apply to both methods.
+You can change Page Builder's existing breakpoints using an Admin theme or module. The following steps apply to both.
 
 1. [Add an overriding view.xml file]()
 1. [Change the min-width and max-width]()
@@ -31,7 +38,7 @@ You can change Page Builder breakpoints using a Page Builder module or an Admin 
 1. [Change your frontend media queries]() (as needed)
 1. [Change the viewport stage CSS]() (as needed)
 
-You can skip steps 3-5 if you are changing or adding new breakpoints without viewport configurations. These include the `tablet` and `mobile-small` breakpoints. Otherwise all these steps are required to ensure that breakpoint and viewport widths are the same.
+You can skip steps 3-5 if you are changing or adding new breakpoints without viewport configurations. These include the `tablet` and `mobile-small` breakpoints. Otherwise all these steps are required to ensure that the breakpoint and viewport widths are the same.
 
 ### Step 1: Create an overriding view.xml file
 
@@ -133,41 +140,6 @@ When changing breakpoints that have viewport configurations, you must also chang
 }
 ```
 
-## Add new breakpoints
-
-Adding new breakpoints is as easy as copying and pasting an existing breakpoint to a `view.xml` file in your Admin theme or module, then changing its `min-width` and `max-width` as needed.
-
-**To create a new breakpoint with a `max-width` of `320px`:**
-
-1. Copy Page Builder's `mobile-small` breakpoint from `Magento/PageBuilder/etc/view.xml`.
-1. Paste it into your `view.xml` file.
-1. Change its `name` and `max-width` property.
-1. Change the display `options` for the `products` content type as needed.
-
-The `options.products` nodes control the number of products displayed for the breakpoint. In the following example, we chose to show only one product at a time (`<var name="slidesToShow">1</var>`) for both appearances (`default` and `continuous`):
-
-```xml
-<!-- Your view.xml file -->
-
-<var name="mobile-tiny">
-    <var name="conditions">
-        <var name="max-width">320px</var>
-    </var>
-    <var name="options">
-        <var name="products">
-            <var name="default">
-                <var name="slidesToShow">1</var>
-            </var>
-            <var name="continuous">
-                <var name="slidesToShow">1</var>
-            </var>
-        </var>
-    </var>
-</var>
-```
-
-With this setting, customers will only see one product at a time when the viewport is `320px` or less.
-
 ## Summary
 
-Adding and changing breakpoint widths in Page Builder is pretty simple. You just need to match your breakpoint widths (`max-width` and `min-width`) to the viewport `media` query, your frontend media queries, and the viewport stage width.
+Changing breakpoint and viewport widths in Page Builder is pretty simple. You just need to match all your breakpoint width changes to their viewport `media` queries, frontend media queries, and the viewport stage widths.

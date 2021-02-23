@@ -1,6 +1,6 @@
 # Add viewports
 
-By default, Page Builder defines four responsive breakpoints, but only uses two of them for stage viewports: `desktop` and `mobile`. The other two breakpoints are `tablet` and `mobile-small`. This topic shows you how to add viewport previews to these breakpoints and customize them as needed.
+By default, Page Builder defines four responsive breakpoints, but only uses two of them for viewports: `desktop` and `mobile`. The other two breakpoints are `tablet` and `mobile-small`. This topic shows you how to add viewport previews to these breakpoints and customize them as needed.
 
 ![Add viewports illustration](../images/pagebuilder-adding-viewports.svg)
 
@@ -220,10 +220,6 @@ In our theme example, we define our viewport CSS classes in our `_viewport-stage
 The `width` values set here should match the `max-width` values configured for the `media` nodes in `view.xml`. If they don't, the end user will see a stage preview that differs from what customers see on the storefront.
 
 Now if you save your `.less` file, transpile it, and reload of your browser, you should see the stage canvas changes widths to match the widths set in your viewport classes.
-
-### Step 6: Add viewport forms
-
-Now that you've completed the stage setup for your new viewports, its time to use them to create a content type property that can accept different values for different  breakpoints.
 
 ## Summary
 
