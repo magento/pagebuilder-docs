@@ -1,6 +1,6 @@
 # How content migration works
 
-Each content type has a corresponding renderer to convert the old BlueFoot JSON structure into the new PageBuilder format. The Page Builder format uses HTML to store all data associated with the content type within the DOM tree through attributes, styles, and child nodes. You can find out more information in our [Page Builder Architecture](<https://devdocs.magento.com/page-builder/docs/reference/architecture.html>) article.
+Each content type has a corresponding renderer to convert the old BlueFoot JSON structure into the new PageBuilder format. The Page Builder format uses HTML to store all data associated with the content type within the DOM tree through attributes, styles, and child nodes. See [Page Builder architecture](../architecture/overview.md) and [Configurations](../architecture/configurations.md) for more information.
 
 In contrast to BlueFoot, the HTML structure we generate contains all the information needed to render the content type, this HTML string is committed directly into the database in place of the BlueFoot string.
 
@@ -31,9 +31,9 @@ We have a custom error handler along with logic to ensure that any issue content
 </div>
 ```
 
-The content is placed within a HTML content type and the original JSON is stored within a similar HTML comment as the BlueFoot data. This ensures preservation of the content to be migrated at a later point. HTML code has it's contents encoded, those the greater than and less than symbols being encoded.
+The content is placed within an HTML content type. The original JSON is stored within a similar HTML comment as the BlueFoot data. This ensures preservation of the content to be migrated at a later point. HTML code has its contents encoded, those the greater than and less than symbols being encoded.
 
-The usage of the HTML code content type allows for other aspects of the page to be edited within Page Builder whilst allowing this special content to be stored until the migration tools are available.
+The usage of the HTML Code content type allows for other aspects of the page to be edited within Page Builder, while allowing this special content to be stored until the migration tools are available.
 
 ## Renderer 
 
@@ -172,7 +172,7 @@ The significant parts of a content type renderer are as follows:
 
 #### Constructor dependency injection
 
-First, we use [dependency injection](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/depend-inj.html) to include our dependencies. These are all aspects of Data Migration that aid in retrieving and formatting data along with rendering DOM elements. We go into these in more detail below.
+First, we use [dependency injection]({{ site.baseurl }}/guides/v2.3/extension-dev-guide/depend-inj.html) to include our dependencies. These are all aspects of Data Migration that aid in retrieving and formatting data along with rendering DOM elements. We go into these in more detail below.
 
 ```php
     public function __construct(
@@ -261,7 +261,7 @@ In this instance, the defaults are very simple because there's only a single DOM
 
 In BlueFoot, the majority of the content is persisted into the database using the entity-attribute-value (EAV) format, which means the content is not available in the JSON from `$itemData`.
 
-Some content types do not persist content to the database, such as the row and column. However for all content types that require it, you must define a virtual type declaring which EAV attributes should be loaded for the content type:
+Some content types do not persist content to the database, such as the row and column. However, for all content types that require it, you must define a virtual type declaring which EAV attributes should be loaded for the content type:
 
 `Magento\PageBuilder\Setup\DataConverter\ConfigurableEavAttributeLoader` which in turn implements our `EavAttributeLoaderInterface`.
 
@@ -280,7 +280,7 @@ Some content types do not persist content to the database, such as the row and c
 
 In this example, the EAV loader for Heading is assigned the `title` and `heading_type` attributes, this ensures the EAV attribute loader will retrieve these values within your renderer. Failing to include an attribute here will result in that attribute not being loaded.
 
-We then use [dependency injection](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/depend-inj.html) to inject our virtual configurable EAV loader into the Heading renderer.
+We then use [dependency injection]({{ site.baseurl }}/guides/v2.3/extension-dev-guide/depend-inj.html) to inject our virtual configurable EAV loader into the Heading renderer.
 
 **Example `di.xml` entry for Heading renderer:**
 
@@ -322,7 +322,7 @@ The migration tool has a preference within it's `di.xml` file that aligns our in
 
 #### Extracting Styles
 
-The first method we provide is to help to extract styles and generate the associated CSS string from BlueFoot EAV or form data.
+The first method we provide helps extract styles and generates the associated CSS strings from BlueFoot EAV or form data.
 
 ```php
 public function extractStyle(array $formData, array $defaults = [], array $pluck = []) : string; 

@@ -1,6 +1,6 @@
 # Run the migration module
 
-{: .bs-callout .bs-callout-warning }
+{:.bs-callout-warning }
 We strongly recommend creating database backups before running the migration module. Once you migrate your data, you can't revert it if you don't like the results. You can only rollback to one of your backup databases. During development, you will probably need to rerun your migration more than once to ensure that your BlueFoot content migrates to Page Builder as you intend. So keep those database backups handy.
 
 You can run the migration module in one of two ways:

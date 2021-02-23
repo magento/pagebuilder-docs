@@ -18,7 +18,7 @@ This topic assumes you have a functioning Magento 2 module. If not, create a bas
 Here are the basic steps for migrating BlueFoot content from other database tables: 
 
 1. Add the following directory structure within your module: `Setup/Patch/Data`. 
-2. Create a [data patch class](<https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/data-patches.html>) for your migration. Example: `MigrateBlogToPageBuilder.php`. Magento executes this class when installing your module.
+2. Create a [data patch class]({{ site.baseurl }}/guides/v2.4/extension-dev-guide/declarative-schema/data-patches.html) for your migration. Example: `MigrateBlogToPageBuilder.php`. Magento executes this class when installing your module.
 3. Implement the `Magento\Framework\Setup\Patch\DataPatchInterface`. 
 4. Define your migration logic within the `apply()` function.
 

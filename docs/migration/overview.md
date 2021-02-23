@@ -15,11 +15,11 @@ The migration tool will migrate content from BlueFoot blocks, as follows:
 
 | BlueFoot Blocks | Content Type Renderer | Page Builder Content Type |
 | :-------------- | :-------------------- | :------------------------ |
-| _Accordion_       | Accordion.php         | HTML Code               |
+| _Accordion_       | Accordion.php         | **HTML Code**               |
 | Advanced Slider | AdvancedSlider.php    | Slider                    |
-| _Anchor_          | Anchor.php            | HTML Code               |
+| _Anchor_          | Anchor.php            | **HTML Code**               |
 | Buttons         | Buttons.php           | Buttons                   |
-| _Code_            | Code.php              | Text                    |
+| _Code_            | Code.php              | **Text**                    |
 | Column          | Column.php            | Column                    |
 | Driver          | Driver.php            | Banner                    |
 | HTML            | Html.php              | HTML Code                 |
@@ -27,11 +27,11 @@ The migration tool will migrate content from BlueFoot blocks, as follows:
 | Horizontal Rule | Divider.php           | Divider                   |
 | Image           | Image.php             | Image                     |
 | Map             | Map.php               | Map                       |
-| _Newsletter_      | Newsletter.php        | HTML Code               |
+| _Newsletter_      | Newsletter.php        | **HTML Code**               |
 | Product         | Product.php           | Products                  |
 | Product List    | ProductionList.php    | Products                  |
 | Row             | Row.php               | Row                       |
-| _Search_          | Search.php            | HTML Code               |
+| _Search_          | Search.php            | **HTML Code**               |
 | Slider          | AdvancedSlider.php    | Slider                    |
 | Static Block    | Block.php             | Block                     |
 | Tabs            | Tabs.php              | Tabs                      |

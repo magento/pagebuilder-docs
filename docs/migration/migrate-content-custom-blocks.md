@@ -12,7 +12,7 @@ This topic assumes you have taken the following actions:
 
 - Familiarized yourself with our [content type renderers](how-content-migration-works.md).
 
-- Familiarized yourself with the [module lifecycle](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/prepare/lifecycle.html).
+- Familiarized yourself with the [module lifecycle]({{ site.baseurl }}/guides/v2.4/extension-dev-guide/prepare/lifecycle.html).
 
 - Re-implemented your custom BlueFoot block as a new Page Builder content type.
 
@@ -20,12 +20,12 @@ This topic assumes you have taken the following actions:
 
 ## Step 1: Increase version
 
-Increase your module's `version` in the [`composer.json`](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/build/composer-integration.html) file.
+Increase your module's `version` in the [`composer.json`]({{ site.baseurl }}/guides/v2.4/extension-dev-guide/build/composer-integration.html) file.
 
 This causes Magento to run your module's setup scripts during the migration process.
 
-{: .bs-callout .bs-callout-info }
-Follow Magento's [versioning policy](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/versioning/) when deciding the value of your module's next version.
+{:.bs-callout-info }
+Follow Magento's [versioning policy]({{ site.baseurl }}/guides/v2.4/extension-dev-guide/versioning/) when deciding the value of your module's next version.
 
 ## Step 2: Add Page Builder dependency
 
@@ -107,7 +107,7 @@ bin/magento setup:upgrade
 ```
 
 ## Step 6: Add a new setup patch
-Create a new data patch inline with our [declarative schema documentation](<https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/data-patches.html>). For this migration, we first declare the following dependencies in the constructor:
+Create a new data patch inline with our [declarative schema documentation]({{ site.baseurl }}/guides/v2.3/extension-dev-guide/declarative-schema/data-patches.html). For this migration, we first declare the following dependencies in the constructor:
 
 - `Magento\Framework\EntityManager\MetadataPool`
 - `Magento\Framework\DB\AggregatedFieldDataConverter`
