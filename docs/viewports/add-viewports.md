@@ -73,9 +73,9 @@ First, delete everything except the `tablet` and `mobile-small` breakpoints. Whe
 </view>
 ```
 
-What's left at this point is all [breakpoint configuration data](), explained elsewhere in the documentation.
+What's left at this point is the `options` element that provides [breakpoint custom data](../viewports/introduction.md#breakpoint-custom-data) to the Products content type.
 
-The Products content type uses this data in its `widget.js` file to make the [slick carousel]() responsive. You will use this data in the [How to use breakpoints]() topic. But not here. So delete the breakpoint data. When you finish, your `view.xml` file should look like this:
+Products uses this data in its `widget.js` file to make the [slick carousel](https://kenwheeler.github.io/slick/) responsive. You will use this data in the [Use breakpoints](./use-breakpoints.md) topic. But not here. So delete the breakpoint data. When you finish, your `view.xml` file should look like this:
 
 ```xml
 <?xml version="1.0"?>
@@ -121,7 +121,7 @@ In our example, we added the following viewport data to the `table` and `mobile-
 </view>
 ```
 
-Details for these viewport nodes are in the [Viewport configuration data]() topic, but let's quickly summarize them:
+Details for these viewport elements are in the [Viewport configurations section](./introduction.md#viewport-configurations), but let's quickly summarize them:
 
 -  `label` — for adding the viewport name to the tooltip.
 -  `stage` — for adding or removing the viewport from the stage.
