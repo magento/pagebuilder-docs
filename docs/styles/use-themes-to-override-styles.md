@@ -22,7 +22,7 @@ app/design/adminhtml/VendorName/ThemeName/web/css/source/content-type/<specific 
 app/design/adminhtml/VendorName/ThemeName/web/css/source/_module.less
 ```
 
-![Page Builder admin theme files](../../images/pagebuilder-admin-theme-files.svg)
+![Page Builder admin theme files](../images/pagebuilder-admin-theme-files.svg)
 
 _Admin theme directory structure_
 
@@ -98,7 +98,7 @@ app/design/frontend/VendorName/ThemeName/web/css/source/content-type/<specific o
 app/design/frontend/VendorName/ThemeName/web/css/source/_extend.less
 ```
 
-![Page Builder frontend theme files](../../images/pagebuilder-frontend-theme-files.svg)
+![Page Builder frontend theme files](../images/pagebuilder-frontend-theme-files.svg)
 
 _Frontend theme directory structure_
 
@@ -119,7 +119,7 @@ The following instructions are here as a **reminder** to apply your frontend the
 
 Navigate to **Content** > **Design** > **Configuration** and edit the store view where you can apply your frontend theme as the default theme:
 
-![Set default theme on store view](../../images/theme-default-setting-admin.svg)
+![Set default theme on store view](../images/theme-default-setting-admin.svg)
 
 _Set default frontend theme for store view_
 
@@ -129,7 +129,7 @@ During development, it's easy to apply your frontend theme to a single page for 
 
 On any CMS page, scroll to the Design section at the bottom, and select your theme from the New Theme selector.
 
-![Set theme for page](../../images/theme-page-setting-admin.svg)
+![Set theme for page](../images/theme-page-setting-admin.svg)
 
 _Set frontend theme for page_
 

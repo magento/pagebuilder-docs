@@ -13,11 +13,11 @@ We don't recommend this practice for anything other than a quick way to experime
 
 1. Open the form editor for the content type.
 
-   ![CSS selector override pattern](../../images/pagebuilder-html-code-editor.svg)
+   ![CSS selector override pattern](../images/pagebuilder-html-code-editor.svg)
 
 1. Add your overriding CSS styles to a `<style>` block in the WYSIWYG editor.
 
-   ![CSS selector override pattern](../../images/pagebuilder-html-code-wysiwyg.svg)
+   ![CSS selector override pattern](../images/pagebuilder-html-code-wysiwyg.svg)
 
     ```html
     <style>
