@@ -201,7 +201,7 @@ The Button Item content type shows multiple elements with various attributes.
 {:.bs-callout-info}
 We automatically add a `data-element` attribute to any HTML element in your templates that binds to the configuration `element` by name. This attribute enables Page Builder to read the data for a specific element. To ensure this works, you must include the Knockout bindings on the HTML elements in your template that require the properties you set for the corresponding element in the configuration. Otherwise you will not see your property configurations rendered in the DOM.
 
-### `style`, `property` and `attribute` elements
+### `style`, `property`, and `attribute` elements
 
 These elements share a common interface and can be configured using the following attributes.
 

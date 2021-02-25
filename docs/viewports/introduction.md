@@ -46,11 +46,15 @@ Page Builder defines the **Minimum Height** form field as a viewport property fo
 
 ## How viewport properties work
 
-First, the user clicks the `mobile` viewport button. This changes the stage width accordingly. The user then opens a form for a content type that defines a viewport property field. The user adds a value to the field and clicks the Save button on the form. Page Builder saves that value _with_ the viewport.
+First, the user clicks the `mobile` viewport button. This changes the stage width accordingly. The user then opens a form for a content type that defines a viewport property field. The user adds a value to the field and clicks the Save button on the form. Page Builder saves that value _with_ the viewport, which connects it to the breakpoint.
 
-Later, when rendering content for the frontend, Page Builder starts generating styles for the content types on the page. The viewport properties that were saved with a viewport (in the form) are added to the media query from the `media` node in the `view.xml` file.
+Later, when rendering content for the frontend, Page Builder starts generating styles for the content types on the page. When Page Builder gets to the viewport properties it adds, it adds them to a media query on the frontend that is defined in the viewport `media` node of the `view.xml` configuration.
 
-Finally, Page Builder adds all its content type styles — for both viewport properties and common properties — to an internal stylesheet on the page. So when the viewport of a device matches the media queries assigned to the content properties, responsive changes happen.
+Finally, Page Builder adds all its content type styles — for both viewport properties and common properties — to an internal stylesheet on the page (see [Internal stylesheets](../styles/introduction.md#internal-stylesheets)). So when the viewport of a device matches the media queries assigned to the viewport properties, those properties change accordingly.
+
+If this is all a bit confusing right now, don't worry. These things will become clear later in this topic as you learn about the parts of the viewport architecture.
+
+**The main takeaway**: Viewports are what make breakpoint-specific properties possible.
 
 ## How viewports work
 
@@ -67,7 +71,7 @@ To access the linked source code for each file listed here, you must have access
 -  [Magento/PageBuilder/view/adminhtml/web/css/images/switcher/switcher-desktop.svg](https://github.com/magento/magento2-page-builder/blob/develop/app/code/Magento/PageBuilder/view/adminhtml/web/css/images/switcher/switcher-desktop.svg)
 -  [Magento/PageBuilder/view/adminhtml/web/css/images/switcher/switcher-mobile.svg](https://github.com/magento/magento2-page-builder/blob/develop/app/code/Magento/PageBuilder/view/adminhtml/web/css/images/switcher/switcher-mobile.svg)
 
-The following diagram shows how these files make viewports work.
+The following diagram shows how these files interact to make viewports work.
 
 ![Viewports overview](../images/pagebuilder-viewport-files.svg)
 
