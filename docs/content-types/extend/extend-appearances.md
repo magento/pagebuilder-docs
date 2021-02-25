@@ -1,6 +1,6 @@
 ## Extend an appearance
 
-In this topic, you will learn how to add a new user-defined property to an existing content type. Specifically, we will add a `max-height` property to all the Banner appearances. Why? Because our customers [told us to, drill sargeant](https://www.youtube.com/watch?v=U6VPEcj77v8).
+In this topic, you will learn how to add a new user-defined property to an existing content type. Specifically, we will add a `max-height` property to all the Banner appearances. Why? Because our customers [told us to, drill sergeant](https://www.youtube.com/watch?v=U6VPEcj77v8).
 
 **Scenario:** Your customers use Banners to feature products on their site. However, they don't like the fact that the Banner's height grows with the content they enter. So they want you to add a `max-height` field to all the Banner appearances. That way they can limit all their banners to the same height, and have their extra content scroll as needed.
 
