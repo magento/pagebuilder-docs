@@ -30,6 +30,8 @@ The following table lists the Page Builder events you can bind to and handle wit
 | [contentType:redrawAfter](#contenttyperedrawafter)                  | [stage:{{preview.contentType.stageId}}:readyAfter](#stageidreadyafter)                           |
 | [contentType:removeAfter](#contenttyperemoveafter)                  | [stage:{{preview.contentType.stageId}}:renderAfter](#stagepreviewrenderafter)                    |
 | [contentType:renderAfter](#contenttyperenderafter)                  | [stage:{{preview.contentType.stageId}}:fullScreenModeChangeAfter](#stageidtogglefullscreen)      |
+| [contentType:renderAfter](#contenttyperenderafter)                  | [stage:{{preview.contentType.stageId}}:viewportChangeAfter](#stageidviewportchangeafter)         |
+| [contentType:renderAfter](#contenttyperenderafter)                  | [stage:viewportChangeAfter](#stageviewportchangeafter)                                           |
 |                                                                     | [stage:updateAfter](#stageupdateafter)                                                           |
 |                                                                     |                                                                                                  |
 | **Column Events**                                                   | **Preview Events**                                                                               |
@@ -443,9 +445,9 @@ events.on("stage:childFocusStop", function () {});
 
 ### `stage:viewportChangeAfter` {#stageviewportchangeafter}
 
-Triggered for viewport changes in the Admin.
-Handle this event to control responsive changes to your content type from within your `widget` controls.
-Your `widget` should handle this event for cases where your content type is contained within a Block or Dynamic Block. In these cases, your content type's `widget` is loaded in the Admin, not your `preview` component.
+Triggered on viewport changes in the Admin stage.
+Handle this event to control in your content type's widget (`widget.js`) for cases in which your content type is rendered on the Admin stage from within a Block or Dynamic Block.
+In these cases, Page Builder loads your `widget`, not the `preview` component, to the Admin stage. This means that your widget as to make changes to your content type when users change the viewports on the stage.
 
 ```js
 events.on(`stage:viewportChangeAfter`, function (args) {});
@@ -460,7 +462,7 @@ events.on(`stage:viewportChangeAfter`, function (args) {});
 
 ### `stage:{{preview.contentType.stageId}}:viewportChangeAfter` {#stageidviewportchangeafter}
 
-Triggered for viewport changes in the Admin.
+Triggered on viewport changes in the Admin stage.
 Handle this event to control responsive changes to your content type from within your `preview` component.
 
 ```js
