@@ -6,7 +6,7 @@ When you create a Page Builder module by either extending a Page Builder content
 #html-body [data-content-type='my-custom'].my-class // Specificity = 120.
 ```
 
-![CSS selector override pattern](../../images/pagebuilder-style-override-pattern-class.svg)
+![CSS selector override pattern](../images/pagebuilder-style-override-pattern-class.svg)
 
 ## The great benefit
 
@@ -20,7 +20,7 @@ The cascade effect makes your module styles act as "default" styles. And the sam
 
 The steps for overriding Page Builder styles in the Admin and on the storefront are the same. The following diagram shows the numbered steps shared between the development `areas` and module types.
 
-![Admin styles in modules](../../images/pagebuilder-admin-frontend-module-files.svg)
+![Admin styles in modules](../images/pagebuilder-admin-frontend-module-files.svg)
 
 The steps for overriding styles in your modules are similar to those introduced for [overriding Admin themes](use-themes-to-override-styles.md).
 ### Step 1: Create `adminhtml` and `frontend` directories

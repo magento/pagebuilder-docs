@@ -8,7 +8,7 @@ To override the internal CSS styles that Page Builder applies to content types, 
 #html-body  +  [data-pb-style=W3M3WHX]
 ```
 
-![Default style selector](../../images/pagebuilder-style-selector.svg)
+![Default style selector](../images/pagebuilder-style-selector.svg)
 
 _Page Builder default selector pattern_
 
@@ -27,7 +27,7 @@ To override Page Builder's styles, always use the following CSS selector pattern
 #html-body  +  [content-type-attribute]  +  any additional selector
 ```
 
-![CSS selector override pattern](../../images/pagebuilder-style-override-pattern-class.svg)
+![CSS selector override pattern](../images/pagebuilder-style-override-pattern-class.svg)
 
 _CSS selector override pattern_
 
@@ -45,7 +45,7 @@ If you want to override just _one_ of the HTML heading elements (`h1 - h6`), you
 #html-body h1[data-content-type="heading"] {}
 ```
 
-![Page Builder style selector](../../images/pagebuilder-style-override-element-selector.svg)
+![Page Builder style selector](../images/pagebuilder-style-override-element-selector.svg)
 
 Again, you can override Page Builder's default styles with `any additional selector`. This keeps your CSS simple and the specificity low.
 
@@ -81,7 +81,9 @@ In the following examples, each combination of selectors targets different DOM e
 
 ## Override content using CSS Classes
 
-So far, we've only used IDs, attributes, and elements to override Page Builder's CSS. But you can also use CSS classes to fill the `any additional selector` slot of the pattern. To override a content type using one or more custom CSS classes:
+So far, we've only used IDs, attributes, and elements to override Page Builder's CSS. But you can also use CSS classes as your overriding selector in the **additional selector** slot. 
+
+**To override a content type using one or more custom CSS classes**:
 
 1. Create the CSS selector.
 
@@ -95,7 +97,7 @@ If your CSS class name is `.theme-headings`, the CSS selector you define in your
 #html-body [data-content-type="heading"].theme-headings {}
 ```
 
-![Page Builder style selector](../../images/pagebuilder-style-override-selector.svg)
+![Page Builder style selector](../images/pagebuilder-style-override-selector.svg)
 
 By adding the class to the pattern, you create a `Heading` selector with a specificity of `120`—which again overrides Page Builder's default specificity of `110`. All the CSS rules declared in the selector with the `.theme-headings` class will override Page Builder's equivalent rules for the `Heading` content type.
 
@@ -105,7 +107,7 @@ The second step is to add your custom class name to the content type's form edit
 
 For example, to have Page Builder apply the `theme-headings` class to a `Heading` on the page, you would open the `Heading` form editor and enter `theme-headings` (no period) in the **CSS Classes** field, as shown here:
 
-![Add CSS class to content type](../../images/css-classes-field.svg)
+![Add CSS class to content type](../images/css-classes-field.svg)
 
 Page Builder adds this class to the `Heading` element (`h1` - `h6`) in the DOM, where it is targeted and styled by your CSS class selector and ruleset.
 

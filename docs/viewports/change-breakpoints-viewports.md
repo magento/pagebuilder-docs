@@ -66,6 +66,7 @@ Page Builder uses the `min-width` and `max-width` values to generate media queri
     </var>
 </var>
 ```
+
 {: .bs-callout-info }
 **Other CSS units**. The default `min-width` and `max-width` values are in pixels (`px`). But you can use `em` units or any other CSS unit suitable to media queries.
 

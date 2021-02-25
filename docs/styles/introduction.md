@@ -29,7 +29,7 @@ For every content type (both native and custom), Page Builder adds an attribute 
 
 Page Builder generates its CSS selectors using one `id` selector and one `attribute` selector. This pattern is always the same, which gives all Page Builder CSS selectors a specificity of **110**. The anatomy of a Page Builder CSS selector is shown here:
 
-![Page Builder style selector](../../images/pagebuilder-style-selector.svg)
+![Page Builder style selector](../images/pagebuilder-style-selector.svg)
 
 As noted, the CSS specificity of 110 is relatively low, which makes it possible to override these styles with your own custom CSS. For more information on CSS specificity and how it works, see [https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity).
 
@@ -56,13 +56,13 @@ To create the CSS rulesets for the selectors, Page Builder pulls the properties 
 
 As end users change and save settings within a content type's editor, Page Builder updates the CSS ruleset to reflect those changes (and creates a new unique value for `data-pb-style`).
 
-![Page Builder content styling](../../images/how-pagebuilder-styles-content.svg)
+![Page Builder content styling](../images/how-pagebuilder-styles-content.svg)
 
 ## Internal stylesheets
 
 If you inspect a page on your storefront built with Page Builder, you can see how Page Builder applies styles to its content types. For example, the following HTML is from a simple page with three content types: a `Row`, `Heading`, and `Text`. The highlighted parts show how the styles are defined and applied to Page Builder content types on a page.
 
-![Page Builder style selector](../../images/pagebuilder-inspect-styling.png)
+![Page Builder style selector](../images/pagebuilder-inspect-styling.png)
 
 1. **Html-body ID**. The first thing to notice is the CSS `id=html-body` assigned to Magento storefront pages. Page Builder uses this `id` to construct all the CSS selectors it applies to its content types.
 

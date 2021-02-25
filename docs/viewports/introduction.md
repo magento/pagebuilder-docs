@@ -8,11 +8,11 @@ Page Builder viewports refer to the buttons and their related device widths show
 
 By default, Page Builder provides two viewports: **desktop** and **mobile**, as shown here:
 
-![Viewports overview](../../images/pagebuilder-viewport-ui.svg)
+![Viewports overview](../images/pagebuilder-viewport-ui.svg)
 
 When the buttons are clicked, the stage width changes to the width defined in the viewport's CSS class for the stage. For example, the default `mobile` viewport narrows the stage canvas to 768px, as shown here:
 
-![Viewports overview](../../images/pagebuilder-viewport-ui-mobile.svg)
+![Viewports overview](../images/pagebuilder-viewport-ui-mobile.svg)
 
 The stage width is controlled by the `.mobile-viewport` CSS (Less):
 
@@ -69,7 +69,7 @@ To access the linked source code for each file listed here, you must have access
 
 The following diagram shows how these files make viewports work.
 
-![Viewports overview](../../images/pagebuilder-viewport-files.svg)
+![Viewports overview](../images/pagebuilder-viewport-files.svg)
 
 ### Summary descriptions
 
@@ -79,13 +79,13 @@ The following diagram shows how these files make viewports work.
 -  [view.xml](#viewxml)—Configuration data that defines properties for viewport names, visibility, defaults, min- and max-widths, button icons, tooltip labels, and more.
 -  [_mobile_viewport.less](#_mobile-viewportless)—Defines CSS classes that change the stage width. Classes in this file are assigned to the observable `viewportClasses` property and switched when `toggleViewport()` is triggered by the viewport buttons.
 -  [Button icons](#button-icons)—SVG images for the viewport buttons.
--  [Stage events](#stage-event-triggers)—The events triggered from the `toggleViewport()` function—[`stage:viewportChangeAfter`](../../architecture/events.md#stageviewportchangeafter) and [`stage:${this.id}:viewportChangeAfter`](../../architecture/events.md#stageidviewportchangeafter). Content type JavaScript components (`preview.ts` and `widget.js`) can listen for these events and make responsive changes as needed.
+-  [Stage events](#stage-event-triggers)—The events triggered from the `toggleViewport()` function—[`stage:viewportChangeAfter`](../architecture/events.md#stageviewportchangeafter) and [`stage:${this.id}:viewportChangeAfter`](../architecture/events.md#stageidviewportchangeafter). Content type JavaScript components (`preview.ts` and `widget.js`) can listen for these events and make responsive changes as needed.
 
 ## Viewport bindings and events
 
 The following diagram is similar to the previous one, but focuses more on how the viewport bindings and events work. The numbers are not meant to show a strict operational sequence. They simply call out the important actions and connections between the files.
 
-![Viewports overview](../../images/pagebuilder-viewports-overview.svg)
+![Viewports overview](../images/pagebuilder-viewports-overview.svg)
 
 1. **Templates**—The `page-builder.html` template renders the `switcher.html` viewport template in the header section of the Page Builder stage.
 1. **Bindings**—The `switcher.html` binds to the properties and functions of its parent ViewModel: `page-builder.ts`.
@@ -322,6 +322,8 @@ The following nodes from the `view.xml` file provide configuration data for brea
 -  `conditions` - Contains the `min-width` and `max-width` breakpoints Page Builder uses to build media queries for JavaScript widgets and preview components.
 -  `max-width` and `min-width` - Define the breakpoint widths used to construct a media query in JavaScript. The default values are in pixels (`px`), but `em` units can also be used.
 
+**Breakpoint custom data**:
+
 Breakpoint configurations also include any custom nodes you add to defined breakpoint-specific data for your `preview` components and `widgets`. Page Builder uses these particular nodes to define the breakpoint-specific data it needs to make its Products `widget` responsive:
 
 -  `options` - Parent object that defines custom data used by the `Products` content type. You can define similar nodes with unique names for your own content type options.
@@ -331,7 +333,7 @@ Breakpoint configurations also include any custom nodes you add to defined break
 
 As shown for `Products`, you can define custom nodes for your own breakpoint-specific data. Then use that data to control your content type's layout on the Admin stage (using your `preview` component) and the storefront (using your `widget`).
 
-### Using custom data
+### Adding custom data to breakpoints
 
 Let's say you want to create a content type that shows customer testimonials in a carousel. Like Products, you could use the [slick control](https://kenwheeler.github.io/slick/) to auto-loop the quotes across the screen. But you need a way to tell slick to increase or decrease the number of quotes to show on the screen for a given breakpoint. You can't do that with CSS media queries because slick is a contained control. You have to do it from your content type's `widget`. In this case, you could create a custom property for each breakpoint called `testimonialsToShow`. This property would define the ideal number of testimonials to show for a given breakpoint.
 
@@ -419,7 +421,7 @@ Page Builder's viewport buttons use SVG images. The URLs to these images are def
 
 As the URLs indicate, Page Builder's SVG images for the buttons are located here:
 
-![Viewport switcher button images](../../images/pagebuilder-switcher-icon-location.svg)
+![Viewport switcher button images](../images/pagebuilder-switcher-icon-location.svg)
 
 ## Stage event triggers
 

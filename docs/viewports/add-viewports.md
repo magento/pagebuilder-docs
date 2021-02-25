@@ -2,7 +2,7 @@
 
 By default, Page Builder defines four responsive breakpoints, but only uses two of them for viewports: `desktop` and `mobile`. The other two breakpoints are `tablet` and `mobile-small`. This topic shows you how to add viewport previews to these breakpoints and customize them as needed.
 
-![Add viewports illustration](../../images/pagebuilder-adding-viewports.svg)
+![Add viewports illustration](../images/pagebuilder-adding-viewports.svg)
 
 {: .bs-callout-info }
 **Example available**. An example for adding additional viewports is available for viewing and installing from: [https://github.com/magento-devdocs/pagebuilder-theme](https://github.com/magento-devdocs/pagebuilder-theme). This example uses an Admin theme, which is typically a best practice for production releases. But during development, you might find that using a module helps simplify your daily workflow. Especially if you're starting from scratch. Then you can even use the [PB Modules CLI](https://github.com/magento-devdocs/pbmodules) to create a starting module.
@@ -24,7 +24,7 @@ To create and apply an Admin theme, follow the instructions described here:
 
 Your Admin theme and its required module should have directories set up as shown in the diagram:
 
-![Viewport icons](../../images/pagebuilder-admin-viewport-theme-files.svg)
+![Viewport icons](../images/pagebuilder-admin-viewport-theme-files.svg)
 
 ### Step 2: Add a `view.xml` file
 
@@ -131,7 +131,7 @@ Details for these viewport nodes are in the [Viewport configuration data]() topi
 
 At this point, if you save your `view.xml` file, clear your cache (`bin/magento cache:clean`), and do a hard reload of your browser, you should see two additional buttons (with broken images) in the Page Builder's stage header:
 
-![Viewport icons](../../images/viewport-skeletons-without-images.png)
+![Viewport icons](../images/viewport-skeletons-without-images.png)
 
 The buttons don't have icons because we haven't added them yet. But they have tooltips that show the viewport names you added to the `label` node. And you can even click them to trigger stage events. But there's nothing to process yet.
 
@@ -147,7 +147,7 @@ After downloading, add the files to your theme or module's `web/css/images/switc
 
 Now you can reload the CMS page, open Page Builder, and hopefully see your new viewport buttons with icons:
 
-![Viewport icons](../../images/viewport-skeletons-with-images.png)
+![Viewport icons](../images/viewport-skeletons-with-images.png)
 
 #### Creating your own icons
 
@@ -160,7 +160,7 @@ If you want to create your own icons, use the following guidelines to help you m
 
 Shown below are the basic pixel dimensions and styles for our button icons.
 
-![Viewport icons](../../images/pagebuilder-viewport-icons.png)
+![Viewport icons](../images/pagebuilder-viewport-icons.png)
 
 **Pro Tip:** Make sure you give all your custom icons a height of 18px, even when they are smaller like the `switcher-mobile-small.svg`. This common height ensures that your icons will align nicely in the stage header alongside Page Builder's existing icons.
 

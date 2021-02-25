@@ -75,7 +75,7 @@ define([
 
 ## Stage event handler
 
-For the Admin stage, use the [stage:viewportChangeAfter](../../architecture/events.md#stageviewportchangeafter) event to control responsive changes to your content type from within your `widget`.
+For the Admin stage, use the [stage:viewportChangeAfter](../architecture/events.md#stageviewportchangeafter) event to control responsive changes to your content type from within your `widget`.
 
 As mentioned for the Products `widget`, your `widget` should handle this event for cases where your content type is contained within a Block or Dynamic Block. In these cases, your content type's `widget` is loaded in the Admin, not your `preview` component.
 
