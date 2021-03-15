@@ -41,33 +41,6 @@ Custom modules create new content types for Page Builder. Creating a new content
 
 -  **[Custom FAQ](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/FAQ/Custom)** — This module shows you how to create a content type for an FAQ page that uses an accordion for the questions and answers. Created by [Igor Melnikov](https://github.com/melnikovi).
 
-## Installation
+## Installing the example modules
 
-Assuming you have Page Builder already installed, you can install the example modules as follows:
-
-1. Clone the pagebuilder-examples repo:
-
-    ```terminal
-    git clone https://github.com/magento-devdocs/pagebuilder-examples
-    ```
-
-2. Navigate to your `<Magento2_installation>/app/code/` directory.
-
-3. Copy or symlink the `Example` directory from your local `pagebuilder-examples` clone into your `app/code/` directory.
-
-    **To Symlink**:
-    ```terminal
-    ln -s <Relative_route_to_cloned_Example_directory>
-    ```
-
-    ![Examples installation directory](images/examples-install-location.png)
-
-4. Enable the modules using the `setup:upgrade` command:
-
-   ```terminal
-   bin/magento setup:upgrade
-   ```
-
-5. Navigate to a Page Builder instance to ensure the example content types appear in the Page Builder panel, as shown here:
-
-   ![Content type examples shown in panel](images/example-content-types.png)
+Use the instructions from the examples repo, found here: [https://github.com/magento-devdocs/pagebuilder-examples#installing-the-example-modules](https://github.com/magento-devdocs/pagebuilder-examples#installing-the-example-modules).
