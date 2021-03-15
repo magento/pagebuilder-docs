@@ -13,23 +13,23 @@ You can find all our existing Page Builder examples in the [https://github.com/m
 
 Extension modules are extensions of Page Builder's existing modules. Extending an existing module is often the best way to introduce new functionality to Page Builder. Our current extension modules are described here:
 
--  **[Banner Extension](Banner/Extension/)** — This module shows you how to customize an existing content type: the Banner. This is the completed module featured in the documentation topic [Extend an appearance](https://devdocs.magento.com/page-builder/docs/content-types/extend/extend-an-appearance.html). Created by [Bruce Denham](https://github.com/bdenham).
+-  **[Banner Extension](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/BannerExt/Extension)** — This module shows you how to customize an existing content type: the Banner. This is the completed module featured in the documentation topic [Extend an appearance](https://devdocs.magento.com/page-builder/docs/content-types/extend/extend-appearances.html). Created by [Bruce Denham](https://github.com/bdenham).
 
--  **[Banner Appearance](Banner/Appearance/)** — This module shows you how to add a new appearance to the Banner. This is the completed module featured in the documentation topic [Add appearances](https://devdocs.magento.com/page-builder/docs/content-types/extend/add-appearances.html). Created by [Bruce Denham](https://github.com/bdenham).
+-  **[Banner Appearance](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/BannerApp/Appearance)** — This module shows you how to add a new appearance to the Banner. This is the completed module featured in the documentation topic [Add appearances](https://devdocs.magento.com/page-builder/docs/content-types/extend/add-appearances.html). Created by [Bruce Denham](https://github.com/bdenham).
 
--  **[Forms Extension](Form/Extensions/)** — This module shows you how to remove fields and fieldsets from Page Builder's built-in forms. Created by [Bruce Denham](https://github.com/bdenham).
+-  **[Forms Extension](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/Forms/Extension)** — This module shows you how to remove fields and fieldsets from Page Builder's built-in forms. Created by [Bruce Denham](https://github.com/bdenham).
 
--  **[Button Extension](Button/Extension/)** — This module shows how to add custom button types. Created by [Bruce Denham](https://github.com/bdenham).
+-  **[Button Extension](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/Button/Extension)** — This module shows how to add custom button types. Created by [Bruce Denham](https://github.com/bdenham).
 
--  **[Columns Extension](Columns/Extension/)** — This module shows how to add custom button types. Created by [Bruce Denham](https://github.com/bdenham).
+-  **[Columns Extension](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/Columns/Extension)** — This module shows how to add custom button types. Created by [Bruce Denham](https://github.com/bdenham).
 
--  **[Deactivate PageBuilder](Deactivate/PageBuilder/)** — This example module shows you how to disable Page Builder for a particular page in Magento, specifically Pages, Blocks, and Dynamic Blocks. Created by [Bruce Denham](https://github.com/bdenham).
+-  **[Deactivate PageBuilder](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/Deactivate/PageBuilder)** — This example module shows you how to disable Page Builder for a particular page in Magento, specifically Pages, Blocks, and Dynamic Blocks. Created by [Bruce Denham](https://github.com/bdenham).
 
--  **[Image LazyLoading](Image/LazyLoading/)** — This module shows how to add lazy loading behavior to the Image content type. For this example, we use the [lazysizes](https://github.com/aFarkas/lazysizes) loader. Created by [Bruce Denham](https://github.com/bdenham).
+-  **[Image LazyLoading](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/Image/LazyLoading)** — This module shows how to add lazy loading behavior to the Image content type. For this example, we use the [lazysizes](https://github.com/aFarkas/lazysizes) loader. Created by [Bruce Denham](https://github.com/bdenham).
 
--  **[Slider Extension](Slider/Extension/)** — This module shows you how to add `centerMode` and `centerPadding` settings from the [slick carousel](https://kenwheeler.github.io/slick/) used by the Slider. Create by [Bruce Denham](https://github.com/bdenham).
+-  **[Slider Extension](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/Slider/Extension)** — This module shows you how to add `centerMode` and `centerPadding` settings from the [slick carousel](https://kenwheeler.github.io/slick/) used by the Slider. Create by [Bruce Denham](https://github.com/bdenham).
 
--  **[Text Extension](Text/Extension/)** — This module shows you how to customize the Page Builder's Text toolbar, integrate your own theme's typography, and add TinyMCE's `code` plugin to the toolbar so you can view the HTML code directly. Created by [Bruce Denham](https://github.com/bdenham).
+-  **[Text Extension](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/Text/Extension)** — This module shows you how to customize the Page Builder's Text toolbar, integrate your own theme's typography, and add TinyMCE's `code` plugin to the toolbar so you can view the HTML code directly. Created by [Bruce Denham](https://github.com/bdenham).
 
 ## Custom modules
 
