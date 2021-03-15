@@ -2,7 +2,7 @@
 
 Out of the box, Page Builder provides a variety of interactive CSS styling options for your content types. For example, Page Builder's `Heading` content type provides options for setting heading types (`h1` through `h6`), text alignments, border properties, margins, and paddings. It also lets users apply one or more static CSS classes by entering them into a text input field.
 
-But what if you want to give users even more styling options? For example, maybe you want to add Heading color options. Or Heading text-style options. This topic will show you how to use the `<attribute>`, `<style>`, and `<css>` configuration options to style the elements in your content types.
+But what if you want to give users even more styling options? For example, maybe you want to add Heading color options. Or Heading text-style options. This topic shows you how to use the `attribute`, `style`, and `css` configuration options to style the elements in your content types.
 
 ## Understanding the big picture
 
