@@ -224,7 +224,7 @@ Use `_module.less` for import statements
 
 ## Example Module
 
-An example module for this topic is available for download in the [pagebuilder-examples repository](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/Example/PageBuilderBannerAppearance).
+An example module for this topic is available for download in the [pagebuilder-examples repository](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/BannerApp/Appearance).
 
 ## Final thoughts
 

@@ -141,7 +141,7 @@ So let's add a button icon and CSS for the stage width to make the button look g
 
 Page Builder uses SVG images for its existing viewport button icons. And while you _can_ use other image formats (like .png), we recommend using SVG icons that match Page Builder's existing icons.
 
-For this exercise, you can [download the `switcher-tablet.svg` and `switcher-mobile-small.svg` images](https://github.com/magento-devdocs/pagebuilder-examples/tree/breakpoints/PageBuilder/Breakpoints/view/adminhtml/web/css/images/switcher) from our example repo.
+For this exercise, you can [download the `switcher-tablet.svg` and `switcher-mobile-small.svg` images](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/Columns/Extension/view/adminhtml/web/css/images/switcher) from our example repo.
 
 After downloading, add the files to your theme or module's `web/css/images/switcher/` directory to match the URLs we set for our viewport `icon` nodes in `view.xml`.
 
