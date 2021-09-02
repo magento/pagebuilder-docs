@@ -8,13 +8,13 @@ The example code used in this topic is for migrating the data for a custom BlueF
 
 This topic assumes you have taken the following actions:
 
-- Migrated the core BlueFoot blocks
+-  Migrated the core BlueFoot blocks
 
-- Familiarized yourself with our [content type renderers](how-content-migration-works.md).
+-  Familiarized yourself with our [content type renderers](how-content-migration-works.md).
 
-- Familiarized yourself with the [module lifecycle]({{ site.baseurl }}/guides/v2.4/extension-dev-guide/prepare/lifecycle.html).
+-  Familiarized yourself with the [module lifecycle]({{ site.baseurl }}/guides/v2.4/extension-dev-guide/prepare/lifecycle.html).
 
-- Re-implemented your custom BlueFoot block as a new Page Builder content type.
+-  Re-implemented your custom BlueFoot block as a new Page Builder content type.
 
   This prerequisite is the most time-consuming. But with careful planning, you can build a simpler version of your BlueFoot block in Page Builder.
 
@@ -42,8 +42,6 @@ Create the following class under `Setup/DataConverter/Renderer` and implement th
 ```php
 Magento\PageBuilder\Setup\DataConverter\RendererInterface
 ```
-
-**Example: List renderer**
 
 ```php
 namespace VendorName\ModuleName\Setup\DataConverter\Renderer;
@@ -79,14 +77,11 @@ class List implements RendererInterface
 
 ## Step 4: Add renderer to the RenderPool
 
-The `RenderPool` maps BlueFoot blocks to the renderers that migrate their content. You can find the existing renderers in `app/code/Magento/PageBuilderDataMigration/etc/di.xml`. 
+The `RenderPool` maps BlueFoot blocks to the renderers that migrate their content. You can find the existing renderers in `app/code/Magento/PageBuilderDataMigration/etc/di.xml`.
 
 The migration module uses the `RenderPool` in the `di.xml` file to find the renderer to run for a given block type. For example, if the migration module encounters a BlueFoot entity type of `row`, it searches for the name `row` in the `RenderPool`. If it finds the name, it runs the associated renderer to migrate the row content.
 
 The same logic applies to your _custom_ BlueFoot blocks. If the name of your custom block is `list`, you must add it to the `RenderPool` in your module's `di.xml` file. If you don't add it, the migration module will not migrate your the content from your `list` block.
-
-
-**Example: List renderer di.xml entry**
 
 ```xml
 <type name="Magento\PageBuilder\Setup\DataConverter\RendererPool">
@@ -97,26 +92,27 @@ The same logic applies to your _custom_ BlueFoot blocks. If the name of your cus
     </arguments>
 </type>
 ```
+:arrow_up: Example: List renderer `di.xml` entry
 
 ## Step 5: Run migration
 
 If you have not run the migration module yet, do it now using the following command:
 
-```
+```bash
 bin/magento setup:upgrade
 ```
 
 ## Step 6: Add a new setup patch
 Create a new data patch inline with our [declarative schema documentation]({{ site.baseurl }}/guides/v2.3/extension-dev-guide/declarative-schema/data-patches.html). For this migration, we first declare the following dependencies in the constructor:
 
-- `Magento\Framework\EntityManager\MetadataPool`
-- `Magento\Framework\DB\AggregatedFieldDataConverter`
-- `Magento\Framework\DB\Select\QueryModifierFactory`
-- `Magento\Framework\DB\FieldToConvert`
-- `Magento\PageBuilder\Setup\DataConverter\MixedToPageBuilder`
+-  `Magento\Framework\EntityManager\MetadataPool`
+-  `Magento\Framework\DB\AggregatedFieldDataConverter`
+-  `Magento\Framework\DB\Select\QueryModifierFactory`
+-  `Magento\Framework\DB\FieldToConvert`
+-  `Magento\PageBuilder\Setup\DataConverter\MixedToPageBuilder`
 
 {: .bs-callout .bs-callout-info }
-The migration module migrates the content from unknown BlueFoot blocks into HTML Code content types. To migrate this content into other content types, use the `MixedToPageBuilder` data converter. 
+The migration module migrates the content from unknown BlueFoot blocks into HTML Code content types. To migrate this content into other content types, use the `MixedToPageBuilder` data converter.
 
 The following example uses the `MixedToPageBuilder` class to convert content from CMS pages (cms_page), CMS blocks (cms_block), product attributes (catalog_product_entity_text), and catalog attributes (catalog_category_entity_text):
 
@@ -162,7 +158,7 @@ $this->aggregatedFieldConverter->convert(
 
 Run the following command to start your module's migration process:
 
-```
+```bash
 bin/magento setup:upgrade
 ```
 

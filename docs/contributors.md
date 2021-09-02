@@ -19,7 +19,7 @@ Before installing Page Builder for making contributions, you must have the follo
     git clone https://github.com/magento/magento2-page-builder-ee
     ```
 
-2. From the root directory of your Magento Commerce installation, use the `dev/tools/build-ee.php` script to symlink `magento2-page-builder` and `magento2-page-builder-ee` repos into your Magento Commerce installation:
+1. From the root directory of your Magento Commerce installation, use the `dev/tools/build-ee.php` script to symlink `magento2-page-builder` and `magento2-page-builder-ee` repos into your Magento Commerce installation:
 
     ```terminal
     php dev/tools/build-ee.php --command=link --exclude=true --ee-source="magento2-page-builder" --ce-source="."
@@ -30,7 +30,7 @@ Before installing Page Builder for making contributions, you must have the follo
 
     ![Symlinks to Page Builder](images/symlinked-pagebuilder.png)
 
-3. Enable the Page Builder module using the following command:
+1. Enable the Page Builder module using the following command:
 
     ```terminal
     bin/magento setup:upgrade
@@ -38,7 +38,7 @@ Before installing Page Builder for making contributions, you must have the follo
 
 ### Updating GitHub installation
 
-When a new version of Page Builder is available, simply pull down the latest versions from `magento/magento2-page-builder` and `magento/magento2-page-builder-ee`.
+When a new version of Page Builder is available, pull the latest versions from GitHub at `magento/magento2-page-builder` and `magento/magento2-page-builder-ee`.
 
 ### Installing Node.js dependencies
 

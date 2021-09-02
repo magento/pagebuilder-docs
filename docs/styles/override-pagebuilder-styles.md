@@ -10,7 +10,7 @@ To override the internal CSS styles that Page Builder applies to content types, 
 
 ![Default style selector](../images/pagebuilder-style-selector.svg)
 
-_Page Builder default selector pattern_
+:arrow_up: *Page Builder default selector pattern*
 
 You can find all the details about how Page Builder styles its content types in [How Page Builder styles content](introduction.md).
 
@@ -29,7 +29,7 @@ To override Page Builder's styles, always use the following CSS selector pattern
 
 ![CSS selector override pattern](../images/pagebuilder-style-override-pattern-class.svg)
 
-_CSS selector override pattern_
+:arrow_up: *CSS selector override pattern*
 
 1. `#html-body` - Start all your override selectors with this `id`. The `#html-body` id is in the `<body>` element of every Magento frontend and admin page.
 
@@ -51,29 +51,29 @@ Again, you can override Page Builder's default styles with `any additional selec
 
 ## More selector override examples
 
-In the following examples, each combination of selectors targets different DOM elements for a content type. But all of these selectors have a specificity higher than Page Builder's default of `110`:
+In the following examples, each selector targets different DOM elements for a content type. But they all have a specificity higher than Page Builder's default of `110`:
 
-**Overrides all `heading` elements (`h1 - h6`) for all `heading` appearances**
+:white_check_mark: **Overrides all `heading` elements (`h1 - h6`) for all `heading` appearances**
 
 ```scss
 // Specificity: 120
 #html-body [data-content-type="heading"][data-element="main"] {}
 ```
 
-**Overrides `heading` elements (`h1 - h6`) for the `default` appearance**
+:white_check_mark: **Overrides `heading` elements (`h1 - h6`) for the `default` appearance**
 
 ```scss
 // Specificity: 120
 #html-body [data-content-type="heading"][data-appearance="default"] {}
 ```
 
-**Override all `Row` inner element styles**
+:white_check_mark: **Override all `Row` inner element styles**
 
 ```scss
 #html-body [data-content-type="row"] [data-element="inner"] {} // Specificity 120
 ```
 
-**Override all `Text` typography styles**
+:white_check_mark: **Override all `Text` typography styles**
 
 ```scss
 #html-body [data-content-type="text"] p {} // Specificity 111
@@ -81,13 +81,13 @@ In the following examples, each combination of selectors targets different DOM e
 
 ## Override content using CSS Classes
 
-So far, we've only used IDs, attributes, and elements to override Page Builder's CSS. But you can also use CSS classes as your overriding selector in the **additional selector** slot. 
+So far, we've only used IDs, attributes, and elements to override Page Builder's CSS. But you can also use CSS classes as your overriding selector in the **additional selector** slot.
 
-**To override a content type using one or more custom CSS classes**:
+{:.procedure}
+To override a content type using one or more custom CSS classes:
 
 1. Create the CSS selector.
-
-2. Apply the CSS class.
+1. Apply the CSS class.
 
 ### Step 1: Create the CSS selector
 
@@ -98,6 +98,8 @@ If your CSS class name is `.theme-headings`, the CSS selector you define in your
 ```
 
 ![Page Builder style selector](../images/pagebuilder-style-override-selector.svg)
+
+:arrow_up: *Adding theme classes to the Page Builder styling pattern*
 
 By adding the class to the pattern, you create a `Heading` selector with a specificity of `120`—which again overrides Page Builder's default specificity of `110`. All the CSS rules declared in the selector with the `.theme-headings` class will override Page Builder's equivalent rules for the `Heading` content type.
 

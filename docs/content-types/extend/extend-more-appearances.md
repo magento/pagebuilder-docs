@@ -6,19 +6,19 @@ But what if you want to give users even more styling options? For example, maybe
 
 ## Understanding the big picture
 
-Before we dive into the particulars of using different configuration options, let's take a moment to understand the role of the configurations within a Page Builder content type. The following diagram shows how the configuration options for the `Heading` content type connect or map the inputs from the Heading form to the bindings in the Heading templates and finally to the rendered output in the DOM:
-
-_Touch or click to expand_
+Before we dive into the details of using different configuration options, let's take a moment to understand the role of the configurations within a Page Builder content type. The following diagram shows how the configuration options for the `Heading` content type connect or map the inputs from the Heading form to the bindings in the Heading templates and finally to the rendered output in the DOM:
 
 ![Understanding the big picture](../../images/styling-big-picture.svg){: .zoom}
 
+:mag_right: *Touch or click to expand*
+
 1. **Heading Form** (`pagebuilder_heading_form.xml`). This form inherits from the `pagebuilder_base_form.xml`, which provides most of the input fields for the Heading. The Heading form itself provides input fields selecting an `appearance`, entering the `heading_text`, and selecting a `heading_type` (`h1` to `h6`). The text to the left of each field specifies which form the field comes from, the `heading_form` or the `base_form`.
 
-2. **Heading Configuration** (`heading.xml`). The main purpose of all content type configuration files is to provide the data mapping between the form fields and the HTML templates. Configurations map to fields with matching names.
+1. **Heading Configuration** (`heading.xml`). The main purpose of all content type configuration files is to provide the data mapping between the form fields and the HTML templates. Configurations map to fields with matching names.
 
-3. **Heading Template** (`master.html`, `preview.html`). Template Knockout bindings map to configurations using their element naming hierarchies.
+1. **Heading Template** (`master.html`, `preview.html`). Template Knockout bindings map to configurations using their element naming hierarchies.
 
-4. **Heading Rendered in DOM**. Page Builder renders the template bindings to the DOM. The `<attribute>` configurations are rendered as custom attributes for the element. The `<style>` configurations are rendered as inline styles on the element. The `<css>` configuration is rendered as a `class` attribute for the element. And the `<html>` configuration renders the text for the element.
+1. **Heading Rendered in DOM**. Page Builder renders the template bindings to the DOM. The `<attribute>` configurations are rendered as custom attributes for the element. The `<style>` configurations are rendered as inline styles on the element. The `<css>` configuration is rendered as a `class` attribute for the element. And the `<html>` configuration renders the text for the element.
 
 You may not understand all the details right away, but we hope that by providing the whole story up front, it will help you start putting the pieces together as you work your way through this topic and play with the companion example module.
 
@@ -30,7 +30,7 @@ For this example module, we chose to extend the `Heading` content type by adding
 
 ![Add an appearance](../../images/heading-extension-using-attributes-and-style.png)
 
-_Extended `Heading` form with color, text style, and opacity options_
+:arrow_up: *Extended `Heading` form with color, text style, and opacity options*
 
 The example module provides all the code used here to describe how to style elements using `<attribute>` and `<style>` nodes. It also shows the use of a custom converter for our `opacity` style to ensure that users can enter the opacity as a percentage.
 
@@ -48,7 +48,7 @@ First, you need to add fields to your content type's form so that users have a w
 -  `heading_style` for selecting text styles
 -  `heading_opacity` for entering an opacity for the Heading text
 
-The UI component form for these fields is shown here:
+The UI component form for these fields looks like this:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -116,7 +116,7 @@ The UI component form for these fields is shown here:
 </form>
 ```
 
-_New fields to extend the `Heading` form_
+:arrow_up: *New fields to extend the `Heading` form*
 
 The names of these fields, `heading_color`, `heading_style`, and `heading_opacity` are particularly important. They are the same names you must assign to their corresponding `<attribute>` and `<style>` nodes for the `<element>` in your configuration file. We'll do that next.
 
@@ -153,9 +153,9 @@ In our extended Heading configuration, we added two `<attribute>` nodes and one 
 </config>
 ```
 
-_Configuration attributes for the `Heading` element_
+:arrow_up: *NewConfiguration attributes for the `Heading` element*
 
-In this example, the `source` values for the nodes (`data-heading-color`, `data-heading-style`, and `opacity`) will be rendered in the DOM for the Heading's `main` element (which is `h2` by default), as shown here:
+In this example, the `source` values for the nodes (`data-heading-color`, `data-heading-style`, and `opacity`) renders in the DOM for the Heading's `main` element (which is `h2` by default), as shown here:
 
 ```html
 <h2 data-content-type="heading"
@@ -170,17 +170,18 @@ In this example, the `source` values for the nodes (`data-heading-color`, `data-
 
 The values shown for these attributes and inline-style properties are set by the user from the form fields. In this example, the user selected `brand-green` from the `heading_color` field, `style-italic` from the `heading_style` field, and entered `100` (in percent) in the `heading_opacity` field (converted to the decimal form you see here using a custom converter you will find in the example).
 
-But before these `attributes` and `styles` can be rendered to the DOM as shown, we need to add the necessary Knockout bindings to our HTML templates. We'll do that next.
+But before Page Builder can render the `attributes` and `styles` to the DOM as shown, we need to add the necessary Knockout bindings to our HTML templates.
 
 ## Step 3: Add template Knockout bindings
 
-In our example module, we are using the Heading's native `master.html` and `preview.html` templates, which already have all the Knockout bindings needed to render our new `<attribute>` and `<style>` configurations to the DOM. But its critical that you understand what these bindings are and what they do. Because without them, nothing will be rendered to the screen.
+In our example module, we are using the Heading's native `master.html` and `preview.html` templates, which already have all the Knockout bindings needed to render our new `<attribute>` and `<style>` configurations to the DOM. But its critical that you understand what these bindings are and what they do. Because without them, Page Builder renders nothing to the screen.
 
-In order for our configuration options to be rendered in the DOM (as described in step 2), we must add or ensure that Knockout bindings for our three configuration styling options are within our HTML templates. The three Knockout bindings for the `<attribute>`, `<style>`, and `<css>` configuration nodes are `attr`, `ko-style`, and `css`, respectively:
+To render our configuration options in the DOM (as described in step 2), we must ensure that Knockout bindings are in our HTML templates. The three Knockout bindings for the `<attribute>`, `<style>`, and `<css>` configuration nodes are `attr`, `ko-style`, and `css`, respectively:
 
 ```html
 <h2 attr="data.main.attributes" ko-style="data.main.style" css="data.main.css"...></h2>
 ```
+
 For all three Knockout bindings, `data.main` references the `main` element in the configuration file (`heading.xml`). The other binding references are as follows:
 
 -  For the `attr` binding, the `attributes` property references the collection of `<attribute>` nodes defined for the `main` element.
@@ -189,7 +190,7 @@ For all three Knockout bindings, `data.main` references the `main` element in th
 
 -  For the `css` binding, the `css` property references the `<css>` node defined for the `main` element.
 
-These Knockout bindings are applied to the Heading's `master.html` template (as well as the `preview.html` template), as shown here:
+You need to add these Knockout bindings to the Heading's `master.html` template (as well as the `preview.html` template), as shown here:
 
 ```html
 <!-- Heading master.html -->
@@ -202,7 +203,7 @@ These Knockout bindings are applied to the Heading's `master.html` template (as 
 <h6 if="data.main.heading_type() == 'h6'" attr="data.main.attributes" ko-style="data.main.style" css="data.main.css" html="data.main.html"></h6>
 ```
 
-_Knockout bindings for the Heading's `data.main` config elements_
+:arrow_up: *Knockout bindings for the Heading's `data.main` config elements*
 
 With these bindings in place, Page Builder will render them to the DOM, using the values from the form fields (as noted in step 2), to look something like this:
 
@@ -217,11 +218,11 @@ With these bindings in place, Page Builder will render them to the DOM, using th
 </h2>
 ```
 
-Knowing how the attributes and their user-selected values are written to the DOM, we can now target our content type's `main` element (`<h2>` in this example) using attribute-based CSS classes from our `_default.less` files. We'll do this next.
+After you understand how Page Builder writes attributes and their user-selected values to the DOM, you can target the content type's `main` element (`<h2>` in this example) using attribute-based CSS classes from our `_default.less` files. We'll do this next.
 
 ## Step 4: Add CSS classes
 
-To target our DOM output, we will use attribute-based CSS classes in our `_default.less` files for both the `adminhtml` and `frontend`, as shown here from our module's adminhtml area:
+To target our DOM output, we want to use attribute-based CSS classes in our `_default.less` files for both the `adminhtml` and `frontend`, as shown here (from our module's adminhtml area):
 
 ```scss
 /*-- adminhtml _default.less attribute-based classes */
@@ -268,19 +269,19 @@ To target our DOM output, we will use attribute-based CSS classes in our `_defau
 }
 ```
 
-_Attribute-based CSS classes_
+:arrow_up: *Attribute-based CSS classes*
 
-Since the values for these attributes are set by the user from the form field, we can add a variety of different CSS properties for each available value. This makes it easy to target and style your content type elements in both small and large ways, depending on your use cases.
+To provide end users with styling options in the Admin UI's form fields, we can add a variety of different CSS properties for each available value. This makes it easy to target and style your content type elements in both small and large ways, depending on your use cases.
 
 ## Discussion
 
-Page Builder provides three configuration options for styling the elements in your content types. The differences in usage are summarized here:
+Page Builder provides three configuration options for styling the elements in your content types. You can:
 
 -  Use `<attribute>` nodes to style content-type elements with attribute-based CSS classes.
 -  Use `<style>` nodes to style content-type elements with specific CSS properties.
 -  Use `<css>` nodes to style content-type elements with one or more static CSS classes chosen by the end user.
 
-The `<attribute>` and `<style>` nodes can be added multiple times to a content-type `element`. But the `<css>` node can only be added once per element. Refer to [Understanding the `<css>` node](#understandthecssnode) for more information.
+You can add the `<attribute>` and `<style>` nodes many times to a content-type `element`. But you can add the `<css>` node only once per element. Refer to [Understanding the `<css>` node](#understandthecssnode) for more information.
 
 To aid in our discussion of these configuration nodes and how to use them, we will refer to the `element` configuration from `heading.xml` (`PageBuilder/view/adminhtml/pagebuilder/content_type/heading.xml`):
 

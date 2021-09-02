@@ -64,7 +64,7 @@ define(['Magento_PageBuilder/js/content-type/uploader'], function (Uploader) {
     };
 ```
 
-**Uploader constructor arguments**
+### Uploader constructor arguments
 
 | Argument           | Type      | Description                                                                                                     | Required | Default                                                                                                 |
 |--------------------|-----------|-----------------------------------------------------------------------------------------------------------------|----------|---------------------------------------------------------------------------------------------------------|

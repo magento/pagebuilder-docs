@@ -1,17 +1,16 @@
 # How Page Builder styles content
 
-Page Builder applies CSS styles to both native and custom content types by generating attribute-based CSS rulesets that are unique to each content type on a page. Listed below are the highlights of how Page Builder styles content types.
+Page Builder applies CSS styles to both native and custom content types by generating attribute-based CSS rulesets that are unique to each content type on a page. Page Builder generates and applies styles to content types in four stages:
 
--  [Content-type attributes](#content-type-attributes). Page Builder adds a `data-pb-style` attribute and a dynamically generated value to the content type so that it can be uniquely targeted by a CSS selector.
+-  [Add content-type attributes](#add-content-type-attributes). Page Builder adds a `data-pb-style` attribute and a dynamically generated value to the content type so that it can be uniquely targeted by a CSS selector.
 
--  [Dynamic CSS selectors](#dynamic-css-selectors). Page Builder generates a CSS selector for the content type by combining the page's `html-body` ID and the `data-pb-style` attribute with the content type's unique value.
+-  [Generate dynamic CSS selectors](#dynamic-css-selectors). Page Builder generates a CSS selector for the content type by combining the page's `html-body` ID and the `data-pb-style` attribute with the content type's unique value.
 
--  [CSS rulesets](#css-rulesets). Page Builder creates the CSS ruleset (property: values) for the selector by pulling values from the content type's form editor.
+-  [Create CSS rulesets](#css-rulesets). Page Builder creates the CSS ruleset (property: values) for the selector by pulling values from the content type's form editor.
 
--  [Internal stylesheets](#internal-stylesheets). Page Builder creates an internal stylesheet for each page by adding a `<style>` block before the content types on the page.
+-  [Create internal stylesheets](#internal-stylesheets). Page Builder creates an internal stylesheet for each page by adding a `<style>` block before the content types on the page.
 
-The details of each process are explained below.
-
+This topic details each stage in the process.
 ## Content-type attributes
 
 For every content type (both native and custom), Page Builder adds an attribute called `data-pb-style` with a unique and dynamically generated value. The following example shows a Heading content type with the style attribute:
@@ -60,17 +59,17 @@ As end users change and save settings within a content type's editor, Page Build
 
 ## Internal stylesheets
 
-If you inspect a page on your storefront built with Page Builder, you can see how Page Builder applies styles to its content types. For example, the following HTML is from a simple page with three content types: a `Row`, `Heading`, and `Text`. The highlighted parts show how the styles are defined and applied to Page Builder content types on a page.
+If you inspect a page on your storefront built with Page Builder, you can see how Page Builder applies styles to its content types. For example, the following HTML is from a simple page with three content types: a `Row`, `Heading`, and `Text`. The highlighted parts show how Page Builder defines and applies the styles to content types on a page.
 
 ![Page Builder style selector](../images/pagebuilder-inspect-styling.png)
 
 1. **Html-body ID**. The first thing to notice is the CSS `id=html-body` assigned to Magento storefront pages. Page Builder uses this `id` to construct all the CSS selectors it applies to its content types.
 
-2. **Internal style block**. Page Builder adds all the unique `data-pb-style` attribute styles for the page's content types to a single `<style>` block. This creates what's called an internal stylesheet for the page. In this example, the page contains three content types that required three CSS rulesets for the page's `<style>` block.
+1. **Internal style block**. Page Builder adds all the unique `data-pb-style` attribute styles for the page's content types to a single `<style>` block. This creates what's called an internal stylesheet for the page. In this example, the page contains three content types that required three CSS rulesets for the page's `<style>` block.
 
     Note that not every content type on the page needs its own unique ruleset. In many cases, CSS rulesets can be shared among the content types on the page. Page Builder determines the most efficient application of CSS to the content types on the page, then creates the rulesets necessary for accurate styling.
 
-3. **Applied styles**. The dynamic `data-pb-style` attributes on the content types match their respective CSS styles in the `<style>` block, and the browser does the rest. For both custom and native content types, Page Builder applies the `data-pb-style` attribute to content type elements that contain `style` nodes.
+1. **Applied styles**. The dynamic `data-pb-style` attributes on the content types match their respective CSS styles in the `<style>` block, and the browser does the rest. For both custom and native content types, Page Builder applies the `data-pb-style` attribute to content type elements that contain `style` nodes.
 
     For example, notice how Page Builder adds the `data-pb-style` attribute to the Row's `inner` element, and not the `main` element, as was done for the Heading and Text content types. The reason becomes clear when you look at the Row's element structure within its config file (`row.xml`):
 
@@ -96,6 +95,6 @@ If you inspect a page on your storefront built with Page Builder, you can see ho
 
 ## Summary
 
-Page Builder applies styles to native and custom content types by creating dynamic, attribute-based styles, using a CSS selector pattern that results in a specificity of 110 for each content type style. These styles are added to a single internal stylesheet for each page and can be easily overridden with custom CSS classes.
+Page Builder applies styles to native and custom content types by creating dynamic, attribute-based styles, using a CSS selector pattern that results in a specificity of 110 for each content type style. Page Builder adds these styles to a single internal stylesheet for each page and can be easily overridden with custom CSS classes.
 
 See [Override Page Builder styles](override-pagebuilder-styles.md) to start customizing Page Builder's styles to meet your needs.

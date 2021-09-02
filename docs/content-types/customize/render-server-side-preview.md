@@ -42,7 +42,7 @@ Add the renderer you just created as an argument to the `Magento\PageBuilder\Mod
 To invoke the renderer from the stage, submit an HTTP request to the Page Builder preview controller:
 
 1. Obtain the URL for the HTTP request from within your preview component by calling `getConfig("preview_url")` on the `Magento_PageBuilder/js/config` component.
-2. Make a request to the aforementioned obtained URL specifying your custom content type name and any additional parameters you want to use to render the element:
+1. Make a request to the aforementioned obtained URL specifying your custom content type name and any additional parameters you want to use to render the element:
 
     ```javascript
      define([

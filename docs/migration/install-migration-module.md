@@ -9,13 +9,13 @@ We recommend using the module in a development environment before deploying it t
 
 Before installing the migration module, you need to prepare the environment you intend to migrate:
 
-- **Make a backup of your current database.**
+-  **Make a backup of your current database.**
 
-- Remove BlueFoot from your current Magento instance: `composer remove gene/bluefoot`. 
+-  Remove BlueFoot from your current Magento instance: `composer remove gene/bluefoot`.
 
   BlueFoot does not contain uninstall scripts, but we do preserve your data on uninstall.
-  
-- Upgrade to Magento Commerce 2.3.1 (which includes Page Builder).
+
+-  Upgrade to Magento Commerce 2.3.1 (which includes Page Builder).
 
   Please see our [Command-line upgrade]({{ site.baseurl }}/guides/v2.3/comp-mgr/cli/cli-upgrade.html) instructions on how to complete this.
   Page Builder itself does not convert any of your content. We preserve your existing BlueFoot content when we install Page Builder.
@@ -25,14 +25,13 @@ Before installing the migration module, you need to prepare the environment you 
 To install the migration module:
 
 1. Navigate to the root directory of your Magento 2.3.1 installation.
-
-2. Use the following composer command:
+1. Use the following composer command:
 
    ```bash
    composer require magento/module-page-builder-data-migration
    ```
 
-3. [Disable the default migration-on-deployment feature](#disable-migration-on-deployment). 
+1. [Disable the default migration-on-deployment feature](#disable-migration-on-deployment).
 
    {: .bs-callout .bs-callout-warning }
    This step is critical for migration development work. It disables the default migration module behavior that migrates your content as part of the deployment using `setup:upgrade`. We made this the default behavior so that deployment to production is easy. But during development, you need to turn it off so that you do not run your migrations accidentally, before you have made strategic changes to your migration code, or backups to your database.
@@ -48,19 +47,19 @@ To install the migration module from the GitHub repo ([magento2/magento2-page-bu
 
 1. Navigate into the directory above your Magento 2 installation.
 
-2. Clone the `magento/magento2-page-builder-data-migration` repository using the following command:
+1. Clone the `magento/magento2-page-builder-data-migration` repository using the following command:
 
    ```bash
    git clone git@github.com:magento/magento2-page-builder-data-migration.git
    ```
 
-3. Symlink the `magento2-page-builder-data-migration` into your Magento installation:
+1. Symlink the `magento2-page-builder-data-migration` into your Magento installation:
 
    ```bash
    php <magento-root-directory>/dev/tools/build-ee.php --command=link --ce-source <magento-root-directory> --ee-source magento2-page-builder-data-migration
    ```
 
-4. [Disable the default migration-on-deployment feature](#disable-migration-on-deployment).
+1. [Disable the default migration-on-deployment feature](#disable-migration-on-deployment).
 
    {: .bs-callout .bs-callout-warning }
    This step is critical for migration development work. It disables the default migration module behavior that migrates your content as part of the deployment using `setup:upgrade`. We made this the default behavior so that deployment to production is easy. But during development, you need to turn it off so that you do not run your migrations accidentally, before you have made strategic changes to your migration code, or backups to your database.
@@ -77,7 +76,7 @@ To disable migration on deployment, run the following queries on the `setup_modu
 INSERT INTO `setup_module` (`module`, `schema_version`, `data_version`)
 VALUES
     ('Magento_PageBuilderDataMigration', '1.0.0', '1.0.0');
-    
+
 INSERT INTO `patch_list` (`patch_name`)
 VALUES
     ('Magento\\PageBuilderDataMigration\\Setup\\Patch\\Data\\MigrateToPageBuilder');

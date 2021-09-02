@@ -2,12 +2,12 @@
 
 By default, the migration module only migrates content from these tables of the Magento database:
 
-- CMS Pages
-- CMS Blocks
-- Catalog Product Attributes
-- Catalog Category Attributes
+-  CMS Pages
+-  CMS Blocks
+-  Catalog Product Attributes
+-  Catalog Category Attributes
 
-If you have BlueFoot content in other tables, you must complete the following steps to migrate that content. 
+If you have BlueFoot content in other tables, you must complete the following steps to migrate that content.
 
 ## Prerequisites
 
@@ -15,12 +15,12 @@ This topic assumes you have a functioning Magento 2 module. If not, create a bas
 
 ## Steps for migrating other content
 
-Here are the basic steps for migrating BlueFoot content from other database tables: 
+Here are the basic steps for migrating BlueFoot content from other database tables:
 
-1. Add the following directory structure within your module: `Setup/Patch/Data`. 
-2. Create a [data patch class]({{ site.baseurl }}/guides/v2.4/extension-dev-guide/declarative-schema/data-patches.html) for your migration. Example: `MigrateBlogToPageBuilder.php`. Magento executes this class when installing your module.
-3. Implement the `Magento\Framework\Setup\Patch\DataPatchInterface`. 
-4. Define your migration logic within the `apply()` function.
+1. Add the following directory structure within your module: `Setup/Patch/Data`.
+1. Create a [data patch class]({{ site.baseurl }}/guides/v2.4/extension-dev-guide/declarative-schema/data-patches.html) for your migration. Example: `MigrateBlogToPageBuilder.php`. Magento executes this class when installing your module.
+1. Implement the `Magento\Framework\Setup\Patch\DataPatchInterface`.
+1. Define your migration logic within the `apply()` function.
 
 ## Data patch class example
 

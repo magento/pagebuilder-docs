@@ -8,7 +8,7 @@ Page Builder provides two ways to style your content type's HTML templates using
 
 1. You can use the standard `class` attribute to define the base look and feel of a content type.
 
-2. You can use the `css` attribute to provide end-users with CSS customization options.
+1. You can use the `css` attribute to provide end-users with CSS customization options.
 
 ### `class` attribute
 
@@ -233,7 +233,7 @@ Next we need to setup the bindings.
 To create the binding between the CSS class values selected in our `quote_css` form field and our template, we need to do two things:
 
 1. Add a `<css>` binding element to the `quote` element in our `example_quote.xml` configuration file.
-2. Add a `css` binding attribute to the `<blockquote>` element in our HTML template files (`preview.html` and `master.html`).
+1. Add a `css` binding attribute to the `<blockquote>` element in our HTML template files (`preview.html` and `master.html`).
 
 **Config file entry**: For our Quote, we want the `<css>` element to bind to our `quote_css` by name as follows:
 

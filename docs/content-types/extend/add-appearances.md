@@ -4,7 +4,7 @@ This topic shows you how to add an appearance to Page Builder's native content t
 
 ![Add appearances](../../images/how-to-add-appearance.svg)
 
-_Steps for adding appearances_
+:arrow_up: *Steps for adding appearances*
 
 These steps also apply to adding appearances to your custom content types and any third-party content types.
 
@@ -14,13 +14,13 @@ First, we need a way select our new appearance within the form. In Page Builder,
 
 ![Banner visual selector](../../images/banner-visual-selector.png)
 
-_Visual selector for Banner_
+:arrow_up: *Visual selector for Banner*
 
 To add a new appearance option for one of Page Builder's native content types (such as the Banner), create a new `di.xml` file in your module, as shown here:
 
 ![Add VisualSelect class](../../images/add-visualselect-class.png)
 
-_File and location for the VisualSelect class_
+:arrow_up: *File and location for the VisualSelect class*
 
 Within the `di.xml` file, add a virtual type using the`VisualSelect` class with the Banner's virtual type name (`<virtualType name="AppearanceSourceBanner"`), as shown here:
 
@@ -39,7 +39,8 @@ Within the `di.xml` file, add a virtual type using the`VisualSelect` class with 
     </virtualType>
 </config>
 ```
-_VisualSelect class for new Banner appearance_
+
+:arrow_up: *VisualSelect class for new Banner appearance*
 
 Using the same class name as the Banner ensures that Magento's XML merging will add your new visual appearance option to the existing Banner appearance options.
 
@@ -68,15 +69,18 @@ To add more appearance options, simply create more `item` arrays with names that
     <item name="icon" xsi:type="string">Example_PageBuilderBannerExtensionBanner/css/images/content-type/banner/appearance/short.svg</item>
 </item>
 ```
-_Example of additional appearance options_
+
+:arrow_up: *Example of appearance options*
 
 ### Create an appearance icon
 
-Appearance icons are `.svg` files that graphically depict the layout of an appearance. Add your additional appearance icons to your module's css appearance directory (`css/images/content-type/[content-type-name]/appearance/`). Additional appearance icons for the Banner would be added as shown here:
+Appearance icons are `.svg` files that graphically depict the layout of an appearance.
+Add your additional appearance icons to your module's css appearance directory (`css/images/content-type/[content-type-name]/appearance/`).
+You can add appearance icons for the Banner using the directory structure shown here:
 
 ![Add appearance icons](../../images/appearance-icon-location.png)
 
-_Additional appearance icons for Banner_
+:arrow_up: *Appearance icons for Banner*
 
 You can use any design tool to create your SVG. But if you want to match your appearance icons to Page Builder's icons _perfectly_, use the SVG structure and dimensions shown here:
 
@@ -91,12 +95,12 @@ You can use any design tool to create your SVG. But if you want to match your ap
   </g>
 </svg>
 ```
-_SVG appearance template_
+:arrow_up: *SVG appearance template*
 
 These specific dimensions ensure that your icon fits seamlessly with Page Builder's existing appearance icons:
 
 | Property                       | Value       |
-|--------------------------------|-------------|
+| ------------------------------ | ----------- |
 | `svg width`                    | 218         |
 | `svg height`                   | 110         |
 | `svg viewbox`                  | 0 0 218 110 |
@@ -107,15 +111,15 @@ These specific dimensions ensure that your icon fits seamlessly with Page Builde
 | base `rect y`                  | 21          |
 | base `rect fill`               | #524D49     |
 | other  shape `fill` properties | #FFF        |
-{:style="table-layout:fixed"}
 
 ## Step 2: Add appearance configurations
 
-Appearance configurations connect the data entered in a content type's form to its HTML templates. For example, the Heading content type has an `<html>` config element (`<html name="heading_text" />`) that maps the text entered into the content type's `heading_text` field (`<field name="heading_text" formElement="input">`) to the Heading's Knockout template binding (`html="data.main.html"`), as illustrated here:
+Appearance configurations connect the data entered in a content type's form to its HTML templates.
+For example, the Heading content type has an `<html>` config element (`<html name="heading_text" />`) that maps the text entered into the content type's `heading_text` field (`<field name="heading_text" formElement="input">`) to the Heading's Knockout template binding (`html="data.main.html"`), as illustrated here:
 
 ![Appearance configurations](../../images/appearance-configurations.png)
 
-_Appearance configurations explained_
+:arrow_up: *Appearance configurations explained*
 
 The same concept applies to `styles`, `attributes`, and `css` elements. These elements ensure that the form settings (both content and styles) get applied to the templates as expected.
 
@@ -123,10 +127,11 @@ To add a new Banner appearance configuration, create a content type config file 
 
 ![Appearance configuration config file](../../images/appearance-config-file.png)
 
-_Add additional appearances to Banner content type_
+:arrow_up: *Add appearances to Banner content type*
 
 {: .bs-callout .bs-callout-info }
-This procedure applies to any native content type you want to extend. In other words, you can use the file name (such as `heading.xml`) and type name (such as `<type name="heading">`) of any content type to extend it based on Magento's XML merging behavior.
+This procedure applies to any native content type you want to extend.
+In other words, you can use the file name (such as `heading.xml`) and type name (such as `<type name="heading">`) of any content type to extend it based on Magento's XML merging behavior.
 
 An example `banner.xml` config file for a new `simple-poster` appearance is shown here:
 
@@ -156,7 +161,7 @@ An example `banner.xml` config file for a new `simple-poster` appearance is show
     </type>
 </config>
 ```
-_Additional simple-poster appearance for the Banner content type_
+:arrow_up: *Simple-poster appearance for the Banner content type*
 
 ## Step 3: Add appearance forms
 
@@ -169,7 +174,7 @@ When you select an appearance with a form, Page Builder replaces the content typ
     <type name="products"
           form="pagebuilder_products_form"
 ```
-_Content type form used by default for all appearances_
+:arrow_up: *Content type form used by default for all appearances*
 
 To add a form for an appearance, add a `<form>` element as a child of the `<appearance>` element in your content type's config file. As mentioned, the Products content type uses a form for its Carousel appearance, as shown here:
 
@@ -182,7 +187,7 @@ To add a form for an appearance, add a `<form>` element as a child of the `<appe
     <elements>
     . . .
 ```
-_Adding a form to an appearance_
+:arrow_up: *Adding a form to an appearance*
 
 ## Step 4: Add appearance templates
 
@@ -190,7 +195,7 @@ Appearances use different HTML templates to create different layouts. They also 
 
 ![Appearance configuration config file](../../images/appearance-templates-banner.png)
 
-_Banner appearance templates_
+:arrow_up: *Banner appearance templates*
 
 {: .bs-callout .bs-callout-info }
 Notice how Page Builder organizes the Banner templates by appearance name. We recommend the same practice when adding templates for your appearances.
@@ -199,7 +204,7 @@ To create templates for additional Banner appearances, such as the `simple-poste
 
 ![Appearance templates](../../images/appearance-templates-additional.png)
 
-_Add additional templates to `template/content-type/[content-type-name]/[appearance-name]`_
+:arrow_up: *Add additional templates to `template/content-type/[content-type-name]/[appearance-name]`*
 
 ## Step 5: Add appearance styles
 
@@ -207,13 +212,13 @@ Appearances use different CSS/LESS files to create different visual styles for a
 
 ![Appearance stylesheets](../../images/appearance-css-banner.png)
 
-_Banner stylesheets_
+:arrow_up: *Banner stylesheets*
 
 To create a stylesheet for an additional Banner appearance, such as the `simple-poster`, add a folder named `banner` and a `.less` file with the name of the appearance, as shown here:
 
 ![Additional appearance stylesheets](../../images/appearance-css-additional.png)
 
-_Add additional stylesheets to `css/source/content-type/[content-type-name]/`_
+:arrow_up: *Add additional stylesheets to `css/source/content-type/[content-type-name]/`*
 
 The `_module.less` file is an import file that ensures the additional stylesheet gets added to the existing Banner styles. The `_module.xml` file for our `simple-poster.less` file looks like this:
 

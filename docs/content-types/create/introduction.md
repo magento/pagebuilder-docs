@@ -31,11 +31,11 @@ The steps for creating the Quote content type are illustrated and described belo
 ![Creating Custom Content Types](../../images/content-type-overview.svg)
 
 1. **Add configuration**: Create an XML file to define your content type and reference the other files that control the appearance and behavior of your content type.
-2. **Add templates**: Create HTML templates that define the appearance of your content types on the Admin stage (`preview.html`) and the storefront (`master.html`).
-3. **Add component**: Create a JavaScript file that defines the behavior of your content type on the Admin stage (`preview.js`) and the storefront (`master.js`).
-4. **Add form**: Create a UI component form and a layout so Admin users can edit your content type within the Page Builder editor.
-5. **Add styles**: Create LESS files to style your content types when rendered in the Admin UI and on the storefront.
-6. **Add an icon**: Create an SVG icon to visually identify your content type within the Page Builder panel.
+1. **Add templates**: Create HTML templates that define the appearance of your content types on the Admin stage (`preview.html`) and the storefront (`master.html`).
+1. **Add component**: Create a JavaScript file that defines the behavior of your content type on the Admin stage (`preview.js`) and the storefront (`master.js`).
+1. **Add form**: Create a UI component form and a layout so Admin users can edit your content type within the Page Builder editor.
+1. **Add styles**: Create LESS files to style your content types when rendered in the Admin UI and on the storefront.
+1. **Add an icon**: Create an SVG icon to visually identify your content type within the Page Builder panel.
 
 ## Quote file structure
 
