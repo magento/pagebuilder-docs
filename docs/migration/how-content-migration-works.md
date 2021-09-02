@@ -12,9 +12,9 @@ We have two data converters provided out of the box which enable migration of da
 
 These data converters are located within `app/code/Magento/PageBuilderDataMigration/Setup/DataConverter`.
 
-| Name                    | Description                                                  |
-| ----------------------- | ------------------------------------------------------------ |
-| `BlueFootToPageBuilder` | Consumes BlueFoot generated content structures formed of JSON and uses renderer's to convert every content type to Page Builder HTML. In the instance the data converter encounters an error it will store the original JSON as un-migrated content. |
+| Name                    | Description                                                                                                                                                                                                                                                                                                    |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `BlueFootToPageBuilder` | Consumes BlueFoot generated content structures formed of JSON and uses renderer's to convert every content type to Page Builder HTML. In the instance the data converter encounters an error it will store the original JSON as un-migrated content.                                                           |
 | `MixedToPageBuilder`    | If the above data converter fails on a particular piece of content due to an error or missing renderer for the content type it will have it's data preserved as un-migrated content. In this instance you can use the mixed data converter to run the un-migrated content blocks through the renderer's again. |
 
 You can find more information on how to use the `MixedToPageBuilder` converter within our [Migrate content from custom blocks](migrate-content-custom-blocks.md) guide. We do not use this data converter out of the box so it will not be ran unless the steps in the attached guide are followed.
@@ -35,7 +35,7 @@ The content is placed within an HTML content type. The original JSON is stored w
 
 The usage of the HTML Code content type allows for other aspects of the page to be edited within Page Builder, while allowing this special content to be stored until the migration tools are available.
 
-## Renderer 
+## Renderer
 
 Every content type which is supported by the migration suite will have a renderer defined to translate the BlueFoot JSON data into valid Page Builder HTML. These renderers do not share the code used by the Page Builder tool itself due to our master format rendering being implemented in JavaScript.
 
@@ -59,9 +59,9 @@ interface RendererInterface
 
 ### Parameters
 
-| Name              | Description                                                  |
-| ----------------- | ------------------------------------------------------------ |
-| `$itemData`       | All associated item data for the content type, this will contain the form data along with the associated BlueFoot entity ID. |
+| Name              | Description                                                                                                                                    |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$itemData`       | All associated item data for the content type, this will contain the form data along with the associated BlueFoot entity ID.                   |
 | `$additionalData` | In some instances, there will be additional information associated with the content type. Most commonly used when a content type has children. |
 
 {:style="table-layout:auto"}
@@ -242,7 +242,7 @@ Along with the EAV & style classes we provide an element renderer class (`Elemen
 
 #### Default form values
 
-We declare the advanced defaults for this content type. Each Page Builder content type can define default values within its form declaration. These values are automatically applied to the content types master format on creation. BlueFoot did not implement the same system, which means you must declare the defaults for inclusion here manually. 
+We declare the advanced defaults for this content type. Each Page Builder content type can define default values within its form declaration. These values are automatically applied to the content types master format on creation. BlueFoot did not implement the same system, which means you must declare the defaults for inclusion here manually.
 
 ```php
     private function getAdvancedDefaults()
@@ -316,23 +316,23 @@ We automatically follow these references and update the values with their associ
 
 ### `StyleExtractorInterface`
 
-We utilise the style extractor to help with translating the simple EAV stored values of BlueFoot into our new actual inline CSS expressions. This extractor exists as aspects of this operation can be tedious and result in lots of duplicated code between content types. 
+We utilise the style extractor to help with translating the simple EAV stored values of BlueFoot into our new actual inline CSS expressions. This extractor exists as aspects of this operation can be tedious and result in lots of duplicated code between content types.
 
-The migration tool has a preference within it's `di.xml` file that aligns our interface with the concrete implementation. We import this dependency through our constructor using `Magento\PageBuilder\Setup\DataConverter\StyleExtractorInterface`. 
+The migration tool has a preference within it's `di.xml` file that aligns our interface with the concrete implementation. We import this dependency through our constructor using `Magento\PageBuilder\Setup\DataConverter\StyleExtractorInterface`.
 
 #### Extracting Styles
 
 The first method we provide helps extract styles and generates the associated CSS strings from BlueFoot EAV or form data.
 
 ```php
-public function extractStyle(array $formData, array $defaults = [], array $pluck = []) : string; 
+public function extractStyle(array $formData, array $defaults = [], array $pluck = []) : string;
 ```
 
-| Parameter   | Type  | Description                                                  |
-| ----------- | ----- | ------------------------------------------------------------ |
-| `$formData` | Array | Associative array of data from a BlueFoot block. This could be either the EAV data, the form data, or a combination of both. |
+| Parameter   | Type  | Description                                                                                                                                                                      |
+| ----------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$formData` | Array | Associative array of data from a BlueFoot block. This could be either the EAV data, the form data, or a combination of both.                                                     |
 | `$defaults` | Array | Associative array of default values which should be generated alongside the `$formData`. Existing values in the form data override any default values provided in this argument. |
-| `$pluck`    | Array | Array of style keys to pluck from the generated styles. For example, `['text-align', 'border-color']` would provide just those two styles even if other styles were generated. |
+| `$pluck`    | Array | Array of style keys to pluck from the generated styles. For example, `['text-align', 'border-color']` would provide just those two styles even if other styles were generated.   |
 
 {:style="table-layout:auto"}
 
@@ -352,8 +352,8 @@ There may be cases where you need to apply new styles to an element manually, wi
 public function createStyleFromArray(array $styles) : string;
 ```
 
-| Parameter | Type  | Description                                                  |
-| --------- | ----- | ------------------------------------------------------------ |
+| Parameter | Type  | Description                                                                                                                          |
+| --------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `$styles` | Array | Associative array of styles to be converted into a string. For example, `['border-style': 'none']` results in `border-style: none;`. |
 
 {:style="table-layout:auto"}
@@ -368,7 +368,7 @@ For structural content types such as rows and columns a custom children extracto
 
 During rendering, content types are processed from the bottom of the tree to the top. In other words, the system renders all child blocks first and makes the results available to the immediate parent for placement.
 
-Using a virtual type of `Magento\PageBuilder\Setup\DataConverter\ChildrenExtractor\Configurable` we can define the path to which the child items are located within the BlueFoot data. 
+Using a virtual type of `Magento\PageBuilder\Setup\DataConverter\ChildrenExtractor\Configurable` we can define the path to which the child items are located within the BlueFoot data.
 
 **Example `di.xml` entry:**
 

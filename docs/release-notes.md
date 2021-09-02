@@ -128,7 +128,7 @@ This version of Page Builder is just a version-number update for Magento 2.3.5-p
 -  {:.new}**Documentation on adding new Appearances**<br/>
    Everything you need to know about [adding appearances](https://devdocs.magento.com/page-builder/docs/content-types/extend/add-appearances.html) for existing or custom content types.
 
-**Various fixes**
+### **Various fixes**
 
 -  {:.fix}<!-- PB-50 -->Fixed an issue where the TinyMCE menu for slide content appears underneath other content types if the parent container of the slide is duplicated.
 -  {:.fix}<!-- PB-166 -->Updated Page Builder to implement destroy method to prevent memory leaks in some scenarios.
@@ -151,18 +151,18 @@ This version of Page Builder is just a version-number update for Magento 2.3.5-p
 
 ## **1.2.0** for Magento Commerce 2.3.4
 
-**Page Builder integration with PWA Studio**
+### **Page Builder integration with PWA Studio**
 
 -  {:.new}Added Page Builder content rendering to the Venia app in PWA Studio. Page Builder content can now be viewed within the PWA Studio Venia app. See the Page Builder documentation within [PWA Studio][] for all the information on this new feature.
 
-**Products content type enhancements**
+### **Products content type enhancements**
 
 -  {:.new}<!-- PB-77, PB-173, PB-175 -->Added Product carousel. The Products content type now provides an option to display your products in a carousel / slider format, including several options to customize the carousel to your needs.
 -  {:.new}<!-- PB-69 -->Added Product SKU sorting. The Products content type now provides an option to sort your products by SKU in the order you add them to a list within the Admin.
 -  {:.new}<!-- PB-181 -->Added Product Category sorting. The Products content type now provides an option to sort your products by category _position_, displaying them in same order that they appear within your Magento Catalog.
 -  {:.new}<!-- PB-107 -->Added Product selection totals. The Products content type Admin editor now displays the total number of products that match your product selection options.
 
-**Various fixes**
+### **Various fixes**
 
 -  {:.fix}<!-- PB-237 -->Security enhancements.
 -  {:.fix}<!-- PB-41 -->Fixed searches within UI select components to make only one AJAX request per search term.

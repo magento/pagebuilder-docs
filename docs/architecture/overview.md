@@ -13,11 +13,13 @@ Page Builder also uses core Magento technologies such as jQuery, Knockout, and U
 Page Builder uses XHTML with inline styles and data attributes for storage and as the master format.
 This allows Page Builder to display content with minimum changes to the Magento storefront and other third-party systems.
 Use the following steps to display Page Builder content on a Magento storefront or third-party system:
+
 {% raw %}
 
 1. Replace all Magento directives such as `{{image url=path/to/image.png}}`
-2. Add custom stylesheet to provide the base styles that the user can't edit. This includes styles for the content types, such as the `slider` and the `tabs`.
-3. After the content renders, load and initialize the widgets and libraries on the frontend that need initialization, such as the `slider` and the `tabs`.
+1. Add custom stylesheet to provide the base styles that the user can't edit. This includes styles for the content types, such as the `slider` and the `tabs`.
+1. After the content renders, load and initialize the widgets and libraries on the frontend that need initialization, such as the `slider` and the `tabs`.
+
 {% endraw %}
 
 ## Integration with Magento and custom modules
@@ -54,16 +56,16 @@ This means you don't have to change your custom extensions if you're using UI co
 The following is a simple overview of the data flow:
 
 1. Page Builder's reader() reads the data from associated elements in the persisted rendered output of the master format. It does this by traversing through the content type's DOM tree and searching for the associated elements declared in the content types definition XML. Then it uses the various attributes, styles, and other configurations to read the data from the specific area of the DOM element.
-2. Page Builder's element converters convert the data for each data mapping entry () to an internal supported format if required, this ensures the data collected from the DOM nodes is compatible with Page Builder's internal data store and UI component fields.
-3. Page Builder's mass converters can change data for all content type elements, not just one. For more details, see [converter interface](configurations.md).
-4. Page Builder creates its content types and populates the `Magento_PageBuilder/js/data-store` with data.
-5. End-users change the data in the data store within the form editor or when using the various live-editing options on the stage.
-6. Page Builder converts the data using mass converters.
-7. Page Builder converts the data using element data converters.
-8. Page Builder updates the preview and master component observables.
-9. Page Builder updates the stage with the associated data from the preview update.
-10. Page Builder completes a render cycle of the master format, which updates the underlying textarea with the changed content.
-11. When the end-user saves the edited parent entity to the Page Builder instance (such as the CMS page or catalog product), Page Builder saves the rendered master format in the same way as any other content for the field.
+1. Page Builder's element converters convert the data for each data mapping entry () to an internal supported format if required, this ensures the data collected from the DOM nodes is compatible with Page Builder's internal data store and UI component fields.
+1. Page Builder's mass converters can change data for all content type elements, not just one. For more details, see [converter interface](configurations.md).
+1. Page Builder creates its content types and populates the `Magento_PageBuilder/js/data-store` with data.
+1. End-users change the data in the data store within the form editor or when using the various live-editing options on the stage.
+1. Page Builder converts the data using mass converters.
+1. Page Builder converts the data using element data converters.
+1. Page Builder updates the preview and master component observables.
+1. Page Builder updates the stage with the associated data from the preview update.
+1. Page Builder completes a render cycle of the master format, which updates the underlying textarea with the changed content.
+1. When the end-user saves the edited parent entity to the Page Builder instance (such as the CMS page or catalog product), Page Builder saves the rendered master format in the same way as any other content for the field.
 
 ### Mass converter
 
@@ -140,10 +142,10 @@ See [content type configuration](configurations.md) for more information.
 Appearances provide several ways to customize your content types. For example, you can:
 
 1. Add new style properties to existing content types.
-2. Add new attributes to existing content types. This is similar to adding new style properties.
-3. Change templates.
-4. Move data between elements, by data-mapping within the content type's configuration file. For example, a developer can move the `margin` style property from one element to another.
-5. Change the form for a [content type].
+1. Add new attributes to existing content types. This is similar to adding new style properties.
+1. Change templates.
+1. Move data between elements, by data-mapping within the content type's configuration file. For example, a developer can move the `margin` style property from one element to another.
+1. Change the form for a [content type].
 
 ## Module structure
 

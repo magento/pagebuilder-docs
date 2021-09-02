@@ -11,8 +11,8 @@ The icons used for Page Builder's built-in content types are actually font icons
 To create and add an icon, you must:
 
 1. Create your SVG or PNG icon.
-2. Create a CSS class for the icon.
-3. Reference the icon class in the config file.
+1. Create a CSS class for the icon.
+1. Reference the icon class in the config file.
 
 ## Create your icon
 

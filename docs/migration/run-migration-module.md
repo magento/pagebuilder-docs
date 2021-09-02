@@ -7,11 +7,11 @@ You can run the migration module in one of two ways:
 
 1. **Run it manually** using the console command: `bin/magento pagebuilder:migrate` (for migration during development).
 
-2. **Run it on installation** using `bin/magento setup:upgrade` (for migration-on-deployment within production environments).
+1. **Run it on installation** using `bin/magento setup:upgrade` (for migration-on-deployment within production environments).
 
 ## Run Manually
 
-Running the migration module manually is ideal during development when you need to adjust the migration code before running it. 
+Running the migration module manually is ideal during development when you need to adjust the migration code before running it.
 To run the module manually, use the following command:
 
 ```bash

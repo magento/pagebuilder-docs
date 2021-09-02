@@ -25,11 +25,11 @@ Use the [PB Modules CLI](https://github.com/magento-devdocs/pbmodules) to create
     npx https://github.com/magento-devdocs/pbmodules.git
     ```
 
-2. Extend the `Banner` and complete the remaining prompts. When finished, you should have a complete directory structure and all the files you need (plus extras) to start extending the Banner.
+1. Extend the `Banner` and complete the remaining prompts. When finished, you should have a complete directory structure and all the files you need (plus extras) to start extending the Banner.
 
     ![PB Modules](../../images/pbmodules.png)
 
-3. Before continuing, run `bin/magento setup:upgrade` to install and enable your module.
+1. Before continuing, run `bin/magento setup:upgrade` to install and enable your module.
 
 ### Step 2: Add new properties to elements
 
@@ -159,7 +159,7 @@ In our example, we used the following markup for our `max_height` field:
 Explaining UI component form fields is beyond the scope of this topic, but a few brief descriptions of the most important nodes might help those of you who are not familiar with UI components. If you already know about UI components, feel free to skip this part.
 
 | Elements            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `fieldset`          | The fieldset `name` should match the name of the fieldset from the Banner's form. The `appearance_fieldset` is common to all the content type forms and, by default, appears at the top of the forms using the `sortOrder` of 10. If you used [PB Modules](https://github.com/magento-devdocs/pbmodules/), the `fieldset` node names were copied from the Banner's form, so you're all set.                                                            |
 | `field`             | The field `name` should match your `style` node name in your `banner.xml` config file. The same is true if you are adding `attribute`, `css`, `html`, or `tag` nodes; their names should match the field names that supply their values. Fields also have a `sortOrder` you can use to place your field above or below existing fields. The `formElement` for a field describes the HTML form type, such as input, wysiwyg, select, checkbox and more. |
 | `argument > config` | Provides the initial configuration for the field, including the `default` value. We set our default `max_height` field to `400` (px).                                                                                                                                                                                                                                                                                                                  |

@@ -9,7 +9,7 @@ In this topic, you will learn how to use Admin and frontend themes to override t
 To override Page Builder styles used in the Admin, you need to:
 
 1. Create or modify an Admin theme.
-2. Apply the Admin theme to a module.
+1. Apply the Admin theme to a module.
 
 ### Step 1: Create or modify an Admin theme
 
@@ -24,22 +24,22 @@ app/design/adminhtml/VendorName/ThemeName/web/css/source/_module.less
 
 ![Page Builder admin theme files](../images/pagebuilder-admin-theme-files.svg)
 
-_Admin theme directory structure_
+:arrow_up: *Admin theme directory structure*
 
 The key takeaways are numbered in the image and described as follows:
 
 1. **Content types**. Organize your overriding styles according to the Page Builder content-types you want to override. In this example, we added the `design/adminhtml/VendorName/ThemeName/web/css/source/content-type/` directory with the `heading` and `products` content types we want to override.
 
-2. **Overriding stylesheets**. Name your overriding `.less` files to match the appearance names of your content types. In this example, the `heading` content type has one appearance: `default`. However, the `products` content type has two appearances `default` and `carousel`, so we create one `.less` file for each. This convention helps organize your overriding styles to finding and updating them later.
+1. **Overriding stylesheets**. Name your overriding `.less` files to match the appearance names of your content types. In this example, the `heading` content type has one appearance: `default`. However, the `products` content type has two appearances `default` and `carousel`, so we create one `.less` file for each. This convention helps organize your overriding styles to finding and updating them later.
 
-3. **Import files**. Include an `_import.less` file for each content type directory. This file should only contain `@import` statements for all the overriding files in the directory. Using import files like this helps keep your changes closer to where they occur. In our example, the `_import.less` file for our `products` content type contains two imports:
+1. **Import files**. Include an `_import.less` file for each content type directory. This file should only contain `@import` statements for all the overriding files in the directory. Using import files like this helps keep your changes closer to where they occur. In our example, the `_import.less` file for our `products` content type contains two imports:
 
     ```scss
     @import '_default.less';
     @import '_carousel.less';
     ```
 
-4. **_module.less**. The `_module.less` file is required and must be added directly to your Admin theme's `source` directory. Magento uses this file to add your Admin styles to the `pub/static/adminhtml` output, where they can override the default Admin styles, including Page Builder's default content-type styles. Like the `_import.less` files, the `_module.less` file should only contain `@import` statements. In our example, our `_module.less` contains two imports:
+1. **_module.less**. The `_module.less` file is required and must be added directly to your Admin theme's `source` directory. Magento uses this file to add your Admin styles to the `pub/static/adminhtml` output, where they can override the default Admin styles, including Page Builder's default content-type styles. Like the `_import.less` files, the `_module.less` file should only contain `@import` statements. In our example, our `_module.less` contains two imports:
 
     ```scss
     @import 'content-type/heading/_import.less';
@@ -70,7 +70,7 @@ The following instructions are specific to applying an Admin theme to a custom P
     </config>
     ```
 
-2. Upgrade your module, clean the cache, and reload the Admin in the browser:
+1. Upgrade your module, clean the cache, and reload the Admin in the browser:
 
     ```bash
     bin/magento setup:upgrade
@@ -85,7 +85,7 @@ The following instructions are specific to applying an Admin theme to a custom P
 To override Page Builder styles on the storefront, you need to:
 
 1. Create or modify a frontend theme.
-2. Apply the frontend theme to a store view or page.
+1. Apply the frontend theme to a store view or page.
 
 ### Step 1: Create or modify a frontend theme
 
@@ -100,30 +100,32 @@ app/design/frontend/VendorName/ThemeName/web/css/source/_extend.less
 
 ![Page Builder frontend theme files](../images/pagebuilder-frontend-theme-files.svg)
 
-_Frontend theme directory structure_
+:arrow_up: *Frontend theme directory structure*
 
 The first three numbered callouts (**1, 2, 3**) for the frontend theme are identical in description to the Admin theme [previously described](#step-1-create-or-modify-an-admin-theme). The only difference for frontend themes is that the `_module.less` file should be named `_extend.less`.
 
-**(4) _extend.less**. The `_extend.less` file is required and must be added directly to your frontend theme's `source` directory. Magento uses this file to add your frontend styles to the `pub/static/frontend` output in a location within the `styles-m.css` where they override (instead of replace) the default frontend styles, including Page Builder's default content-type styles. Like the `_import.less` files, the `_extend.less` file should only contain `@import` statements. In our example, our `_extend.less` contains the same two imports as seen in `module.less`:
+:four:  **_extend.less**. The `_extend.less` file is required and must be added directly to your frontend theme's `source` directory. Magento uses this file to add your frontend styles to the `pub/static/frontend` output in a location within the `styles-m.css` where they override (instead of replace) the default frontend styles, including Page Builder's default content-type styles. Like the `_import.less` files, the `_extend.less` file should only contain `@import` statements. In our example, our `_extend.less` contains the same two imports as seen in `module.less`:
 
-    ```scss
-    @import 'content-type/heading/_import.less';
-    @import 'content-type/products/_import.less';
-    ```
+```scss
+@import 'content-type/heading/_import.less';
+@import 'content-type/products/_import.less';
+```
 
 ### Step 2: Apply the frontend theme
 
 The following instructions are here as a **reminder** to apply your frontend theme to a store view or page. If you forget, you won't see your style overrides in the storefront. To learn more on applying themes in general, see [Apply a storefront theme]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/themes/theme-apply.html).
 
-**To apply your frontend theme to a store view**:
+{:.procedure}
+To apply your frontend theme to a store view:
 
 Navigate to **Content** > **Design** > **Configuration** and edit the store view where you can apply your frontend theme as the default theme:
 
 ![Set default theme on store view](../images/theme-default-setting-admin.svg)
 
-_Set default frontend theme for store view_
+:arrow_up: *Set default frontend theme for store view*
 
-**To apply your frontend theme to a page**:
+{:.procedure}
+To apply your frontend theme to a page:
 
 During development, it's easy to apply your frontend theme to a single page for testing, but it's also easy to forget to switch your page to that theme.
 
@@ -131,8 +133,8 @@ On any CMS page, scroll to the Design section at the bottom, and select your the
 
 ![Set theme for page](../images/theme-page-setting-admin.svg)
 
-_Set frontend theme for page_
+:arrow_up: *Set frontend theme for page*
 
 ## More about themes
 
-For additional information on overriding styles using themes, see [Simple ways to customize a theme's styles]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/css-guide/css_quick_guide_approach.html).
+For more information on overriding styles using themes, see [Simple ways to customize a theme's styles]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/css-guide/css_quick_guide_approach.html).

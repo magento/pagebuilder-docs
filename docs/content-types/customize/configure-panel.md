@@ -26,7 +26,7 @@ To rename the panel menu sections, you need to extend the defaults configured in
 
     ![Custom menu section file](../../images/custom-menu-section-file.png)
 
-2. Your `menu_section.xml` file should extend the Page Builder `menu_section.xml` (located here: `app/code/Magento/PageBuilder/view/adminhtml/pagebuilder/menu_section.xml`) as follows:
+1. Your `menu_section.xml` file should extend the Page Builder `menu_section.xml` (located here: `app/code/Magento/PageBuilder/view/adminhtml/pagebuilder/menu_section.xml`) as follows:
 
     ```xml
     <?xml version="1.0"?>
@@ -35,7 +35,7 @@ To rename the panel menu sections, you need to extend the defaults configured in
     </config>
     ```
 
-3. Change one or more of the existing menu sections by overriding their `label` values. This example changes the layout menu section from "Layout" to "Structure":
+1. Change one or more of the existing menu sections by overriding their `label` values. This example changes the layout menu section from "Layout" to "Structure":
 
     ```xml
     <?xml version="1.0"?>

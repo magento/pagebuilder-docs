@@ -4,22 +4,22 @@ Changing breakpoints and viewports is about changing Page Builder's default `min
 
 The following list shows Page Builder's default `min-width` and `max-width` values for breakpoints and viewports:
 
-**desktop**
+:arrow_right: **desktop**
 
 -  `<var name="min-width">1024px</var>`
 
-**tablet**
+:arrow_right: **tablet**
 
 -  `<var name="max-width">1024px</var>`
 -  `<var name="min-width">768px</var>`
 
-**mobile**
+:arrow_right: **mobile**
 
 -  `<var name="max-width">768px</var>`
 -  `<var name="min-width">640px</var>`
 -  `<var name="media">only screen and (max-width: 768px)</var>`
 
-**mobile-small**
+:arrow_right: **mobile-small**
 
 -  `<var name="max-width">640px</var>`
 
@@ -38,7 +38,7 @@ You can change Page Builder's existing breakpoints using an Admin theme or modul
 1. [Change your frontend media queries]() (as needed)
 1. [Change the viewport stage CSS]() (as needed)
 
-You can skip steps 3-5 if you are changing or adding new breakpoints without viewport configurations. These include the `tablet` and `mobile-small` breakpoints. Otherwise all these steps are required to ensure that the breakpoint and viewport widths are the same.
+You can skip steps 3-5 if you are changing or adding new breakpoints without viewport configurations. These include the `tablet` and `mobile-small` breakpoints. Otherwise, you need to complete all these steps to ensure that the breakpoint and viewport widths are the same.
 
 ### Step 1: Create an overriding view.xml file
 

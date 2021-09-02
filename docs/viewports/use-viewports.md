@@ -2,10 +2,6 @@
 
 In this topic, we create a content type form field that can accept different values for different breakpoints.
 
-**[Add link to example branch in repo]**
-
-**[Insert diagram]**
-
 [Describe creating the additional `tablet` and `mobile-small` forms for the the min-height field of the existing `Row`. Also show how you can add breakpoints to new fields and other existing fields]
 
 1. [Define a viewport](#step-1-define-a-viewport).
@@ -14,7 +10,7 @@ In this topic, we create a content type form field that can accept different val
 1. [Add CSS for form icons and tooltips](#step-4-add-css-for-form-icons-and-tooltips).
 1. [Add SVG images for form icons](#step-5-add-svg-images-for-form-icons).
 
-### Step 1: Define a viewport
+## Step 1: Define a viewport
 
 ### Step 2: Add viewports to content type configurations
 
