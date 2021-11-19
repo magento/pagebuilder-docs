@@ -43,8 +43,8 @@ The following configuration is from the Quote content type. An overview of these
     <appearances>
         <appearance name="default"
                   default="true"
-                  preview_template="Example_PageBuilderQuote/content-type/acme_quote/default/preview"
-                  master_template="Example_PageBuilderQuote/content-type/acme_quote/default/master"
+                  preview_template="Example_PageBuilderQuote/content-type/example-quote/default/preview"
+                  master_template="Example_PageBuilderQuote/content-type/example-quote/default/master"
                   reader="Magento_PageBuilder/js/master-format/read/configurable">
         <elements...>
         </appearance>
