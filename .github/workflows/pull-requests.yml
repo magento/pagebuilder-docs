@@ -2,9 +2,6 @@ name: Markdown linting for PRs
 
 on:
   pull_request:
-    branches:
-      - master
-      - develop
     paths:
       - docs/**
 
