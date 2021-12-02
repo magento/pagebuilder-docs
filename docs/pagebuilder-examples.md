@@ -21,7 +21,7 @@ Extension modules are extensions of Page Builder's existing modules. Extending a
 
 -  **[Button Extension](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/Button/Extension)** — This module shows how to add custom button types. Created by [Bruce Denham](https://github.com/bdenham).
 
--  **[Columns Extension](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/Columns/Extension)** — This module shows how to add custom button types. Created by [Bruce Denham](https://github.com/bdenham).
+-  **[Columns Extension](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/Columns/Extension)** — This module shows how to use breakpoints to control the responsive layout of columns. Created by [Bruce Denham](https://github.com/bdenham).
 
 -  **[Deactivate PageBuilder](https://github.com/magento-devdocs/pagebuilder-examples/tree/master/Deactivate/PageBuilder)** — This example module shows you how to disable Page Builder for a particular page in Magento, specifically Pages, Blocks, and Dynamic Blocks. Created by [Bruce Denham](https://github.com/bdenham).
 
