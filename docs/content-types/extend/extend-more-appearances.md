@@ -305,7 +305,7 @@ To aid in our discussion of these configuration nodes and how to use them, we wi
 </element>
 ```
 
-{: .bs-callout .bs-callout-info }
+{: .bs-callout-info }
 The `<tag>` and `<html>` nodes are beyond the scope of this topic, but like the other nodes, they also map to fields in a form. In this case, the `<tag>` node maps to the Heading's `heading_type` field and the `<html>` node maps to the `heading_text` field from the `pagebuilder_heading_form.xml`.
 
 ### Understanding and using `style` nodes

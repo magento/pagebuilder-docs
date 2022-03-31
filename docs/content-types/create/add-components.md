@@ -166,7 +166,7 @@ In the preceding code, we made changes to the options menu icons and tooltips. Y
 
 ![Create config file](../../images/options-menu-custom.png)
 
-{: .bs-callout .bs-callout-info }
+{: .bs-callout-info }
 Even though you can change the base option menu properties as described, we suggest you stick the the default options as much as possible to provide end-users with a consistent experience across Magento's content types and other third-party content types that are included as time goes on.
 
 ## Quote `master_component`

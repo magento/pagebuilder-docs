@@ -129,7 +129,7 @@ To add a new Banner appearance configuration, create a content type config file 
 
 :arrow_up: *Add appearances to Banner content type*
 
-{: .bs-callout .bs-callout-info }
+{: .bs-callout-info }
 This procedure applies to any native content type you want to extend.
 In other words, you can use the file name (such as `heading.xml`) and type name (such as `<type name="heading">`) of any content type to extend it based on Magento's XML merging behavior.
 
@@ -197,7 +197,7 @@ Appearances use different HTML templates to create different layouts. They also 
 
 :arrow_up: *Banner appearance templates*
 
-{: .bs-callout .bs-callout-info }
+{: .bs-callout-info }
 Notice how Page Builder organizes the Banner templates by appearance name. We recommend the same practice when adding templates for your appearances.
 
 To create templates for additional Banner appearances, such as the `simple-poster` described in steps 1 and 2, add a new appearance folder with your `master.html` and `preview.html` templates, as shown here:

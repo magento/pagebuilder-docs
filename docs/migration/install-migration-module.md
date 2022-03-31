@@ -2,7 +2,7 @@
 
 The migration module is a composer package hosted within our repository. This package is only available for those with Commerce access keys.
 
-{: .bs-callout .bs-callout-warning }
+{: .bs-callout-warning }
 We recommend using the module in a development environment before deploying it to the production environment. We also recommend creating sufficient backups before completing any form of content migration.
 
 ## Prerequisites
@@ -33,14 +33,14 @@ To install the migration module:
 
 1. [Disable the default migration-on-deployment feature](#disable-migration-on-deployment).
 
-   {: .bs-callout .bs-callout-warning }
+   {: .bs-callout-warning }
    This step is critical for migration development work. It disables the default migration module behavior that migrates your content as part of the deployment using `setup:upgrade`. We made this the default behavior so that deployment to production is easy. But during development, you need to turn it off so that you do not run your migrations accidentally, before you have made strategic changes to your migration code, or backups to your database.
 
 After completing these steps, the data migration source code can be found within the `vendor/magento` directory with the other magento modules.
 
 ## GitHub installation
 
-{: .bs-callout .bs-callout-info}
+{: .bs-callout-info}
 This installation option is for those who are part of the Magento organization on GitHub and want easier access to the migration source code during migration development work.
 
 To install the migration module from the GitHub repo ([magento2/magento2-page-builder-data-migration](<https://github.com/magento/magento2-page-builder-data-migration>){:data-proofer-ignore='true'}):
@@ -61,7 +61,7 @@ To install the migration module from the GitHub repo ([magento2/magento2-page-bu
 
 1. [Disable the default migration-on-deployment feature](#disable-migration-on-deployment).
 
-   {: .bs-callout .bs-callout-warning }
+   {: .bs-callout-warning }
    This step is critical for migration development work. It disables the default migration module behavior that migrates your content as part of the deployment using `setup:upgrade`. We made this the default behavior so that deployment to production is easy. But during development, you need to turn it off so that you do not run your migrations accidentally, before you have made strategic changes to your migration code, or backups to your database.
 
 After completing these steps, the data migration source code should sit alongside the root directory of Magento 2.3.1 installation, with the symlinks placed within. If your directory structure differs, adjust your symlink paths as needed.

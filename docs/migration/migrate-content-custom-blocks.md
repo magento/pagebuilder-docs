@@ -111,7 +111,7 @@ Create a new data patch inline with our [declarative schema documentation]({{ si
 -  `Magento\Framework\DB\FieldToConvert`
 -  `Magento\PageBuilder\Setup\DataConverter\MixedToPageBuilder`
 
-{: .bs-callout .bs-callout-info }
+{: .bs-callout-info }
 The migration module migrates the content from unknown BlueFoot blocks into HTML Code content types. To migrate this content into other content types, use the `MixedToPageBuilder` data converter.
 
 The following example uses the `MixedToPageBuilder` class to convert content from CMS pages (cms_page), CMS blocks (cms_block), product attributes (catalog_product_entity_text), and catalog attributes (catalog_category_entity_text):
