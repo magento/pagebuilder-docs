@@ -4,7 +4,6 @@ In Page Builder, we use a term called _visual selector_, which refers to a UI se
 
 ![alignments](../../images/advanced-alignment.png "Content alignment")
 
-{:.bs-
 Visual selectors support all image formats, but we highly recommend using SVG images for sharpness and clarity.
 
 ## Override the select component with an element template {#element-template}

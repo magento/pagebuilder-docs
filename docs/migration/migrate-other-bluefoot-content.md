@@ -143,7 +143,7 @@ $this->aggregatedFieldConverter->convert(
 
 ## Run your migration module
 
-{: .bs-callout .bs-callout-info }
+{: .bs-callout-info }
 The above changes will not run when using `bin/magento pagebuilder:migrate`. That command only runs for the default areas mentioned at the start of this topic. If you want to run your setup patch using a similar command, you need to create a console command for your module. Otherwise, you can use the `setup:upgrade` command as follows.
 
 You can now run the `setup:upgrade` command to migrate your other BlueFoot content:

@@ -14,7 +14,7 @@ The name of your configuration file should reflect the name of your content type
 
 ![Create config file](../../images/step1-add-config-file.png)
 
-{: .bs-callout .bs-callout-info }
+{: .bs-callout-info }
 The reason we suggest prefixing your content type with your vendor name is to prevent Magento from merging your content type configuration file with another configuration file of the same name, or with a future content type published by Magento.
 
 ## The `example_quote` configuration

@@ -4,7 +4,7 @@ Our content migration module (`PageBuilderDataMigration`) enables BlueFoot users
 
 ![Overview diagram of content migration](images/migration-overview.svg)
 
-{: .bs-callout .bs-callout-info }
+{: .bs-callout-info }
 We only support migrating content from BlueFoot to Page Builder `1.0.*` (released with Magento Commerce `2.3.1`). If we release a newer version of Page Builder, you must first migrate your BlueFoot content to Page Builder `1.0.*`, then upgrade your instance of Page Builder to the newer version.
 
 ## Supported Content Types

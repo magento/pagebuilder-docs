@@ -90,5 +90,5 @@ To add the image uploader to your preview template (`preview.html`), use Knockou
 </div>
 ```
 
-{: .bs-callout .bs-callout-info }
+{: .bs-callout-info }
 When an end-user deletes a file from the media browser, Magento triggers the `fileDeleted` event on the window with the `mediabrowser` namespace. The passed argument is an object containing the `ids` property, which is an array of ID strings for each of the deleted files. Magento adds the IDs of the selected files in the objects dispatched by the `addFile` and `processFile` methods inside the image uploader component.

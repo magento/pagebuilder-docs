@@ -15,7 +15,7 @@ These menu sections are defined in the Page Builder `menu_section.xml` file and 
 
 This topic describes four ways to customize the Page Builder panel:
 
-{: .bs-callout .bs-callout-info }
+{: .bs-callout-info }
 For the sake of the user experience, please don't forget the affect your panel configurations may have on the end user. User's should have access the most important content types first, so be careful how you reorder menu sections and content types within menu sections. We strongly encourage you to place your content types into the existing menu sections when possible, instead of creating your own menu section.
 
 ## Rename panel menu sections
