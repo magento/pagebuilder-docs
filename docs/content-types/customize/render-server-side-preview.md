@@ -62,16 +62,16 @@ To invoke the renderer from the stage, submit an HTTP request to the Page Builde
              // Get the url to call
              var url = Config.getConfig("preview_url");
              const requestConfig = {
-                 method: "GET",
+                 method: "POST",
                  data: {
                      role: this.config.name, // this would be awesome-element in this case
                      // You can also pass any other data to the renderer
-                     message: 'custom data!'
+                     message: 'custom data'
                  }
              };
 
              $.ajax(url, requestConfig).done(function(response) {
-                 // Will display: "Hello stage! You said custom content!"
+                 // Will display: "Hello stage! You said custom data!"
                  this.data.main.html(response.data.message);
              }.bind(this));
          };
@@ -86,4 +86,4 @@ Your exact configuration and situation determine when, and how, you render the e
 
 Generally, you would perform this operation when the properties change, by overriding the `afterObservablesUpdated` method with this logic (as shown in the previous example).
 
-To update the Document Object Model (DOM) to display your content, amend the JavaScript property that represents the HTML variable of your main element with the response from the HTTP request, `this.data.main.html(response.content);` from the previous example.
+To update the Document Object Model (DOM) to display your content, amend the JavaScript property that represents the HTML variable of your main element with the response from the HTTP request, `this.data.main.html(response.data.message);` from the previous example.
