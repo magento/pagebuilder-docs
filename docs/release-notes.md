@@ -7,7 +7,24 @@ The release notes include:
 -  {:.new}New features
 -  {:.fix}Fixes and improvements
 
-## 1.6.0 for Magento Commerce 2.4.2
+## 1.7.1 for Commerce 2.4.4
+
+-  {:.fix} Page Builder is now compatible with PHP 8.1. [GitHub-34131](https://github.com/magento/magento2/issues/34131)<!--- AC-1300-->
+-  {:.fix} Merchants can now add alternative text (`alt_text`) to images (Image, Banner, Slide) to enhance content accessibility. [GitHub-746](https://github.com/magento/magento2-page-builder/issues/746) <!--- PB-1193-->
+-  {:.fix} Administrators with permissions restricted to Content edit only no longer see an error when using Page Builder to add a product widget to a CMS page. {{ site.data.var.ee }} also displays an accurate product count on the widget settings page. Previously, {{ site.data.var.ee }} required permissions to the Catalog module when retrieving product count and displayed this error: `A technical problem with the server created an error. Try again to continue what you were doing. If the problem persists, try again later`. <!--- MC-42779-->
+-  {:.fix} Display issues with the Page Builder Format menu have been resolved with the TinyMCE 5 library upgrade. <!--- AC-446-->
+-  {:.fix} You can now use the mouse click to edit a **Text To Display** value in the Page Builder Insert Link popup. <!--- AC-982-->
+-  {:.fix} {{ site.data.var.ee }} now displays all options as expected on the Page Builder Font Size options menu. Previously, not all options were displayed. <!--- AC-1056-->
+-  {:.fix} Upgraded the `phpgt/dom` Composer dependency for the `magento/magento2-page-builder` extension to the latest versions. [GitHub-34096](https://github.com/magento/magento2/issues/34096) <!--- magento/magento2-page-builder/pull/779-->
+-  {:.fix} {{ site.data.var.ee }} no longer resizes the Page Builder Insert Link and Insert Image modals when displaying the slider in a small column. <!--- AC-973-->
+-  {:.fix} The Page Builder Table Properties menu is now displayed as expected. <!--- AC-407-->
+-  {:.fix} Slider dots are no longer displayed on the Page Builder Insert link or image modal when the mouse is not hovering over the slider. <!--- AC-406-->
+-  {:.fix} The font size used to display Page Builder Table menu options has been optimized. <!--- AC-396-->
+-  {:.fix} Corrected anomalies with the positioning of the Insert/Edit Image and Insert/Edit Link popup windows. <!--- AC-397-->
+-  {:.fix} {{ site.data.var.ee }} no longer throws an error when you click on **Text Editor** for a banner in Page Builder. <!--- AC-398-->
+-  {:.fix} {{ site.data.var.ee }} no longer converts all dynamic blocks to one language during upgrade. <!--- MC-42265-->
+
+## 1.6.0 for Commerce 2.4.2
 
 -  {:.new}<!-- Issue 558 -->**New Page Builder styling**. Page Builder made massive improvements to how it styles content. The changes now make it easy to create simple CSS selectors to override Page Builder's existing content type styles. These changes make it possible to create Page Builder themes with rich responsiveness for all content types.
 
@@ -29,11 +46,11 @@ The release notes include:
 
 -  {:.fix}<!-- MC-37989 -->**Security enhancements**.
 
-## 1.5.1 for Magento Commerce 2.4.1-p1
+## 1.5.1 for Commerce 2.4.1-p1
 
 -  {:.fix}<!-- PB-1140, MC-38812 -->**Error popup.** Fixed an issue in which Page Builder displayed an error popup when adding Catalog subcategories in the Admin.
 
-## 1.5.0 for Magento Commerce 2.4.1
+## 1.5.0 for Commerce 2.4.1
 
 -  {:.new}<!-- Issue 510, 511, 512, 513 -->**Immersive, full-screen editing.** Editing Page Builder content is now full-screen only for all areas controlled by Page Builder. This includes CMS pages, Product and Category pages, Blocks, and Dynamic Blocks. Full-screen editing puts the focus on your content and provides a view that better matches the user experience on the storefront.
 
@@ -85,11 +102,11 @@ The release notes include:
 
 -  {:.fix}Security enhancements.
 
-## **1.3.3-p1** for Magento Commerce 2.3.6-p1
+## **1.3.3-p1** for Commerce 2.3.6-p1
 
 -  {:.fix}Security enhancements.
 
-## **1.3.3** for Magento Commerce 2.3.6
+## **1.3.3** for Commerce 2.3.6
 
 -  {:.fix}<!-- MC-32766 -->Fixed the Text content type to correctly save the Magento variable directives added to html attributes.
 -  {:.fix}<!-- MC-34590 -->Fixed the Text content type to correctly handle and save non-Latin-1 characters.
@@ -97,15 +114,15 @@ The release notes include:
 -  {:.fix}<!-- MC-34846 -->Fixed the HTML content type to correctly display embedded widgets like "Order by SKU" on the Storefront.
 -  {:.fix}Fixed an error that prevented users from saving content-type forms in some cases. The error ("Page Builder was rendering for 5 seconds without releasing locks") caused the loader icon to spin indefinitely after trying to save a form.
 
-## **1.3.2** for Magento Commerce 2.3.5-p2
+## **1.3.2** for Commerce 2.3.5-p2
 
 -  {:.new}Security enhancements.
 
-## **1.3.1** for Magento Commerce 2.3.5-p1
+## **1.3.1** for Commerce 2.3.5-p1
 
 This version of Page Builder is just a version-number update for Magento 2.3.5-p1. All features described for version 1.3.0 apply to this version as well.
 
-## **1.3.0** for Magento Commerce 2.3.5
+## **1.3.0** for Commerce 2.3.5
 
 -  {:.new}**Templates**<br/>
    Page Builder now has templates that can be created from existing content and applied to new content areas. Page Builder templates save both content and layouts of existing pages, blocks, dynamic blocks, product attributes, and category descriptions. For example, you can save an existing Page Builder CMS page as a template and then apply that template (with all its content and layouts) to quickly create new CMS Pages for your site. This new feature is documented here: [Templates](https://docs.magento.com/m2/ee/user_guide/cms/page-builder-templates.html).
@@ -141,15 +158,15 @@ This version of Page Builder is just a version-number update for Magento 2.3.5-p
 -  {:.fix}<!-- PB-390 -->Fixed an issue in which nested Page Builder content fails to save if users click the Save button before the page fully renders.
 -  {:.fix}<!-- PB-418 -->Fixed exception error being throw in cron jobs due to Page Builder analytics.
 
-## **1.2.2** for Magento Commerce 2.3.4-p2
+## **1.2.2** for Commerce 2.3.4-p2
 
 -  {:.new}Security enhancements.
 
-## **1.2.1** for Magento Commerce 2.3.4-p1
+## **1.2.1** for Commerce 2.3.4-p1
 
 -  {:.new}Security enhancements.
 
-## **1.2.0** for Magento Commerce 2.3.4
+## **1.2.0** for Commerce 2.3.4
 
 ### **Page Builder integration with PWA Studio**
 
@@ -173,11 +190,11 @@ This version of Page Builder is just a version-number update for Magento 2.3.5-p
 -  {:.fix}<!-- PB-239 -->Fixed a session error that can occur when previewing a large page in the Page Builder Admin.
 -  {:.fix}<!-- PB-248 -->Updated Page Builder LESS styles to prevent storefront style duplication.
 
-## **1.1.1** for Magento Commerce 2.3.3-p1
+## **1.1.1** for Commerce 2.3.3-p1
 
 -  {:.new}Security enhancements.
 
-## **1.1.0** for Magento Commerce 2.3.3
+## **1.1.0** for Commerce 2.3.3
 
 -  {:.new}<!-- MC-15250 -->Added explicit product sorting to the Products content type.
 
@@ -204,19 +221,19 @@ This version of Page Builder is just a version-number update for Magento 2.3.5-p
 
 -  {:.fix}<!-- MC-16241 -->Fixed an issue in which the required asterisk symbol was displayed twice on form fields.
 
-## **1.0.3** for Magento Commerce 2.3.2-p2
+## **1.0.3** for Commerce 2.3.2-p2
 
 -  {:.new}Security enhancements.
 
-## **1.0.2** for Magento Commerce 2.3.2-p1
+## **1.0.2** for Commerce 2.3.2-p1
 
 -  {:.new}Security enhancements.
 
-## **1.0.1** for Magento Commerce 2.3.2
+## **1.0.1** for Commerce 2.3.2
 
 -  {:.new}Ensures compatibility with Magento Commerce 2.3.2.
 
-## **1.0.0** for Magento Commerce 2.3.1
+## **1.0.0** for Commerce 2.3.1
 
 -  {:.new}General availability release!
 
