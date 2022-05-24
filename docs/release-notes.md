@@ -11,18 +11,18 @@ The release notes include:
 
 -  {:.fix} Page Builder is now compatible with PHP 8.1. [GitHub-34131](https://github.com/magento/magento2/issues/34131)<!--- AC-1300-->
 -  {:.fix} Merchants can now add alternative text (`alt_text`) to images (Image, Banner, Slide) to enhance content accessibility. [GitHub-746](https://github.com/magento/magento2-page-builder/issues/746) <!--- PB-1193-->
--  {:.fix} Administrators with permissions restricted to Content edit only no longer see an error when using Page Builder to add a product widget to a CMS page. {{ site.data.var.ee }} also displays an accurate product count on the widget settings page. Previously, {{ site.data.var.ee }} required permissions to the Catalog module when retrieving product count and displayed this error: `A technical problem with the server created an error. Try again to continue what you were doing. If the problem persists, try again later`. <!--- MC-42779-->
+-  {:.fix} Administrators with permissions restricted to Content edit only no longer see an error when using Page Builder to add a product widget to a CMS page. Page Builder also displays an accurate product count on the widget settings page. Previously, Page Builder required permissions to the Catalog module when retrieving product count and displayed this error: `A technical problem with the server created an error. Try again to continue what you were doing. If the problem persists, try again later`. <!--- MC-42779-->
 -  {:.fix} Display issues with the Page Builder Format menu have been resolved with the TinyMCE 5 library upgrade. <!--- AC-446-->
--  {:.fix} You can now use the mouse click to edit a **Text To Display** value in the Page Builder Insert Link popup. <!--- AC-982-->
--  {:.fix} {{ site.data.var.ee }} now displays all options as expected on the Page Builder Font Size options menu. Previously, not all options were displayed. <!--- AC-1056-->
+-  {:.fix} You can now use the mouse to edit a **Text To Display** value in the Insert Link popup. <!--- AC-982-->
+-  {:.fix} Page Builder now displays all options as expected on the Font Size options menu. Previously, not all options were displayed. <!--- AC-1056-->
 -  {:.fix} Upgraded the `phpgt/dom` Composer dependency for the `magento/magento2-page-builder` extension to the latest versions. [GitHub-34096](https://github.com/magento/magento2/issues/34096) <!--- magento/magento2-page-builder/pull/779-->
--  {:.fix} {{ site.data.var.ee }} no longer resizes the Page Builder Insert Link and Insert Image modals when displaying the slider in a small column. <!--- AC-973-->
+-  {:.fix} Page Builder no longer resizes the Insert Link and Insert Image modals when displaying the slider in a small column. <!--- AC-973-->
 -  {:.fix} The Page Builder Table Properties menu is now displayed as expected. <!--- AC-407-->
--  {:.fix} Slider dots are no longer displayed on the Page Builder Insert link or image modal when the mouse is not hovering over the slider. <!--- AC-406-->
--  {:.fix} The font size used to display Page Builder Table menu options has been optimized. <!--- AC-396-->
+-  {:.fix} Slider dots are no longer displayed on the Insert link or image modal when the mouse is not hovering over the slider. <!--- AC-406-->
+-  {:.fix} The font size used to display the Table menu options has been optimized. <!--- AC-396-->
 -  {:.fix} Corrected anomalies with the positioning of the Insert/Edit Image and Insert/Edit Link popup windows. <!--- AC-397-->
--  {:.fix} {{ site.data.var.ee }} no longer throws an error when you click on **Text Editor** for a banner in Page Builder. <!--- AC-398-->
--  {:.fix} {{ site.data.var.ee }} no longer converts all dynamic blocks to one language during upgrade. <!--- MC-42265-->
+-  {:.fix} Page Builder no longer throws an error when you click on **Text Editor** for a banner. <!--- AC-398-->
+-  {:.fix} Page Builder no longer converts all dynamic blocks to one language during upgrade. <!--- MC-42265-->
 
 ## 1.6.0 for Commerce 2.4.2
 
