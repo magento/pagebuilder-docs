@@ -7,7 +7,7 @@ The release notes include:
 -  {:.new}New features
 -  {:.fix}Fixes and improvements
 
-## 1.7.2 for Magento Commerce 2.4.5
+## 1.7.2 for Commerce 2.4.5
 
 -  {:.new}**New wrapper entity - "Column Group" was introduced for Column**. Previously users can add column(s) only inside another container/wrapper elements such as Tab, Row, etc. Now column has its own wrapper and can be added directly on stage. Also, Column Group has a settings element where users can specify configuration for this wrapper entity.[GitHub-597](https://github.com/magento/magento2-page-builder/issues/597)<!--- PB-500-->
 
