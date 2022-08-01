@@ -11,7 +11,7 @@ The release notes include:
 
 -  {:.new}**New wrapper entity - "Column Group" was introduced for Column**. Previously, users could add columns only inside another container/wrapper content type, such as a Tab, Row, etc. Now, the Column has its own wrapper and can be added directly on stage. Also, Column Group has a settings element where users can specify configuration for this wrapper entity.[GitHub-597](https://github.com/magento/magento2-page-builder/issues/597)<!--- PB-500-->
 
--  {:.new}**New ability to duplicate, hide and delete implemented for Column Group**. Using these menu elements, users can duplicate, hide and delete Column Groups so can manipulate Column Groups the same way as other content types and have a unified experience.[GitHub-595](https://github.com/magento/magento2-page-builder/issues/595)<!--- PB-507-->
+-  {:.new}**New menu options to duplicate, hide, and delete Column Groups**. With these new options, users can duplicate, hide, and delete Column Groups — just like they can with content types. [GitHub-595](https://github.com/magento/magento2-page-builder/issues/595)<!--- PB-507-->
 
 -  {:.new}<!-- Issue 594 -->**New multiline column support added to Column Group**. With this addition, users can manipulate multiple lines of columns inside one Column Group to make help make column layouts much more flexible. [GitHub-34131](https://github.com/magento/magento2-page-builder/issues/594)<!--- BP-108-->
 
