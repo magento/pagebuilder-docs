@@ -9,7 +9,7 @@ The release notes include:
 
 ## 1.7.2 for Commerce 2.4.5
 
--  {:.new}**New wrapper entity - "Column Group" was introduced for Column**. Previously users can add column(s) only inside another container/wrapper elements such as Tab, Row, etc. Now column has its own wrapper and can be added directly on stage. Also, Column Group has a settings element where users can specify configuration for this wrapper entity.[GitHub-597](https://github.com/magento/magento2-page-builder/issues/597)<!--- PB-500-->
+-  {:.new}**New wrapper entity - "Column Group" was introduced for Column**. Previously, users could add columns only inside another container/wrapper content type, such as a Tab, Row, etc. Now, the Column has its own wrapper and can be added directly on stage. Also, Column Group has a settings element where users can specify configuration for this wrapper entity.[GitHub-597](https://github.com/magento/magento2-page-builder/issues/597)<!--- PB-500-->
 
 -  {:.new}**New ability to duplicate, hide and delete implemented for Column Group**. Using these menu elements, users can duplicate, hide and delete Column Groups so can manipulate Column Groups the same way as other content types and have a unified experience.[GitHub-595](https://github.com/magento/magento2-page-builder/issues/595)<!--- PB-507-->
 
