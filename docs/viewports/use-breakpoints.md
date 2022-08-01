@@ -92,7 +92,7 @@ events.on('stage:viewportChangeAfter', function (args) {
 });
 ```
 
-In both handlers, the event handler uses the breakpoint/viewport name to access the `slidesToShow` value, then uses that value to re-initialize the `Products` carousel (the [slick slider](http://kenwheeler.github.io/slick/)) to show a suitable number of products for the selected viewport width, when displayed on the stage.
+In both handlers, the event handler uses the breakpoint/viewport name to access the `slidesToShow` value, then uses that value to re-initialize the `Products` carousel (the [slick slider](https://kenwheeler.github.io/slick/)) to show a suitable number of products for the selected viewport width, when displayed on the stage.
 
 Notice how the viewport data in both event handlers is accessed using dot syntax according to the hierarchy defined in the `view.xml` configuration file. For example, the `preview.ts` file, data for the local `this.slidesToShow` property is accessed using the viewport name from `args`, as shown here:
 

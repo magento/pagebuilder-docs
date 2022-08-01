@@ -21,7 +21,7 @@ Within Page Builder, we use the `sortable` binding to pass preview-component opt
 
 **Configuration:**
 
-See the options listed on jQuery UI's Sortable API page: http://api.jqueryui.com/sortable/
+See the options listed on jQuery UI's Sortable API page: https://api.jqueryui.com/sortable/
 
 **Usage:**
 
@@ -42,7 +42,7 @@ Within Page Builder, we use this binding for the left panel's content types. You
 
 **Configuration:**
 
-See the options listed on jQuery UI's Sortable API page: http://api.jqueryui.com/draggable/
+See the options listed on jQuery UI's Sortable API page: https://api.jqueryui.com/draggable/
 
 **Usage:**
 
