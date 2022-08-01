@@ -13,7 +13,7 @@ The release notes include:
 
 -  {:.new}**New ability to duplicate, hide and delete implemented for Column Group**. Using these menu elements, users can duplicate, hide and delete Column Groups so can manipulate Column Groups the same way as other content types and have a unified experience.[GitHub-595](https://github.com/magento/magento2-page-builder/issues/595)<!--- PB-507-->
 
--  {:.new}<!-- Issue 594 -->**New multiline column support added to Column Group**. With this enhancement, users can manipulate multiple lines of columns inside one Column Group. It provides more flexibility in defining columns layout.[GitHub-34131](https://github.com/magento/magento2-page-builder/issues/594)<!--- BP-108-->
+-  {:.new}<!-- Issue 594 -->**New multiline column support added to Column Group**. With this addition, users can manipulate multiple lines of columns inside one Column Group to make help make column layouts much more flexible. [GitHub-34131](https://github.com/magento/magento2-page-builder/issues/594)<!--- BP-108-->
 
 ## 1.7.1 for Commerce 2.4.4
 
