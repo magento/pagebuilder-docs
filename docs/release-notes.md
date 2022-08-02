@@ -7,6 +7,14 @@ The release notes include:
 -  {:.new}New features
 -  {:.fix}Fixes and improvements
 
+## 1.7.2 for Commerce 2.4.5
+
+-  {:.new}**New wrapper entity - "Column Group" was introduced for Column**. Previously, users could add columns only inside another container/wrapper content type, such as a Tab, Row, etc. Now, the Column has its own wrapper and can be added directly on stage. Also, Column Group has a settings element where users can specify configuration for this wrapper entity.[GitHub-597](https://github.com/magento/magento2-page-builder/issues/597)<!--- PB-500-->
+
+-  {:.new}**New menu options to duplicate, hide, and delete Column Groups**. With these new options, users can duplicate, hide, and delete Column Groups — just like they can with content types. [GitHub-595](https://github.com/magento/magento2-page-builder/issues/595)<!--- PB-507-->
+
+-  {:.new}<!-- Issue 594 -->**New multiline column support added to Column Group**. With this addition, users can manipulate multiple lines of columns inside one Column Group to make help make column layouts much more flexible. [GitHub-34131](https://github.com/magento/magento2-page-builder/issues/594)<!--- BP-108-->
+
 ## 1.7.1 for Commerce 2.4.4
 
 -  {:.fix} Page Builder is now compatible with PHP 8.1. [GitHub-34131](https://github.com/magento/magento2/issues/34131)<!--- AC-1300-->
