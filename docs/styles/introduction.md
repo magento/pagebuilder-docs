@@ -2,7 +2,7 @@
 
 Page Builder applies CSS styles to both native and custom content types by generating attribute-based CSS rulesets that are unique to each content type on a page. Page Builder generates and applies styles to content types in four stages:
 
--  [Add content-type attributes](#add-content-type-attributes). Page Builder adds a `data-pb-style` attribute and a dynamically generated value to the content type so that it can be uniquely targeted by a CSS selector.
+-  [Add content-type attributes](#content-type-attributes). Page Builder adds a `data-pb-style` attribute and a dynamically generated value to the content type so that it can be uniquely targeted by a CSS selector.
 
 -  [Generate dynamic CSS selectors](#dynamic-css-selectors). Page Builder generates a CSS selector for the content type by combining the page's `html-body` ID and the `data-pb-style` attribute with the content type's unique value.
 
