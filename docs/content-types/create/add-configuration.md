@@ -26,7 +26,7 @@ The following configuration is from the Quote content type. An overview of these
 ```xml
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
-    <type name="example_quote"
+    <type name="example-quote"
         label="Quote"
         menu_section="elements"
         component="Magento_PageBuilder/js/content-type"
