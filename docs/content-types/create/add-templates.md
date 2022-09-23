@@ -74,7 +74,6 @@ The Quote `preview_template`  (`preview.html`) is shown here in full, followed b
      class="pagebuilder-content-type"
      css="data.main.css"
      event="{ mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false">
-    <render args="getOptions().template" />
     <blockquote attr="data.quote.attributes"
               ko-style="data.quote.style"
               css="data.quote.css"
@@ -92,6 +91,7 @@ The Quote `preview_template`  (`preview.html`) is shown here in full, followed b
        css="data.author_title.css"
        data-bind="liveEdit: { field: 'quote_author_desc', placeholder: $t('Enter Description') }">
     </div>
+    <render args="getOptions().template" />
 </div>
 ```
 

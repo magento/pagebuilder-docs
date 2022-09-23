@@ -123,10 +123,10 @@ The `class` attributes reference these styles in both our Admin preview template
 ```html
 <!--preview.html-->
 <div attr="data.main.attributes" ko-style="data.main.style" class="pagebuilder-content-type" css="data.main.css" event="{ mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false">
-    <render args="getOptions().template" />
     <blockquote class="quote-content" css="data.quote.css" attr="data.quote.attributes" ko-style="data.quote.style" data-bind="liveEdit: { field: 'quote_text', placeholder: $t('Enter Quote') }"></blockquote>
     <div class="quote-author" attr="data.author.attributes" ko-style="data.author.style" data-bind="liveEdit: { field: 'quote_author', placeholder: $t('Enter Author') }"></div>
     <div class="quote-description" attr="data.author_title.attributes" ko-style="data.author_title.style" data-bind="liveEdit: { field: 'quote_author_desc', placeholder: $t('Enter Description') }"></div>
+    <render args="getOptions().template" />
 </div>
 ```
 
