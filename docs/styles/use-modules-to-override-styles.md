@@ -1,3 +1,9 @@
+---
+title: Use Modules to override styles
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/styles/use-modules-to-override-styles
+layout: migrated
+---
+
 # Use Modules to override styles
 
 When you create a Page Builder module by either extending a Page Builder content type or creating a custom content type, you should override Page Builder's styles from within the module, using the Page Builder selector override pattern: `#html-body` + `[content-type attribute]` + `any additional selector`, as shown here:

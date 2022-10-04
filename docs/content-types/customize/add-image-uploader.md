@@ -1,3 +1,9 @@
+---
+title: Add an image uploader
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/add-image-uploader
+layout: migrated
+---
+
 # Add an image uploader
 
 This topic describes how to add the image uploader component to your content type so that end-users can add images from the Admin stage as needed.

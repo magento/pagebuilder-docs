@@ -1,3 +1,9 @@
+---
+title: Add additional data
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/
+layout: migrated
+---
+
 # Add additional data
 
 This topic describes how to extend and configure Page Builder content types to accommodate any preferred setting that is not addressed in the confines of our existing `content_type.xsd` schema definition.

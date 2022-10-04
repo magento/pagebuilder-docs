@@ -1,3 +1,9 @@
+---
+title: Add a text editor
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/add-text-editor
+layout: migrated
+---
+
 # Add a text editor
 
 This topic describes how to add a reusable inline text editing component to the Page Builder stage for a content type.

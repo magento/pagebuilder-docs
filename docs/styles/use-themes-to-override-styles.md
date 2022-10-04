@@ -1,3 +1,9 @@
+---
+title: Use Themes to override styles
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/styles/use-themes-to-override-styles
+layout: migrated
+---
+
 # Use Themes to override styles
 
 The best place to override Page Builder's default styles for native content types is within your Admin and frontend themes. For your own custom or extension modules, you should first add your overriding styles to your modules, as explained in [Use modules to override styles](use-modules-to-override-styles.md).

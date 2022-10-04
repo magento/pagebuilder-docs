@@ -1,3 +1,9 @@
+---
+title:# Extend an appearance
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/extend/extend-appearances
+layout: migrated
+---
+
 ## Extend an appearance
 
 In this topic, you will learn how to add a new user-defined property to an existing content type. Specifically, we will add a `max-height` property to all the Banner appearances. Why? Because our customers told us to, drill sergeant. [(WTM?)](https://www.youtube.com/watch?v=U6VPEcj77v8 "What's That Movie?").

@@ -1,3 +1,9 @@
+---
+title: Add a visual selector
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/add-visual-selector
+layout: migrated
+---
+
 # Add a visual selector
 
 In Page Builder, we use a term called _visual selector_, which refers to a UI select control that makes its options visually clear to end users. You can see examples of these selectors in Page Builder's content type form fields for **Background Type**, **Background Size**, **Alignment**, and more. This topic describes how to add these visual selector controls to your own content types.

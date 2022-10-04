@@ -1,3 +1,9 @@
+---
+title: Add configuration
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/create/add-configuration
+layout: migrated
+---
+
 # Add configuration
 
 The configuration file defines the settings and references to your content type files. You will return to this file often to update references and change settings during the development process.

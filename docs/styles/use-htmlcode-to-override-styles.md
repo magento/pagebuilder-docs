@@ -1,3 +1,9 @@
+---
+title: Use HTML Code to override styles
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/styles/use-htmlcode-to-override-styles
+layout: migrated
+---
+
 # Use HTML Code to override styles
 
 {:.bs-callout-info}

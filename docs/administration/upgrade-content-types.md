@@ -1,3 +1,9 @@
+---
+title: Upgrade content types
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/upgrade-content-types
+layout: migrated
+---
+
 # Upgrade content types
 
 Before version 1.3, if we updated our content-type configurations and sent them out with a new version of Page Builder, it could break the data you saved using the previous version. This happened because the configuration data of a content type is mapped to the content type's display templates. So when we change a configuration, the display of existing content might also change. With significant changes, the data from the appearance `element` nodes (`attributes`, `css`, `html`, `style`, and `tag`) is lost. Such changes cause existing content to appear incorrectly, or not at all.

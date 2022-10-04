@@ -1,3 +1,9 @@
+---
+title: Migrate other BlueFoot content
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/migration/migrate-other-bluefoot-content
+layout: migrated
+---
+
 # Migrate other BlueFoot content
 
 By default, the migration module only migrates content from these tables of the Magento database:

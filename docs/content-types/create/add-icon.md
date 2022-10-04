@@ -1,3 +1,9 @@
+---
+title: Add icon
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/create/add-icon
+layout: migrated
+---
+
 # Add icon
 
 In this last step, we will create a panel icon for our Quote content type so that it has a unique but visually consistent identity alongside Page Builder's native font icons. When finished, the panel icon for our Quote content type will look like this:

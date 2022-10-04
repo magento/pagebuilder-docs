@@ -1,3 +1,9 @@
+---
+title: Change breakpoints and viewports
+layout: migrated
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/viewports/change-breakpoints-viewports
+---
+
 # Change breakpoints and viewports
 
 Changing breakpoints and viewports is about changing Page Builder's default `min-width` and `max-width` values to match your responsive design needs.

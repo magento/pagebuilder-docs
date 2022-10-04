@@ -1,3 +1,9 @@
+---
+title: Content type configurations
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/architecture/configurations
+layout: migrated
+---
+
 # Content type configurations
 
 Content type configurations are how you define your content types to Page Builder. Creating new content types, extending content-types, and customizing content types all starts with an XML configuration file.

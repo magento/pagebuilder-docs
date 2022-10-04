@@ -1,3 +1,9 @@
+---
+title: Configure the panel
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/configure-panel
+layout: migrated
+---
+
 # Configure the panel
 
 By default, the Page Builder panel has four menu sections (Layout, Elements, Media, Add Content) and 16 content types as shown here:

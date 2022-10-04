@@ -1,3 +1,9 @@
+---
+title: Install the migration module
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/migration/install-migration-module
+layout: migrated
+---
+
 # Install the migration module
 
 The migration module is a composer package hosted within our repository. This package is only available for those with Commerce access keys.

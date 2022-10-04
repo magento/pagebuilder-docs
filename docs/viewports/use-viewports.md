@@ -1,3 +1,9 @@
+---
+title: Use viewports for forms
+layout: migrated
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/viewports/use-viewports
+---
+
 # Use viewports for forms
 
 In this topic, we create a content type form field that can accept different values for different breakpoints.

@@ -1,3 +1,9 @@
+---
+title: Add a block chooser
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/add-block-chooser
+layout: migrated
+---
+
 # Add a block chooser
 
 This topic describes how to use the block chooser UI component for a custom content type.

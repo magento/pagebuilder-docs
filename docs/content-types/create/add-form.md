@@ -1,3 +1,9 @@
+---
+title: Add form
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/create/add-form
+layout: migrated
+---
+
 # Add form
 
 In this step, we will create a UI component form. This form will give users another way to enter text for the Quote and style the text's appearance.
