@@ -1,6 +1,6 @@
 ---
 title: What is Page Builder?
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/index
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/
 layout: migrated
 ---
 
