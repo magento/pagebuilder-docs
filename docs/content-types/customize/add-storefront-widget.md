@@ -1,3 +1,9 @@
+---
+title: Add a storefront widget
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/add-storefront-widget
+layout: migrated
+---
+
 # Add a storefront widget
 
 A storefront widget is a JavaScript component that handles the behavior of a content type after Page Builder renders it on the storefront. For example, the Tabs and Sliders have their own storefront widgets to handle the end-user's tapping of tabs and swiping of slides on the storefront.

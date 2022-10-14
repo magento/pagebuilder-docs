@@ -1,3 +1,9 @@
+---
+title: Use breakpoints for widgets
+layout: migrated
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/viewports/use-breakpoints
+---
+
 # Use breakpoints for widgets
 
 Using breakpoints in Page Builder involves adding custom data to a breakpoint configuration so that you can use that data to control the responsive behavior of content types from `widgets`.

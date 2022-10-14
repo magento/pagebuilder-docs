@@ -1,3 +1,9 @@
+---
+title: Run the migration module
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/migration/run-migration-module
+layout: migrated
+---
+
 # Run the migration module
 
 {:.bs-callout-warning }

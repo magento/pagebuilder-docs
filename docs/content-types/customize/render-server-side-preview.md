@@ -1,3 +1,9 @@
+---
+title: Render server-side previews
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/render-server-side-preview
+layout: migrated
+---
+
 # Render server-side previews
 
 This topic describes how to use the `RenderPool` on the stage to render a backend preview.

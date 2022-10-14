@@ -1,3 +1,9 @@
+---
+title: Migrate content from custom blocks
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/migration/migrate-content-custom-blocks
+layout: migrated
+---
+
 # Migrate content from custom blocks
 
 This topic describes how to migrate content from your custom BlueFoot blocks to Page Builder custom content types.

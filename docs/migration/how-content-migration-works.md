@@ -1,3 +1,9 @@
+---
+title: How content migration works
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/migration/how-content-migration-works
+layout: migrated
+---
+
 # How content migration works
 
 Each content type has a corresponding renderer to convert the old BlueFoot JSON structure into the new PageBuilder format. The Page Builder format uses HTML to store all data associated with the content type within the DOM tree through attributes, styles, and child nodes. See [Page Builder architecture](../architecture/overview.md) and [Configurations](../architecture/configurations.md) for more information.

@@ -1,3 +1,9 @@
+---
+title: Use Page Builder for product attributes
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/use-for-product-attributes
+layout: migrated
+---
+
 # Use Page Builder for product attributes
 
 The Page Builder module is compatible with all product attribute fields that use an input of type `text`.

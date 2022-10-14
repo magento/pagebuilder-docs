@@ -1,3 +1,9 @@
+---
+title: Overview of content migration
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/migration/
+layout: migrated
+---
+
 # Overview of content migration
 
 Our content migration module (`PageBuilderDataMigration`) enables BlueFoot users to migrate *the content* from their BlueFoot blocks to the new Page Builder content types. The migration module does not convert the code from the BlueFoot blocks; it only migrates the content.

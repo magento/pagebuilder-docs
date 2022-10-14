@@ -1,3 +1,9 @@
+---
+title: Add a custom toolbar
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/add-custom-toolbar
+layout: migrated
+---
+
 # Add a custom toolbar
 
 This topic shows you how to implement an inline toolbar for your content type. You can see an example of a toolbar in Page Builder's Heading content type, as shown here:

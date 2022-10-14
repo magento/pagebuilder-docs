@@ -1,3 +1,9 @@
+---
+title: Apply product conditions
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/apply-product-conditions
+layout: migrated
+---
+
 # Apply product conditions
 
 Out-of-the-box, product conditions can be set on Page Builder's Product content type to define which products you want to display based on a variety of product attributes. For example, if you only want display products in a category with a price greater than $50, you would set up a condition for the product as shown here:

@@ -1,3 +1,9 @@
+---
+title: Add components
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/create/add-components
+layout: migrated
+---
+
 # Add components
 
 In this step, we will create a preview component in order to customize the options menu for our Quote. The options menu is the popup menu that appears when you mouseover a content type, as shown here:

@@ -1,3 +1,9 @@
+---
+title: Add icons and images
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/add-icons-images
+layout: migrated
+---
+
 # Add icons and images
 
 Page Builder Admin icons follow the same design principles as the core [Magento Admin icons]. They are simple, flat, and monochromatic to prevent the loss of detail at smaller sizes, while making their shapes easier to comprehend.

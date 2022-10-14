@@ -1,3 +1,9 @@
+---
+title: Page Builder events
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/architecture/events
+layout: migrated
+---
+
 # Page Builder events
 
 {% raw %}

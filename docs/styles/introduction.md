@@ -1,3 +1,9 @@
+---
+title: How Page Builder styles content
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/styles/
+layout: migrated
+---
+
 # How Page Builder styles content
 
 Page Builder applies CSS styles to both native and custom content types by generating attribute-based CSS rulesets that are unique to each content type on a page. Page Builder generates and applies styles to content types in four stages:

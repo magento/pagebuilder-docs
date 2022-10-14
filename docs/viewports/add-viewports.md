@@ -1,3 +1,9 @@
+---
+title: Add viewports
+layout: migrated
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/viewports/add-viewports
+---
+
 # Add viewports
 
 By default, Page Builder defines four responsive breakpoints, but only uses two of them for viewports: `desktop` and `mobile`. The other two breakpoints are `tablet` and `mobile-small`. This topic shows you how to add viewport previews to these breakpoints and customize them as needed.

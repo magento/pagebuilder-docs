@@ -1,3 +1,9 @@
+---
+title: Add styles
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/create/add-styles
+layout: migrated
+---
+
 # Add styles
 
 In this step, we will create CSS styles (using LESS) to define the Quote's base appearance. We will also create several optional CSS classes that end-users can apply to our Quote.

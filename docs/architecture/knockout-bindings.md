@@ -1,3 +1,9 @@
+---
+title: Page Builder Knockout bindings
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/architecture/knockout-bindings
+layout: migrated
+---
+
 # Page Builder Knockout bindings
 
 As part of the Page Builder application, we provide a number of several new Knockout bindings to add more functionality to certain content types through Knockouts binding syntax.

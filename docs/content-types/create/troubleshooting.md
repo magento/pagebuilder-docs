@@ -1,3 +1,9 @@
+---
+title: Troubleshooting
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/create/troubleshooting
+layout: migrated
+---
+
 # Troubleshooting
 
 ## Change in the master.html is not visible

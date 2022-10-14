@@ -1,3 +1,9 @@
+---
+title: Install Page Builder example modules
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/pagebuilder-examples
+layout: migrated
+---
+
 # Install Page Builder example modules
 
 Learning by example is one of the best ways to absorb the knowledge you need when learning new development tasks. We take that approach to heart and have tried to provide several example modules that focus on different areas of Page Builder development.

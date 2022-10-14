@@ -1,3 +1,9 @@
+---
+title: Page Builder Architecture
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/architecture/
+layout: migrated
+---
+
 # Page Builder Architecture
 
 We wrote Page Builder in [TypeScript], a superset of JavaScript. Before each release, we transpile the TypeScript to JavaScript.

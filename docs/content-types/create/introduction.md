@@ -1,3 +1,9 @@
+---
+title: Introduction to creating content types
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/create/
+layout: migrated
+---
+
 # Introduction to creating content types
 
 Page Builder comes with several content types (controls) you can use to build your storefront pages. In this tutorial, you will add a new content type: a **Quote** control, which you can use to show customer testimonials or other types of quotations within your storefront.

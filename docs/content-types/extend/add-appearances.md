@@ -1,3 +1,9 @@
+---
+title: Add appearances
+migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/extend/add-appearances
+layout: migrated
+---
+
 # Add appearances
 
 This topic shows you how to add an appearance to Page Builder's native content types. An overview of the steps and the files you need to add are illustrated here:
