@@ -1,5 +1,5 @@
 ---
-title:# Extend an appearance
+title: Extend an appearance
 migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/extend/extend-appearances
 layout: migrated
 ---
