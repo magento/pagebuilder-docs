@@ -1,6 +1,6 @@
 ---
 title: Page Builder Knockout bindings
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/architecture/knockout-bindings
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/architecture/knockout-bindings
 layout: migrated
 ---
 

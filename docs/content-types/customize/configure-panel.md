@@ -1,6 +1,6 @@
 ---
 title: Configure the panel
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/configure-panel
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/configure-panel
 layout: migrated
 ---
 

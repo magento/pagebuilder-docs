@@ -1,6 +1,6 @@
 ---
 title: Apply product conditions
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/apply-product-conditions
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/apply-product-conditions
 layout: migrated
 ---
 

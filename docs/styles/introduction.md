@@ -1,6 +1,6 @@
 ---
 title: How Page Builder styles content
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/styles/
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/styles/
 layout: migrated
 ---
 

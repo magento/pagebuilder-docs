@@ -1,6 +1,6 @@
 ---
 title: Add icons and images
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/add-icons-images
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/add-icons-images
 layout: migrated
 ---
 

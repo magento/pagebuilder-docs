@@ -1,6 +1,6 @@
 ---
 title: Release notes for Page Builder
-migrated_to: https://experienceleague.adobe.com/docs/commerce-admin/page-builder/release-notes.html?lang=en
+redirect_to: https://experienceleague.adobe.com/docs/commerce-admin/page-builder/release-notes.html?lang=en
 layout: migrated
 ---
 

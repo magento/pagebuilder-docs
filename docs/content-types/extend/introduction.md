@@ -1,6 +1,6 @@
 ---
 title: Introduction to extending content types
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/extend/
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/extend/
 layout: migrated
 ---
 

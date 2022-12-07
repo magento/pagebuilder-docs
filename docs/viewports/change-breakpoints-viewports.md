@@ -1,7 +1,7 @@
 ---
 title: Change breakpoints and viewports
 layout: migrated
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/viewports/change-breakpoints-viewports
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/viewports/change-breakpoints-viewports
 ---
 
 # Change breakpoints and viewports

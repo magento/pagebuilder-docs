@@ -1,7 +1,7 @@
 ---
 title: Add viewports
 layout: migrated
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/viewports/add-viewports
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/viewports/add-viewports
 ---
 
 # Add viewports

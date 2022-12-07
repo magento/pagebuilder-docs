@@ -1,6 +1,6 @@
 ---
 title: Migrate other BlueFoot content
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/migration/migrate-other-bluefoot-content
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/migration/migrate-other-bluefoot-content
 layout: migrated
 ---
 

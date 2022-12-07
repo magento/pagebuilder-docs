@@ -1,6 +1,6 @@
 ---
 title: Content type configurations
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/architecture/configurations
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/architecture/configurations
 layout: migrated
 ---
 

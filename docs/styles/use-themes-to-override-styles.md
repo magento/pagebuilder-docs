@@ -1,6 +1,6 @@
 ---
 title: Use Themes to override styles
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/styles/use-themes-to-override-styles
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/styles/use-themes-to-override-styles
 layout: migrated
 ---
 

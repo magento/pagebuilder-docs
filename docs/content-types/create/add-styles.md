@@ -1,6 +1,6 @@
 ---
 title: Add styles
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/create/add-styles
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/create/add-styles
 layout: migrated
 ---
 

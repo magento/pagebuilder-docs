@@ -1,7 +1,7 @@
 ---
 title: Use breakpoints for widgets
 layout: migrated
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/viewports/use-breakpoints
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/viewports/use-breakpoints
 ---
 
 # Use breakpoints for widgets
