@@ -1,6 +1,6 @@
 ---
 title: How content migration works
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/migration/how-content-migration-works
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/migration/how-content-migration-works
 layout: migrated
 ---
 

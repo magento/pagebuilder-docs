@@ -1,6 +1,6 @@
 ---
 title: Add components
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/create/add-components
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/create/add-components
 layout: migrated
 ---
 

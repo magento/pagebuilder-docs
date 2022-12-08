@@ -1,6 +1,6 @@
 ---
 title: Migrate content from custom blocks
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/migration/migrate-content-custom-blocks
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/migration/migrate-content-custom-blocks
 layout: migrated
 ---
 

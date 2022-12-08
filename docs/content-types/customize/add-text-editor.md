@@ -1,6 +1,6 @@
 ---
 title: Add a text editor
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/add-text-editor
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/add-text-editor
 layout: migrated
 ---
 

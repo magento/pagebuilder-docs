@@ -1,6 +1,6 @@
 ---
 title: Add icon
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/create/add-icon
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/create/add-icon
 layout: migrated
 ---
 

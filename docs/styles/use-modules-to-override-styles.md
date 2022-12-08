@@ -1,6 +1,6 @@
 ---
 title: Use Modules to override styles
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/styles/use-modules-to-override-styles
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/styles/use-modules-to-override-styles
 layout: migrated
 ---
 

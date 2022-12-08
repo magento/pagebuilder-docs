@@ -1,6 +1,6 @@
 ---
 title: Extend another appearance
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/extend/extend-more-appearances
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/extend/extend-more-appearances
 layout: migrated
 ---
 

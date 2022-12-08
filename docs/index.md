@@ -1,12 +1,12 @@
 ---
 title: What is Page Builder?
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/
 layout: migrated
 ---
 
 # What is Page Builder?
 
-Page Builder is a Magento extension for creating content by dragging-and-dropping pre-built controls. 
+Page Builder is a Magento extension for creating content by dragging-and-dropping pre-built controls.
 We call these controls "content types." The available content types are shown in Page Builder's menu:
 
 ![Page Builder content types](images/pagebuilder-content-types.png)

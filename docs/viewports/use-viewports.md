@@ -1,5 +1,7 @@
 ---
 title: Use viewports for forms
+layout: migrated
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/viewports/add-viewports/
 ---
 
 # Use viewports for forms

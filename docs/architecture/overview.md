@@ -1,6 +1,6 @@
 ---
 title: Page Builder Architecture
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/architecture/
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/architecture/
 layout: migrated
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Add appearances
-migrated_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/extend/add-appearances
+redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/extend/add-appearances
 layout: migrated
 ---
 
