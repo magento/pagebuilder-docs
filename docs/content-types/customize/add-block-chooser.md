@@ -1,7 +1,7 @@
 ---
 title: Add a block chooser
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/add-block-chooser
-layout: migrated
+status: migrated
 ---
 
 # Add a block chooser

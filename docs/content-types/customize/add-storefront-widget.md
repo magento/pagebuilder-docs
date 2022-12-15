@@ -1,7 +1,7 @@
 ---
 title: Add a storefront widget
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/add-storefront-widget
-layout: migrated
+status: migrated
 ---
 
 # Add a storefront widget

@@ -1,7 +1,7 @@
 ---
 title: Page Builder data store
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/architecture/data-store
-layout: migrated
+status: migrated
 ---
 
 # Page Builder data store

@@ -1,7 +1,7 @@
 ---
 title: Add additional data
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/
-layout: migrated
+status: migrated
 ---
 
 # Add additional data

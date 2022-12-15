@@ -1,7 +1,7 @@
 ---
 title: Overview of content migration
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/migration/
-layout: migrated
+status: migrated
 ---
 
 # Overview of content migration

@@ -1,7 +1,7 @@
 ---
 title: What is Page Builder?
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/
-layout: migrated
+status: migrated
 ---
 
 # What is Page Builder?

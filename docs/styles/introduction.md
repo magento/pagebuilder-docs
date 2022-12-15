@@ -1,7 +1,7 @@
 ---
 title: How Page Builder styles content
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/styles/
-layout: migrated
+status: migrated
 ---
 
 # How Page Builder styles content

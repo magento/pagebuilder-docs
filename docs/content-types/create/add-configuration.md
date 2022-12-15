@@ -1,7 +1,7 @@
 ---
 title: Add configuration
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/create/add-configuration
-layout: migrated
+status: migrated
 ---
 
 # Add configuration

@@ -1,7 +1,7 @@
 ---
 title: Render server-side previews
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/render-server-side-preview
-layout: migrated
+status: migrated
 ---
 
 # Render server-side previews

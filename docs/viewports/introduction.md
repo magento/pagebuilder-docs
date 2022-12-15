@@ -1,6 +1,6 @@
 ---
 title: Introduction to viewports for responsive content
-layout: migrated
+status: migrated
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/viewports/
 ---
 

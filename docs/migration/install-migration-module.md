@@ -1,7 +1,7 @@
 ---
 title: Install the migration module
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/migration/install-migration-module
-layout: migrated
+status: migrated
 ---
 
 # Install the migration module

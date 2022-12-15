@@ -1,7 +1,7 @@
 ---
 title: Upgrade content types
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/upgrade-content-types
-layout: migrated
+status: migrated
 ---
 
 # Upgrade content types

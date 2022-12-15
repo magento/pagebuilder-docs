@@ -1,7 +1,7 @@
 ---
 title: Apply product conditions
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/apply-product-conditions
-layout: migrated
+status: migrated
 ---
 
 # Apply product conditions
