@@ -1,7 +1,7 @@
 ---
 title: Install Page Builder
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/contributors
-layout: migrated
+status: migrated
 ---
 
 # Install Page Builder

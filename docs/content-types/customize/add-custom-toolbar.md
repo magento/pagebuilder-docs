@@ -1,7 +1,7 @@
 ---
 title: Add a custom toolbar
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/add-custom-toolbar
-layout: migrated
+status: migrated
 ---
 
 # Add a custom toolbar

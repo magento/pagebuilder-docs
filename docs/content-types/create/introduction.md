@@ -1,7 +1,7 @@
 ---
 title: Introduction to creating content types
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/create/
-layout: migrated
+status: migrated
 ---
 
 # Introduction to creating content types

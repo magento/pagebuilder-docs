@@ -1,7 +1,7 @@
 ---
 title: Override Page Builder styles
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/styles/override-pagebuilder-styles
-layout: migrated
+status: migrated
 ---
 
 # Override Page Builder styles

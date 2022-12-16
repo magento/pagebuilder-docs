@@ -1,7 +1,7 @@
 ---
 title: Use Page Builder for product attributes
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/use-for-product-attributes
-layout: migrated
+status: migrated
 ---
 
 # Use Page Builder for product attributes

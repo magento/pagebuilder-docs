@@ -1,7 +1,7 @@
 ---
 title: Add a visual selector
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/customize/add-visual-selector
-layout: migrated
+status: migrated
 ---
 
 # Add a visual selector

@@ -1,7 +1,7 @@
 ---
 title: Extend an appearance
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/extend/extend-appearances
-layout: migrated
+status: migrated
 ---
 
 ## Extend an appearance

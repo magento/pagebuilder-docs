@@ -1,7 +1,7 @@
 ---
 title: Deactivate Page Builder
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/deactivate-pagebuilder
-layout: migrated
+status: migrated
 ---
 
 # Deactivate Page Builder

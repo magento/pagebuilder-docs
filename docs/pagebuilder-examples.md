@@ -1,7 +1,7 @@
 ---
 title: Install Page Builder example modules
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/pagebuilder-examples
-layout: migrated
+status: migrated
 ---
 
 # Install Page Builder example modules

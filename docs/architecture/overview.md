@@ -1,7 +1,7 @@
 ---
 title: Page Builder Architecture
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/architecture/
-layout: migrated
+status: migrated
 ---
 
 # Page Builder Architecture

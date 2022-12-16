@@ -1,7 +1,7 @@
 ---
 title: Run the migration module
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/migration/run-migration-module
-layout: migrated
+status: migrated
 ---
 
 # Run the migration module

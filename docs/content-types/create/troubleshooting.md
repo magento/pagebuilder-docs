@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting
 redirect_to: https://developer.adobe.com/commerce/frontend-core/page-builder/content-types/create/troubleshooting
-layout: migrated
+status: migrated
 ---
 
 # Troubleshooting
